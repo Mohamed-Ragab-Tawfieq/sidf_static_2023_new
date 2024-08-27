@@ -8,15 +8,15 @@ function handleLoader() {
 }
 handleLoader();
 
-/*********** home hexgons ***********/
-function handleHexagonHover(element) {
-    $('.hexagon').removeClass('expand-hexagon collapse-hexagon');
-    $(element).addClass('expand-hexagon');
-    $(element).parent().addClass('expand-column');
-    $('.hexagon').not(element).addClass('collapse-hexagon');
+/*********** toggle home item ***********/
+function toggleItem() {
+    if (window.innerWidth <= 991) {
+        document.querySelectorAll('.arrow-btn').forEach(item => {
+            item?.addEventListener("click", () => {
+                item.parentNode.parentNode.classList.toggle('expanded');
+            });
+        });
+    }
 }
 
-function handleHexagonBlur() {
-    $('.hexagon').removeClass('expand-hexagon collapse-hexagon');
-    $('.expand-column').removeClass('expand-column');
-}
+toggleItem();

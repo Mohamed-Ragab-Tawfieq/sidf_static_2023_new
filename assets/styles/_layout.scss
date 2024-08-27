@@ -3,15 +3,8 @@
     flex-direction: column;
     flex: 1 1 auto;
 
-    background: url("../images/body-bg.svg") no-repeat center;
-    background-size: cover;
-
+    background: #f0f1f1;
     padding-block: 2rem;
-    // min-height: 100vh;
-
-    // @media (min-width: 1200px) and (max-width: 1450px) {
-    //     min-height: calc(115vh - 120px);
-    // }
 }
 
 .mobile-header,
@@ -102,6 +95,14 @@
 
                 &:hover {
                     transform: scale(1.15);
+                }
+            }
+        }
+
+        .btn-outline-success {
+            &:hover {
+                img {
+                    @extend .white-img;
                 }
             }
         }

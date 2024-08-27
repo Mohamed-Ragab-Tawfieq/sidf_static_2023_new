@@ -9,22 +9,16 @@
         <link rel="apple-touch-icon" href="assets/images/icons/logo-no-text.png">
         <title>SIDF</title>
         <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/vendors/swiper-bundle.min.css">
-        <link rel="stylesheet" href="assets/vendors/animate.min.css">
-        <link rel="stylesheet" href="assets/vendors/aos.css">
-        <link rel="stylesheet" href="assets/vendors/hover-min.css">
         <link rel="stylesheet" href="assets/styles/main.min.css">
     </head>
 
     <body id="body">
         <header class="mobile-header collapsed" id="mobile-header">
             <div class="container">
-                <nav>
-                    <button class="btn text-success toggle-header" onclick="toggleHeader()"><i class="bi bi-list"></i></button>
-                    <a href=""><img src="assets/images/arabic_logo.svg" class="logo" alt="logo"></a>
-                    <div class="search d-none">
-                        <button class="btn text-success"><i class="bi bi-search"></i></button>
-                    </div>
+                <nav class="flex-between flex-row">
+                    <button class="btn flex-center fs-3" onclick="toggleHeader()"><i class="material-icons">menu</i></button>
+                    <a href=""><img src="assets/images/arabic_logo.svg" width="77" alt="logo"></a>
+                    <button class="btn text-success"><img src="assets/images/icons/search.svg" alt="search"></button>
                 </nav>
 
                 <div class="details">
@@ -60,8 +54,8 @@
                     <a href=""><img src="assets/images/arabic_logo.svg" class="logo" alt="logo"></a>
                     <h2 class="site-name">التقــرير التفاعلي 2024</h2>
 
-                    <div>
-                        <a href="" class="btn btn-primary btn-logo flex-y-row gap-2 f-18 px-8">
+                    <div class="flex-between">
+                        <a href="" class="btn btn-outline-success flex-y-row gap-2 f-18 px-8">
                             <img src="assets/images/icons/download-04.svg" alt="download">
                             تحميل ملف لمحة عن الصندوق
                         </a>
@@ -74,154 +68,179 @@
 
         <main class="main-content">
             <div class="container">
-                <div class="flex-between">
-                    <h1 class="fw-7 op-9">
-                        <span>التقرير السنوي لسنة</span>
-                        <span class="display-4 fw-7">2024</span>
-                    </h1>
-
-                    <a href="" class="btn btn-primary btn-logo flex-y-row gap-2 f-18 px-8">
-                        <img src="assets/images/icons/download-04.svg" alt="download">
-                        تحميل ملف لمحة عن الصندوق
+                <div class="flex-between flex-row">
+                    <h1 class="fw-7 op-7 main-title">التقرير السنوي لسنة 2024 </h1>
+                    <a href="" class="btn d-lg-none p-2" style="background: #72A647;">
+                        <img src="assets/images/icons/download-04.svg" class="white-img" alt="download">
                     </a>
                 </div>
 
-                <div class="hexagon-layout">
-                    <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                        <h2 class="text-white fw-6 display-3">01</h2>
-                        <img src="assets/images/home/01.png" class="absolute-center" alt="Title 1">
+                <div class="grid-5 mt-12 pt-8">
+                    <div class="home-item">
+                        <div class="flex-between flex-row title-wrapper">
+                            <h4 class="title">لمحة عن الصندوق</h4>
+                            <button class="btn flex-center arrow-btn"><img src="assets/images/icons/arrow-down.svg" width="18" height="18" alt="arrow-down"></button>
+                        </div>
                         <div class="content">
-                            <h4 class="text-white fw-7">لمحة عن الصندوق</h4>
+                            <h4 class="number flex-center">01</h4>
+                            <img src="assets/images/home/01.png" alt="Title 1">
                             <ul>
                                 <li><a href="">الصندوق في سطور </a></li>
                                 <li><a href="">مجلس الإدارة </a></li>
-                                <li><a href="">الهيكل التنظيمي</a></li>
+                                <li class="active"><a href="">الهيكل التنظيمي</a></li>
                                 <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                        <h2 class="text-white fw-6 display-3">02</h2>
-                        <img src="assets/images/home/02.png" class="absolute-center" alt="Title 2">
+                    <div class="home-item">
+                        <div class="flex-between flex-row title-wrapper">
+                            <h4 class="title">أبرز أرقام 2024م</h4>
+                            <button class="btn flex-center arrow-btn"><img src="assets/images/icons/arrow-down.svg" width="18" height="18" alt="arrow-down"></button>
+                        </div>
                         <div class="content">
-                            <h4 class="text-white fw-7">أبرز أرقام 2024م</h4>
+                            <h4 class="number flex-center">02</h4>
+                            <img src="assets/images/home/02.png" alt="Title 2">
                             <ul>
                                 <li><a href="">الصندوق في سطور </a></li>
                                 <li><a href="">مجلس الإدارة </a></li>
-                                <li><a href="">الهيكل التنظيمي</a></li>
+                                <li class="active"><a href="">الهيكل التنظيمي</a></li>
                                 <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                        <h2 class="text-white fw-6 display-3">03</h2>
-                        <img src="assets/images/home/03.png" class="absolute-center" alt="Title 3">
+                    <div class="home-item">
+                        <div class="flex-between flex-row title-wrapper">
+                            <h4 class="title"> أتجاهات و مؤشرات الأقتصاد المحلي</h4>
+                            <button class="btn flex-center arrow-btn"><img src="assets/images/icons/arrow-down.svg" width="18" height="18" alt="arrow-down"></button>
+                        </div>
                         <div class="content">
-                            <h4 class="text-white fw-7"> أتجاهات و مؤشرات الأقتصاد المحلي</h4>
+                            <h4 class="number flex-center">03</h4>
+                            <img src="assets/images/home/03.png" alt="Title 3">
                             <ul>
                                 <li><a href="">الصندوق في سطور </a></li>
                                 <li><a href="">مجلس الإدارة </a></li>
-                                <li><a href="">الهيكل التنظيمي</a></li>
+                                <li class="active"><a href="">الهيكل التنظيمي</a></li>
                                 <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                        <h2 class="text-white fw-6 display-3">04</h2>
-                        <img src="assets/images/home/04.png" class="absolute-center" alt="Title 4">
+                    <div class="home-item">
+                        <div class="flex-between flex-row title-wrapper">
+                            <h4 class="title">النشاط الإقراضي للصندوق</h4>
+                            <button class="btn flex-center arrow-btn"><img src="assets/images/icons/arrow-down.svg" width="18" height="18" alt="arrow-down"></button>
+                        </div>
                         <div class="content">
-                            <h4 class="text-white fw-7">النشاط الإقراضي للصندوق</h4>
+                            <h4 class="number flex-center">04</h4>
+                            <img src="assets/images/home/04.png" alt="Title 4">
                             <ul>
                                 <li><a href="">الصندوق في سطور </a></li>
                                 <li><a href="">مجلس الإدارة </a></li>
-                                <li><a href="">الهيكل التنظيمي</a></li>
+                                <li class="active"><a href="">الهيكل التنظيمي</a></li>
                                 <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                        <h2 class="text-white fw-6 display-3">05</h2>
-                        <img src="assets/images/home/05.png" class="absolute-center" alt="Title 5">
+                    <div class="home-item">
+                        <div class="flex-between flex-row title-wrapper">
+                            <h4 class="title">استراتيجية الصندوق</h4>
+                            <button class="btn flex-center arrow-btn"><img src="assets/images/icons/arrow-down.svg" width="18" height="18" alt="arrow-down"></button>
+                        </div>
                         <div class="content">
-                            <h4 class="text-white fw-7">استراتيجية الصندوق</h4>
+                            <h4 class="number flex-center">05</h4>
+                            <img src="assets/images/home/05.png" alt="Title 5">
                             <ul>
                                 <li><a href="">الصندوق في سطور </a></li>
                                 <li><a href="">مجلس الإدارة </a></li>
-                                <li><a href="">الهيكل التنظيمي</a></li>
+                                <li class="active"><a href="">الهيكل التنظيمي</a></li>
                                 <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                        <h2 class="text-white fw-6 display-3">06</h2>
-                        <img src="assets/images/home/06.png" class="absolute-center" alt="Title 6">
+                    <div class="home-item">
+                        <div class="flex-between flex-row title-wrapper">
+                            <h4 class="title">التحول الرقمي و تقنية المعلومات</h4>
+                            <button class="btn flex-center arrow-btn"><img src="assets/images/icons/arrow-down.svg" width="18" height="18" alt="arrow-down"></button>
+                        </div>
                         <div class="content">
-                            <h4 class="text-white fw-7">التحول الرقمي و تقنية المعلومات</h4>
+                            <h4 class="number flex-center">06</h4>
+                            <img src="assets/images/home/06.png" alt="Title 6">
                             <ul>
                                 <li><a href="">الصندوق في سطور </a></li>
                                 <li><a href="">مجلس الإدارة </a></li>
-                                <li><a href="">الهيكل التنظيمي</a></li>
+                                <li class="active"><a href="">الهيكل التنظيمي</a></li>
                                 <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                        <h2 class="text-white fw-6 display-3">07</h2>
-                        <img src="assets/images/home/09.png" class="absolute-center" alt="Title 7">
+                    <div class="home-item">
+                        <div class="flex-between flex-row title-wrapper">
+                            <h4 class="title">تنمية القدرات البشرية</h4>
+                            <button class="btn flex-center arrow-btn"><img src="assets/images/icons/arrow-down.svg" width="18" height="18" alt="arrow-down"></button>
+                        </div>
                         <div class="content">
-                            <h4 class="text-white fw-7">تنمية القدرات البشرية</h4>
+                            <h4 class="number flex-center">07</h4>
+                            <img src="assets/images/home/09.png" alt="Title 7">
                             <ul>
                                 <li><a href="">الصندوق في سطور </a></li>
                                 <li><a href="">مجلس الإدارة </a></li>
-                                <li><a href="">الهيكل التنظيمي</a></li>
+                                <li class="active"><a href="">الهيكل التنظيمي</a></li>
                                 <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                        <h2 class="text-white fw-6 display-3">08</h2>
-                        <img src="assets/images/home/08.png" class="absolute-center" alt="Title 8">
+                    <div class="home-item">
+                        <div class="flex-between flex-row title-wrapper">
+                            <h4 class="title">الصندوق خلال 50 عامًا</h4>
+                            <button class="btn flex-center arrow-btn"><img src="assets/images/icons/arrow-down.svg" width="18" height="18" alt="arrow-down"></button>
+                        </div>
                         <div class="content">
-                            <h4 class="text-white fw-7">الصندوق خلال 50 عامًا</h4>
+                            <h4 class="number flex-center">08</h4>
+                            <img src="assets/images/home/08.png" alt="Title 8">
                             <ul>
                                 <li><a href="">الصندوق في سطور </a></li>
                                 <li><a href="">مجلس الإدارة </a></li>
-                                <li><a href="">الهيكل التنظيمي</a></li>
+                                <li class="active"><a href="">الهيكل التنظيمي</a></li>
                                 <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                        <h2 class="text-white fw-6 display-3">09</h2>
-                        <img src="assets/images/home/09.png" class="absolute-center" alt="Title 9">
+                    <div class="home-item">
+                        <div class="flex-between flex-row title-wrapper">
+                            <h4 class="title">موضوع تحت الأضواء</h4>
+                            <button class="btn flex-center arrow-btn"><img src="assets/images/icons/arrow-down.svg" width="18" height="18" alt="arrow-down"></button>
+                        </div>
                         <div class="content">
-                            <h4 class="text-white fw-7">موضوع تحت الأضواء</h4>
+                            <h4 class="number flex-center">09</h4>
+                            <img src="assets/images/home/09.png" alt="Title 9">
                             <ul>
                                 <li><a href="">الصندوق في سطور </a></li>
                                 <li><a href="">مجلس الإدارة </a></li>
-                                <li><a href="">الهيكل التنظيمي</a></li>
+                                <li class="active"><a href="">الهيكل التنظيمي</a></li>
                                 <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                        <h2 class="text-white fw-6 display-3">10</h2>
-                        <img src="assets/images/home/10.png" class="absolute-center" alt="Title 10">
+                    <div class="home-item">
+                        <div class="flex-between flex-row title-wrapper">
+                            <h4 class="title">إحصاءات النشاط الاقراضي</h4>
+                            <button class="btn flex-center arrow-btn"><img src="assets/images/icons/arrow-down.svg" width="18" height="18" alt="arrow-down"></button>
+                        </div>
                         <div class="content">
-                            <h4 class="text-white fw-7">إحصاءات النشاط الاقراضي</h4>
+                            <h4 class="number flex-center">10</h4>
+                            <img src="assets/images/home/10.png" alt="Title 10">
                             <ul>
                                 <li><a href="">الصندوق في سطور </a></li>
                                 <li><a href="">مجلس الإدارة </a></li>
-                                <li><a href="">الهيكل التنظيمي</a></li>
+                                <li class="active"><a href="">الهيكل التنظيمي</a></li>
                                 <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
                             </ul>
                         </div>
@@ -283,7 +302,6 @@
             </div>
         </div> -->
 
-        <script src="assets/vendors/bootstrap.bundle.min.js"></script>
         <script src="assets/vendors/jquery.min.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
