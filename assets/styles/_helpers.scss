@@ -15,6 +15,24 @@
     transform: translate(50%, 50%);
 }
 
+.btn-gradient {
+    background: linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
+    color: $white;
+}
+
+.btn-brown {
+    background: #7e5b2d !important;
+    color: $white;
+}
+
+.sec-padding {
+    padding-block: 80px;
+
+    @media (max-width: 991px) {
+        padding-block: 40px;
+    }
+}
+
 [class*="grid"] {
     display: grid !important;
     gap: 1rem;

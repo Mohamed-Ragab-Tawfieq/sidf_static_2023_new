@@ -88,7 +88,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow: hidden;
 
     @media (max-width: 991px) {
         font-size: clamp(0.75rem, 3.5vw, 1rem) !important;
