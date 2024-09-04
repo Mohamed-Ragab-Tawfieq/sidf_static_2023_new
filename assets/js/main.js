@@ -1,3 +1,13 @@
+
+/*** loader ***/
+$(document).ready(function () {
+    const loader = document.getElementById('loader');
+
+    setTimeout(() => {
+        loader?.classList.add('d-none')
+    }, 11000);
+})
+
 /*---------------- Home start ----------------*/
 /*** home hexgons ***/
 function handleHexagonHover(element) {
@@ -13,12 +23,27 @@ function handleHexagonBlur() {
 }
 
 function handleHexagonsScroll() {
-    const parent = document.querySelector('.hexagons-wrap')
+    const parent = document.querySelector('.hexagons-wrap');
+    const factor = window.innerWidth >= 1200 ? 2.17 : 0.72;
+
     parent?.addEventListener('scroll', function () {
+        const lines = document.querySelector('.progress-lines');
+        const windowWidth = window.innerWidth / factor;
+        const linesProgress = (parent.scrollLeft / -windowWidth) * 100;
+        const arrowsBg = document.querySelector('.arrows-bg');
+        const homeSide = document.querySelector('.home-side');
+
+        lines.style.width = linesProgress + 'vw';
+
         if (parent.scrollLeft < 0) {
             parent.classList.add('end');
+            arrowsBg?.classList.add('top');
+            homeSide?.classList.add('bottom');
         } else {
+            lines.style.width = 2 + 'vw';
             parent.classList.remove('end');
+            arrowsBg?.classList.remove('top');
+            homeSide?.classList.remove('bottom');
         }
     });
 }
@@ -47,27 +72,27 @@ window.addEventListener('scroll', function () {
     const stickyHeader = header.offsetTop;
 
     if (window.scrollY > stickyHeader) {
-        header.classList.add('sticky');
+        header?.classList.add('sticky');
     } else {
-        header.classList.remove('sticky');
+        header?.classList.remove('sticky');
     }
 
     if (window.scrollY > stickyHeader + 300) {
-        aboutBrief.classList.add('arrows-move');
+        aboutBrief?.classList.add('arrows-move');
     } else {
-        aboutBrief.classList.remove('arrows-move');
+        aboutBrief?.classList.remove('arrows-move');
     }
 
     if (window.scrollY > stickyHeader + 600) {
-        progress.classList.add('sticky');
+        progress?.classList.add('sticky');
     } else {
-        progress.classList.remove('sticky');
+        progress?.classList.remove('sticky');
     }
 
     if (window.scrollY > 200) {
-        welcomeArrows.classList.add('hide');
+        welcomeArrows?.classList.add('hide');
     } else {
-        welcomeArrows.classList.remove('hide');
+        welcomeArrows?.classList.remove('hide');
     }
 })
 
@@ -76,37 +101,41 @@ $(document).ready(function () {
     const aboutBrief = document.getElementById('about-brief');
     const welcomeArrows = document.querySelector('.about-welcome .arrows');
 
-    if (aboutBrief.classList.contains('aos-animate')) {
-        welcomeArrows?.classList.add('hide')
-    } else {
-        welcomeArrows?.classList.remove('hide')
+    if (aboutBrief) {
+        if (aboutBrief.classList.contains('aos-animate')) {
+            welcomeArrows?.classList.add('hide')
+        } else {
+            welcomeArrows?.classList.remove('hide')
+        }
     }
 })
 
 /*** slider ***/
 $(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        autoplay: true,
-        margin: 10,
-        nav: true,
-        rtl: true,
-        navText: [
-            '<i class="material-icons"> chevron_right </i>',
-            '<i class="material-icons"> chevron_left </i>',
-        ],
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 4.2
+    if ($('.owl-carousel').length) {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            margin: 10,
+            nav: true,
+            rtl: true,
+            navText: [
+                '<i class="material-icons"> chevron_right </i>',
+                '<i class="material-icons"> chevron_left </i>',
+            ],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4.2
+                }
             }
-        }
-    });
+        });
+    }
 });
 
 /*** about bars ***/
@@ -123,11 +152,15 @@ $(document).ready(function () {
 
 /*** counters ***/
 $(document).ready(function () {
-    new PureCounter();
+    if ($('[data-purecounter-end]').length) {
+        new PureCounter();
+    }
 })
 
 /*** aos animation ***/
 $(document).ready(function () {
-    AOS.init();
-})
+    if ($('[data-aos]').length) {
+        AOS.init();
+    }
+});
 /*---------------- About end ----------------*/

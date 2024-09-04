@@ -88,10 +88,19 @@ body {
 
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+
+    background: url("../images/home/body-bg.svg") no-repeat top left;
 
     @media (max-width: 991px) {
         font-size: clamp(0.75rem, 3.5vw, 1rem) !important;
+    }
+
+    &.home {
+        overflow: hidden;
+
+        @media (max-width: 991px) {
+            background: #f8f8f8 url(../images/home/body-bg-xs.svg) no-repeat top 20px right -5px / 160px;
+        }
     }
 
     [lang="ar"] & {

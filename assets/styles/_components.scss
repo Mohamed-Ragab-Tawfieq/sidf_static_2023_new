@@ -2,12 +2,6 @@
 section {
     position: relative;
 
-    &.about-brief {
-        .sec-arrows {
-            width: 330px;
-        }
-    }
-
     .sec-arrows {
         margin-top: -500px;
         margin-inline-start: -80px;
@@ -40,6 +34,12 @@ section {
 }
 
 // sections
+.about-brief {
+    .sec-arrows {
+        width: 330px;
+    }
+}
+
 .about-welcome {
     position: relative;
     overflow: hidden;

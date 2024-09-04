@@ -9,22 +9,17 @@
         <link rel="apple-touch-icon" href="assets/images/icons/logo-no-text.png">
         <title>SIDF</title>
         <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/vendors/swiper-bundle.min.css">
-        <link rel="stylesheet" href="assets/vendors/animate.min.css">
         <link rel="stylesheet" href="assets/vendors/aos.css">
-        <link rel="stylesheet" href="assets/vendors/hover-min.css">
         <link rel="stylesheet" href="assets/styles/main.min.css">
     </head>
 
-    <body id="body">
+    <body class="home" id="body">
         <header class="mobile-header collapsed" id="mobile-header">
             <div class="container">
                 <nav>
-                    <button class="btn text-success toggle-header" onclick="toggleHeader()"><i class="bi bi-list"></i></button>
-                    <a href=""><img src="assets/images/arabic_logo.svg" class="logo" alt="logo"></a>
-                    <div class="search d-none">
-                        <button class="btn text-success"><i class="bi bi-search"></i></button>
-                    </div>
+                    <button class="btn"><img src="assets/images/icons/menu.svg" alt="menu"></button>
+                    <a href="index.html"><img src="assets/images/logo.svg" width="77" class="logo" alt="logo"></a>
+                    <button class="btn"><img src="assets/images/icons/search.svg" alt="search"></button>
                 </nav>
             </div>
         </header>
@@ -32,11 +27,11 @@
         <header class="main-header sticky" id="main-header">
             <div class="container">
                 <nav class="flex-between">
-                    <a href=""><img src="assets/images/arabic_logo.svg" class="logo" alt="logo"></a>
-                    <h2 class="site-name">التقــرير التفاعلي 2024</h2>
+                    <a href="index.html"><img src="assets/images/logo.svg" class="logo" alt="logo"></a>
+                    <h2 class="site-name">التقــرير التفاعلي</h2>
 
                     <div class="flex-between">
-                        <a href="" class="btn px-1 btn-brown flex-y-row gap-2 f-18 px-8">
+                        <a href="about.html" class="btn px-1 btn-info flex-y-row gap-2 f-18 px-8">
                             <img src="assets/images/icons/download-04.svg" class="white-img" alt="download">
                             تحميل ملف لمحة عن الصندوق
                         </a>
@@ -49,9 +44,12 @@
 
         <main class="main-content">
             <div class="container">
-                <div class="home-side">
-                    <h2 class="display-3 lh-sm fw-7 text-nowrap" style="color: #4E3418;">التقرير السنوي 2024</h2>
-                    <img src="assets/images/home/side-img.png" width="330" alt="side-img">
+                <div class="home-side" id="home-side">
+                    <h2 class="lh-sm text-nowrap" style="color: #4E3418;">
+                        <span class="display-3 fw-7">التقــرير التفاعلي</span>
+                        <span class="display-1 fw-7">2023</span>
+                    </h2>
+                    <img src="assets/images/home/side-img.png" width="400" alt="side-img">
                 </div>
 
                 <div class="hexagons-wrap flex-center flex-column">
@@ -60,12 +58,15 @@
                             <h2 class="text-white fw-6 display-3">01</h2>
                             <img src="assets/images/home/01.png" class="absolute-center" alt="Title 1">
                             <div class="content">
-                                <h4 class="text-white fw-7">لمحة عن الصندوق</h4>
+                                <h4 class="text-white fw-7">
+                                    لمحة عن الصندوق
+                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                </h4>
                                 <ul>
-                                    <li><a href="">الصندوق في سطور </a></li>
-                                    <li><a href="">مجلس الإدارة </a></li>
-                                    <li><a href="">الهيكل التنظيمي</a></li>
-                                    <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الصندوق في سطور </a></li>
+                                    <li><a href="about.html">مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الهيكل التنظيمي</a></li>
+                                    <li><a href="about.html">تقديم معالي رئيس مجلس الإدارة </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -74,40 +75,15 @@
                             <h2 class="text-white fw-6 display-3">02</h2>
                             <img src="assets/images/home/02.png" class="absolute-center" alt="Title 2">
                             <div class="content">
-                                <h4 class="text-white fw-7">أبرز أرقام 2024م</h4>
+                                <h4 class="text-white fw-7">
+                                    أبرز أرقام 2023م
+                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                </h4>
                                 <ul>
-                                    <li><a href="">الصندوق في سطور </a></li>
-                                    <li><a href="">مجلس الإدارة </a></li>
-                                    <li><a href="">الهيكل التنظيمي</a></li>
-                                    <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                            <h2 class="text-white fw-6 display-3">03</h2>
-                            <img src="assets/images/home/03.png" class="absolute-center" alt="Title 3">
-                            <div class="content">
-                                <h4 class="text-white fw-7"> أتجاهات و مؤشرات الأقتصاد المحلي</h4>
-                                <ul>
-                                    <li><a href="">الصندوق في سطور </a></li>
-                                    <li><a href="">مجلس الإدارة </a></li>
-                                    <li><a href="">الهيكل التنظيمي</a></li>
-                                    <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                            <h2 class="text-white fw-6 display-3">04</h2>
-                            <img src="assets/images/home/04.png" class="absolute-center" alt="Title 4">
-                            <div class="content">
-                                <h4 class="text-white fw-7">النشاط الإقراضي للصندوق</h4>
-                                <ul>
-                                    <li><a href="">الصندوق في سطور </a></li>
-                                    <li><a href="">مجلس الإدارة </a></li>
-                                    <li><a href="">الهيكل التنظيمي</a></li>
-                                    <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الصندوق في سطور </a></li>
+                                    <li><a href="about.html">مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الهيكل التنظيمي</a></li>
+                                    <li><a href="about.html">تقديم معالي رئيس مجلس الإدارة </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -116,28 +92,15 @@
                             <h2 class="text-white fw-6 display-3">05</h2>
                             <img src="assets/images/home/05.png" class="absolute-center" alt="Title 5">
                             <div class="content">
-                                <h4 class="text-white fw-7">استراتيجية الصندوق</h4>
+                                <h4 class="text-white fw-7">
+                                    استراتيجية الصندوق
+                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                </h4>
                                 <ul>
-                                    <li><a href="">الصندوق في سطور </a></li>
-                                    <li><a href="">مجلس الإدارة </a></li>
-                                    <li><a href="">الهيكل التنظيمي</a></li>
-                                    <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hexagon-layout">
-                        <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                            <h2 class="text-white fw-6 display-3">06</h2>
-                            <img src="assets/images/home/06.png" class="absolute-center" alt="Title 6">
-                            <div class="content">
-                                <h4 class="text-white fw-7">التحول الرقمي و تقنية المعلومات</h4>
-                                <ul>
-                                    <li><a href="">الصندوق في سطور </a></li>
-                                    <li><a href="">مجلس الإدارة </a></li>
-                                    <li><a href="">الهيكل التنظيمي</a></li>
-                                    <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الصندوق في سطور </a></li>
+                                    <li><a href="about.html">مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الهيكل التنظيمي</a></li>
+                                    <li><a href="about.html">تقديم معالي رئيس مجلس الإدارة </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -146,12 +109,15 @@
                             <h2 class="text-white fw-6 display-3">07</h2>
                             <img src="assets/images/home/09.png" class="absolute-center" alt="Title 7">
                             <div class="content">
-                                <h4 class="text-white fw-7">تنمية القدرات البشرية</h4>
+                                <h4 class="text-white fw-7">
+                                    تنمية القدرات البشرية
+                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                </h4>
                                 <ul>
-                                    <li><a href="">الصندوق في سطور </a></li>
-                                    <li><a href="">مجلس الإدارة </a></li>
-                                    <li><a href="">الهيكل التنظيمي</a></li>
-                                    <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الصندوق في سطور </a></li>
+                                    <li><a href="about.html">مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الهيكل التنظيمي</a></li>
+                                    <li><a href="about.html">تقديم معالي رئيس مجلس الإدارة </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -160,26 +126,86 @@
                             <h2 class="text-white fw-6 display-3">08</h2>
                             <img src="assets/images/home/08.png" class="absolute-center" alt="Title 8">
                             <div class="content">
-                                <h4 class="text-white fw-7">الصندوق خلال 50 عامًا</h4>
+                                <h4 class="text-white fw-7">
+                                    الصندوق خلال 50 عامًا
+                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                </h4>
                                 <ul>
-                                    <li><a href="">الصندوق في سطور </a></li>
-                                    <li><a href="">مجلس الإدارة </a></li>
-                                    <li><a href="">الهيكل التنظيمي</a></li>
-                                    <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الصندوق في سطور </a></li>
+                                    <li><a href="about.html">مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الهيكل التنظيمي</a></li>
+                                    <li><a href="about.html">تقديم معالي رئيس مجلس الإدارة </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hexagon-layout">
+                        <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
+                            <h2 class="text-white fw-6 display-3">03</h2>
+                            <img src="assets/images/home/03.png" class="absolute-center" alt="Title 3">
+                            <div class="content">
+                                <h4 class="text-white fw-7">
+                                    أتجاهات و مؤشرات الأقتصاد المحلي
+                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                </h4>
+                                <ul>
+                                    <li><a href="about.html">الصندوق في سطور </a></li>
+                                    <li><a href="about.html">مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الهيكل التنظيمي</a></li>
+                                    <li><a href="about.html">تقديم معالي رئيس مجلس الإدارة </a></li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
+                            <h2 class="text-white fw-6 display-3">04</h2>
+                            <img src="assets/images/home/04.png" class="absolute-center" alt="Title 4">
+                            <div class="content">
+                                <h4 class="text-white fw-7">
+                                    النشاط الإقراضي للصندوق
+                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                </h4>
+                                <ul>
+                                    <li><a href="about.html">الصندوق في سطور </a></li>
+                                    <li><a href="about.html">مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الهيكل التنظيمي</a></li>
+                                    <li><a href="about.html">تقديم معالي رئيس مجلس الإدارة </a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
+                            <h2 class="text-white fw-6 display-3">06</h2>
+                            <img src="assets/images/home/06.png" class="absolute-center" alt="Title 6">
+                            <div class="content">
+                                <h4 class="text-white fw-7">
+                                    التحول الرقمي و تقنية المعلومات
+                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                </h4>
+                                <ul>
+                                    <li><a href="about.html">الصندوق في سطور </a></li>
+                                    <li><a href="about.html">مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الهيكل التنظيمي</a></li>
+                                    <li><a href="about.html">تقديم معالي رئيس مجلس الإدارة </a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
                             <h2 class="text-white fw-6 display-3">09</h2>
                             <img src="assets/images/home/09.png" class="absolute-center" alt="Title 9">
                             <div class="content">
-                                <h4 class="text-white fw-7">موضوع تحت الأضواء</h4>
+                                <h4 class="text-white fw-7">
+                                    موضوع تحت الأضواء
+                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                </h4>
                                 <ul>
-                                    <li><a href="">الصندوق في سطور </a></li>
-                                    <li><a href="">مجلس الإدارة </a></li>
-                                    <li><a href="">الهيكل التنظيمي</a></li>
-                                    <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الصندوق في سطور </a></li>
+                                    <li><a href="about.html">مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الهيكل التنظيمي</a></li>
+                                    <li><a href="about.html">تقديم معالي رئيس مجلس الإدارة </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -188,12 +214,15 @@
                             <h2 class="text-white fw-6 display-3">10</h2>
                             <img src="assets/images/home/10.png" class="absolute-center" alt="Title 10">
                             <div class="content">
-                                <h4 class="text-white fw-7">إحصاءات النشاط الاقراضي</h4>
+                                <h4 class="text-white fw-7">
+                                    إحصاءات النشاط الاقراضي
+                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                </h4>
                                 <ul>
-                                    <li><a href="">الصندوق في سطور </a></li>
-                                    <li><a href="">مجلس الإدارة </a></li>
-                                    <li><a href="">الهيكل التنظيمي</a></li>
-                                    <li><a href="">تقديم معالي رئيس مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الصندوق في سطور </a></li>
+                                    <li><a href="about.html">مجلس الإدارة </a></li>
+                                    <li><a href="about.html">الهيكل التنظيمي</a></li>
+                                    <li><a href="about.html">تقديم معالي رئيس مجلس الإدارة </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -201,7 +230,14 @@
                 </div>
             </div>
 
-            <img src="assets/images/home/lines.svg" class="progress-lines" alt="progress">
+            <div class="arrows-bg"></div>
+            <div class="progress-lines">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </main>
 
         <div class="bottom-bar sticky">
@@ -240,22 +276,7 @@
             </div>
         </div>
 
-        <!-- <div class="loader">
-            <div class="logo-area mb-12 animate__animated animate__zoomIn">
-                <a href=""><img src="assets/images/arabic_logo.svg" class="logo" alt="logo"></a>
-            </div>
-            <div class="big-img animate__animated animate__fadeInUp">
-                <img class="" src="assets/images/loader.png" alt="">
-            </div>
-            <div class="title-area animate__animated animate__fadeIn">
-                <h1 class="title animate__animated animate__fadeInUp">التـقــــرير السنــــوي</h1>
-                <h1 class="title animate__animated animate__fadeInUp">2022</h1>
 
-                <div class="abstract">
-                    <img src="assets/images/loader-abstract.svg" alt="">
-                </div>
-            </div>
-        </div> -->
 
         <script src="assets/vendors/bootstrap.bundle.min.js"></script>
         <script src="assets/vendors/jquery.min.js"></script>

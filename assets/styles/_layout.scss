@@ -1,10 +1,185 @@
-.main-content {
+$bgHeight: 415px;
+
+.loader {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: $white;
+    direction: ltr;
     overflow: hidden;
+
+    .logo-img {
+        animation: logoAnimate 1s ease-in 4s forwards;
+
+        svg:first-of-type {
+            position: absolute;
+            bottom: 50%;
+            right: 49.3%;
+            transform: translate(49.3%, 50%) rotate(180deg);
+        }
+
+        svg:last-of-type {
+            position: absolute;
+            bottom: 50%;
+            right: 48%;
+            transform: translate(48%, 50%);
+        }
+    }
+
+    @keyframes logoAnimate {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    #logoPart1,
+    #logoPart2 {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: logoPart 10s ease forwards;
+    }
+
+    @keyframes logoPart {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    .bg {
+        position: relative;
+
+        height: 100vh;
+        width: 100%;
+
+        background-color: #ac8e55;
+        animation: bgAnimate 0.5s ease-in 6s forwards;
+
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            $bgHeight: 300px;
+        }
+    }
+
+    @keyframes bgAnimate {
+        from {
+            height: 100vh;
+        }
+
+        to {
+            height: $bgHeight;
+        }
+    }
+
+    .top-img {
+        position: absolute;
+        top: 4vh;
+        left: 50%;
+        transform: translateY(-200px) translateX(-50%);
+        animation: topImgAnimate 0.75s ease-in 8s forwards;
+    }
+
+    @keyframes topImgAnimate {
+        from {
+            transform: translateY(-200px) translateX(-50%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0) translateX(-50%);
+            opacity: 1;
+        }
+    }
+
+    .bottom-img {
+        position: absolute;
+        bottom: -400px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 130px;
+
+        animation: bottomImgAnimate 0.75s ease-in 8s forwards;
+
+        .progress-lines {
+            width: 60vw;
+        }
+    }
+
+    @keyframes bottomImgAnimate {
+        from {
+            bottom: -400px;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 20px;
+            opacity: 1;
+        }
+    }
+
+    .loader-years {
+        opacity: 0;
+        animation: yearsAnimate 0.75s ease-in 8s forwards;
+    }
+
+    @keyframes yearsAnimate {
+        from {
+            transform: scale(0.5);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .loader-arrows {
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        inset-inline-start: -1500px;
+
+        opacity: 0;
+        animation: arrowsAnimate 0.75s ease-in 8s forwards;
+    }
+
+    @keyframes arrowsAnimate {
+        from {
+            inset-inline-start: -1500px;
+            opacity: 0;
+        }
+
+        to {
+            inset-inline-start: 45vw;
+            opacity: 1;
+        }
+    }
+}
+
+.main-content {
+    .home & {
+        overflow: hidden;
+    }
 }
 
 .mobile-header,
 .main-header {
     background-color: $white;
+    box-shadow: 0 10px 15px rgba(63, 68, 72, 0.05);
     z-index: 30;
 
     &.sticky {
@@ -85,7 +260,6 @@
 }
 
 .main-header {
-    box-shadow: 0 10px 15px rgba(63, 68, 72, 0.05);
     padding-block: 1rem;
     transition: all 0.3s ease-in-out;
 
@@ -94,15 +268,13 @@
     }
 
     nav {
-        .logo-area {
-            .logo {
-                height: 3.75rem;
-                transform-origin: right top;
-                transition: all ease-in-out 0.3s;
+        .logo {
+            height: 3.75rem;
+            transform-origin: right top;
+            transition: all ease-in-out 0.3s;
 
-                &:hover {
-                    transform: scale(1.15);
-                }
+            &:hover {
+                transform: scale(1.15);
             }
         }
 
@@ -136,6 +308,10 @@
     box-shadow: 0 -11px 10px rgba($black, 0.1);
     padding-block: 0.8rem;
     margin-top: auto;
+
+    @media (max-width: 1199px) {
+        display: none;
+    }
 
     &.sticky {
         position: fixed;

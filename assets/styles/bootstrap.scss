@@ -2,10 +2,12 @@ $primary: #2b5c7f;
 $success: #72a647;
 $white: #fff;
 $black: #000;
+$info: #845a23;
 
 $theme-colors: (
     "primary": $primary,
-    "success": $success
+    "success": $success,
+    "info": $info
 );
 
 $colors: (
@@ -17,7 +19,7 @@ $container-max-widths: (
     md: 720px,
     lg: 960px,
     xl: 1192px,
-    xxl: 1320px
+    xxl: 1385px
 );
 
 $input-font-weight: 400;
