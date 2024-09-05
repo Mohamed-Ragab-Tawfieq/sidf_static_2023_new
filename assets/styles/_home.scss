@@ -172,15 +172,17 @@
 }
 
 .hexagons-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     position: relative;
-    overflow: auto hidden;
-    transform: rotate(-45deg);
+    height: 2000px;
+    padding-block: 800px 1000px;
+    transform: rotate(60deg);
+    overflow: hidden auto;
 
-    padding-inline: 1200px;
-    margin-top: 500px;
-    height: 680px;
-
-    padding-block: 150px 0;
+    margin-top: -570px;
+    margin-inline-start: 600px;
 
     @media (max-width: 991px) {
         height: 420px;
@@ -193,66 +195,34 @@
         margin-inline-start: -140px;
     }
 
-    &.end {
-        margin-top: -40px;
-        transform: rotate(-20deg);
+    &::-webkit-scrollbar {
+        width: 0;
+    }
 
+    &.end {
         @media (max-width: 991px) {
             margin-top: 20px;
             padding-inline: 500px;
             transform: rotate(-40deg);
         }
-
-        .hexagon {
-            transform: rotate(20deg);
-
-            @media (max-width: 991px) {
-                transform: rotate(40deg);
-            }
-        }
-
-        .hexagon-layout {
-            &:last-of-type {
-                margin-inline-start: 285px;
-                margin-top: -40px;
-
-                @media (max-width: 991px) {
-                    margin-inline-start: 200px;
-                    margin-top: -25px;
-                }
-            }
-        }
-    }
-
-    &::-webkit-scrollbar {
-        height: 0;
     }
 }
 
 .hexagon-layout {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-
     &:first-of-type {
-        .hexagon {
-            margin-top: -140px;
-        }
+        margin-top: 10px;
+        margin-inline-start: 50px;
     }
 
     &:last-of-type {
-        margin-inline-start: 445px;
-        margin-top: -10px;
-
-        @media (max-width: 991px) {
-            margin-inline-start: 300px;
-            margin-top: -10px;
-        }
+        margin-top: -290px;
+        margin-inline-start: -190px;
     }
 }
 
 .hexagon {
     position: relative;
-    transform: rotate(45deg);
+    transform: rotate(-60deg);
     height: 300px;
     width: 300px;
 

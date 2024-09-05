@@ -18,7 +18,7 @@ $bgHeight: 415px;
     overflow: hidden;
 
     .logo-img {
-        animation: logoAnimate 1s ease-in 4s forwards;
+        animation: logoAnimate 0.5s ease-in 3.5s forwards;
 
         svg:first-of-type {
             position: absolute;
@@ -49,12 +49,13 @@ $bgHeight: 415px;
     #logoPart2 {
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
-        animation: logoPart 10s ease forwards;
+        animation: logoPart 7s ease forwards;
     }
 
     @keyframes logoPart {
         to {
             stroke-dashoffset: 0;
+            fill: $white;
         }
     }
 
@@ -65,7 +66,7 @@ $bgHeight: 415px;
         width: 100%;
 
         background-color: #ac8e55;
-        animation: bgAnimate 0.5s ease-in 6s forwards;
+        animation: bgAnimate 0.5s ease-in 4s forwards;
 
         @media (min-width: 1200px) and (max-width: 1450px) {
             $bgHeight: 300px;
@@ -87,7 +88,7 @@ $bgHeight: 415px;
         top: 4vh;
         left: 50%;
         transform: translateY(-200px) translateX(-50%);
-        animation: topImgAnimate 0.75s ease-in 8s forwards;
+        animation: topImgAnimate 0.75s ease-in 4.5s forwards;
     }
 
     @keyframes topImgAnimate {
@@ -111,7 +112,7 @@ $bgHeight: 415px;
         justify-content: space-between;
         gap: 130px;
 
-        animation: bottomImgAnimate 0.75s ease-in 8s forwards;
+        animation: bottomImgAnimate 0.75s ease-in 4.5s forwards;
 
         .progress-lines {
             width: 60vw;
@@ -132,7 +133,7 @@ $bgHeight: 415px;
 
     .loader-years {
         opacity: 0;
-        animation: yearsAnimate 0.75s ease-in 8s forwards;
+        animation: yearsAnimate 0.75s ease-in 4.5s forwards;
     }
 
     @keyframes yearsAnimate {
@@ -154,7 +155,7 @@ $bgHeight: 415px;
         inset-inline-start: -1500px;
 
         opacity: 0;
-        animation: arrowsAnimate 0.75s ease-in 8s forwards;
+        animation: arrowsAnimate 0.75s ease-in 4.5s forwards;
     }
 
     @keyframes arrowsAnimate {

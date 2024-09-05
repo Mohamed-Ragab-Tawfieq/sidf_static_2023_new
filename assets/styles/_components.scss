@@ -3,8 +3,9 @@ section {
     position: relative;
 
     .sec-arrows {
-        margin-top: -500px;
+        margin-top: -600px;
         margin-inline-start: -80px;
+
         opacity: 0;
         transition: all 1s ease-in-out;
     }
@@ -12,6 +13,7 @@ section {
     &.aos-animate {
         .sec-arrows {
             margin-top: 0;
+            margin-inline-start: -80px;
 
             width: 52px;
             opacity: 1;
@@ -37,6 +39,13 @@ section {
 .about-brief {
     .sec-arrows {
         width: 330px;
+        margin-inline-start: 180px;
+    }
+
+    &.aos-animate {
+        .sec-arrows {
+            transition: all 1s ease-in-out 0.6s;
+        }
     }
 }
 
@@ -56,12 +65,13 @@ section {
         position: absolute;
         bottom: 50%;
         transform: translateY(50%) scale(1);
-        inset-inline-start: 0;
+        inset-inline-end: 30px;
         transition: all 1s ease-in-out;
 
         &.hide {
             bottom: 0;
             transform: scale(0);
+            inset-inline-end: 100%;
             transform-origin: bottom;
             transition: all 1s ease-in-out;
         }
@@ -82,6 +92,7 @@ section {
 .about-counters {
     display: flex;
     flex-direction: column;
+    margin-top: 2.63rem;
 
     .item {
         position: relative;
@@ -171,8 +182,17 @@ section {
             font-weight: 600;
             text-align: center;
 
+            &:not(.active) {
+                border: 1px solid transparent;
+            }
+
             &.active {
                 @extend .btn-gradient;
+            }
+
+            &:not(.active):hover {
+                border: 1px solid $success;
+                color: $black;
             }
         }
 
@@ -197,7 +217,7 @@ section {
         bottom: 0;
 
         width: 0;
-        height: 2px;
+        height: 4px;
 
         background-color: $success;
         transition: width 0.1s ease-in-out;

@@ -24,23 +24,26 @@ function handleHexagonBlur() {
 
 function handleHexagonsScroll() {
     const parent = document.querySelector('.hexagons-wrap');
-    const factor = window.innerWidth >= 1200 ? 2.17 : 0.72;
 
+    // lines
     parent?.addEventListener('scroll', function () {
         const lines = document.querySelector('.progress-lines');
-        const windowWidth = window.innerWidth / factor;
-        const linesProgress = (parent.scrollLeft / -windowWidth) * 100;
+        const linesProgress = (parent.scrollTop / 1310) * 100;
+        lines.style.width = linesProgress + 'vw';
+    });
+
+    // side
+    parent?.addEventListener('scroll', function () {
         const arrowsBg = document.querySelector('.arrows-bg');
         const homeSide = document.querySelector('.home-side');
 
-        lines.style.width = linesProgress + 'vw';
+        console.log(parent.scrollTop)
 
-        if (parent.scrollLeft < 0) {
+        if (parent.scrollTop > 0) {
             parent.classList.add('end');
             arrowsBg?.classList.add('top');
             homeSide?.classList.add('bottom');
         } else {
-            lines.style.width = 2 + 'vw';
             parent.classList.remove('end');
             arrowsBg?.classList.remove('top');
             homeSide?.classList.remove('bottom');
@@ -48,7 +51,6 @@ function handleHexagonsScroll() {
     });
 }
 handleHexagonsScroll()
-
 /*---------------- Home end ----------------*/
 
 
