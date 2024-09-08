@@ -133,7 +133,7 @@ $(document).ready(function () {
                     items: 3
                 },
                 1000: {
-                    items: 4.2
+                    items: 4.3
                 }
             }
         });
@@ -147,7 +147,7 @@ $(document).ready(function () {
         var numberValue = parseFloat(numberText);
 
         if (!isNaN(numberValue)) {
-            $(this).find('.btn-gradient').css('height', (numberValue * 4.6) + 'px');
+            $(this).find('.btn-gradient').css('height', (numberValue * 3) + 'px');
         }
     });
 });

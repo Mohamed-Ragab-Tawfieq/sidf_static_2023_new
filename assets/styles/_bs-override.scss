@@ -200,10 +200,10 @@ a {
         padding-bottom: clamp(0.7rem, 3.2vw, #{$i * 0.25}rem) !important;
     }
     .ps-#{$i} {
-        padding-inline-start: 3.2vw, clamp(0.7rem, #{$i * 0.25}rem) !important;
+        padding-inline-start: clamp(0.7rem, 3.2vw, #{$i * 0.25}rem) !important;
     }
     .pe-#{$i} {
-        padding-inline-end: 3.2vw, clamp(0.7rem, #{$i * 0.25}rem) !important;
+        padding-inline-end: clamp(0.7rem, 3.2vw, #{$i * 0.25}rem) !important;
     }
     .px-#{$i} {
         padding-inline: clamp(0.7rem, 3.2vw, #{$i * 0.25}rem) !important;

@@ -32,11 +32,13 @@ section {
 }
 
 .sec-dark {
-    background-color: #e8e6e6 !important;
+    background-color: #f1f6ed !important;
 }
 
 // sections
 .about-brief {
+    background: url("../images/about/section-bg.svg") no-repeat top -40% left;
+
     .sec-arrows {
         width: 330px;
         margin-inline-start: 180px;
@@ -44,7 +46,7 @@ section {
 
     &.aos-animate {
         .sec-arrows {
-            transition: all 1s ease-in-out 0.6s;
+            transition: all 1s ease-in-out 0.3s;
         }
     }
 }
@@ -65,7 +67,7 @@ section {
         position: absolute;
         bottom: 50%;
         transform: translateY(50%) scale(1);
-        inset-inline-end: 30px;
+        inset-inline-end: 200px;
         transition: all 1s ease-in-out;
 
         &.hide {
@@ -96,26 +98,13 @@ section {
 
     .item {
         position: relative;
+        background: url("../images/about/about-arrows-3.svg") no-repeat center left 0.63rem;
 
         width: 190px;
         height: 150px;
 
         border: 1px solid $success;
         border-radius: 1rem;
-
-        img {
-            position: absolute;
-
-            &.start {
-                top: -20px;
-                inset-inline-start: -20px;
-            }
-
-            &.end {
-                top: -20px;
-                inset-inline-end: -20px;
-            }
-        }
 
         h4 {
             max-width: 150px;
@@ -226,8 +215,11 @@ section {
 
 .about-vision {
     @mixin liHover {
-        @extend .btn-gradient;
+        background:
+            url("../images/about/about-arrows-4.svg") no-repeat center left 50px / contain,
+            linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
         color: $white;
+
         outline: 1px solid $success;
         transition: all 0.5s ease-in-out;
         animation: liAnimate 0.5s;
@@ -242,8 +234,9 @@ section {
             }
         }
 
+        h5,
         p {
-            display: block;
+            color: $white !important;
         }
 
         .arrow {
@@ -265,98 +258,126 @@ section {
         }
     }
 
-    li {
+    .item {
         position: relative;
         padding: 32px 56px;
+
+        border: 1px solid $success;
         border-radius: 1rem;
+
         color: $success;
         transition: all 0.5s ease-in-out;
 
-        &:not(:last-of-type) {
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                right: 50%;
-                transform: translateX(50%);
+        &:hover {
+            @include liHover;
 
-                width: 95%;
-                height: 1px;
-
-                margin: auto;
-                border-bottom: 1px solid $success;
+            &.span-2 {
+                background:
+                    url("../images/about/about-arrows-4.svg") no-repeat center left 30px / contain,
+                    linear-gradient(
+                        0deg,
+                        #386732 6.54%,
+                        #467836 24.54%,
+                        #5d933c 56.54%,
+                        #6ba440 84.54%,
+                        #70aa42 106.54%
+                    );
             }
         }
 
-        &:hover {
-            @include liHover;
+        p {
+            max-width: 75%;
         }
 
-        p {
-            display: none;
+        .grid-icon {
+            grid-template-rows: 1.5rem auto;
+
+            h5 {
+                color: #636467;
+            }
+
+            p {
+                color: #6d6e71;
+            }
         }
     }
 }
 
-.about-bars {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    align-items: self-end;
-    gap: 20px;
-
+.about-graphs-wrap {
     &.aos-animate {
-        .btn-gradient {
-            animation: barsAnimate 3s;
-
-            @keyframes barsAnimate {
-                from {
-                    transform: scaleY(0);
-                }
-
-                to {
-                    transform: scaleY(1);
-                }
-            }
+        .sec-arrows {
+            @extend .white-img;
+            margin-inline-start: -45px;
         }
     }
+    .about-graphs {
+        background: url("../images/about/about.png") no-repeat center;
+        padding: 2.5rem 4.63rem;
+        border-radius: 40px;
 
-    .item {
-        text-align: center;
-        background:
-            url("../images/about/bar.svg") no-repeat center/cover,
-            url("../images/about/bar-arrows.svg") no-repeat top center;
-    }
+        .about-bars {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            align-items: self-end;
+            gap: 20px;
 
-    .number {
-        line-height: 0.5;
-        padding-top: 100px;
-    }
+            &.aos-animate {
+                .btn-gradient {
+                    animation: barsAnimate 3s;
 
-    h2 {
-        text-align: center;
-    }
+                    @keyframes barsAnimate {
+                        from {
+                            transform: scaleY(0);
+                        }
 
-    .date {
-        width: 66px;
-        height: 48px;
+                        to {
+                            transform: scaleY(1);
+                        }
+                    }
+                }
+            }
 
-        border-radius: 8px;
-        margin: auto;
-    }
+            .item {
+                text-align: center;
+                background:
+                    url("../images/about/bar.svg") no-repeat center/cover,
+                    url("../images/about/bar-arrows.svg") no-repeat top 30px center;
+            }
 
-    .btn-gradient {
-        height: 100px;
-        width: 80%;
-        margin: auto;
+            .number {
+                line-height: 0.5;
+                padding-top: 100px;
+            }
 
-        border-top-right-radius: 8px;
-        border-top-left-radius: 8px;
+            h2 {
+                text-align: center;
+            }
 
-        transform-origin: bottom;
+            .date {
+                width: 66px;
+                height: 48px;
+
+                border-radius: 8px;
+                margin: auto;
+            }
+
+            .btn-gradient {
+                height: 100px;
+                width: 80%;
+                margin: auto;
+
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+
+                transform-origin: bottom;
+            }
+        }
     }
 }
 
 .about-slider-wrap {
+    background: url("../images/about/progress-lines.svg") no-repeat center left 3rem / contain;
+
     &.aos-animate {
         .owl-nav {
             width: 100% !important;
