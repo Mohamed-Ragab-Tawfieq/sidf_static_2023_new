@@ -1,0 +1,77 @@
+.vision-card {
+    position: relative;
+    padding: 32px 56px;
+
+    border: 1px solid $success;
+    border-radius: 1rem;
+
+    color: $success;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        background:
+            url("../images/arrows/about-arrows-4.svg") no-repeat center left 50px / contain,
+            linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
+        color: $white;
+
+        transition: all 0.5s ease-in-out;
+        animation: liAnimate 0.5s;
+
+        @keyframes liAnimate {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        * {
+            color: $white !important;
+        }
+
+        .arrow {
+            animation: arrowAnimation 1s ease-in-out;
+
+            @keyframes arrowAnimation {
+                0% {
+                    transform: translateX(0);
+                }
+
+                50% {
+                    transform: translateX(-50px);
+                }
+
+                to {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        &.span-2 {
+            background:
+                url("../images/arrows/about-arrows-4.svg") no-repeat center left 30px / contain,
+                linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
+        }
+
+        &.arrow-reverse {
+            background:
+                url("../images/arrows/arrows-bg.svg") no-repeat center left -20px / 70px,
+                linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
+        }
+    }
+
+    .title {
+        color: #636467;
+    }
+
+    .description {
+        color: #6d6e71;
+        max-width: 75%;
+    }
+
+    .grid-icon {
+        grid-template-rows: 1.5rem auto;
+    }
+}

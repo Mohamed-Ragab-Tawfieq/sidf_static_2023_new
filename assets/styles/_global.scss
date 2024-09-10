@@ -89,14 +89,15 @@ body {
     display: flex;
     flex-direction: column;
 
-    background: url("../images/home/body-bg.svg") no-repeat top left;
-
     @media (max-width: 991px) {
         font-size: clamp(0.75rem, 3.5vw, 1rem) !important;
     }
 
     &.home {
         overflow: hidden;
+        background:
+            url("../images/arrows/home-arrow.svg") no-repeat top 150px right / 14%,
+            url(../images/home/body-bg.svg) no-repeat top 130px left -100px / 25%;
 
         @media (max-width: 991px) {
             background: #f8f8f8 url(../images/home/body-bg-xs.svg) no-repeat top 20px right -5px / 160px;
@@ -221,6 +222,60 @@ table {
 
         @media (max-width: 991px) {
             white-space: nowrap;
+        }
+    }
+}
+
+section {
+    position: relative;
+
+    .sec-arrows {
+        margin-top: -600px;
+        margin-inline-start: -80px;
+
+        opacity: 0;
+        transition: all 1s ease-in-out;
+    }
+
+    &.aos-animate {
+        .sec-arrows {
+            margin-top: 0;
+            margin-inline-start: -80px;
+
+            width: 52px;
+            opacity: 1;
+            transition: all 1s ease-in-out;
+        }
+    }
+}
+
+.sec-title {
+    position: relative;
+
+    img {
+        position: absolute;
+        inset-inline-start: -70px;
+    }
+}
+
+.sec-dark {
+    background-color: #f1f6ed !important;
+}
+
+.sec-arrow-end {
+    background: url("../images/arrows/about-arrows-3.svg") no-repeat center left / contain;
+
+    &.aos-animate {
+        animation: arrowAnimate 0.5s ease-in-out;
+
+        @keyframes arrowAnimate {
+            from {
+                background-position-x: center;
+            }
+
+            to {
+                background-position-x: left;
+            }
         }
     }
 }

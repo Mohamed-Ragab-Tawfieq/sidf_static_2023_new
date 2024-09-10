@@ -1,118 +1,4 @@
-/************** about **************/
-section {
-    position: relative;
-
-    .sec-arrows {
-        margin-top: -600px;
-        margin-inline-start: -80px;
-
-        opacity: 0;
-        transition: all 1s ease-in-out;
-    }
-
-    &.aos-animate {
-        .sec-arrows {
-            margin-top: 0;
-            margin-inline-start: -80px;
-
-            width: 52px;
-            opacity: 1;
-            transition: all 1s ease-in-out;
-        }
-    }
-}
-
-.sec-title {
-    position: relative;
-
-    img {
-        position: absolute;
-        inset-inline-start: -70px;
-    }
-}
-
-.sec-dark {
-    background-color: #f1f6ed !important;
-}
-
-// sections
-.about-brief {
-    background: url("../images/about/section-bg.svg") no-repeat top -40% left;
-
-    .sec-arrows {
-        width: 330px;
-        margin-inline-start: 180px;
-    }
-
-    &.aos-animate {
-        .sec-arrows {
-            transition: all 1s ease-in-out 0.3s;
-        }
-    }
-}
-
-.about-welcome {
-    position: relative;
-    overflow: hidden;
-    height: 614px;
-    padding: 70px 56px;
-    border-radius: 40px;
-    background: url("../images/about/about.png") no-repeat center/cover;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .arrows {
-        position: absolute;
-        bottom: 50%;
-        transform: translateY(50%) scale(1);
-        inset-inline-end: 200px;
-        transition: all 1s ease-in-out;
-
-        &.hide {
-            bottom: 0;
-            transform: scale(0);
-            inset-inline-end: 100%;
-            transform-origin: bottom;
-            transition: all 1s ease-in-out;
-        }
-    }
-
-    .display-1 {
-        position: relative;
-        z-index: 10;
-    }
-}
-
-.about-counters-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 3rem;
-}
-
-.about-counters {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2.63rem;
-
-    .item {
-        position: relative;
-        background: url("../images/about/about-arrows-3.svg") no-repeat center left 0.63rem;
-
-        width: 190px;
-        height: 150px;
-
-        border: 1px solid $success;
-        border-radius: 1rem;
-
-        h4 {
-            max-width: 150px;
-            text-align: center;
-        }
-    }
-}
-
+/************** general **************/
 .about-navbar {
     position: relative;
     padding-block: 14px 24px;
@@ -213,164 +99,75 @@ section {
     }
 }
 
-.about-vision {
-    @mixin liHover {
-        background:
-            url("../images/about/about-arrows-4.svg") no-repeat center left 50px / contain,
-            linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
-        color: $white;
+/************** about **************/
+// brief
+.about-brief {
+    background: url("../images/about/section-bg.svg") no-repeat top -40% left;
 
-        outline: 1px solid $success;
-        transition: all 0.5s ease-in-out;
-        animation: liAnimate 0.5s;
-
-        @keyframes liAnimate {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        h5,
-        p {
-            color: $white !important;
-        }
-
-        .arrow {
-            animation: arrowAnimation 1s ease-in-out;
-
-            @keyframes arrowAnimation {
-                0% {
-                    transform: translateX(0);
-                }
-
-                50% {
-                    transform: translateX(-50px);
-                }
-
-                to {
-                    transform: translateX(0);
-                }
-            }
-        }
+    .sec-arrows {
+        width: 330px;
+        margin-inline-start: 180px;
     }
 
-    .item {
-        position: relative;
-        padding: 32px 56px;
-
-        border: 1px solid $success;
-        border-radius: 1rem;
-
-        color: $success;
-        transition: all 0.5s ease-in-out;
-
-        &:hover {
-            @include liHover;
-
-            &.span-2 {
-                background:
-                    url("../images/about/about-arrows-4.svg") no-repeat center left 30px / contain,
-                    linear-gradient(
-                        0deg,
-                        #386732 6.54%,
-                        #467836 24.54%,
-                        #5d933c 56.54%,
-                        #6ba440 84.54%,
-                        #70aa42 106.54%
-                    );
-            }
-        }
-
-        p {
-            max-width: 75%;
-        }
-
-        .grid-icon {
-            grid-template-rows: 1.5rem auto;
-
-            h5 {
-                color: #636467;
-            }
-
-            p {
-                color: #6d6e71;
-            }
+    &.aos-animate {
+        .sec-arrows {
+            transition: all 1s ease-in-out 0.3s;
         }
     }
 }
 
-.about-graphs-wrap {
-    &.aos-animate {
-        .sec-arrows {
-            @extend .white-img;
-            margin-inline-start: -45px;
+.about-welcome {
+    position: relative;
+    overflow: hidden;
+    height: 614px;
+    padding: 70px 56px;
+    border-radius: 40px;
+    background: url("../images/about/about.png") no-repeat center/cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .arrows {
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%) scale(1);
+        inset-inline-end: 200px;
+        transition: all 1s ease-in-out;
+
+        &.hide {
+            bottom: 0;
+            transform: scale(0);
+            inset-inline-end: 100%;
+            transform-origin: bottom;
+            transition: all 1s ease-in-out;
         }
     }
-    .about-graphs {
-        background: url("../images/about/about.png") no-repeat center;
-        padding: 2.5rem 4.63rem;
-        border-radius: 40px;
 
-        .about-bars {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            align-items: self-end;
-            gap: 20px;
+    .display-1 {
+        position: relative;
+        z-index: 10;
+    }
+}
 
-            &.aos-animate {
-                .btn-gradient {
-                    animation: barsAnimate 3s;
+.about-counters {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.63rem;
 
-                    @keyframes barsAnimate {
-                        from {
-                            transform: scaleY(0);
-                        }
+    .item {
+        position: relative;
+        background: url("../images/arrows/about-arrows-3.svg") no-repeat center left 0.63rem;
 
-                        to {
-                            transform: scaleY(1);
-                        }
-                    }
-                }
-            }
+        width: 190px;
+        height: 150px;
 
-            .item {
-                text-align: center;
-                background:
-                    url("../images/about/bar.svg") no-repeat center/cover,
-                    url("../images/about/bar-arrows.svg") no-repeat top 30px center;
-            }
+        border: 1px solid $success;
+        border-radius: 1rem;
 
-            .number {
-                line-height: 0.5;
-                padding-top: 100px;
-            }
-
-            h2 {
-                text-align: center;
-            }
-
-            .date {
-                width: 66px;
-                height: 48px;
-
-                border-radius: 8px;
-                margin: auto;
-            }
-
-            .btn-gradient {
-                height: 100px;
-                width: 80%;
-                margin: auto;
-
-                border-top-right-radius: 8px;
-                border-top-left-radius: 8px;
-
-                transform-origin: bottom;
-            }
+        h4 {
+            max-width: 150px;
+            text-align: center;
         }
     }
 }
@@ -436,52 +233,81 @@ section {
     }
 }
 
-// about slider
-.owl-nav {
-    @extend .flex-between;
-    flex-direction: row;
-    width: 100%;
-    margin-top: 50px !important;
-}
-
-.owl-prev,
-.owl-next {
-    @extend .flex-center;
-
-    width: 40px;
-    height: 40px;
-
-    background: $white !important;
-    color: $success !important;
-    border: 1px solid $success !important;
-
-    font-size: 1.7rem !important;
-}
-
-.owl-dots {
-    margin-top: -35px;
-
-    .owl-dot {
-        vertical-align: middle;
-
-        span {
-            width: 7.3vw !important;
-            height: 1px !important;
-
-            border-radius: 0 !important;
-            margin: 5px 0 !important;
+.about-graphs-wrap {
+    &.aos-animate {
+        .sec-arrows {
+            @extend .white-img;
+            margin-inline-start: -45px;
         }
+    }
+    .about-graphs {
+        background: url("../images/about/about.png") no-repeat center;
+        padding: 2.5rem 4.63rem;
+        border-radius: 40px;
 
-        &.active {
-            span {
-                height: 3px !important;
-                background-color: $success !important;
+        .about-bars {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            align-items: self-end;
+            gap: 20px;
 
-                .circle-dots & {
-                    height: 11px !important;
-                    width: 11px !important;
+            &.aos-animate {
+                .btn-gradient {
+                    animation: barsAnimate 3s;
+
+                    @keyframes barsAnimate {
+                        from {
+                            transform: scaleY(0);
+                        }
+
+                        to {
+                            transform: scaleY(1);
+                        }
+                    }
                 }
+            }
+
+            .item {
+                text-align: center;
+                background:
+                    url("../images/about/bar.svg") no-repeat center/cover,
+                    url("../images/arrows/bar-arrows.svg") no-repeat top 30px center;
+            }
+
+            .number {
+                line-height: 0.5;
+                padding-top: 100px;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            .date {
+                width: 66px;
+                height: 48px;
+
+                border-radius: 8px;
+                margin: auto;
+            }
+
+            .btn-gradient {
+                height: 100px;
+                width: 80%;
+                margin: auto;
+
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+
+                transform-origin: bottom;
             }
         }
     }
+}
+
+// board
+.about-board {
+    position: relative;
+    background: url("../images/about/board.svg") no-repeat center / contain;
+    height: 1260px;
 }

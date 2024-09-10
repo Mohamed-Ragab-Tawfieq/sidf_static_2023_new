@@ -1,10 +1,21 @@
+.home-title {
+    margin-top: 100px;
+    color: #4e3418;
+    transition: all 0.2s ease-in-out;
+
+    &.top {
+        margin-top: 0;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
 .home-side {
     transition: all 0.5s ease-in-out;
 
     @media (min-width: 1200px) {
         position: absolute;
-        top: 90px;
-        inset-inline-start: 5.5vw;
+        top: 120px;
+        inset-inline-end: 5.5vw;
     }
 
     @media (max-width: 1199px) {
@@ -13,7 +24,14 @@
         margin-top: 1.25rem;
     }
 
-    &.bottom {
+    img {
+        @media (max-width: 1450px) {
+            width: 300px !important;
+        }
+    }
+
+    &.top {
+        inset-inline-end: 20.5vw;
         transition: all 0.5s ease-in-out;
 
         @media (max-width: 991px) {
@@ -21,16 +39,15 @@
         }
 
         @media (min-width: 1200px) {
-            top: auto;
-            bottom: 50px;
+            top: -100px;
+        }
+
+        @media (max-width: 1450px) {
+            inset-inline-end: 12.5vw;
         }
 
         img {
             transition: all 0.5s ease-in-out;
-
-            @media (min-width: 992px) {
-                width: 300px;
-            }
         }
 
         .display-1,
@@ -67,12 +84,13 @@
         }
     }
 
-    img {
+    .side-img {
         position: relative;
         z-index: 5;
         transition: all 0.5s ease-in-out;
 
         width: 450px;
+        animation: yearsAnimate 0.5s ease-in-out 6s;
 
         margin-top: -20px;
         margin-inline-start: 40px;
@@ -86,45 +104,19 @@
         @media (max-width: 1199px) {
             width: 200px;
         }
-    }
-}
 
-.arrows-bg {
-    position: fixed;
-    bottom: 50%;
-    transform: translateY(50%);
-    inset-inline-start: 31%;
-    z-index: -1;
+        @keyframes yearsAnimate {
+            from {
+                margin-top: -120px;
+                margin-inline-start: 140px;
+                transform: scale(1.3);
+            }
 
-    width: 340px;
-    height: 500px;
-
-    background: url("../images/home/arrows-bg.svg") no-repeat center/contain;
-
-    @media (max-width: 991px) {
-        position: absolute;
-        bottom: auto;
-        top: 150px;
-        inset-inline-start: 55%;
-        transform: none;
-
-        width: 120px;
-        height: 280px;
-    }
-
-    &.top {
-        bottom: 100%;
-        transform: translateY(100%) rotate(-5deg);
-        inset-inline-start: 0%;
-
-        background-size: 50%;
-        height: 250px;
-
-        transition: all 0.2s ease-in-out;
-
-        @media (max-width: 991px) {
-            bottom: 90%;
-            top: auto;
+            to {
+                margin-top: -20px;
+                margin-inline-start: 40px;
+                transform: scale(1);
+            }
         }
     }
 }
@@ -203,8 +195,12 @@
     transform: rotate(60deg);
     overflow: hidden auto;
 
-    margin-top: -570px;
-    margin-inline-start: 600px;
+    margin-top: -770px;
+    margin-inline-start: 400px;
+
+    @media (max-width: 1450px) {
+        padding-block: 800px 1200px;
+    }
 
     @media (max-width: 991px) {
         height: 420px;
@@ -222,6 +218,10 @@
     }
 
     &.end {
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            padding-block: 700px 1200px;
+        }
+
         @media (max-width: 991px) {
             margin-top: 20px;
             padding-inline: 500px;
@@ -232,13 +232,23 @@
 
 .hexagon-layout {
     &:first-of-type {
-        margin-top: 10px;
-        margin-inline-start: 50px;
+        margin-top: -190px;
+        margin-inline-start: -160px;
+
+        @media (max-width: 1450px) {
+            margin-top: -50px;
+            margin-inline-start: -110px;
+        }
     }
 
     &:last-of-type {
-        margin-top: -290px;
-        margin-inline-start: -190px;
+        margin-top: -480px;
+        margin-inline-start: -590px;
+
+        @media (max-width: 1450px) {
+            margin-top: -280px;
+            margin-inline-start: -475px;
+        }
     }
 }
 
@@ -248,9 +258,9 @@
     height: 300px;
     width: 300px;
 
-    @media (max-width: 1199px) {
-        height: 200px;
-        width: 200px;
+    @media (max-width: 1450px) {
+        height: 230px;
+        width: 230px;
     }
 
     &:nth-of-type(even) {
@@ -259,6 +269,7 @@
         }
     }
 
+    // hover
     &.expand-hexagon {
         z-index: 30;
 
@@ -266,6 +277,10 @@
             width: 345px;
             filter: brightness(0.5);
             transition: all 0.3s ease-in-out;
+
+            @media (max-width: 1450px) {
+                width: 260px;
+            }
 
             @media (max-width: 1199px) {
                 width: 245px;
@@ -275,6 +290,12 @@
         h2 {
             top: 30px;
             max-width: 200px;
+
+            @media (min-width: 1200px) and (max-width: 1450px) {
+                top: 10px;
+                inset-inline-start: 50px;
+                font-size: 1.75rem;
+            }
 
             @media (max-width: 991px) {
                 top: 5px;
@@ -286,6 +307,11 @@
             inset-inline-start: 15%;
             max-width: 200px;
 
+            @media (min-width: 1200px) and (max-width: 1450px) {
+                bottom: auto;
+                top: 50px;
+            }
+
             @media (max-width: 991px) {
                 top: 35px;
                 inset-inline-start: 10%;
@@ -296,6 +322,10 @@
 
         h4 {
             max-width: 200px;
+
+            @media (min-width: 1200px) and (max-width: 1450px) {
+                font-size: 1.25rem;
+            }
         }
 
         ul {
@@ -304,6 +334,10 @@
 
             @media (min-width: 992px) {
                 margin-top: 20px;
+            }
+
+            @media (min-width: 992px) {
+                margin-top: 0;
             }
 
             @keyframes animateList {
@@ -323,8 +357,8 @@
         width: 320px;
         transition: all 0.3s ease-in-out;
 
-        @media (min-width: 1200px) and (max-width: 1450px) {
-            width: 300px;
+        @media (max-width: 1450px) {
+            width: 250px;
         }
 
         @media (max-width: 1199px) {
@@ -377,8 +411,12 @@
     li {
         padding: 2px 6px;
 
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            max-width: 160px;
+        }
+
         &:hover {
-            background: $white url("../images/about/about-arrows.svg") no-repeat center left 15px/20px;
+            background: $white url("../images/arrows/about-arrows.svg") no-repeat center left 15px/20px;
 
             a {
                 color: $success;
@@ -404,6 +442,11 @@
             max-width: 210px;
             display: block;
             color: $white;
+
+            @media (min-width: 1200px) and (max-width: 1450px) {
+                font-size: 0.93rem;
+                font-weight: 400;
+            }
 
             @media (min-width: 992px) {
                 padding-inline-end: 25px;

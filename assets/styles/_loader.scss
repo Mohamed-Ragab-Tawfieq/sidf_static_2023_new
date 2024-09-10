@@ -1,10 +1,10 @@
 @keyframes logoScale {
     0% {
-        transform: scale(0);
+        transform: translate(50%, 50%) scale(0);
     }
 
     100% {
-        transform: scale(1.5);
+        transform: translate(50%, 50%) scale(1.5);
     }
 }
 
@@ -52,18 +52,6 @@
     }
 }
 
-@keyframes yearsAnimate {
-    from {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
 @keyframes arrowsAnimate {
     from {
         inset-inline-start: -1500px;
@@ -71,7 +59,7 @@
     }
 
     to {
-        inset-inline-start: 45vw;
+        inset-inline-start: 71vw;
         opacity: 1;
     }
 }
@@ -94,7 +82,7 @@
     overflow: hidden;
 
     .logo-img {
-        transform: scale(0);
+        transform: translate(50%, 50%) scale(0);
         animation:
             logoScale 0.5s ease-in 1s forwards,
             logoFade 1s ease-in 2s forwards;
@@ -135,8 +123,7 @@
     }
 
     .loader-years {
-        opacity: 0;
-        animation: yearsAnimate 0.75s ease-in 4.5s forwards;
+        transform: scale(0);
     }
 
     .loader-arrows {
