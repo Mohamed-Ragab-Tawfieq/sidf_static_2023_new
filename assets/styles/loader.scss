@@ -8,12 +8,24 @@
     }
 }
 
-@keyframes logoFade {
+@keyframes logoMoveTop {
     0% {
+        transform: translateY(0) translateX(50%);
+    }
+
+    100% {
+        transform: translateY(-250px) translateX(50%);
+    }
+}
+
+@keyframes logoMoveRight {
+    0% {
+        transform: translateY(-250px) translateX(0) scale(1);
         opacity: 1;
     }
 
     100% {
+        transform: translateY(-250px) translateX(110px) scale(0.2);
         opacity: 0;
     }
 }
@@ -54,13 +66,21 @@
 
 @keyframes arrowsAnimate {
     from {
-        inset-inline-start: -1500px;
         opacity: 0;
     }
 
     to {
-        inset-inline-start: 71vw;
         opacity: 1;
+    }
+}
+
+@keyframes arrowsLight {
+    from {
+        filter: drop-shadow(0px 2px 3px #fff);
+    }
+
+    to {
+        filter: none;
     }
 }
 
@@ -77,7 +97,7 @@
     justify-content: center;
     flex-direction: column;
 
-    background-color: $white;
+    background-color: #fff;
     direction: ltr;
     overflow: hidden;
 
@@ -85,7 +105,8 @@
         transform: translate(50%, 50%) scale(0);
         animation:
             logoScale 0.5s ease-in 1s forwards,
-            logoFade 1s ease-in 2s forwards;
+            logoMoveTop 1s ease-in 4s forwards,
+            logoMoveRight 0.5s ease-in 4.8s forwards;
     }
 
     .bg {
@@ -129,10 +150,12 @@
     .loader-arrows {
         position: absolute;
         bottom: 50%;
+        inset-inline-start: 71vw;
         transform: translateY(50%);
-        inset-inline-start: -1500px;
 
         opacity: 0;
-        animation: arrowsAnimate 0.75s ease-in 4.5s forwards;
+        animation:
+            arrowsAnimate 1s ease-in 4.5s forwards,
+            arrowsLight 0.5s ease-in 4.8s infinite;
     }
 }
