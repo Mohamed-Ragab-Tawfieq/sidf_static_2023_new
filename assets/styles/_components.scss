@@ -324,6 +324,11 @@
 // board
 .about-board {
     position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
     background: url("../images/about/board.svg") no-repeat center / contain;
-    height: 1260px;
+    height: 1460px;
 }

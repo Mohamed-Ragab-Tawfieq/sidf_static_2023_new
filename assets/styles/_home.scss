@@ -1,6 +1,6 @@
 .home-title {
     margin-top: 100px;
-    color: #4e3418;
+    color: #6a522f;
     transition: all 0.2s ease-in-out;
 
     &.top {
@@ -11,7 +11,7 @@
 
 .home-side {
     transition: all 0.5s ease-in-out;
-    animation: sideAnimate 1.5s ease-in 6s forwards;
+    animation: sideAnimate 1s ease-in 6s forwards;
 
     @media (min-width: 1200px) {
         position: absolute;

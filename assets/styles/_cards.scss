@@ -75,3 +75,36 @@
         grid-template-rows: 1.5rem auto;
     }
 }
+
+.board-card {
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+
+    header {
+        border-radius: 8px;
+        border-start-start-radius: 0;
+        border-start-end-radius: 0;
+
+        position: relative;
+        z-index: 10;
+        padding-block: 0.44rem;
+        margin-bottom: -1rem;
+    }
+
+    .body {
+        background-color: $white;
+        box-shadow: 0 2rem 2rem 0 rgba($black, 0.09);
+        border-radius: 1rem;
+        padding-top: 2rem;
+        overflow: hidden;
+    }
+
+    .progress-lines {
+        gap: 4px;
+
+        div {
+            height: 1px;
+        }
+    }
+}
