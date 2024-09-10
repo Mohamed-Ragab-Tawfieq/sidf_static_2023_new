@@ -18,6 +18,10 @@
         transition: all 0.3s ease-in-out;
         animation: progressAnimation 0.3s;
 
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            inset: 53px 0 auto;
+        }
+
         ul {
             transform: translateX(100px);
             animation: ulAnimation 1s both;
@@ -56,6 +60,10 @@
             font-size: 24px;
             font-weight: 600;
             text-align: center;
+
+            @media (min-width: 1200px) and (max-width: 1450px) {
+                padding-block: 0.25rem;
+            }
 
             &:not(.active) {
                 border: 1px solid transparent;
@@ -107,11 +115,19 @@
     .sec-arrows {
         width: 330px;
         margin-inline-start: 180px;
+
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            margin-inline-start: 0;
+        }
     }
 
     &.aos-animate {
         .sec-arrows {
             transition: all 1s ease-in-out 0.3s;
+
+            @media (min-width: 1200px) and (max-width: 1450px) {
+                transition: all 1s ease-in-out 0s;
+            }
         }
     }
 }

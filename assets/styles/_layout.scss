@@ -45,6 +45,10 @@
 .mobile-header {
     padding-block: 0.7rem;
 
+    @media (min-width: 1200px) and (max-width: 1450px) {
+        padding-block: 0.5rem;
+    }
+
     @media (min-width: 992px) {
         display: none;
     }
@@ -81,6 +85,10 @@
     @extend .mobile-header;
     margin-bottom: 32px;
     box-shadow: 0 2px 7px 0 rgba($black, 0.1);
+
+    @media (min-width: 1200px) and (max-width: 1450px) {
+        margin-bottom: 20px;
+    }
 
     @media (min-width: 992px) {
         display: block;
