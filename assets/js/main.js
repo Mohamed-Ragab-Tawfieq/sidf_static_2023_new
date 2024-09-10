@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     setTimeout(() => {
         loader?.classList.add('d-none')
-    }, 6000);
+    }, 6500);
 })
 
 /*---------------- Home start ----------------*/

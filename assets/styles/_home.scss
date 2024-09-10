@@ -11,6 +11,7 @@
 
 .home-side {
     transition: all 0.5s ease-in-out;
+    animation: sideAnimate 1.5s ease-in 6s forwards;
 
     @media (min-width: 1200px) {
         position: absolute;
@@ -22,6 +23,16 @@
         display: flex;
         justify-content: space-between;
         margin-top: 1.25rem;
+    }
+
+    @keyframes sideAnimate {
+        from {
+            inset-inline-end: 20vw;
+        }
+
+        to {
+            inset-inline-end: 5.5vw;
+        }
     }
 
     img {
