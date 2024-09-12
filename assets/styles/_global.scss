@@ -258,6 +258,10 @@ section {
 .sec-arrow-end {
     background: url("../images/arrows/about-arrows-3.svg") no-repeat center left / contain;
 
+    @media (min-width: 1200px) and (max-width: 1450px) {
+        background-size: 28%;
+    }
+
     &.aos-animate {
         animation: arrowAnimate 0.5s ease-in-out;
 

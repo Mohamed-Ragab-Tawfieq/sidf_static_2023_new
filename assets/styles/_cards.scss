@@ -79,7 +79,7 @@
 .board-card {
     width: fit-content;
     text-align: center;
-    margin: auto;
+    filter: drop-shadow(0 2px 4px rgba($black, 0.2));
 
     header {
         border-radius: 8px;
@@ -94,7 +94,7 @@
 
     .body {
         background-color: $white;
-        box-shadow: 0 2rem 2rem 0 rgba($black, 0.09);
+        filter: drop-shadow(0 8px 16px rgba($black, 0.5));
         border-radius: 1rem;
         padding-top: 2rem;
         overflow: hidden;
