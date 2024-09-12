@@ -336,6 +336,19 @@
 
 .about-tree {
     .tree {
-        background: url("../images/about/structure/tree.svg") no-repeat center / cover;
+        width: 1180px;
+        height: 727px;
+
+        margin: auto;
+        background: url("../images/about/structure/tree.svg") no-repeat top center / contain;
+
+        .bottom-children {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        li {
+            font-weight: 700;
+        }
     }
 }
