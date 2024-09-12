@@ -70,23 +70,22 @@
 
         <main class="main-content">
             <div class="container">
-                <h2 class="home-title">
-                    <span class="display-3 fw-7">التقــرير السنوي</span>
-                    <span class="display-1 fw-7">2023</span>
-                </h2>
-
                 <div class="home-side" id="home-side">
-                    <img src="assets/images/home/side-img.svg" width="400" alt="side-img">
+                    <h2 class="home-title">
+                        <span class="display-3 fw-7">التقــرير السنوي</span>
+                        <span class="display-1 fw-7">2023</span>
+                    </h2>
+                    <img src="assets/images/home/side-img.png" alt="side-img">
                 </div>
 
                 <div class="hexagons-wrap">
                     <div class="hexagon-layout flex-center flex-column">
                         <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                            <h2 class="text-white fw-6 display-3">03</h2>
-                            <img src="assets/images/home/03.png" class="absolute-center" alt="Title 3">
+                            <h2 class="text-white fw-6 display-3">02</h2>
+                            <img src="assets/images/home/02.png" class="absolute-center" alt="Title 2">
                             <div class="content">
                                 <h4 class="text-white fw-7">
-                                    أتجاهات و مؤشرات الأقتصاد المحلي
+                                    أبرز أرقام 2023م
                                     <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
@@ -133,11 +132,11 @@
                         </div>
 
                         <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                            <h2 class="text-white fw-6 display-3">09</h2>
-                            <img src="assets/images/home/09.png" class="absolute-center" alt="Title 9">
+                            <h2 class="text-white fw-6 display-3">08</h2>
+                            <img src="assets/images/home/08.png" class="absolute-center" alt="Title 8">
                             <div class="content">
                                 <h4 class="text-white fw-7">
-                                    موضوع تحت الأضواء
+                                    الصندوق خلال 50 عامًا
                                     <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
@@ -186,11 +185,11 @@
                         </div>
 
                         <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                            <h2 class="text-white fw-6 display-3">02</h2>
-                            <img src="assets/images/home/02.png" class="absolute-center" alt="Title 2">
+                            <h2 class="text-white fw-6 display-3">03</h2>
+                            <img src="assets/images/home/03.png" class="absolute-center" alt="Title 3">
                             <div class="content">
                                 <h4 class="text-white fw-7">
-                                    أبرز أرقام 2023م
+                                    أتجاهات و مؤشرات الأقتصاد المحلي
                                     <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
@@ -237,11 +236,11 @@
                         </div>
 
                         <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
-                            <h2 class="text-white fw-6 display-3">08</h2>
-                            <img src="assets/images/home/08.png" class="absolute-center" alt="Title 8">
+                            <h2 class="text-white fw-6 display-3">09</h2>
+                            <img src="assets/images/home/09.png" class="absolute-center" alt="Title 9">
                             <div class="content">
                                 <h4 class="text-white fw-7">
-                                    الصندوق خلال 50 عامًا
+                                    موضوع تحت الأضواء
                                     <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
@@ -364,12 +363,10 @@
 
                         if (parent.scrollTop > 0) {
                             parent.classList.add('end');
-                            homeSide?.classList.add('top');
-                            homeTitle?.classList.add('top');
+                            homeSide?.classList.add('bottom');
                         } else {
                             parent.classList.remove('end');
-                            homeSide?.classList.remove('top');
-                            homeTitle?.classList.remove('top');
+                            homeSide?.classList.remove('bottom');
                         }
                     });
                 }

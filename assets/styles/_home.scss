@@ -1,22 +1,10 @@
-.home-title {
-    margin-top: 100px;
-    color: #6a522f;
-    transition: all 0.2s ease-in-out;
-
-    &.top {
-        margin-top: 0;
-        transition: all 0.2s ease-in-out;
-    }
-}
-
 .home-side {
     transition: all 0.5s ease-in-out;
-    animation: sideAnimate 1s ease-in 6s forwards;
 
     @media (min-width: 1200px) {
         position: absolute;
         top: 120px;
-        inset-inline-end: 5.5vw;
+        inset-inline-start: 5.5vw;
     }
 
     @media (max-width: 1199px) {
@@ -25,112 +13,57 @@
         margin-top: 1.25rem;
     }
 
-    @keyframes sideAnimate {
-        from {
-            inset-inline-end: 20vw;
-            opacity: 0.5;
-            transform: scale(0.5);
-        }
-
-        to {
-            inset-inline-end: 5.5vw;
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-
-    img {
-        @media (max-width: 1450px) {
-            width: 300px !important;
-        }
-    }
-
-    &.top {
+    &.bottom {
         inset-inline-end: 20.5vw;
         transition: all 0.5s ease-in-out;
 
-        @media (max-width: 991px) {
-            transform: scale(0);
-        }
-
         @media (min-width: 1200px) {
-            top: -100px;
-        }
-
-        @media (max-width: 1450px) {
-            inset-inline-end: 12.5vw;
+            top: 45%;
         }
 
         img {
-            transition: all 0.5s ease-in-out;
+            transform: scale(0.6);
+            margin-top: -4rem;
+            margin-inline-start: -11%;
+            transition: all 0.2s ease-in-out;
         }
 
         .display-1,
         .display-3 {
-            transition: all 0.5s ease-in-out;
-
-            @media (min-width: 992px) {
-                font-size: 4rem;
-            }
+            font-size: 3rem !important;
         }
     }
 
-    h2 {
+    img {
+        transition: all 0.2s ease-in-out;
+
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            width: 400px;
+        }
+    }
+
+    .home-title {
+        color: #6a522f;
+
         @media (max-width: 1199px) {
             padding-top: 1.25rem;
         }
-    }
 
-    .display-3 {
-        transition: all 0.5s ease-in-out;
-        font-size: 1.5rem;
+        .display-3 {
+            transition: all 0.5s ease-in-out;
+            font-size: 1.5rem;
 
-        @media (min-width: 1200px) {
-            font-size: 4.5rem;
-        }
-    }
-
-    .display-1 {
-        transition: all 0.5s ease-in-out;
-        font-size: 1.5rem;
-
-        @media (min-width: 1200px) {
-            font-size: 5.5rem;
-        }
-    }
-
-    .side-img {
-        position: relative;
-        z-index: 5;
-        transition: all 0.5s ease-in-out;
-
-        width: 450px;
-        animation: yearsAnimate 0.5s ease-in-out 6s;
-
-        margin-top: -20px;
-        margin-inline-start: 40px;
-
-        @media (min-width: 1200px) and (max-width: 1450px) {
-            width: 350px;
-            margin-top: -30px;
-            margin-inline-start: 90px;
-        }
-
-        @media (max-width: 1199px) {
-            width: 200px;
-        }
-
-        @keyframes yearsAnimate {
-            from {
-                margin-top: -120px;
-                margin-inline-start: 140px;
-                transform: scale(1.3);
+            @media (min-width: 1200px) {
+                font-size: 4.5rem;
             }
+        }
 
-            to {
-                margin-top: -20px;
-                margin-inline-start: 40px;
-                transform: scale(1);
+        .display-1 {
+            transition: all 0.5s ease-in-out;
+            font-size: 1.5rem;
+
+            @media (min-width: 1200px) {
+                font-size: 5.5rem;
             }
         }
     }
@@ -206,11 +139,11 @@
 
     position: relative;
     height: 2000px;
-    padding-block: 800px 1000px;
+    padding-block: 1000px;
     transform: rotate(60deg);
     overflow: hidden auto;
 
-    margin-top: -770px;
+    margin-top: -670px;
     margin-inline-start: 400px;
 
     @media (max-width: 1450px) {
@@ -247,22 +180,22 @@
 
 .hexagon-layout {
     &:first-of-type {
-        margin-top: -190px;
-        margin-inline-start: -160px;
+        margin-top: 10px;
+        margin-inline-start: 140px;
 
-        @media (max-width: 1450px) {
-            margin-top: -50px;
-            margin-inline-start: -110px;
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            margin-top: -110px;
+            margin-inline-start: 190px;
         }
     }
 
     &:last-of-type {
-        margin-top: -480px;
-        margin-inline-start: -590px;
+        margin-top: -285px;
+        margin-inline-start: -290px;
 
-        @media (max-width: 1450px) {
-            margin-top: -280px;
-            margin-inline-start: -475px;
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            margin-top: 120px;
+            margin-inline-start: -175px;
         }
     }
 }

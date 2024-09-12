@@ -1,6 +1,17 @@
 .main-content {
     .home & {
         overflow: hidden;
+        background:
+            url(../images/arrows/home-arrow.svg) no-repeat top 130px right 38vw / 14%,
+            url(../images/home/body-bg.svg) no-repeat top 35px left / 25%,
+            #f8f8f8;
+
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            background:
+                url(../images/arrows/home-arrow.svg) no-repeat top 130px right 33vw / 14%,
+                url(../images/home/body-bg.svg) no-repeat top 35px left / 25%,
+                #f8f8f8;
+        }
     }
 }
 

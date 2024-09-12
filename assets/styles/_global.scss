@@ -95,13 +95,6 @@ body {
 
     &.home {
         overflow: hidden;
-        background:
-            url("../images/arrows/home-arrow.svg") no-repeat top 150px right / 14%,
-            url(../images/home/body-bg.svg) no-repeat top 130px left -100px / 25%;
-
-        @media (max-width: 991px) {
-            background: #f8f8f8 url(../images/home/body-bg-xs.svg) no-repeat top 20px right -5px / 160px;
-        }
     }
 
     [lang="ar"] & {
