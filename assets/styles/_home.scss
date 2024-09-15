@@ -29,12 +29,9 @@
     }
 
     &.bottom {
+        top: 45% !important;
         inset-inline-end: 20.5vw;
         transition: all 0.5s ease-in-out;
-
-        @media (min-width: 1200px) {
-            top: 45%;
-        }
 
         img {
             transform: scale(0.6);
@@ -92,59 +89,6 @@
 
     @media (max-width: 991px) {
         inset: auto 0 20px;
-    }
-}
-
-.progress-lines {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-
-    div {
-        height: 2px;
-        width: 100%;
-    }
-
-    &.success {
-        div:nth-of-type(1) {
-            background-color: #f1f6ed;
-        }
-
-        div:nth-of-type(2) {
-            background-color: #d3e3c6;
-        }
-
-        div:nth-of-type(3) {
-            background-color: #bed6aa;
-        }
-
-        div:nth-of-type(4) {
-            background-color: #a1c384;
-        }
-
-        div:nth-of-type(5) {
-            background-color: #8eb86c;
-        }
-    }
-
-    div:nth-of-type(1) {
-        background-color: #f2efea;
-    }
-
-    div:nth-of-type(2) {
-        background-color: #e5ded5;
-    }
-
-    div:nth-of-type(3) {
-        background-color: #d9cec0;
-    }
-
-    div:nth-of-type(4) {
-        background-color: #ccbeab;
-    }
-
-    div:nth-of-type(5) {
-        background-color: #bfad96;
     }
 }
 

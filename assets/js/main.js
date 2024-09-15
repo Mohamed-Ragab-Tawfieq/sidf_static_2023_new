@@ -28,7 +28,7 @@ handleAboutNav()
 window.addEventListener('scroll', function () {
     const header = document.getElementById('inner-header');
     const progress = document.getElementById('about-navbar');
-    const aboutBrief = document.getElementById('about-brief');
+    const aboutBrief = document.getElementById('first-section');
     const welcomeArrows = document.querySelector('.about-welcome .arrows');
     const stickyHeader = header.offsetTop;
 
@@ -59,7 +59,7 @@ window.addEventListener('scroll', function () {
 
 /*** about arrows ***/
 $(document).ready(function () {
-    const aboutBrief = document.getElementById('about-brief');
+    const aboutBrief = document.getElementById('first-section');
     const welcomeArrows = document.querySelector('.about-welcome .arrows');
 
     if (aboutBrief) {
