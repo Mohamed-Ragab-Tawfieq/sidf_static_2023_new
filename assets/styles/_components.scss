@@ -76,6 +76,10 @@
             &:not(.active):hover {
                 border: 1px solid $success;
                 color: $black;
+
+                &.blue {
+                    border: 1px solid $primary;
+                }
             }
         }
 
@@ -104,6 +108,10 @@
 
         background-color: $success;
         transition: width 0.1s ease-in-out;
+
+        &.blue {
+            background-color: $primary;
+        }
     }
 }
 
@@ -178,7 +186,7 @@
 
 /************** about **************/
 .first-section {
-    background: url("../images/about/section-bg.svg") no-repeat top -40% left;
+    background: url("../images/pages/about/section-bg.svg") no-repeat top -40% left;
 
     .sec-arrows {
         width: 330px;
@@ -206,11 +214,15 @@
     height: 614px;
     padding: 70px 56px;
     border-radius: 40px;
-    background: url("../images/about/about.png") no-repeat center/cover;
+    background: url("../images/top-img/1.png") no-repeat center/cover;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &.blue {
+        background: url("../images/top-img/2.png") no-repeat center/cover;
+    }
 
     .arrows {
         position: absolute;
@@ -241,7 +253,7 @@
 
     .item {
         position: relative;
-        background: url("../images/arrows/about-arrows-3.svg") no-repeat center left 0.63rem;
+        background: url("../images/arrows/left/3.svg") no-repeat center left 0.63rem;
 
         width: 190px;
         height: 150px;
@@ -257,7 +269,7 @@
 }
 
 .about-slider-wrap {
-    background: url("../images/about/progress-lines.svg") no-repeat center left 3rem / contain;
+    background: url("../images/pages/about/progress-lines.svg") no-repeat center left 3rem / contain;
 
     &.aos-animate {
         .owl-nav {
@@ -325,7 +337,7 @@
         }
     }
     .about-graphs {
-        background: url("../images/about/about.png") no-repeat center;
+        background: url("../images/top-img/1.png") no-repeat center;
         padding: 2.5rem 4.63rem;
         border-radius: 40px;
 
@@ -354,8 +366,8 @@
             .item {
                 text-align: center;
                 background:
-                    url("../images/about/bar.svg") no-repeat center/cover,
-                    url("../images/arrows/bar-arrows.svg") no-repeat top 30px center;
+                    url("../images/pages/about/bar.svg") no-repeat center/cover,
+                    url("../images/arrows/top/1.svg") no-repeat top 30px center;
             }
 
             .number {
@@ -397,7 +409,7 @@
     justify-content: space-between;
     flex-direction: column;
 
-    background: url("../images/about/board.svg") no-repeat center / contain;
+    background: url("../images/pages/about/board.svg") no-repeat center / contain;
     height: 1500px;
     margin-bottom: 150px;
 }
@@ -407,7 +419,7 @@
         width: 1180px;
         height: 727px;
         margin: auto;
-        background: url("../images/about/structure/tree.svg") no-repeat top center / contain;
+        background: url("../images/pages/about/structure/tree.svg") no-repeat top center / contain;
 
         .bottom-children {
             display: grid;

@@ -18,6 +18,14 @@
 .btn-gradient {
     background: linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
     color: $white;
+
+    &.blue {
+        background: linear-gradient(180deg, #3c80b0 -0.99%, #165578 95.36%);
+    }
+}
+
+.btn-gradient-blue {
+    background: linear-gradient(180deg, #3c80b0 -0.99%, #165578 95.36%);
 }
 
 .btn-brown {

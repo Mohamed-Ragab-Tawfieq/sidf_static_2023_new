@@ -257,8 +257,8 @@ section {
 
 .sec-arrow-end {
     background:
-        url("../images/arrows/about-arrows-3.svg") no-repeat center left / contain,
-        url("../images/about/section-bg.svg") no-repeat top -40% left !important;
+        url("../images/arrows/left/3.svg") no-repeat center left / contain,
+        url("../images/pages/about/section-bg.svg") no-repeat top -40% left !important;
 
     @media (min-width: 1200px) and (max-width: 1450px) {
         background-size: 28%;
@@ -266,7 +266,7 @@ section {
 
     &.chairman-arrow {
         background:
-            url("../images/arrows/about-arrows-6.svg") no-repeat bottom -10% left / 15%,
-            url("../images/about/section-bg.svg") no-repeat top left !important;
+            url("../images/arrows/right/3.svg") no-repeat bottom -10% left / 15%,
+            url("../images/pages/about/section-bg.svg") no-repeat top left !important;
     }
 }

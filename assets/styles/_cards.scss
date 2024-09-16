@@ -8,9 +8,15 @@
     color: $success;
     transition: all 0.5s ease-in-out;
 
+    &.blue {
+        &:hover {
+            @extend .btn-gradient-blue;
+        }
+    }
+
     &:hover {
         background:
-            url("../images/arrows/about-arrows-4.svg") no-repeat center left 50px / contain,
+            url("../images/arrows/left/5.svg") no-repeat center left 50px / contain,
             linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
         color: $white;
 
@@ -51,13 +57,13 @@
 
         &.span-2 {
             background:
-                url("../images/arrows/about-arrows-4.svg") no-repeat center left 30px / contain,
+                url("../images/arrows/left/5.svg") no-repeat center left 30px / contain,
                 linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
         }
 
         &.arrow-reverse {
             background:
-                url("../images/arrows/arrows-bg.svg") no-repeat center left -20px / 70px,
+                url("../images/arrows/right/1.svg") no-repeat center left -20px / 70px,
                 linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
         }
     }
@@ -118,7 +124,7 @@
 
     position: relative;
     background:
-        url("../images/arrows/about-arrows-5.svg") no-repeat center left / contain,
+        url("../images/arrows/right/2.svg") no-repeat center left / contain,
         rgba($white, 0.9);
 
     width: 195px;
