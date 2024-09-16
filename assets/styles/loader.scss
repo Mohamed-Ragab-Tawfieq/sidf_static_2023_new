@@ -147,6 +147,10 @@
 
     .loader-years {
         transform: scale(0);
+
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            width: 700px;
+        }
     }
 
     .loader-arrows {
