@@ -229,6 +229,7 @@
 
         h4 {
             max-width: 200px;
+            white-space: nowrap;
 
             @media (min-width: 1200px) and (max-width: 1450px) {
                 font-size: 1.25rem;
@@ -353,6 +354,7 @@
             @media (min-width: 1200px) and (max-width: 1450px) {
                 font-size: 0.93rem;
                 font-weight: 400;
+                white-space: nowrap;
             }
 
             @media (min-width: 992px) {
