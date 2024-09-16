@@ -1,43 +1,21 @@
 .home-side {
-    transition: all 0.5s ease-in-out;
-    animation: sideAnimate 1s ease-in 6s forwards;
-
-    @media (min-width: 1200px) {
-        position: absolute;
-        top: 120px;
-        inset-inline-start: 5.5vw;
-    }
-
-    @media (max-width: 1199px) {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1.25rem;
-    }
-
-    @keyframes sideAnimate {
-        from {
-            top: 190px;
-            inset-inline-start: -5.5vw;
-            transform: scale(0.5);
-        }
-
-        to {
-            top: 120px;
-            inset-inline-start: 5.5vw;
-            transform: scale(1);
-        }
-    }
-
     &.bottom {
-        top: 45% !important;
-        inset-inline-end: 20.5vw;
-        transition: all 0.5s ease-in-out;
-
         img {
+            top: 45%;
+            inset-inline-start: -50px;
             transform: scale(0.6);
-            margin-top: -4rem;
-            margin-inline-start: -11%;
-            transition: all 0.2s ease-in-out;
+            transition: all 1s ease-in-out;
+
+            @media (min-width: 1200px) and (max-width: 1450px) {
+                top: 50%;
+                inset-inline-start: 1vw;
+                transform: scale(0.7);
+            }
+        }
+
+        .home-title {
+            top: 46%;
+            transition: top 1s ease-in-out;
         }
 
         .display-1,
@@ -47,7 +25,10 @@
     }
 
     img {
-        transition: all 0.2s ease-in-out;
+        position: fixed;
+        top: 230px;
+        inset-inline-start: 5.5vw;
+        transition: all 1s ease-in-out;
 
         @media (min-width: 1200px) and (max-width: 1450px) {
             width: 400px;
@@ -55,6 +36,13 @@
     }
 
     .home-title {
+        position: fixed;
+        top: 120px;
+        inset-inline-start: 5.5vw;
+
+        transition:
+            top 1s ease-in-out,
+            left 1s ease-in-out;
         color: #6a522f;
 
         @media (max-width: 1199px) {
@@ -62,7 +50,7 @@
         }
 
         .display-3 {
-            transition: all 0.5s ease-in-out;
+            transition: all 1s ease-in-out;
             font-size: 1.5rem;
 
             @media (min-width: 1200px) {
@@ -71,7 +59,7 @@
         }
 
         .display-1 {
-            transition: all 0.5s ease-in-out;
+            transition: all 1s ease-in-out;
             font-size: 1.5rem;
 
             @media (min-width: 1200px) {

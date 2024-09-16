@@ -67,10 +67,12 @@
 @keyframes arrowsAnimate {
     from {
         opacity: 0;
+        transform: translateY(50%) scale(0.7);
     }
 
     to {
         opacity: 1;
+        transform: translateY(50%) scale(1);
     }
 }
 
@@ -106,7 +108,7 @@
         animation:
             logoScale 0.5s ease-in 1s forwards,
             logoMoveTop 1s ease-in 4s forwards,
-            logoMoveRight 0.5s ease-in 4.8s forwards;
+            logoMoveRight 1s ease-in 4.8s forwards;
     }
 
     .bg {
@@ -124,7 +126,7 @@
         top: 4vh;
         left: 50%;
         transform: translateY(-200px) translateX(-50%);
-        animation: topImgAnimate 0.75s ease-in 4.5s forwards;
+        animation: topImgAnimate 1.5s ease-in 4.5s forwards;
     }
 
     .bottom-img {
@@ -136,7 +138,7 @@
         justify-content: space-between;
         gap: 130px;
 
-        animation: bottomImgAnimate 0.75s ease-in 4.5s forwards;
+        animation: bottomImgAnimate 1.5s ease-in 4.5s forwards;
 
         .progress-lines {
             width: 60vw;
@@ -156,6 +158,6 @@
         opacity: 0;
         animation:
             arrowsAnimate 1s ease-in 4.5s forwards,
-            arrowsLight 0.5s ease-in 4.8s infinite;
+            arrowsLight 1.2s ease-in 4.8s infinite;
     }
 }

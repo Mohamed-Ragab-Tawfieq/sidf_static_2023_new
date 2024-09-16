@@ -317,18 +317,13 @@
                 loaderYears.style.transform = 'scale(0)';
 
                 setTimeout(() => {
-                    loaderYears.style.transition = 'transform 0.75s ease-in';
+                    loaderYears.style.transition = 'transform 1.2s ease-in';
                     loaderYears.style.transform = 'scale(1)';
                 }, 4500);
 
                 setTimeout(() => {
-                    loaderYears.style.transition = 'transform 0.75s ease-in';
-                    loaderYears.style.transform = 'scale(0.5) translateX(400px)';
-                }, 6000);
-
-                setTimeout(() => {
                     loader.style.display = 'none'
-                }, 6500);
+                }, 8000);
             });
         </script>
 
