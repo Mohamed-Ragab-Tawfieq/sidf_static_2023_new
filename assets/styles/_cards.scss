@@ -108,3 +108,24 @@
         }
     }
 }
+
+.counter-card {
+    @extend .flex-center;
+    flex-direction: column;
+
+    border: 2px solid $info;
+    border-radius: 0.94rem;
+
+    position: relative;
+    background:
+        url("../images/arrows/about-arrows-5.svg") no-repeat center left / contain,
+        rgba($white, 0.9);
+
+    width: 195px;
+    height: 145px;
+
+    h5 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+}

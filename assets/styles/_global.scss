@@ -256,23 +256,17 @@ section {
 }
 
 .sec-arrow-end {
-    background: url("../images/arrows/about-arrows-3.svg") no-repeat center left / contain;
+    background:
+        url("../images/arrows/about-arrows-3.svg") no-repeat center left / contain,
+        url("../images/about/section-bg.svg") no-repeat top -40% left !important;
 
     @media (min-width: 1200px) and (max-width: 1450px) {
         background-size: 28%;
     }
 
-    &.aos-animate {
-        animation: arrowAnimate 0.5s ease-in-out;
-
-        @keyframes arrowAnimate {
-            from {
-                background-position-x: center;
-            }
-
-            to {
-                background-position-x: left;
-            }
-        }
+    &.chairman-arrow {
+        background:
+            url("../images/arrows/about-arrows-6.svg") no-repeat bottom -10% left / 15%,
+            url("../images/about/section-bg.svg") no-repeat top left !important;
     }
 }
