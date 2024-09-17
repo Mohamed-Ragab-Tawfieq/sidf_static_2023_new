@@ -8,16 +8,6 @@
     }
 }
 
-@keyframes logoWhite {
-    0% {
-        filter: none;
-    }
-
-    100% {
-        filter: brightness(0) invert(1);
-    }
-}
-
 @keyframes logoPart1Animate {
     0% {
         transform: translateX(-20px);
@@ -142,30 +132,28 @@
         filter: none;
         transform: translate(50%, 50%) scale(0);
         animation:
-            logoScale 0.5s ease-in 1s forwards,
-            logoWhite 0.5s ease-in 2.5s forwards,
-            logoScale2 1.5s ease 3.2s forwards;
+            logoScale 0.8s ease-in 1.5s forwards,
+            logoScale2 1.5s ease 4s forwards;
 
         img:first-of-type {
             position: absolute;
             transform: translateX(-20px);
-            animation: logoPart1Animate 0.5s ease-in 2.5s forwards;
+            animation: logoPart1Animate 0.8s ease-in 3s forwards;
         }
 
         img:last-of-type {
             transform: translateX(15px);
-            animation: logoPart2Animate 0.5s ease-in 2.5s forwards;
+            animation: logoPart2Animate 0.8s ease-in 3s forwards;
         }
     }
 
     .bg {
-        position: relative;
-
         height: 0;
         width: 100%;
 
+        position: relative;
         background-color: #ac8e55;
-        animation: bgAnimate 1s ease-in 2.5s forwards;
+        animation: bgAnimate 1s ease-in 1s forwards;
     }
 
     .top-img {
