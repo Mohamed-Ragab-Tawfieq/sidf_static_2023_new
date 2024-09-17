@@ -184,9 +184,13 @@
     }
 }
 
+.chart-wrapper {
+    display: flex;
+}
+
 /************** about **************/
 .first-section {
-    background: url("../images/pages/about/section-bg.svg") no-repeat top -40% left;
+    background: url("../images/pages/logo/1.svg") no-repeat top -40% left;
 
     .sec-arrows {
         width: 330px;
@@ -284,7 +288,7 @@
             border-radius: 1rem;
 
             &::before {
-                content: url("../images/icons/logo.svg");
+                content: url("../images/icons/logo/logo.svg");
                 position: absolute;
                 top: 40px;
                 inset-inline-start: 24px;
@@ -336,8 +340,9 @@
             margin-inline-start: -45px;
         }
     }
+
     .about-graphs {
-        background: url("../images/top-img/1.png") no-repeat center;
+        background: url("../images/top-img/1.png") no-repeat center / cover;
         padding: 2.5rem 4.63rem;
         border-radius: 40px;
 
@@ -497,3 +502,6 @@
         }
     }
 }
+
+/************** statistics **************/
+// loans

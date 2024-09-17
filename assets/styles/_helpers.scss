@@ -8,6 +8,10 @@
     filter: brightness(0) invert(1);
 }
 
+.no-filter {
+    filter: none !important;
+}
+
 .absolute-center {
     position: absolute;
     bottom: 50%;

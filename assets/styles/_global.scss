@@ -255,10 +255,29 @@ section {
     background-color: #f1f6ed !important;
 }
 
+.sec-dark-blue {
+    background-color: #ecf2f7 !important;
+}
+
+.routing-links {
+    margin-bottom: 2rem;
+
+    .btn:last-of-type {
+        background-color: #e8e6e6;
+    }
+}
+
+.lines-end-blue {
+    background-image: url("../images/lines-vertical-blue.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: left;
+}
+
 .sec-arrow-end {
     background:
         url("../images/arrows/left/3.svg") no-repeat center left / contain,
-        url("../images/pages/about/section-bg.svg") no-repeat top -40% left !important;
+        url("../images/pages/logo/1.svg") no-repeat top -40% left !important;
 
     @media (min-width: 1200px) and (max-width: 1450px) {
         background-size: 28%;
@@ -267,6 +286,6 @@ section {
     &.chairman-arrow {
         background:
             url("../images/arrows/right/3.svg") no-repeat bottom -10% left / 15%,
-            url("../images/pages/about/section-bg.svg") no-repeat top left !important;
+            url("../images/pages/logo/1.svg") no-repeat top left !important;
     }
 }

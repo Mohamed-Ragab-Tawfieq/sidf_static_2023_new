@@ -9,8 +9,12 @@
     transition: all 0.5s ease-in-out;
 
     &.blue {
+        border-color: $primary;
+
         &:hover {
-            @extend .btn-gradient-blue;
+            background:
+                url("../images/arrows/left/5.svg") no-repeat center left 50px / contain,
+                linear-gradient(180deg, #3c80b0 -0.99%, #165578 95.36%);
         }
     }
 
@@ -19,6 +23,7 @@
             url("../images/arrows/left/5.svg") no-repeat center left 50px / contain,
             linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
         color: $white;
+        border-color: transparent;
 
         transition: all 0.5s ease-in-out;
         animation: liAnimate 0.5s;
@@ -35,6 +40,10 @@
 
         * {
             color: $white !important;
+        }
+
+        img {
+            @extend .white-img;
         }
 
         .arrow {
