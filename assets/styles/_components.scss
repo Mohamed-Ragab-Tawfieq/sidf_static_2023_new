@@ -229,13 +229,8 @@
 .first-section {
     background: url("../images/logo/1.svg") no-repeat top -15% left;
 
-    .sec-arrows {
-        width: 330px;
-        margin-inline-start: 180px;
-
-        @media (min-width: 1200px) and (max-width: 1450px) {
-            margin-inline-start: 0;
-        }
+    &.primary {
+        background: url("../images/logo/2.svg") no-repeat top -15% left / 30%;
     }
 
     &.aos-animate {
@@ -245,6 +240,15 @@
             @media (min-width: 1200px) and (max-width: 1450px) {
                 transition: all 1s ease-in-out 0s;
             }
+        }
+    }
+
+    .sec-arrows {
+        width: 330px;
+        margin-inline-start: 180px;
+
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            margin-inline-start: 0;
         }
     }
 }
