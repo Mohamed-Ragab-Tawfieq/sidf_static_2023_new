@@ -263,11 +263,19 @@ section {
     }
 }
 
-.percent {
+.counter-percent {
     position: relative;
 
     &::after {
         content: "%";
+    }
+}
+
+.counter-plus {
+    position: relative;
+
+    &::before {
+        content: "+";
     }
 }
 

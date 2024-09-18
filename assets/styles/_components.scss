@@ -546,8 +546,20 @@
 
 /************** statistics **************/
 // loans
+.charts-title {
+    @media (min-width: 1200px) and (max-width: 1450px) {
+        font-size: 3rem;
+    }
+}
+
 .charts-chemicals {
     position: relative;
+
+    // & > img {
+    //     @media (min-width: 1200px) and (max-width: 1450px) {
+    //         width: 700px;
+    //     }
+    // }
 
     ul {
         position: absolute;
