@@ -128,6 +128,11 @@ $(document).ready(function () {
             filesizing: false, // This will enable/disable File Size format [boolean]
             formater: 'us-US', // Number toLocaleString locale/formater, by default is "en-US" [string|boolean:false]
             separator: true, // This will enable/disable comma separator for thousands. Use it for set the symbol too [boolean|char|string]
+            callbacks: {
+                onComplete: function () {
+                    formatPureCounterCurrency();
+                }
+            }
         });
 
     }

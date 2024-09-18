@@ -251,14 +251,6 @@ section {
     }
 }
 
-.sec-dark {
-    background-color: #f1f6ed !important;
-}
-
-.sec-dark-blue {
-    background-color: #ecf2f7 !important;
-}
-
 .routing-links {
     margin-bottom: 2rem;
 
@@ -267,25 +259,51 @@ section {
     }
 }
 
-.lines-end-blue {
-    background-image: url("../images/lines-vertical-blue.svg");
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: left;
+.percent {
+    position: relative;
+
+    &::after {
+        content: "%";
+    }
+}
+
+// backgrounds
+.sec-dark {
+    background-color: #f1f6ed !important;
+}
+
+.sec-dark-primary {
+    background-color: #ecf2f7 !important;
 }
 
 .sec-arrow-end {
-    background:
-        url("../images/arrows/left/3.svg") no-repeat center left / contain,
-        url("../images/pages/logo/1.svg") no-repeat top -40% left !important;
+    background: url("../images/arrows/left/3.svg") no-repeat center left / contain;
 
     @media (min-width: 1200px) and (max-width: 1450px) {
         background-size: 28%;
     }
+}
 
-    &.chairman-arrow {
-        background:
-            url("../images/arrows/right/3.svg") no-repeat bottom -10% left / 15%,
-            url("../images/pages/logo/1.svg") no-repeat top left !important;
+.sec-arrow-end-right {
+    background: url("../images/arrows/right/3.svg") no-repeat bottom -10% left / 15%;
+}
+
+.sec-logo-start {
+    &.logo-1 {
+        background: url("../images/logo/1.svg") no-repeat center right;
+    }
+
+    &.logo-2 {
+        background: url("../images/logo/2.svg") no-repeat center right;
+    }
+}
+
+.sec-logo-end {
+    &.logo-1 {
+        background: url("../images/logo/1.svg") no-repeat center left;
+    }
+
+    &.logo-2 {
+        background: url("../images/logo/2.svg") no-repeat center left;
     }
 }
