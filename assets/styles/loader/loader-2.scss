@@ -38,6 +38,26 @@
     }
 }
 
+@keyframes logoScale2Responsive {
+    0% {
+        transform: translate(50%, 50%) scale(1);
+    }
+
+    100% {
+        transform: translate(150%, 50%) scale(4.5);
+    }
+}
+
+@keyframes logoScale2 {
+    0% {
+        transform: translate(50%, 50%) scale(1);
+    }
+
+    100% {
+        transform: translate(150%, 50%) scale(5);
+    }
+}
+
 @keyframes bgAnimate {
     0% {
         height: 0;
@@ -134,6 +154,12 @@
         animation:
             logoScale 0.8s ease-in 1.5s forwards,
             logoScale2 1.5s ease 4s forwards;
+
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            animation:
+                logoScale 0.8s ease-in 1.5s forwards,
+                logoScale2Responsive 1.5s ease 4s forwards;
+        }
 
         img:first-of-type {
             position: absolute;
