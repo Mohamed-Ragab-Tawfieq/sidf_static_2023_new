@@ -115,6 +115,12 @@
     }
 }
 
+.aos-animate {
+    .progress-lines.vertical {
+        animation: vLinesAnimate 1s ease-in;
+    }
+}
+
 .progress-lines {
     display: flex;
     flex-direction: column;
@@ -127,8 +133,19 @@
 
     &.vertical {
         position: absolute;
+        top: 0;
         flex-direction: row;
         height: 100%;
+
+        @keyframes vLinesAnimate {
+            from {
+                height: 0;
+            }
+
+            to {
+                height: 100%;
+            }
+        }
 
         &.start {
             inset-inline-start: 0;
