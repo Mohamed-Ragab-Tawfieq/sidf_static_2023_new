@@ -33,12 +33,10 @@
 
         <main class="main-content">
             <section class="about-welcome-wrap">
-                <div class="container">
-                    <div class="about-welcome primary" id="about-welcome" data-aos="fade-up" data-aos-duration="500">
-                        <h2 class="display-1 text-white fw-7">02</h2>
-                        <h1 class="display-1 text-white fw-7">أبرز أرقام 2023م</h1>
-                        <img src="../assets/images/arrows/left/1.svg" class="arrows img-fluid" alt="arrows">
-                    </div>
+                <div class="about-welcome primary" id="about-welcome" data-aos="fade-up" data-aos-duration="500">
+                    <h2 class="display-1 text-white fw-7">02</h2>
+                    <h1 class="display-1 text-white fw-7">أبرز أرقام 2023م</h1>
+                    <img src="../assets/images/arrows/left/1.svg" class="arrows img-fluid" width="200" alt="arrows">
                 </div>
             </section>
 
@@ -235,18 +233,42 @@
                     <div class="ms-11 ps-11 flex-between">
                         <div class="flex-y-row gap-4">
                             <img src="../assets/images/arrows/left/7.svg" class="sec-arrows" width="52" alt="arrows">
-                            <h2 class="charts-title display-3 fw-7 text-primary w-xxl-2" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-easing="ease-in-sine"> التوزيع القطاعي لقيمة القروض المعتمدة خلال عام 2023م</h2>
-                            <div class="charts-chemicals flex-end px-8">
-                                <img src="../assets/images/pages/statistics/charts/1.png" width="800" alt="chart">
-                                <ul>
-                                    <li class="text-primary h2 fw-7 purecounter counter-percent" style="top: 28px; inset-inline-end: 30px;" data-purecounter-end="1">1%</li>
-                                    <li class="text-primary h2 fw-7 purecounter counter-percent" style="top: 105px; inset-inline-end: 0;" data-purecounter-end="11">11%</li>
-                                    <li class="text-primary h2 fw-7 purecounter counter-percent" style="top: 184px; inset-inline-end: 24px;" data-purecounter-end="3">3%</li>
-                                    <li class="text-primary h2 fw-7 purecounter counter-percent" style="top: 254px; inset-inline-end: -24px;" data-purecounter-end="10">10%</li>
-                                    <li class="text-primary display-4 fw-6 purecounter" style="top: 147px; inset-inline-end: 451px;" data-purecounter-end="12.9" data-purecounter-decimals="1">12.9</li>
-                                    <li class="text-primary h2 fw-7 purecounter counter-percent" style="top: 309px; inset-inline-end: 508px;" data-purecounter-end="75">75%</li>
-                                </ul>
+                            <h2 class="charts-title display-3 fw-7 text-primary w-lg-3 w-xxl-2" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-easing="ease-in-sine"> التوزيع القطاعي لقيمة القروض المعتمدة خلال عام 2023م</h2>
+
+                            <div class="donut-chart">
+                                <img src="../assets/images/pages/statistics/charts/1.svg" class="donut-img" alt="chart">
+                                <div class="circle">
+                                    <h3 class="text-primary display-4 fw-6 purecounter" data-purecounter-end="12.9" data-purecounter-decimals="1">12.9</h3>
+                                    <h4 class="text-primary-light fw-5">مليار ريال</h4>
+                                </div>
+                                <div class="biggest" style="inset-inline-start: 30%;">
+                                    <h2 class="title fw-7">الصناعات الكيميائية</h2>
+                                    <span class="value fw-7 purecounter counter-percent" data-purecounter-end="62">62%</span>
+                                </div>
                             </div>
+
+                            <ul class="chart-labels-list">
+                                <li class="flex-y-row text-primary h2 fw-7">
+                                    <span class="chart-label-circle" style="background-color: var(--blue-100);"></span>
+                                    <span class="text-nowrap">الصناعات الأخري</span>
+                                    <span class="chart-label purecounter counter-percent" data-purecounter-end="1">1%</span>
+                                </li>
+                                <li class="flex-y-row text-primary h2 fw-7">
+                                    <span class="chart-label-circle" style="background-color: #A5C5DC;"></span>
+                                    <span class="text-nowrap">الصناعات الهندسية</span>
+                                    <span class="chart-label purecounter counter-percent" data-purecounter-end="11">11%</span>
+                                </li>
+                                <li class="flex-y-row text-primary h2 fw-7">
+                                    <span class="chart-label-circle" style="background-color: #7CABCC;"></span>
+                                    <span class="text-nowrap">صناعة مواد البناء</span>
+                                    <span class="chart-label purecounter counter-percent" data-purecounter-end="3">3%</span>
+                                </li>
+                                <li class="flex-y-row text-primary h2 fw-7">
+                                    <span class="chart-label-circle" style="background-color: #6399C1;"></span>
+                                    <span class="text-nowrap">الصناعات الاستهلاكية</span>
+                                    <span class="chart-label purecounter counter-percent" data-purecounter-end="10">10%</span>
+                                </li>
+                            </ul>
                         </div>
 
                         <div class="progress-lines primary vertical end">
@@ -267,21 +289,46 @@
                         <div>
                             <div class="flex-y-row gap-4 sec-logo-end logo-2">
                                 <img src="../assets/images/arrows/left/7.svg" class="sec-arrows" width="52" alt="arrows">
-                                <div class="charts-eastareas">
-                                    <img src="../assets/images/pages/statistics/charts/2.png" width="650" alt="chart">
-                                    <ul>
-                                        <li class="text-primary h2 fw-7 purecounter counter-percent" style="top: -32px; inset-inline-end: 446px;" data-purecounter-end="8">8%</li>
-                                        <li class="text-primary h2 fw-7 purecounter counter-percent" style="top: 87px; inset-inline-end: 460px;" data-purecounter-end="13">13%</li>
-                                        <li class="text-primary h2 fw-7 purecounter counter-percent" style="top: 206px; inset-inline-end: 520px;" data-purecounter-end="8">8%</li>
-                                        <li class="text-primary h2 fw-7 purecounter counter-percent" style="top: 324px; inset-inline-end: 503px;" data-purecounter-end="9">9%</li>
-                                        <li class="text-primary display-4 fw-6 purecounter" style="top: 122px; inset-inline-end: 151px;" data-purecounter-end="12.9" data-purecounter-decimals="1">12.9</li>
-                                        <li class="text-primary h2 fw-7 purecounter counter-percent" style="top: 274px; inset-inline-end: 125px;" data-purecounter-end="62">62%</li>
-                                    </ul>
+
+                                <ul class="chart-labels-list">
+                                    <li class="flex-y-row text-primary h2 fw-7">
+                                        <span class="chart-label-circle" style="background-color: var(--blue-100);"></span>
+                                        <span class="text-nowrap">جازان</span>
+                                        <span class="chart-label purecounter counter-percent" data-purecounter-end="8">8%</span>
+                                    </li>
+                                    <li class="flex-y-row text-primary h2 fw-7">
+                                        <span class="chart-label-circle" style="background-color: #A5C5DC;"></span>
+                                        <span class="text-nowrap">الرياض</span>
+                                        <span class="chart-label purecounter counter-percent" data-purecounter-end="13">13%</span>
+                                    </li>
+                                    <li class="flex-y-row text-primary h2 fw-7">
+                                        <span class="chart-label-circle" style="background-color: #7CABCC;"></span>
+                                        <span class="text-nowrap">المناطق الأخري</span>
+                                        <span class="chart-label purecounter counter-percent" data-purecounter-end="8">8%</span>
+                                    </li>
+                                    <li class="flex-y-row text-primary h2 fw-7">
+                                        <span class="chart-label-circle" style="background-color: #6399C1;"></span>
+                                        <span class="text-nowrap">مكة المكرمة</span>
+                                        <span class="chart-label purecounter counter-percent" data-purecounter-end="9">9%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="donut-chart">
+                                    <img src="../assets/images/pages/statistics/charts/2.svg" class="donut-img" alt="chart">
+                                    <div class="circle">
+                                        <h3 class="text-primary display-4 fw-6 purecounter" data-purecounter-end="12.9" data-purecounter-decimals="1">12.9</h3>
+                                        <h4 class="text-primary-light fw-5">مليار ريال</h4>
+                                    </div>
+                                    <div class="biggest" style="inset-inline-start: 43%;">
+                                        <h2 class="title fw-7">المنطقة الشرقية</h2>
+                                        <span class="value fw-7 purecounter counter-percent" data-purecounter-end="75">75%</span>
+                                    </div>
                                 </div>
-                                <h2 class="charts-title display-3 fw-7 text-primary w-lg-2 mx-auto" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-easing="ease-in-sine"> التوزيع القطاعي لقيمة القروض المعتمدة خلال عام 2023م</h2>
+
+                                <h2 class="charts-title display-3 fw-7 text-primary w-lg-3 mx-auto" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-easing="ease-in-sine"> التوزيع الجغرافي لقيمة القروض المعتمدة خلال عام 2023م</h2>
                             </div>
 
-                            <div class="grid-2 routing-links">
+                            <div class="grid-2 routing-links pt-12 mt-12">
                                 <a href="" class=" btn rounded-4 p-10 text-start btn-primary d-flex flex-column">
                                     <span class="h2 fw-4">
                                         <i class='material-icons' style="font-size: 20px;"> format_indent_decrease </i>

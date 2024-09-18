@@ -115,6 +115,7 @@
     }
 }
 
+// vertical lines
 .aos-animate {
     .progress-lines.vertical {
         animation: vLinesAnimate 1s ease-in;
@@ -252,16 +253,16 @@
 
     &.aos-animate {
         .sec-arrows {
-            transition: all 1s ease-in-out 0.3s;
+            transition: all 0.5s ease-in-out 1s;
 
             @media (min-width: 1200px) and (max-width: 1450px) {
-                transition: all 1s ease-in-out 0s;
+                transition: all 0.3 ease-in;
             }
         }
     }
 
     .sec-arrows {
-        width: 330px;
+        width: 250px;
         margin-inline-start: 180px;
 
         @media (min-width: 1200px) and (max-width: 1450px) {
@@ -273,14 +274,17 @@
 .about-welcome {
     position: relative;
     overflow: hidden;
-    height: 614px;
+    height: 470px;
     padding: 70px 56px;
-    border-radius: 40px;
     background: url("../images/top-img/1.png") no-repeat center/cover;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+
+    @media (min-width: 1200px) and (max-width: 1450px) {
+        height: 390px;
+    }
 
     &.primary {
         background: url("../images/top-img/2.png") no-repeat center/cover;
@@ -569,36 +573,105 @@
     }
 }
 
-.charts-chemicals {
-    position: relative;
+/************** charts **************/
+.aos-animate .donut-chart {
+    animation: donutRotate 0.5s ease-in forwards;
 
-    // & > img {
-    //     @media (min-width: 1200px) and (max-width: 1450px) {
-    //         width: 700px;
-    //     }
-    // }
+    .circle {
+        transform: translate(50%, 50%) scale(1);
+        transition: all 1.2s ease;
+    }
 
-    ul {
-        position: absolute;
-        inset-inline-end: 67px;
-        top: 90px;
+    @keyframes donutRotate {
+        from {
+            transform: rotate(0);
+        }
 
-        li {
-            position: absolute;
+        to {
+            transform: rotate(360deg);
         }
     }
 }
 
-.charts-eastareas {
+.donut-chart {
     position: relative;
+    padding-inline: 3rem;
+    margin-inline: 3rem;
 
-    ul {
-        position: absolute;
-        inset-inline-end: 67px;
-        top: 90px;
+    @media (min-width: 1200px) and (max-width: 1450px) {
+        padding-inline: 1rem;
+        margin-inline: 1rem;
+    }
 
-        li {
-            position: absolute;
+    .circle {
+        @extend .absolute-center;
+        @extend .flex-center;
+        flex-direction: column;
+
+        width: 104px;
+        height: 104px;
+
+        background-color: $blue-100;
+        border-radius: 50%;
+        transform: translate(50%, 50%) scale(0);
+
+        * {
+            line-height: 0.7;
         }
     }
+
+    .donut-img {
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            width: 350px;
+        }
+    }
+
+    .biggest {
+        position: absolute;
+        bottom: 2rem;
+        text-align: center;
+
+        .title {
+            color: $blue-100;
+            font-size: 2rem;
+        }
+
+        .value {
+            background-color: $blue-100;
+            color: rgba($primary, 0.8);
+
+            font-size: 2rem;
+            border-radius: 0.5rem;
+            padding: 0.2rem 0.7rem;
+        }
+    }
+}
+
+.chart-label-circle {
+    @extend .flex-center;
+
+    width: 1rem;
+    height: 1rem;
+
+    border-radius: 50%;
+    margin-inline-end: 0.38rem;
+}
+
+.chart-label {
+    background:
+        url("../images/arrows/left/7.svg") no-repeat center right 0.25rem / contain,
+        $blue-100;
+    color: rgba($primary, 0.8);
+
+    margin-inline-start: 2px;
+    border-radius: 0.5rem;
+
+    padding-block: 0.25rem;
+    padding-inline: 2rem 0.5rem;
+}
+
+.chart-labels-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }

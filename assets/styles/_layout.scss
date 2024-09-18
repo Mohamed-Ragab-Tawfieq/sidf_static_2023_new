@@ -94,7 +94,6 @@
 
 .inner-header {
     @extend .mobile-header;
-    margin-bottom: 32px;
     box-shadow: 0 2px 7px 0 rgba($black, 0.1);
 
     @media (min-width: 1200px) and (max-width: 1450px) {
@@ -122,29 +121,6 @@
 
             &:hover {
                 transform: scale(1.15);
-            }
-        }
-
-        .btn-outline-success {
-            &:hover {
-                img {
-                    @extend .white-img;
-                }
-            }
-        }
-
-        .site-name {
-            font-weight: 600;
-            opacity: 0.9;
-            transform-origin: center top;
-            transition: all ease-in-out 0.3s;
-
-            &:hover {
-                transform: scale(1.25);
-            }
-
-            a {
-                color: $green;
             }
         }
     }
