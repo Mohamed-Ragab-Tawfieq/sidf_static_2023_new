@@ -1,3 +1,111 @@
+@keyframes logoMove {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes sidfAnimate {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes textAnimate {
+    from {
+        width: 0;
+    }
+    to {
+        width: 170px;
+    }
+}
+
+@keyframes logoWrapperAnimate {
+    from {
+        transform: translateX(-20px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes lineAnimate {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes yearsAnimate {
+    from {
+        transform: translateX(50px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes yearsAnimateOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes logoDraw {
+    to {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes logoFill {
+    0% {
+        fill: transparent;
+    }
+    100% {
+        fill: #fff;
+    }
+}
+
+@keyframes greenAnimate {
+    0% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}
+
+@keyframes absoluteAnimate {
+    0% {
+        bottom: 50%;
+        transform: translateX(50%) translateY(50%);
+    }
+    100% {
+        bottom: 90%;
+        transform: translateX(50%) translateY(90%);
+    }
+}
+
+@keyframes absoluteAnimate2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes logoScale {
     0% {
         transform: translate(50%, 50%) scale(0);
@@ -70,12 +178,12 @@
 
 @keyframes topImgAnimate {
     from {
-        transform: translateY(-200px) translateX(-50%);
+        // transform: translateY(-200px) translateX(-50%);
         opacity: 0;
     }
 
     to {
-        transform: translateY(0) translateX(-50%);
+        // transform: translateY(0) translateX(-50%);
         opacity: 1;
     }
 }
@@ -152,24 +260,119 @@
         filter: none;
         transform: translate(50%, 50%) scale(0);
         animation:
-            logoScale 0.8s ease-in 1.5s forwards,
-            logoScale2 1.5s ease 4s forwards;
+            logoScale 0.8s ease-in 6s forwards,
+            logoScale2 1.5s ease 8s forwards;
 
         @media (min-width: 1200px) and (max-width: 1450px) {
             animation:
-                logoScale 0.8s ease-in 1.5s forwards,
-                logoScale2Responsive 1.5s ease 4s forwards;
+                logoScale 0.8s ease-in 6s forwards,
+                logoScale2Responsive 1.5s ease 8s forwards;
         }
 
         img:first-of-type {
             position: absolute;
             transform: translateX(-20px);
-            animation: logoPart1Animate 0.8s ease-in 3s forwards;
+            animation: logoPart1Animate 0.8s ease-in 7s forwards;
         }
 
         img:last-of-type {
             transform: translateX(15px);
-            animation: logoPart2Animate 0.8s ease-in 3s forwards;
+            animation: logoPart2Animate 0.8s ease-in 7s forwards;
+        }
+    }
+
+    .green-bg {
+        direction: rtl;
+
+        * {
+            z-index: 50;
+        }
+
+        .bg {
+            position: fixed;
+            inset: 0;
+            z-index: 10;
+
+            height: 100%;
+            width: 100%;
+
+            transform: scale(1);
+            transform-origin: top;
+
+            background-color: #278829;
+
+            animation: greenAnimate 2s ease 4s forwards;
+        }
+
+        .logo {
+            transform: translateX(-50px);
+            animation: logoMove 1s ease-in 1s forwards;
+
+            svg {
+                stroke-dasharray: 400;
+                stroke-dashoffset: 400;
+                animation: logoDraw 4s ease forwards;
+
+                path {
+                    animation: logoFill 0.5s ease 1s forwards;
+                }
+            }
+        }
+
+        .sidf {
+            opacity: 1;
+            animation: sidfAnimate 0.5s ease-in 2s forwards;
+
+            svg {
+                stroke-dasharray: 400;
+                stroke-dashoffset: 400;
+                animation: logoDraw 4s ease 2s forwards;
+
+                path {
+                    animation: logoFill 0.5s ease 2.5s forwards;
+                }
+            }
+        }
+
+        .absolute-center {
+            bottom: 50%;
+            transform: translate(50%, 50%);
+            animation:
+                absoluteAnimate 1s ease 4s forwards,
+                absoluteAnimate2 0.2s ease 5s forwards;
+        }
+
+        .text {
+            position: relative;
+            direction: ltr;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 0.25rem;
+            color: #fff;
+            animation: textAnimate 1s linear 1.6s 1 normal both;
+        }
+
+        .line {
+            width: 1px;
+            height: 50px;
+
+            margin-inline-end: 1rem;
+            background-color: #fff;
+
+            transform: scaleY(0);
+            transform-origin: bottom;
+
+            animation: lineAnimate 1.8s ease 3.2s forwards;
+        }
+
+        .years {
+            opacity: 0;
+            transform: translateX(50px);
+            animation:
+                yearsAnimate 0.7s ease-in 3s forwards,
+                yearsAnimateOpacity 0.2s ease-in 2.7s forwards;
         }
     }
 
@@ -179,14 +382,15 @@
 
         position: relative;
         background-color: #ac8e55;
-        animation: bgAnimate 1s ease-in 1s forwards;
+        animation: bgAnimate 1s ease-in 5s forwards;
     }
 
     .top-img {
         position: absolute;
-        top: 4vh;
-        left: 50%;
-        transform: translateY(-200px) translateX(-50%);
+        top: 4.5vh;
+        right: 50%;
+        transform: translateX(50%);
+        // transform: translateY(-200px) translateX(-50%);
         animation: topImgAnimate 1.5s ease-in 4.5s forwards;
     }
 
@@ -207,6 +411,7 @@
     }
 
     .loader-years {
+        z-index: 5;
         transform: scale(0);
 
         @media (min-width: 1200px) and (max-width: 1450px) {
@@ -222,7 +427,7 @@
 
         opacity: 0;
         animation:
-            arrowsAnimate 1s ease-in 4.5s forwards,
-            arrowsLight 1.2s ease-in 4.8s infinite;
+            arrowsAnimate 1s ease-in 8s forwards,
+            arrowsLight 1.2s ease-in 8.8s infinite;
     }
 }
