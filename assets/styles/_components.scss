@@ -115,11 +115,9 @@
     }
 }
 
-// vertical lines
-.aos-animate {
-    .progress-lines.vertical {
-        animation: vLinesAnimate 1s ease-in;
-    }
+// lines
+.aos-animate .progress-lines.vertical {
+    animation: vLinesAnimate 2s ease-in;
 }
 
 .progress-lines {
@@ -180,19 +178,19 @@
 
     &.success {
         div:nth-of-type(1) {
-            background-color: #f1f6ed;
+            background-color: #e2ecda;
         }
 
         div:nth-of-type(2) {
-            background-color: #d3e3c6;
+            background-color: #d7e6cb;
         }
 
         div:nth-of-type(3) {
-            background-color: #bed6aa;
+            background-color: #c9dcb9;
         }
 
         div:nth-of-type(4) {
-            background-color: #a1c384;
+            background-color: #bfd7ad;
         }
 
         div:nth-of-type(5) {
@@ -268,12 +266,11 @@
     }
 }
 
-.about-welcome {
+.inner-top-img {
     position: relative;
     overflow: hidden;
     height: 470px;
     padding: 70px 56px;
-    background: url("../images/top-img/1.png") no-repeat center/cover;
 
     display: flex;
     flex-direction: column;
@@ -283,8 +280,9 @@
         height: 390px;
     }
 
-    &.primary {
-        background: url("../images/top-img/2.png") no-repeat center/cover;
+    .top-img {
+        width: 100%;
+        height: 100%;
     }
 
     .arrows {
@@ -316,7 +314,9 @@
 
     .item {
         position: relative;
-        background: url("../images/arrows/left/3.svg") no-repeat center left 0.63rem;
+        background:
+            url("../images/arrows/left/3.svg") no-repeat center left 0.63rem,
+            $white;
 
         width: 190px;
         height: 150px;
@@ -325,15 +325,13 @@
         border-radius: 1rem;
 
         h4 {
-            max-width: 150px;
+            max-width: 180px;
             text-align: center;
         }
     }
 }
 
 .about-slider-wrap {
-    background: url("../images/pages/about/progress-lines.svg") no-repeat center left 3rem / contain;
-
     &.aos-animate {
         .owl-nav {
             width: 100% !important;

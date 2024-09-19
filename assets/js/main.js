@@ -29,7 +29,7 @@ window.addEventListener('scroll', function () {
     const header = document.getElementById('inner-header');
     const progress = document.getElementById('about-navbar');
     const aboutBrief = document.getElementById('first-section');
-    const welcomeArrows = document.querySelector('.about-welcome .arrows');
+    const welcomeArrows = document.querySelector('.inner-top-img .arrows');
     const stickyHeader = header.offsetTop;
 
     if (window.scrollY > stickyHeader) {
@@ -60,7 +60,7 @@ window.addEventListener('scroll', function () {
 /*** about arrows ***/
 $(document).ready(function () {
     const aboutBrief = document.getElementById('first-section');
-    const welcomeArrows = document.querySelector('.about-welcome .arrows');
+    const welcomeArrows = document.querySelector('.inner-top-img .arrows');
 
     if (aboutBrief) {
         if (aboutBrief.classList.contains('aos-animate')) {
