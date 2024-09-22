@@ -99,18 +99,6 @@ $(document).ready(function () {
     }
 });
 
-/*** about bars ***/
-$(document).ready(function () {
-    $('.about-bars .item').each(function () {
-        var numberText = $(this).find('.number').text().trim();
-        var numberValue = parseFloat(numberText);
-
-        if (!isNaN(numberValue)) {
-            $(this).find('.btn-gradient').css('height', (numberValue * 3) + 'px');
-        }
-    });
-});
-
 /*** counters ***/
 $(document).ready(function () {
     if ($('[data-purecounter-end]').length) {

@@ -115,6 +115,37 @@
     }
 }
 
+.dots-dropdown {
+    [data-bs-toggle] {
+        background-color: #ecf2f7;
+        color: rgba($primary, 0.8);
+
+        padding: 1rem;
+        font-size: 1.5rem;
+        border: 1px solid #c3d8e7;
+
+        &.show {
+            i {
+                transform: rotate(270deg);
+                transition: all 0.5s ease;
+            }
+        }
+
+        i {
+            transition: all 0.5s ease;
+        }
+    }
+
+    .dropdown-menu {
+        border: none;
+        box-shadow: 0 12px 25px 0 rgba($black, 0.13);
+
+        .dropdown-item {
+            padding-block: 0.8rem;
+        }
+    }
+}
+
 // lines
 .aos-animate .progress-lines.vertical {
     animation: vLinesAnimate 2s ease-in;
@@ -390,7 +421,7 @@
     }
 }
 
-.about-graphs-wrap {
+.bars-graph-wrap {
     &.aos-animate {
         .sec-arrows {
             @extend .white-img;
@@ -398,68 +429,108 @@
         }
     }
 
-    .about-graphs {
+    .bars-graph {
         background: url("../images/top-img/1.png") no-repeat center / cover;
         padding: 2.5rem 4.63rem;
         border-radius: 40px;
+    }
+}
 
-        .about-bars {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            align-items: self-end;
-            gap: 20px;
+.graph-date {
+    background-color: #ecf2f7;
+    color: $primary;
 
-            &.aos-animate {
-                .btn-gradient {
-                    animation: barsAnimate 3s;
+    padding: 0.38rem;
+    border-radius: 0.38rem;
+}
+// vertical
+.graph-bars.vertical {
+    &.aos-animate {
+        .btn-gradient {
+            animation: barsAnimate 3s;
 
-                    @keyframes barsAnimate {
-                        from {
-                            transform: scaleY(0);
-                        }
+            @keyframes barsAnimate {
+                from {
+                    transform: scaleY(0);
+                }
 
-                        to {
-                            transform: scaleY(1);
-                        }
-                    }
+                to {
+                    transform: scaleY(1);
                 }
             }
+        }
+    }
 
-            .item {
-                text-align: center;
-                background:
-                    url("../images/pages/about/bar.svg") no-repeat center/cover,
-                    url("../images/arrows/top/1.svg") no-repeat top 30px center;
-            }
+    .item {
+        text-align: center;
+        background:
+            url("../images/pages/about/bar.svg") no-repeat center/cover,
+            url("../images/arrows/top/1.svg") no-repeat top 30px center;
+    }
 
-            .number {
-                line-height: 0.5;
-                padding-top: 100px;
-            }
+    .number {
+        line-height: 0.5;
+        padding-top: 100px;
+    }
 
-            h2 {
-                text-align: center;
-            }
+    .btn-gradient {
+        position: relative;
+        margin: auto;
+        transform-origin: bottom;
 
-            .date {
-                width: 66px;
-                height: 48px;
+        height: 100px;
+        width: 80%;
 
-                border-radius: 8px;
-                margin: auto;
-            }
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+}
 
-            .btn-gradient {
-                height: 100px;
-                width: 80%;
-                margin: auto;
+// horizontal
+.graph-bars.horizontal {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 20px;
 
-                border-top-right-radius: 8px;
-                border-top-left-radius: 8px;
+    &.aos-animate {
+        .btn-gradient {
+            animation: barsHorizontalAnimate 3s;
 
-                transform-origin: bottom;
+            @keyframes barsHorizontalAnimate {
+                from {
+                    transform: scaleX(0);
+                }
+
+                to {
+                    transform: scaleX(1);
+                }
             }
         }
+    }
+
+    .item {
+        @extend .flex-center;
+        gap: 0.63rem;
+
+        width: 100%;
+        background:
+            url("../images/pages/about/bar-2.svg") no-repeat center/cover,
+            url("../images/arrows/left/7.svg") no-repeat left 70px center / contain;
+    }
+
+    .btn-gradient {
+        height: 4rem;
+        width: 100%;
+
+        border-start-end-radius: 8px;
+        border-end-end-radius: 8px;
+
+        transform-origin: right;
+    }
+
+    .number {
+        padding-inline: 20px 120px;
     }
 }
 
