@@ -222,10 +222,22 @@ table {
     th,
     td {
         vertical-align: middle;
+        border-color: #639ac2;
 
         @media (max-width: 991px) {
             white-space: nowrap;
         }
+    }
+
+    th {
+        font-size: 1.75rem;
+        color: $white;
+        border-radius: 0 !important;
+    }
+
+    td {
+        font-size: 2rem;
+        font-weight: 700;
     }
 }
 
