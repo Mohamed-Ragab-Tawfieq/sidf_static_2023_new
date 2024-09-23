@@ -146,6 +146,34 @@
     }
 }
 
+details {
+    &[open] {
+        summary {
+            color: $white;
+            background:
+                url("../images/arrows/bottom/1.svg") no-repeat left 2rem center,
+                url("../images/details.png") no-repeat center / cover;
+        }
+    }
+
+    &:not([open]) {
+        summary {
+            background: url("../images/arrows/bottom/2.svg") no-repeat left 2rem center;
+            color: #8a8b8d;
+            border-bottom: 1px solid #ebebeb;
+            transition: all 0.5s cubic-bezier(0, 0, 1, 1);
+        }
+    }
+
+    summary {
+        width: 100%;
+
+        &::marker {
+            content: none;
+        }
+    }
+}
+
 // lines
 .aos-animate .progress-lines.vertical {
     animation: vLinesAnimate 2s ease-in;
@@ -274,10 +302,10 @@
 
 /************** about **************/
 .first-section {
-    background: url("../images/logo/1.svg") no-repeat top -15% left;
+    background: url("../images/logo/1.svg") no-repeat top -10% left;
 
     &.primary {
-        background: url("../images/logo/2.svg") no-repeat top -15% left / 30%;
+        background: url("../images/logo/2.svg") no-repeat top -10% left / 30%;
     }
 
     &.aos-animate {
@@ -464,7 +492,7 @@
     .item {
         text-align: center;
         background:
-            url("../images/pages/about/bar.svg") no-repeat center/cover,
+            url("../images/bars/bar.svg") no-repeat center/cover,
             url("../images/arrows/top/1.svg") no-repeat top 30px center;
     }
 
@@ -515,7 +543,7 @@
 
         width: 100%;
         background:
-            url("../images/pages/about/bar-2.svg") no-repeat center/cover,
+            url("../images/bars/bar-2.svg") no-repeat center/cover,
             url("../images/arrows/left/7.svg") no-repeat left 70px center / contain;
     }
 
@@ -636,7 +664,7 @@
 }
 
 /************** charts **************/
-.aos-animate .donut-chart {
+.aos-animate.donut-chart {
     animation: donutRotate 0.5s ease-in forwards;
 
     .circle {
