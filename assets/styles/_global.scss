@@ -222,22 +222,28 @@ table {
     th,
     td {
         vertical-align: middle;
-        border-color: #639ac2;
+        border-color: #ccc;
 
         @media (max-width: 991px) {
             white-space: nowrap;
         }
     }
 
+    &.primary {
+        border-color: #639ac2;
+    }
+
     th {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         color: $white;
         border-radius: 0 !important;
+        padding-block: 1.6rem !important;
     }
 
     td {
-        font-size: 2rem;
-        font-weight: 700;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #6d6e71 !important;
     }
 }
 
