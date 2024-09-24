@@ -144,3 +144,71 @@
         text-align: center;
     }
 }
+
+.award-card {
+    position: relative;
+    border: 1px solid #9d9ea0;
+    border-radius: 1rem;
+    transition: all 0.5s ease-in-out;
+
+    &::after {
+        content: url("../images/arrows/left/8.svg");
+        position: absolute;
+        top: 0;
+        inset-inline-start: 0;
+    }
+
+    &:hover {
+        &::after {
+            @extend .white-img;
+        }
+
+        * {
+            transition: all 0.5s ease-in-out;
+        }
+
+        .body {
+            &::after {
+                transform: scaleY(1);
+                transform-origin: bottom;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            img {
+                @extend .white-img;
+            }
+
+            * {
+                color: $white;
+                opacity: 1 !important;
+            }
+        }
+    }
+
+    header {
+        padding-bottom: 4px;
+        padding-inline-end: 2rem;
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+    }
+
+    .body {
+        position: relative;
+
+        &::after {
+            @extend .btn-gradient;
+            transform: scaleY(0);
+
+            content: "";
+            position: absolute;
+            top: 0;
+            z-index: -1;
+
+            width: 100%;
+            height: 100%;
+
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+    }
+}
