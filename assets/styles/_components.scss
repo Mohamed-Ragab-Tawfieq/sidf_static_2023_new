@@ -126,7 +126,7 @@
 
         &.show {
             i {
-                transform: rotate(270deg);
+                transform: rotate(360deg);
                 transition: all 0.5s ease;
             }
         }
@@ -153,6 +153,12 @@ details {
             background:
                 url("../images/arrows/bottom/1.svg") no-repeat left 2rem center,
                 url("../images/details.png") no-repeat center / cover;
+
+            &.primary {
+                background:
+                    url("../images/arrows/bottom/1.svg") no-repeat left 2rem center,
+                    linear-gradient(180deg, #3c80b0 -0.99%, #165578 95.36%);
+            }
         }
     }
 
@@ -390,62 +396,73 @@ details {
     }
 }
 
-.about-slider-wrap {
+.sidf-slider-wrap {
     &.aos-animate {
         .owl-nav {
             width: 100% !important;
             transition: all 2s ease-in-out;
         }
     }
+}
 
-    .about-slider {
-        .content {
-            position: relative;
+.sidf-slider {
+    .content {
+        position: relative;
+        height: 280px;
+        border-radius: 1rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba($black, 0.25);
+            backdrop-filter: blur(1px);
             border-radius: 1rem;
+        }
 
-            &::before {
-                content: url("../images/icons/logo/logo.svg");
-                position: absolute;
-                top: 40px;
-                inset-inline-start: 24px;
-                z-index: 5;
-
-                filter: brightness(0) invert(1);
-                transform: scale(1.5);
-            }
-
+        &.primary {
             &::after {
-                content: "";
-                position: absolute;
-                inset: 0;
-                z-index: 0;
-
-                width: 100%;
-                height: 100%;
-
-                background-color: rgba($black, 0.25);
-                backdrop-filter: blur(1px);
-                border-radius: 1rem;
-            }
-
-            a {
-                position: absolute;
-                bottom: 2rem;
-                inset-inline: 24px;
-                z-index: 5;
-            }
-
-            img {
-                height: 275px;
-                border-radius: 1rem;
+                background: linear-gradient(180deg, rgba(#3c80b0, 0.4) -0.99%, rgba(#165578, 0.4) 95.36%), transparent;
+                backdrop-filter: none;
             }
         }
 
-        .owl-nav {
-            width: 50%;
-            margin: auto;
-            transition: all 2s ease-in-out;
+        .icon {
+            position: absolute;
+            top: 40px;
+            inset-inline-start: 24px;
+            z-index: 5;
+
+            width: 44px;
         }
+
+        a {
+            position: absolute;
+            bottom: 2rem;
+            inset-inline: 24px;
+            z-index: 5;
+
+            @media (min-width: 1200px) and (max-width: 1450px) {
+                inset-inline: 1rem;
+            }
+        }
+
+        .slider-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
+        }
+    }
+
+    .owl-nav {
+        width: 50%;
+        margin: auto;
+        transition: all 2s ease-in-out;
     }
 }
 
@@ -724,6 +741,10 @@ details {
         .title {
             color: $blue-100;
             font-size: 2rem;
+
+            &.light {
+                color: #ecf2f7;
+            }
         }
 
         .value {
@@ -733,6 +754,10 @@ details {
             font-size: 2rem;
             border-radius: 0.5rem;
             padding: 0.2rem 0.7rem;
+
+            &.light {
+                background-color: #e7edf2;
+            }
         }
     }
 }
@@ -764,4 +789,23 @@ details {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+/************** lending-activity **************/
+.geo-map {
+    path[fill="#7CABCC"] {
+        &:hover {
+            animation: mapAnimate 0.3s ease-in-out forwards;
+        }
+
+        @keyframes mapAnimate {
+            from {
+                fill: #7cabcc;
+            }
+
+            to {
+                fill: url("#hoverGradient");
+            }
+        }
+    }
 }
