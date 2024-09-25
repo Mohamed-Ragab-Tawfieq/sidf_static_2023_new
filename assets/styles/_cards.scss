@@ -42,7 +42,7 @@
             color: $white !important;
         }
 
-        img {
+        img:not(.no-filter) {
             filter: brightness(0) invert(1) !important;
         }
 
