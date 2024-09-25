@@ -12,7 +12,7 @@ window.addEventListener('scroll', function () {
 /*** about nav active ***/
 function handleAboutNav() {
     document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(".about-navbar .nav-link");
+        const navLinks = document.querySelectorAll(".sidf-navbar .nav-link");
 
         navLinks.forEach(link => {
             if (link.href === window.location.href) {
@@ -27,7 +27,7 @@ handleAboutNav()
 /*** header fixed ***/
 window.addEventListener('scroll', function () {
     const header = document.getElementById('inner-header');
-    const progress = document.getElementById('about-navbar');
+    const progress = document.getElementById('sidf-navbar');
     const aboutBrief = document.getElementById('first-section');
     const welcomeArrows = document.querySelector('.inner-top-img .arrows');
     const stickyHeader = header.offsetTop;

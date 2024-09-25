@@ -1,5 +1,5 @@
 /************** general **************/
-.about-navbar {
+.sidf-navbar {
     position: relative;
     padding-block: 14px 24px;
     overflow: hidden;
@@ -366,7 +366,8 @@ details {
         }
     }
 
-    .display-1 {
+    .display-1,
+    .text {
         position: relative;
         z-index: 10;
     }
