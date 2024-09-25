@@ -230,7 +230,10 @@ table {
     }
 
     &.primary {
-        border-color: #639ac2;
+        th,
+        td {
+            border-color: #639ac2;
+        }
     }
 
     th {
@@ -244,6 +247,7 @@ table {
         font-size: 1.5rem;
         font-weight: 500;
         color: #6d6e71 !important;
+        padding-block: 1.6rem !important;
     }
 }
 

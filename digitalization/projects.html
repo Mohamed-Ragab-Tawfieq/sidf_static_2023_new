@@ -5,660 +5,278 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Saudi Industrial Development Fund">
-        <link rel="icon" href="/favicon.ico">
-        <link rel="apple-touch-icon" href="/assets/images/icons/logo-no-text.png">
+        <link rel="icon" href="../assets/favicon.png">
+        <link rel="apple-touch-icon" href="../assets/favicon.png">
         <title>SIDF</title>
-        <link rel="stylesheet" href="/assets/scss/bootstrap.min.css">
-        <link rel="stylesheet" href="/assets/fonts/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="/assets/vendors/swiper-bundle.min.css">
-        <link rel="stylesheet" href="/assets/vendors/animate.min.css">
-        <link rel="stylesheet" href="/assets/vendors/aos.css">
-        <link rel="stylesheet" href="/assets/vendors/hover-min.css">
-        <link rel="stylesheet" href="/assets/scss/main.min.css">
+        <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/vendors/aos.css">
+        <link rel="stylesheet" href="../assets/vendors/owl.carousel.min.css">
+        <link rel="stylesheet" href="../assets/vendors/owl.theme.default.min.css">
+        <link rel="stylesheet" href="../assets/styles/main.min.css">
     </head>
 
     <body id="body">
-        <header class="mobile-header collapsed" id="mobile-header">
+        <header class="inner-header collapsed" id="inner-header">
             <div class="container">
-                <nav>
-                    <button class="btn text-success toggle-header" onclick="toggleHeader()"><i class="bi bi-list"></i></button>
-                    <a href="/"><img src="/assets/images/arabic_logo.svg" class="logo" alt="logo"></a>
-                    <div class="lang">
-                        <button class="btn px-0" type="button">
-                            <i class="bi bi-globe text-success"></i>
-                            <span class="op-7" id="langBtn">English</span>
-                        </button>
+                <nav class="flex-between flex-row">
+                    <div class="flex-y-row gap-2">
+                        <button class="btn flex-center fs-3" onclick="toggleHeader()"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+                        <a href="../index.html"><img src="../assets/images/logo.svg" width="77" alt="logo"></a>
                     </div>
-                </nav>
 
-                <div class="details">
-                    <button class="btn btn-close mb-4 ms-n4" onclick="toggleHeader()"><i class="bi bi-x-lg flex-center"></i></button>
-                    <nav class="d-flex flex-column align-items-start">
-                        <a href="/" class="h4 text-black op-6">الرئيسية</a>
-                        <a href="/about/in-lines.html" class="h4 text-black op-6">عن الصندوق</a>
-                        <a href="/statistics/loans.html" class="h4 text-black op-6">أبرز أرقام 2022</a>
-                        <a href="/eco-indicators/eco-status.html" class="h4 text-black op-6">مؤشرات اقتصاديه </a>
-                        <a href="/lending-activity/main.html" class="h4 text-black op-6">النشاط الإقراضي </a>
-                        <a href="/strategy/main.html" class="h4 text-black op-6">استراتيجية الصندوق</a>
-                        <a href="/digitalization/development.html" class="h4 text-black op-6">التحول الرقمي</a>
-                        <a href="/human/main.html" class="h4 text-black op-6">تنمية القدرات البشرية</a>
-                        <a href="/vaccines/types.html" class="h4 text-black op-6">دراسة صناعيه</a>
-                        <a href="/additive-manufacturing/main.html" class="h4 text-black op-6"> تحت الاضواء</a>
-                        <a href="/lending-stats/main.html" class="h4 text-black op-6">إحصائيات</a>
-                    </nav>
-                </div>
-            </div>
-        </header>
+                    <h2 class="site-name"><a href="../index.html">التقــرير السنوي 2023</a></h2>
 
-        <header class="main-header" id="main-header">
-            <div class="container">
-                <nav>
-                    <div class="logo-area">
-                        <a href="/"><img src="/assets/images/arabic_logo.svg" class="logo" alt="logo"></a>
-                    </div>
-                    <h3 class="site-name"><a href="/"><span class="text-primary">التقرير السنوي</span> 2022</a></h3>
-                    <div class="flex-center">
-                        <div class="lang">
-                            <button class="btn" type="button">
-                                <i class="bi bi-globe text-success"></i>
-                                <span class="op-7" id="langBtn">English</span>
-                            </button>
-                        </div>
-                        <button class="btn text-success" data-bs-toggle="modal" data-bs-target="#mainModal"><i class="bi bi-list"></i></button>
+                    <div class="flex-between">
+                        <button class="btn px-1 text-success"><img src="../assets/images/icons/search.svg" alt="search"></button>
+                        <button class="btn px-1 fw-5" type="button"> EN </button>
                     </div>
                 </nav>
             </div>
         </header>
 
         <main class="main-content">
-            <div class="container">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb animate__animated animate__bounceInRight">
-                        <li class="breadcrumb-item"><a href="/">الرئيسية</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">التحول الرقمي وتقنية المعلومات </li>
-                    </ol>
-                </nav>
-
-                <div class="flex-between flex-row mb-12">
-                    <h2 class="fw-6 animate__animated animate__fadeInRight">تطوير الأعمال الرقمية </h2>
-                    <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="تحميل التقرير">
-                        <a class="download-report-btn btn btn-success hvr-icon-down" href="" download="">
-                            <i class="bi bi-download hvr-icon"></i>
+            <section>
+                <div class="inner-top-img" id="inner-top-img" data-aos="fade-up" data-aos-duration="500">
+                    <img src="../assets/images/top-img/6.png" class="top-img absolute-center" alt=" welcome image">
+                    <h2 class="display-1 text-white fw-7">06</h2>
+                    <div>
+                        <h2 class="display-1 text-white fw-7">التحول الرقمي و تقنية المعلومات</h2>
+                        <a href="" class="btn bg-white text-primary flex-center position-relative w-fit gap-4 rounded-1 px-4 fs-4" download>
+                            تحميل ملف التحول الرقمي و تقنية المعلومات
+                            <i class='material-icons'>download</i>
                         </a>
-                    </span>
-                </div>
-
-                <div class="row g-0">
-                    <div class="col-lg-3 d-none d-lg-inline-block">
-                        <!-- lg only -->
-                        <aside class="inner-side-menu blue" id="inner-side-menu">
-                            <div>
-                                <h2 class="display-1 fw-3">06</h2>
-                                <h1 class="display-6">التحول الرقمي وتقنية المعلومات</h1>
-
-                                <nav>
-                                    <a href="/digitalization/development.html">تطوير الأعمال الرقمية</a>
-                                    <a href="/digitalization/joureny.html">رحلة الصندوق الصناعي في التحول الرقمي</a>
-                                    <a href="/digitalization/technical-house.html">برنامج ترتيب البيت التقني</a>
-                                    <a href="/digitalization/projects.html" class="active">المشروعات الرئيسية المنجزة</a>
-                                    <a href="/digitalization/awards.html">جوائز وشهادات التقنية</a>
-                                </nav>
-                            </div>
-                        </aside>
                     </div>
+                    <img src="../assets/images/arrows/left/1.svg" class="arrows img-fluid" width="200" alt="arrows">
+                </div>
+            </section>
 
-                    <div class="col-lg">
-                        <div class="inner-details">
-                            <img src="/assets/images/content/digitalization/other/hero-bg.png" class="inner-hero-bg" alt="inner-bg.png">
+            <nav class="about-navbar" id="about-navbar">
+                <ul class="nav nav-pills grid-5 gap-1">
+                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                        <a class="nav-link primary" href="projects.html">المشاريع الرئيسية المنجزة</a>
+                    </li>
+                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                        <a class="nav-link primary" href="services.html">الخدمات الرقمية المقدمة</a>
+                    </li>
+                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                        <a class="nav-link primary" href="joureny.html">رحلة الصندوق في التحول الرقمي</a>
+                    </li>
+                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                        <a class="nav-link primary" href="technical-house.html">برنامج ترتيب البيت التقن</a>
+                    </li>
+                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                        <a class="nav-link primary" href="awards.html">شهادات استحقاق و تجديد الأيزو</a>
+                    </li>
+                </ul>
 
-                            <div class="inner-content">
-                                <!-- mobile only -->
-                                <aside class="inner-side-menu blue d-lg-none" data-aos="flip-down">
-                                    <div>
-                                        <h2 class="display-1 fw-3">06</h2>
-                                        <h1 class="display-6">التحول الرقمي وتقنية المعلومات</h1>
+                <div class="progress primary" id="top-progress"></div>
+            </nav>
 
-                                        <nav>
-                                            <a href="/digitalization/development.html">تطوير الأعمال الرقمية</a>
-                                            <a href="/digitalization/joureny.html">رحلة الصندوق الصناعي في التحول الرقمي</a>
-                                            <a href="/digitalization/technical-house.html">برنامج ترتيب البيت التقني</a>
-                                            <a href="/digitalization/projects.html" class="active">المشروعات الرئيسية المنجزة</a>
-                                            <a href="/digitalization/awards.html">جوائز وشهادات التقنية</a>
-                                        </nav>
-                                    </div>
-                                </aside>
+            <!-- section -->
+            <section class="first-section primary sec-padding" id="first-section" data-aos="fade-up" data-aos-duration="700">
+                <div class="container">
+                    <div class="ms-11 ps-11">
+                        <div class="flex-y-row gap-4">
+                            <img src="../assets/images/arrows/left/7.svg" class="sec-arrows" width="52" alt="arrows">
+                            <h1 class="display-3 fw-7 text-primary" data-aos="zoom-in-left" data-aos-duration="500" data-aos-easing="ease-in-sine">
+                                التحول الرقمي و تقنية المعلومات
+                            </h1>
+                        </div>
 
-                                <!-- page content -->
-                                <h2 class="text-primary fw-7 op-7 mt-12" data-aos="fade-up">المشروعات الرئيسة المنجزة</h2>
-                                <ul>
-                                    <li class="grid-icon">
-                                        <img src="../assets/images/content/digitalization/projects/cloud.svg" alt="cloud.png" data-aos="flip-left">
-                                        <h4 class="text-primary op-8">موارد بلس</h4>
-                                        <p class="text-primary op-7 h5">حل سحابي متقدم للموارد البشرية</p>
-                                    </li>
-                                    <li class="grid-icon">
-                                        <img src="../assets/images/content/digitalization/projects/group.svg" alt="group.svg" data-aos="flip-left">
-                                        <h4 class="text-primary op-8">نظام ادارة التعلم لدى اكاديمية الصندوق</h4>
-                                        <p class="text-primary op-7 h5">نظام سحابة لادارة التعلم</p>
-                                    </li>
-                                    <li class="grid-icon">
-                                        <img src="../assets/images/content/digitalization/projects/sheet-check.svg" alt="sheet-check.svg" data-aos="flip-left">
-                                        <h4 class="text-primary op-8">نظام طلب الخدمات الموحد</h4>
-                                        <p class="text-primary op-7 h5">نظام موحد لادارة الخدمات للادارات المتعددة</p>
-                                    </li>
-                                    <li class="grid-icon">
-                                        <img src="../assets/images/content/digitalization/projects/pointer.svg" alt="pointer.svg" data-aos="flip-left">
-                                        <h4 class="text-primary op-8">اعادة تصميم البوابة الداخلية
-                                        </h4>
-                                        <p class="text-primary op-7 h5">اعادة تطوير بوابة الانترنت داخلية (بوابتي) مع تحسين التصم المحتوى
-                                        </p>
-                                    </li>
-                                    <li class="grid-icon">
-                                        <img src="../assets/images/content/digitalization/projects/protect.svg" alt="protect.svg" data-aos="flip-left">
-                                        <h4 class="text-primary op-8"> ادارة الوصول الامن</h4>
-                                        <p class="text-primary op-7 h5">تنفيذ نظام ادارة الهوية والرسول والتحكم في الوصول المستند الى الادوار لزيادة امان انظمة المعلومات
-                                        </p>
-                                    </li>
-                                    <li class="grid-icon">
-                                        <img src="../assets/images/content/digitalization/projects/cloud-server.svg" alt="cloud-server.svg" data-aos="flip-left">
-                                        <h4 class="text-primary op-8">مستودع بيانات الصندوق
-                                        </h4>
-                                        <p class="text-primary op-7 h5">مستودع بيانات مركزي وامن وموثوق لحفظ البيانات ومعالجتها وتصفيتها ، يطلق العنان لقدرات التحليلات والبيانات في بيئة منظمة ذات تحكم افضل
-                                        </p>
-                                    </li>
-                                    <li class="grid-icon">
-                                        <img src="../assets/images/content/digitalization/projects/settings.svg" alt="settings.svg" data-aos="flip-left">
-                                        <h4 class="text-primary op-8">ابتكار منتجات جديدة
-                                        </h4>
-                                        <p class="text-primary op-7 h5">
-                                            تمكين المنتجات وسيناريوهات الاعمال الجديدة من خلال نظام "تمكين" (على سبيل المثال : الاصول الثابتة للرهن العقاري ورقم الحساب المصرفي الدولي الافتراضي ومنتج "ارض وقرض" مع "مدن")
-                                        </p>
-                                    </li>
-                                </ul>
+                        <div class="gap-5 d-grid" style="grid-template-columns: auto 26vw;">
+                            <div>
+                                <p class="h2 op-7" data-aos="fade-up" data-aos-duration="700">
+                                    حقق صندوق التنمية الصناعية الســــعودي إنجازات رائدة في رحلــــة التحول الرقمــــي خلال عام 2023، حيث قام بتبســــيط العمليات من خلال الأتمتة، و كشــــف عــــن رؤى قابلة للتنفيذ بفضــــل تحليل البيانات، و عزز مشــــاركة العــــمال. و خلال عام 2024م، سيســــتمر الصندوق على تعزيز و تطوير العالقة بين قطاعات الأعمال و تقنية المعلومات للمساهمة في الأبتكار، و اســــتخدام التقنيــــات المتطــــورة لتحســــين المرونــــة و القوة التنافســــية. و بالتعاون مــــع قطاعات الأعمال، تــــم تنفيذ عدة مشاريع رئيسية كجزء من برنامج ترتيب البيت التقني.
+                                </p>
 
-                                <!-- prev & next links -->
-                                <div class="article-prev-next grid-2 grid-md-2" id="article-prev-next">
-                                    <div class="article-prev">
-                                        <h4 class="title">
-                                            <a href="/digitalization/technical-house.html" class="hvr-icon-wobble-horizontal">
-                                                <i class="bi bi-chevron-right mx-2 hvr-icon"></i>
-                                                السابق
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div class="article-next">
-                                        <h4 class="title">
-                                            <a href="/digitalization/awards.html" class="hvr-icon-wobble-horizontal">
-                                                التالي
-                                                <i class="bi bi-chevron-left mx-2 hvr-icon"></i>
-                                            </a>
-                                        </h4>
-                                    </div>
-                                </div>
+                                <p class="h2 op-7" data-aos="fade-up" data-aos-duration="700">
+                                    كما ســــيركز الصندوق خلال عام 2024م علــــى تعزيز القيمة المضافــــة للخدمات الرقمية، و تحقيق نســــبة أعلى من تنفيذ المشــــاريع، و تحســــين تجربة العمال، و تجهيز بنية تحتية مرنة للاستفادة من الحلول المبتكرة لمواجهة تحديات الأعمال.
+                                </p>
                             </div>
+
+                            <img src="../assets/images/charts/3.png" class="rounded-6" width="418" height="290" alt="charts" data-aos="flip-left" data-aos-duration="700">
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- section -->
+            <section class="py-12" data-aos="fade-up" data-aos-duration="700">
+                <div class="container">
+                    <div class="ms-11 ps-11">
+                        <div class="flex-y-row gap-4">
+                            <img src="../assets/images/arrows/left/7.svg" class="sec-arrows" width="52" alt="arrows">
+                            <h1 class="display-3 fw-7 text-primary" data-aos="zoom-in-left" data-aos-duration="500" data-aos-easing="ease-in-sine">
+                                المشاريع الرئيسية المنجزة:
+                            </h1>
+                        </div>
+
+                        <ul class="grid-2">
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">تحسين وتطوير واجهة منصة خدمات الموارد البشرية (موارد بلس)</h2>
+                                <p class="h4 fw-4 op-7">
+                                    قــــام الصنــــدوق بإعــــادة تصميــــم واجهة المســــتخدم لمنصــــة خدمات الموارد البشرية (موارد بلس) و تسهيل الوصول إلى الخدمات و تقليل خطوات إصدار خطابات التعريف.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">مبادرة المصانع الواعدة</h2>
+                                <p class="h4 fw-4 op-7">
+                                    أطلــــق الصنــــدوق مبــــادرة المصانــــع الواعدة، وهــــي إحــــدى المبادرات الفرعية لتحفيز الصناعة المحلية، والتي تهدف إلى تشجيع رواد األعمال والمنشــــآت الصغيرة والمتوســــطة لبدء نشــــاطهم الصناعي من خالل مســــارين: التمويل الميســــر (دون الحاجة إلى أخذ ضمانات شخصية)، ومسار آخر سيتم اإلعالن عنه قريبا.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">برنامج واعي</h2>
+                                <p class="h4 fw-4 op-7">
+                                    أطلــــق الصنــــدوق برنامج (واعي) لأتمتــــة إجراءات و عمليــــات الحوكمة و المخاطر و الالتــــزام ليمثل منصة رقمية موحدة، تســــتفيد منها جميع إدارات الصندوق فيمــــا يتعلق بالمخاطر والالتــــزام و المراجعة الداخلية
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">تفعيل شعار الطريق إلى الخمسين على جميع الأنظمة</h2>
+                                <p class="h4 fw-4 op-7">
+                                    شــــارك الصندوق في حملة الطريق إلى الخمسين بتفعيل شعار « 50 عامًا» على جميع الأنظمة.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">بنك البيانات الوطني</h2>
+                                <p class="h4 fw-4 op-7">
+                                    أكمل الصندوق الربط مع بنك البيانات الوطني الذي يمثل مستودعًا موحدًا للبيانات، و يهدف إلى تحســــين جودة البيانــــات الوطنية و تعزيز مشــــاركتها بيــــن الجهات، و المســــاهمة فــــي بناء اقتصــــاد رقمي قائم.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">الإطلاق الأول لنظام الإقراض الإلكتروني (تمكين بلس)</h2>
+                                <p class="h4 fw-4 op-7">
+                                    نفــــذ الصنــــدوق المرحلة الأولــــى لنظام الإقــــراض الإلكترونــــي (تمكين بلس)، و الذي يعد من أهم المشــــاريع الاســــتراتيجية بالصندوق. يهدف النظام إلى تحسين تجربة المســــتخدم من خلال إعادة تصميم النظام، و تقليــــل الخطوات المطلوبــــة، و توحيد مصادر البيانات، و تحســــين أداء النظام.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">منصة الابتكار iLab</h2>
+                                <p class="h4 fw-4 op-7">
+                                    أطلــــق الصنــــدوق منصة الابتــــكار و التي ستســــتخدم في حــــملات جمع الأفكار و الابتكارات.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">الربط الآلي مع منصة نفاذ</h2>
+                                <p class="h4 fw-4 op-7">
+                                    أكمــــل الصنــــدوق الربط مع مركــــز المعلومات الوطني، و قــــام بتفعيل خاصية تسجيل حســــاب جديد أو تسجيل الدخول لنظام تمكين لجميع السعوديين و المقيمين عن طريق خدمة النفاذ الوطني الموحد.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700" class="span-2">
+                                <h2 class="text-primary-light fw-6">نظام الاستبيانات</h2>
+                                <p class="h4 fw-4 op-7">
+                                    قام الصندوق بتطوير نظام احترافي لإجراء الاســــتبيانات داخليًا و خارجيًا، مما يســــهل تصميم الاســــتبيانات و إطالقها و متابعتها و تحليل نتائجها، مع مراعاة ضوابط الخصوصية و أمن المعلومات.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section -->
+            <section class="sec-dark-primary" data-aos="fade-up" data-aos-duration="700">
+                <div class="container position-relative sec-padding">
+                    <div class="progress-lines primary vertical end">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="ms-11 ps-11">
+                        <div class="flex-y-row gap-4">
+                            <img src="../assets/images/arrows/left/7.svg" class="sec-arrows" width="52" alt="arrows">
+                            <h1 class="display-3 fw-7 text-primary" data-aos="zoom-in-left" data-aos-duration="500" data-aos-easing="ease-in-sine">
+                                المشاريع الرئيسية المنجزة:
+                            </h1>
+                        </div>
+
+                        <ul class="grid-2 pe-8">
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">المرحلة الأولى لنظام الضمانات</h2>
+                                <p class="h4 fw-4 op-7">
+                                    أطلق الصندوق منتج الضمان، وهو خيار غير تمويلي يقدم تعويضات من الصندوق إلى البنوك والشركات الصناعية في حال تخلف العميل عن التزاماته.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">المصادقة متعددة العوامل SafeNet</h2>
+                                <p class="h4 fw-4 op-7">
+                                    قام الصندوق بتنفيذ حل المصادقة متعددة العوامل كجزء من الالتزام المستمر بتعزيز أمان البنية التحتية لتقنية المعلومات، وامتثالا لمتطلبات الهيئة الوطنية للأمن السيبراني.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">إطلاق مشروع ربط نظام الصرف الآلي مع البنك السعودي الفرنسي</h2>
+                                <p class="h4 fw-4 op-7">
+                                    قام الصندوق بتفعيل قناة ربط لنظام سداد مع البنك السعودي الفرنسي من خلال طرق الدفع عن طريق الآيبان أو سداد.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">تطبيق تجربة مركز التعافي من الكوارث</h2>
+                                <p class="h4 fw-4 op-7">
+                                    نفذ الصندوق تجربة مركز التعافي من الكوارث، و حقق وقت التعافي المستهدف و هدف نقطة الاسترحاع بنجاح.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">نظام المطالبات المالية للعمال)</h2>
+                                <p class="h4 fw-4 op-7">
+                                    أطلق الصندوق نظام أتمتة المطالبات المالية للعمال والذي يهدف إلى تحسين تجربة العميل.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">أرشفة البريد الإلكتروني</h2>
+                                <p class="h4 fw-4 op-7">
+                                    أطلق الصندوق مشروع أرشفة البريد الإلكتروني، حيث يعتبر المشروع حالي موثوقا للأرشفة الفعالة للبريد الإلكتروني وإدارة البيانات. يسمح المشروع بأرشفة البريد الإلكتروني بشكل فعال والحفاظ على الامتثال، و تحسين الإنتاجية، وتقليل التكاليف العملية المرتبطة بتخزين البريد الإلكتروني.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">الربط مع سمة</h2>
+                                <p class="h4 fw-4 op-7">
+                                    قام الصندوق بأتمتة الربط مع الشركة السعودية للمعلومات الائتمانية (ســــمة) بهدف تقديــــم خدمات رقميــــة متكاملة و رفع جــــودة البيانات المقدمة.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="text-primary-light fw-6">تطبيق إدارة الأجهزة المحمولة (MDM )</h2>
+                                <p class="h4 fw-4 op-7">
+                                    طبق الصندوق إجراءات و أدوات متقدمة لتمكين الوصول الآمن إلى العديد من الخدمات التقنية للصندوق على الأجهزة المحمولة الشخصية، مما يعرز مستوى الخصوصية و أمن المعلومات والالتزام بالضوابط التشريعية.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section -->
+            <section class="sec-padding routing-links" data-aos="fade-up" data-aos-duration="700">
+                <div class="container">
+                    <div class="flex-y-row gap-4 ms-11 ps-11">
+                        <img src="../assets/images/arrows/left/7.svg" class="sec-arrows" width="52" alt="arrows">
+
+                        <div class="grid-2 w-100">
+                            <a href="" class="btn rounded-4 p-10 text-start btn-primary d-flex flex-column">
+                                <span class="h2 fw-4">
+                                    <i class='material-icons' style="font-size: 20px;"> format_indent_decrease </i>
+                                    الموضوع التالي
+                                </span>
+                                <span class="display-5 fw-6">البرامج والمنتجات التمويلية</span>
+                            </a>
+                            <a href="" class="btn rounded-4 p-10 text-start d-flex flex-column">
+                                <span class="op-7 h2 fw-4">
+                                    <i class='material-icons' style="font-size: 20px;"> format_indent_increase </i>
+                                    الموضوع السابق
+                                </span>
+                                <span class="op-7 display-5 fw-6">كلمة سعادة الرئيس التنفيذي </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
-        <div class="bottom-bar">
-            <div class="container">
-                <div class="flex-between">
-                    <div class="contact flex-y-row gapx-5">
-                        <div class="qr-code">
-                            <img src="/assets/images/QR.png" class="qr-img" alt="QR">
-                            <div class="qr-img-open">
-                                <p class="text-center">امسح الرمز</p>
-                                <img src="/assets/images/QR.png" alt="QR">
-                            </div>
-                        </div>
-                        <a href="https://sidf.gov.sa" target="_blank" class="text-black text-opacity-50"><i class="bi bi-globe icon"></i> sidf.gov.sa</a>
-                        <a href="https://wa.me/+9660118251555" target="_blank" class="text-black text-opacity-50"><i class="bi bi-whatsapp icon"></i> 0118251555</a>
-                    </div>
-                    <nav class="social gap-2 flex-y-row">
-                        <a href="https://www.youtube.com/channel/UCjdXNd7yPduuuuckWusYhgA" target="_blank" class="fs-5"><i class="bi bi-youtube icon"></i></a>
-                        <a href="https://twitter.com/SIDFSA" target="_blank" class="fs-5"><i class="bi bi-twitter-x icon"></i></a>
-                        <a href="https://sa.linkedin.com/company/saudi-industrial-development-fund" target="_blank" class="fs-5"><i class="bi bi-linkedin icon"></i></a>
-                    </nav>
-                </div>
-            </div>
-        </div>
-
-        <!-- go top -->
-        <a href="#body" class="go-top-btn hvr-pulse-grow" id="go-top"><i class="bi bi-chevron-up fs-5"></i></a>
-
-        <div class="modal fade main-modal" id="mainModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable" id="modalDialog">
-                <div class="modal-content">
-                    <div class="modal-header border-bottom-0 px-8 pt-8">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg flex-center"></i></button>
-                    </div>
-                    <div class="modal-body" id="modalBody">
-                        <div class="inner-layout">
-                            <aside>
-                                <nav class="side-menu" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                    <a href="#" data-bs-toggle="pill" data-bs-target="#v-pills-about" role="tab" aria-controls="v-pills-about" aria-selected="false">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                        </svg>
-                                        <img src="/assets/images/side-1.png" width="188" height="48" alt="side-1">
-                                        <span>عن الصندوق </span>
-                                    </a>
-                                    <a href="#" data-bs-toggle="pill" data-bs-target="#v-pills-numbers" role="tab" aria-controls="v-pills-numbers" aria-selected="true">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                        </svg>
-                                        <img src="/assets/images/side-10.png" width="188" height="48" alt="side-2">
-                                        <span>أبرز أرقام 2022</span>
-                                    </a>
-                                    <a href="#" data-bs-toggle="pill" data-bs-target="#v-pills-eco-status" role="tab" aria-controls="v-pills-eco-status" aria-selected="false">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                        </svg>
-                                        <img src="/assets/images/side-3.png" width="188" height="48" alt="side-3">
-                                        <span>مؤشرات اقتصاديه</span>
-                                    </a>
-                                    <a href="#" data-bs-toggle="pill" data-bs-target="#v-pills-lending-activity" role="tab" aria-controls="v-pills-lending-activity" aria-selected="false">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                        </svg>
-                                        <img src="/assets/images/side-4.png" width="188" height="48" alt="side-4">
-                                        <span>النشاط الإقراضي</span>
-                                    </a>
-                                    <a href="#" data-bs-toggle="pill" data-bs-target="#v-pills-strategy" role="tab" aria-controls="v-pills-strategy" aria-selected="false">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                        </svg>
-                                        <img src="/assets/images/side-5.png" width="188" height="48" alt="side-5">
-                                        <span>إستراتيجة الصندوق</span>
-                                    </a>
-                                    <a href="#" class="active" data-bs-toggle="pill" data-bs-target="#v-pills-digitalization" role="tab" aria-controls="v-pills-digitalization" aria-selected="false">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                        </svg>
-                                        <img src="/assets/images/side-6.png" width="188" height="48" alt="side-6">
-                                        <span>التحول الرقمي و تقنية المعلومات </span>
-                                    </a>
-                                    <a href="#" data-bs-toggle="pill" data-bs-target="#v-pills-human" role="tab" aria-controls="v-pills-human" aria-selected="false">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                        </svg>
-                                        <img src="/assets/images/side-7.png" width="188" height="48" alt="side-7">
-                                        <span>تنمية القدرات البشرية</span>
-                                    </a>
-                                    <a href="#" data-bs-toggle="pill" data-bs-target="#v-pills-vaccines" role="tab" aria-controls="v-pills-vaccines" aria-selected="false">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                        </svg>
-                                        <img src="/assets/images/side-8.png" width="188" height="48" alt="side-8">
-                                        <span>دراسة صناعية نظرة حول سوق اللقاحات</span>
-                                    </a>
-                                    <a href="#" data-bs-toggle="pill" data-bs-target="#v-pills-additive-manufacturing" role="tab" aria-controls="v-pills-additive-manufacturing" aria-selected="false">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                        </svg>
-                                        <img src="/assets/images/side-9.png" width="188" height="48" alt="side-9">
-                                        <span>موضوع تحت الأضواء: التصنيع بالإضافة</span>
-                                    </a>
-                                    <a href="#" data-bs-toggle="pill" data-bs-target="#v-pills-lending-stats" role="tab" aria-controls="v-pills-lending-stats" aria-selected="false">
-                                        <svg>
-                                            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                        </svg>
-                                        <img src="/assets/images/side-10.png" width="188" height="48" alt="side-10">
-                                        <span>إحصائيات النشاط الإقراضي </span>
-                                    </a>
-                                </nav>
-                            </aside>
-
-                            <div class="inner-bg">
-                                <img src="/assets/images/arrows-bg.svg" width="450" height="600" alt="arrows-bg">
-                            </div>
-
-                            <div class="tab-content" id="v-pills-tabContent">
-                                <div class="tab-pane fade" id="v-pills-about" role="tabpanel" aria-labelledby="v-pills-about-tab" tabindex="0">
-                                    <h2 class="display-5 op-8 text-success">01</h2>
-                                    <h1 class="display-5 op-8 fw-7 text-success">الصندوق في سطور</h1>
-                                    <p class="op-6 h4 w-xxl-8">
-                                        تأســــس صندوق التنمية الصناعية الســــعودي في عام 1394هـ (1974م)، برأس مال مبدئي بلغ 500 مليون ريال، لتوفير التمكين المالي للقطاع الصناعي في المملكة. وتم رفع رأســــماله تدريجيَّا حتى أصبح 105 مليارات ريال في عام 1440هـ (2019م). وقام الصندوق الصناعي على مدار 48 عامًــــا بتقديم الدعم الصناعي وفقًا لاحتياجات كل مرحلة من خلال تعزيز فرص الاســــتثمار الصناعي وتطوير الصناعة المحلية ورفع مســــتوى أدائها، وتطويرالمؤسســــات التنافســــية،ودعم المبادرات الاستراتيجية، فضلًا عن توّسعه في نطاق الدعم ليشمل عددًا من القطاعات الواعدة في مجالات الصناعــــة و الطاقة و التعدين والخدمات اللوجســــتية،ليكون الُممّكــــن المالي
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-4">
-                                        <nav id="steps-spy-1" class="inner-steps green">
-                                            <a href="#sub-section-1-1" id="sub-section-link-1-1" class="active"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-1-2" id="sub-section-link-1-2"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-1-3" id="sub-section-link-1-3"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-1-4" id="sub-section-link-1-4"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-1-5" id="sub-section-link-1-5"><i class="bi bi-circle"></i></a>
-                                        </nav>
-
-                                        <div class="flex-fill" id="scrollspy-1" data-bs-spy="scroll" data-bs-target="#steps-spy-1" data-bs-smooth-scroll="true" tabindex="1" style="height: 35vh; overflow: auto; position: relative;">
-                                            <div class="sub-section py-4" id="sub-section-1-1">
-                                                <h3 class="text-success fw-7 my-5">الصندوق في سطور</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/about/in-lines.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-1-2">
-                                                <h3 class="text-success fw-7 my-5">مجلس الإدارة</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/about/board.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-1-3">
-                                                <h3 class="text-success fw-7 my-5">الهيكل التنظيمي</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/about/org-structure.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-1-4">
-                                                <h3 class="text-success fw-7 my-5">تقديم معالي رئيس مجلس الإدارة</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/about/chariman-intro.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-1-5">
-                                                <h3 class="text-success fw-7 my-5">كلمة سمو الرئيس التنفيذي</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/about/ceo-word.html"> عرض التفاصيل </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="v-pills-numbers" role="tabpanel" aria-labelledby="v-pills-numbers-tab" tabindex="0">
-                                    <h2 class="display-5 op-8 text-primary">02</h2>
-                                    <h1 class="display-5 op-8 fw-7 text-primary">أبرز أرقام 2022</h1>
-                                    <p class="op-6 h4 w-xxl-8">حقـــق الصنـــدوق خـــال العـــام المنصـــرم 2021 ً م، تطـــور ًّ ا مهم ُ ـــا فـــي أدائـــه؛ تبـــرزه مجموعـــة الحقائـــق والأرقـــام التـــي تعكـــس أداء وإنجـــازات الصنـــدوق فـــي مختلـــف الأنشـــطة والأدوار الحيويـــة المناطـــة بـــه. نـــورد فيمـــا يلـــي أبرزهـــاحقـــق الصنـــدوق خـــال العـــام المنصـــرم 2021 ً م، تطـــور ًّ ا مهم ُ ـــا فـــي أدائـــه؛ تبـــرزه مجموعـــة الحقائـــق والأرقـــام التـــي تعكـــس أداء وإنجـــازات الصنـــدوق فـــي مختلـــف الأنشـــطة والأدوار الحيويـــة المناطـــة بـــه. نـــورد فيمـــا يلـــي أبرزهـــا</p>
-
-                                    <div class="d-flex align-items-center column-gap-4">
-                                        <nav id="steps-spy-2" class="inner-steps">
-                                            <a href="#sub-section-2-1" id="sub-section-link-2-1" class="active"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-2-2" id="sub-section-link-2-2"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-2-3" id="sub-section-link-2-3"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-2-4" id="sub-section-link-2-4"><i class="bi bi-circle"></i></a>
-                                        </nav>
-
-                                        <div class="flex-fill" id="scrollspy-2" data-bs-spy="scroll" data-bs-target="#steps-spy-2" data-bs-smooth-scroll="true" tabindex="2" style="height: 35vh; overflow: auto; position: relative;">
-                                            <div class="sub-section py-4" id="sub-section-2-1">
-                                                <h3 class="text-primary fw-7 my-5">أولا النشاط الإقراضي</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/statistics/loans.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-2-2">
-                                                <h3 class="text-primary fw-7 my-5">ثانيا النشاط الخيري</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/statistics/loans.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-2-3">
-                                                <h3 class="text-primary fw-7 my-5">ثالثا النشاط الإقراضي</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/statistics/loans.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-2-4">
-                                                <h3 class="text-primary fw-7 my-5">رابعا النشاط العملي</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/statistics/loans.html"> عرض التفاصيل </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="v-pills-eco-status" role="tabpanel" aria-labelledby="v-pills-eco-status-tab" tabindex="0">
-                                    <h2 class="display-5 op-8 text-success">03</h2>
-                                    <h1 class="display-5 op-8 fw-7 text-success">اتجاهات و مؤشرات الاقتصاد المحلي</h1>
-                                    <p class="op-6 h4 w-xxl-8">
-                                        واجه الاقتصــــاد العالمي خــــلال عام 2022م تحديات اقتصادية جراء العديد من العوامل، ومــــن أبرزهــــا توتــــر الأوضــــاع السياســــية فــــي عدد مــــن دول العالم والتي أثــــرت على تراجع الأنشــــطة الاقتصادية فيها، بالإضافة الى تزايد أسعار الطاقة وارتفاع معدلات التضخم، مما أدى الــــى تشــــديد الأوضــــاع الماليــــة والنقدية في بعــــض مــــن الاقتصــــادات المختلفة، مع استمرار التداعيات السلبية بسبب تبعات أزمة جائحــــة كورونا. حيث تشــــير تقديرات صندوق النقد الدولي إلى تباطؤ بنســــبة 3.2% في نمو الاقتصاد العالمي عام 2022م مقارنة بالعام الماضي.
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-4">
-                                        <nav id="steps-spy-3" class="inner-steps green">
-                                            <a href="#sub-section-3-1" id="sub-section-link-3-1" class="active"><i class="bi bi-circle"></i></a>
-                                        </nav>
-
-                                        <div class="flex-fill" id="scrollspy-1" data-bs-spy="scroll" data-bs-target="#steps-spy-3" data-bs-smooth-scroll="true" tabindex="1" style="height: 35vh; overflow: auto; position: relative;">
-                                            <div class="sub-section py-4" id="sub-section-3-1">
-                                                <h3 class="text-success fw-7 my-5">الوضع الاقتصادي للمملكة خلال عام 2022م</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/eco-indicators/eco-status.html"> عرض التفاصيل </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="v-pills-lending-activity" role="tabpanel" aria-labelledby="v-pills-lending-activity-tab" tabindex="0">
-                                    <h2 class="display-5 op-8 text-primary">04</h2>
-                                    <h1 class="display-5 op-8 fw-7 text-primary">النشاط الإقراضي</h1>
-                                    <p class="op-6 h4 w-xxl-8">
-                                        واصل الصندوق نشاطه في تنمية القطاع الصناعي المحلي، من خلال توفير طيف واسع من القروض لدعم المشاريع بمختلف القطاعات المتنوعة في المملكة، حيث اعتمد الصندوق نسبة عالية من القروض للمشاريع الصناعية التي تقع في المناطق والمدن الواعدة؛ وفقَا للأرقام المبينة
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-4">
-                                        <nav id="steps-spy-4" class="inner-steps">
-                                            <a href="#sub-section-4-1" id="sub-section-link-4-1" class="active"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-4-2" id="sub-section-link-4-2"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-4-3" id="sub-section-link-4-3"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-4-4" id="sub-section-link-4-4"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-4-5" id="sub-section-link-4-5"><i class="bi bi-circle"></i></a>
-                                        </nav>
-
-                                        <div class="flex-fill" id="scrollspy-2" data-bs-spy="scroll" data-bs-target="#steps-spy-4" data-bs-smooth-scroll="true" tabindex="2" style="height: 35vh; overflow: auto; position: relative;">
-                                            <div class="sub-section py-4" id="sub-section-4-1">
-                                                <h3 class="text-primary fw-7 my-5">النشاط الإقراضي</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/lending-activity/main.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-4-2">
-                                                <h3 class="text-primary fw-7 my-5">أولاً: التوزيع القطاعي للقروض المعتمدة</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/lending-activity/first.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-4-3">
-                                                <h3 class="text-primary fw-7 my-5">ثانيا: التوزيع الجغرافي للقروض المعتمدة</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/lending-activity/second.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-4-4">
-                                                <h3 class="text-primary fw-7 my-5">ثالثاً: اعتمادات البرامج والمنتجات التمويلية</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/lending-activity/third.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-4-5">
-                                                <h3 class="text-primary fw-7 my-5">رابعاً: المشاريع التي بدأت الإنتاج خلال 2022م</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/lending-activity/fourth.html"> عرض التفاصيل </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="v-pills-strategy" role="tabpanel" aria-labelledby="v-pills-strategy-tab" tabindex="0">
-                                    <h2 class="display-5 op-8 text-success">05</h2>
-                                    <h1 class="display-5 op-8 fw-7 text-success">استراتيجية الصندوق</h1>
-                                    <p class="op-6 h4 w-xxl-8">
-                                        تعكس اســــتراتيجية الصندوق الصناعي استمراره في تمكين التحول الصناعي في المملكة، حيث بُنِيَت خطته الاستراتيجية على أربعة محاور يرتبط بها عدد من الأهداف الاســــتراتيجية، ترتكز جميعها على تمكين المنظومة، من خــــلال تقديم خدمات ومنتجات مبنيّة على الخبرة والمعرفة، وتعزيز جاذبية الاســــتثمارات من خــــلال تقديم مجموعة متعددة من المنتجــــات والخدمات، ويكون ذلك مدعوما بقــــدرات تنظيمية قوية ونموذج تقديم خدمات مستدام.
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-4">
-                                        <nav id="steps-spy-5" class="inner-steps green">
-                                            <a href="#sub-section-5-1" id="sub-section-link-5-1" class="active"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-5-2" id="sub-section-link-5-1"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-5-3" id="sub-section-link-5-1"><i class="bi bi-circle"></i></a>
-                                        </nav>
-
-                                        <div class="flex-fill" id="scrollspy-1" data-bs-spy="scroll" data-bs-target="#steps-spy-5" data-bs-smooth-scroll="true" tabindex="1" style="height: 35vh; overflow: auto; position: relative;">
-                                            <div class="sub-section py-4" id="sub-section-5-1">
-                                                <h3 class="text-success fw-7 my-5">استراتيجية الصندوق</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/strategy/main.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-5-2">
-                                                <h3 class="text-success fw-7 my-5">الأهداف الرئيسية للخطة الاستراتيجية</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/strategy/goals.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-5-3">
-                                                <h3 class="text-success fw-7 my-5">مؤشرات الأداء الرئيسية للصندوق</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/strategy/indicators.html"> عرض التفاصيل </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade show active" id="v-pills-digitalization" role="tabpanel" aria-labelledby="v-pills-digitalization-tab" tabindex="0">
-                                    <h2 class="display-5 op-8 text-primary">06</h2>
-                                    <h1 class="display-5 op-8 fw-7 text-primary">التحول الرقمي وتقنية المعلومات</h1>
-                                    <p class="op-6 h4 w-xxl-8">
-                                        تقــــوم هيئة الحكومة الرقمية بوضع مجموعة من المعايير والضوابط لقياس أداء الجهات الحكومية ومتابعة تطور رحلتها في التحول الرقمي وفق أفضل الممارســــات، بما يســــهم في تحقيق مستهدفات رؤية الســــعودية 2030. وفيما يلي نظرة على أهم المعايير من خلال القياس العاشر لعام 2022 مقارنة بقياس العام السابق
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-4">
-                                        <nav id="steps-spy-6" class="inner-steps">
-                                            <a href="#sub-section-5-1" id="sub-section-link-5-1" class="active"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-5-2" id="sub-section-link-5-2"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-5-3" id="sub-section-link-5-3"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-5-4" id="sub-section-link-5-4"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-5-5" id="sub-section-link-5-5"><i class="bi bi-circle"></i></a>
-                                        </nav>
-
-                                        <div class="flex-fill" id="scrollspy-2" data-bs-spy="scroll" data-bs-target="#steps-spy-6" data-bs-smooth-scroll="true" tabindex="2" style="height: 35vh; overflow: auto; position: relative;">
-                                            <div class="sub-section py-4" id="sub-section-5-1">
-                                                <h3 class="text-primary fw-7 my-5">تطوير الأعمال الرقمية</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/digitalization/development.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-5-2">
-                                                <h3 class="text-primary fw-7 my-5">رحلة الصندوق الصناعي في التحول الرقمي</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/digitalization/joureny.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-5-3">
-                                                <h3 class="text-primary fw-7 my-5">برنامج ترتيب البيت التقني</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/digitalization/technical-house.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-5-4">
-                                                <h3 class="text-primary fw-7 my-5">المشروعات الرئيسية المنجزة</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/digitalization/projects.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-5-5">
-                                                <h3 class="text-primary fw-7 my-5">جوائز وشهادات التقنية</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/digitalization/awards.html"> عرض التفاصيل </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="v-pills-human" role="tabpanel" aria-labelledby="v-pills-human-tab" tabindex="0">
-                                    <h2 class="display-5 op-8 text-success">07</h2>
-                                    <h1 class="display-5 op-8 fw-7 text-success">تنمية القدرات البشرية</h1>
-                                    <p class="op-6 h4 w-xxl-8">
-                                        يواصل صنــــدوق التنمية الصناعية الســــعودي جهوده الدؤوبة من أجــــل تطبيق أعلى معاييــــر الجودة والكفاءة المعتمــــدة على المســــتوى العالمي؛ وذلــــك بهدف تطوير بيئة العمل في كافة مناشــــط الصنــــدوق لجعلها بيئة تنافســــية تسهم في اســــتقطاب أبرز المواهب والكفاءات والخبرات الوطنية المتميزة؛ وقد حقق الصندوق خلال عام 2022م مجموعة من الإنجازات المتميزة،
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-4">
-                                        <nav id="steps-spy-7" class="inner-steps green">
-                                            <a href="#sub-section-7-1" id="sub-section-link-7-1" class="active"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-7-2" id="sub-section-link-7-2"><i class="bi bi-circle"></i></a>
-                                        </nav>
-
-                                        <div class="flex-fill" id="scrollspy-1" data-bs-spy="scroll" data-bs-target="#steps-spy-7" data-bs-smooth-scroll="true" tabindex="1" style="height: 35vh; overflow: auto; position: relative;">
-                                            <div class="sub-section py-4" id="sub-section-7-1">
-                                                <h3 class="text-success fw-7 my-5">تنمية القدرات البشرية</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/human/main.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-7-2">
-                                                <h3 class="text-success fw-7 my-5">أبرز إنجازات أكاديمية الصندوق</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/human/academy.html"> عرض التفاصيل </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="v-pills-vaccines" role="tabpanel" aria-labelledby="v-pills-vaccines-tab" tabindex="0">
-                                    <h2 class="display-5 op-8 text-primary">08</h2>
-                                    <h1 class="display-5 op-8 fw-7 text-primary">دراسة صناعية: نظرة حول سوق اللقاحات البشرية</h1>
-                                    <p class="op-6 h4 w-xxl-8">
-                                        اللقاح البشــــري هو مســــتحضر بيولوجي، يتــــم إنتاجه من الكائنــــات الحية الدقيقة الضعيفــــة أو الميتة ُ أو المجزأة، ويســــتخدم في المقــــام الأول للوقاية من الأمراض. وتعمل اللقاحات البشــــرية عن طريق ُ تحفيز الجهاز المناعي لإنتاج بروتينات لمحاربة الأمراض تعرف باسم الأجسام المضادة، والتي تقي ضد العدوى المســــتقبلية. وتأتي هذة اللقاحات على شكل محلول أو مســــحوق أو كبسولات بالإضافة إلى حقن مسبقة التعبئة.
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-4">
-                                        <nav id="steps-spy-8" class="inner-steps">
-                                            <a href="#sub-section-8-1" id="sub-section-link-8-1" class="active"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-8-2" id="sub-section-link-8-2"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-8-3" id="sub-section-link-8-3"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-8-4" id="sub-section-link-8-4"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-8-5" id="sub-section-link-8-5"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-8-6" id="sub-section-link-8-6"><i class="bi bi-circle"></i></a>
-                                        </nav>
-
-                                        <div class="flex-fill" id="scrollspy-2" data-bs-spy="scroll" data-bs-target="#steps-spy-8" data-bs-smooth-scroll="true" tabindex="2" style="height: 35vh; overflow: auto; position: relative;">
-                                            <div class="sub-section py-4" id="sub-section-8-1">
-                                                <h3 class="text-primary fw-7 my-5">أنواع اللقاحات</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/vaccines/types.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-8-2">
-                                                <h3 class="text-primary fw-7 my-5">سلسلة توريد اللقاحات البشرية </h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/vaccines/chain.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-8-3">
-                                                <h3 class="text-primary fw-7 my-5">رحلة اللقاح البشري</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/vaccines/journey.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-8-4">
-                                                <h3 class="text-primary fw-7 my-5">أبرز معالم السوق الدولية</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/vaccines/global-market.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-8-5">
-                                                <h3 class="text-primary fw-7 my-5">أبرز معالم السوق بالمملكة</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/vaccines/local-market.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-8-6">
-                                                <h3 class="text-primary fw-7 my-5">التحديات</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/vaccines/challenges.html"> عرض التفاصيل </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="v-pills-additive-manufacturing" role="tabpanel" aria-labelledby="v-pills-additive-manufacturing-tab" tabindex="0">
-                                    <h2 class="display-5 op-8 text-success">09</h2>
-                                    <h1 class="display-5 op-8 fw-7 text-success">موضوع تحت الأضواء: التصنيع بالإضافة</h1>
-                                    <p class="op-6 h4 w-xxl-8">
-                                        يُعــــد التصنيــــع بالإضافــــة إحــــدى التقنيــــات / الطــــرق التصنيعيــــة المعتمــــدة، والتي تقوم على ابتكار أو تشــــكيل مجســــم ثلاثــــي الأبعاد من خــــلال بنائه طبقة تلو أخــــرى وفق نموذج رقمي محــــدد، وذلك على عكس أساســــيات التصنيع الطرحــــي، مثل التصنيع باســــتخدام آلة التشــــكيل الطرحي (CNC)، والتي تتمثل في تشــــكيل المنتج النهائي عن طريق النحت وإزالــــة المواد الخــــام للحصول على الشــــكل المطلــــوب. وعلــــى مــــدى العقــــود الأربعــــة الماضيــــة تطورت هذه التقنيــــة إلى مجموعة واســــعة من التقنيــــات الفرعية التي ســــجلت تطور في الســــرعة والجودة والقيمة التجارية.
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-4">
-                                        <nav id="steps-spy-9" class="inner-steps green">
-                                            <a href="#sub-section-7-1" id="sub-section-link-7-1" class="active"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-7-2" id="sub-section-link-7-2"><i class="bi bi-circle"></i></a>
-                                            <a href="#sub-section-7-3" id="sub-section-link-7-3"><i class="bi bi-circle"></i></a>
-                                        </nav>
-
-                                        <div class="flex-fill" id="scrollspy-1" data-bs-spy="scroll" data-bs-target="#steps-spy-9" data-bs-smooth-scroll="true" tabindex="1" style="height: 35vh; overflow: auto; position: relative;">
-                                            <div class="sub-section py-4" id="sub-section-7-1">
-                                                <h3 class="text-success fw-7 my-5">التصنيع بالإضافة</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/additive-manufacturing/main.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-7-2">
-                                                <h3 class="text-success fw-7 my-5">مستقبل الصناعة بالإضافة في السعودية</h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/additive-manufacturing/future.html"> عرض التفاصيل </a>
-                                            </div>
-                                            <div class="sub-section py-4" id="sub-section-7-3">
-                                                <h3 class="text-success fw-7 my-5">إمكانية التصنيع بالإضافة </h3>
-                                                <a class="btn btn-grad btn-outline-success py-2 px-6 mt-6" href="/additive-manufacturing/possibility.html"> عرض التفاصيل </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="v-pills-lending-stats" role="tabpanel" aria-labelledby="v-pills-lending-stats-tab" tabindex="0">
-                                    <h2 class="display-5 op-8 text-primary">10</h2>
-                                    <h1 class="display-5 op-8 fw-7 text-primary">إحصاءات النشاط الإقراضي</h1>
-                                    <p class="op-6 h4 w-xxl-8">
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-4">
-                                        <nav id="steps-spy-10" class="inner-steps">
-                                            <a href="#sub-section-10-1" id="sub-section-link-10-1" class="active"><i class="bi bi-circle"></i></a>
-                                        </nav>
-
-                                        <div class="flex-fill" id="scrollspy-2" data-bs-spy="scroll" data-bs-target="#steps-spy-10" data-bs-smooth-scroll="true" tabindex="2" style="height: 35vh; overflow: auto; position: relative;">
-                                            <div class="sub-section py-4" id="sub-section-10-1">
-                                                <h3 class="text-primary fw-7 my-5">إحصاءات النشاط الإقراضي</h3>
-                                                <a class="btn btn-grad btn-outline-primary py-2 px-6 mt-6" href="/lending-stats/main.html"> عرض التفاصيل </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script src="/assets/vendors/bootstrap.bundle.min.js"></script>
-        <script src="/assets/vendors/chart.bundle.min.js"></script>
-        <script src="/assets/vendors/aos.js"></script>
-        <script src="/assets/vendors/purecounter_vanilla.js"></script>
-        <script src="/assets/js/main.js"></script>
+        <script src="../assets/vendors/jquery.min.js"></script>
+        <script src="../assets/vendors/bootstrap.bundle.min.js"></script>
+        <script src="../assets/vendors/owl.carousel.min.js"></script>
+        <script src="../assets/vendors/aos.js"></script>
+        <script src="../assets/vendors/purecounter_vanilla.js"></script>
+        <script src="../assets/js/main.js"></script>
     </body>
 
 </html>

@@ -591,6 +591,10 @@ details {
     background: url("../images/pages/about/board.svg") no-repeat center / contain;
     height: 1500px;
     margin-bottom: 150px;
+
+    &.primary {
+        background: url("../images/pages/about/board-2.svg") no-repeat center;
+    }
 }
 
 .about-tree {
@@ -725,12 +729,6 @@ details {
 
         * {
             line-height: 0.7;
-        }
-    }
-
-    .donut-img {
-        @media (min-width: 1200px) and (max-width: 1450px) {
-            width: 350px;
         }
     }
 
