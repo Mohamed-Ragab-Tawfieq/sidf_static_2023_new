@@ -290,6 +290,10 @@ section {
 .routing-links {
     margin-bottom: 2rem;
 
+    .btn-success {
+        color: $white !important;
+    }
+
     .btn:last-of-type {
         background-color: #e8e6e6;
     }
