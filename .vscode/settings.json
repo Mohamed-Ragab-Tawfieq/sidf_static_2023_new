@@ -2,6 +2,6 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "files.autoSave": "onWindowChange",
+    "files.autoSave": "onFocusChange",
     "files.autoSaveDelay": 0
 }

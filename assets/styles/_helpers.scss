@@ -27,6 +27,20 @@
     transform: translate(50%, 50%);
 }
 
+.absolute-start {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    inset-inline-start: 0;
+}
+
+.absolute-end {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    inset-inline-end: 0;
+}
+
 .btn-gradient {
     background: linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
     color: $white;
@@ -321,6 +335,10 @@
 
     .bg-gray-#{$i} {
         background-color: rgba(#ebcece, calc($i / 10)) !important;
+    }
+
+    .text-black-#{$i} {
+        color: rgba($black, calc($i / 10)) !important;
     }
 
     @media (min-width: 768px) {
