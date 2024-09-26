@@ -1,4 +1,3 @@
-/*---------------- About start ----------------*/
 /*** progress ***/
 window.addEventListener('scroll', function () {
     const progress = document.getElementById('top-progress');
@@ -22,7 +21,6 @@ function handleAboutNav() {
     });
 }
 handleAboutNav()
-
 
 /*** header fixed ***/
 window.addEventListener('scroll', function () {
@@ -132,4 +130,27 @@ $(document).ready(function () {
         AOS.init();
     }
 });
-/*---------------- About end ----------------*/
+
+/*** next and prev ***/
+$(document).ready(function () {
+    if ($('#sidf-navbar').length) {
+        // next
+        var nextText = $('#sidf-navbar .active').parent().next().find('.nav-link').text();
+        var nextHref = $('#sidf-navbar .active').parent().next().find('.nav-link').attr('href');
+
+        $('#next-page').text(nextText);
+        $('#next-page').attr('href', nextHref);
+
+        if ($('#sidf-navbar .nav-item:last-of-type .active').length) {
+            $('.routing-links a:first-of-type').attr('style', 'display: none !important');
+        }
+
+        // prev
+        var prevText = $('#sidf-navbar .active').parent().prev().find('.nav-link').text();
+        $('#prev-page').text(prevText);
+
+        if ($('#sidf-navbar .nav-item:first-of-type .active').length) {
+            $('.routing-links a:last-of-type').attr('style', 'display: none !important');
+        }
+    }
+});
