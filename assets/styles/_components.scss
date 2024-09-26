@@ -345,9 +345,57 @@ details {
         height: 390px;
     }
 
+    &.video-playing {
+        .top-img,
+        .arrows,
+        a[download] {
+            display: none !important;
+        }
+
+        .top-video {
+            display: block;
+        }
+    }
+
     .top-img {
         width: 100%;
         height: 100%;
+    }
+
+    .top-video {
+        display: none;
+        z-index: 50;
+        height: 460px;
+        width: 100%;
+    }
+
+    .play-btn {
+        z-index: 50;
+
+        &:hover {
+            i {
+                animation: none;
+                opacity: 0.8;
+            }
+        }
+
+        i {
+            color: $white;
+            opacity: 0.4;
+            font-size: 4rem;
+            animation: playAnimate 3s ease-in-out infinite;
+
+            @keyframes playAnimate {
+                0%,
+                100% {
+                    opacity: 0.4;
+                }
+
+                50% {
+                    opacity: 0.6;
+                }
+            }
+        }
     }
 
     .arrows {
