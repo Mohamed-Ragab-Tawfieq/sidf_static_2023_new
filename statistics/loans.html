@@ -246,7 +246,8 @@
                             <h2 class="charts-title display-3 fw-7 text-primary w-lg-3 w-xxl-2" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-easing="ease-in-sine"> التوزيع القطاعي لقيمة القروض المعتمدة خلال عام 2023م</h2>
 
                             <div class="donut-chart" data-aos="fade-up" data-aos-duration="700">
-                                <img src="../assets/images/charts/1.svg" class="donut-img" alt="chart" loading="lazy">
+                                <canvas id="pieChart1" width="390" height="390"></canvas>
+                                <!-- <img src="../assets/images/charts/1.svg" class="donut-img" alt="chart" loading="lazy">
                                 <div class="circle">
                                     <h3 class="text-primary display-4 fw-6 purecounter" data-purecounter-end="12.9" data-purecounter-decimals="1">12.9</h3>
                                     <h4 class="text-primary-light fw-5">مليار ريال</h4>
@@ -254,10 +255,10 @@
                                 <div class="biggest" style="inset-inline-start: 30%;">
                                     <h2 class="title fw-7">الصناعات الكيميائية</h2>
                                     <span class="value fw-7 purecounter counter-percent" data-purecounter-end="62">62%</span>
-                                </div>
+                                </div> -->
                             </div>
 
-                            <ul class="chart-labels-list" data-aos="fade-right" data-aos-duration="700">
+                            <!-- <ul class="chart-labels-list" data-aos="fade-right" data-aos-duration="700">
                                 <li class="flex-y-row text-primary h2 fw-7">
                                     <span class="chart-label-circle" style="background-color: var(--blue-100);"></span>
                                     <span class="text-nowrap">الصناعات الأخري</span>
@@ -278,7 +279,7 @@
                                     <span class="text-nowrap">الصناعات الاستهلاكية</span>
                                     <span class="chart-label purecounter counter-percent" data-purecounter-end="10">10%</span>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
 
                         <div class="progress-lines primary vertical end">
@@ -368,7 +369,106 @@
             </section>
         </main>
 
+
         <script src="../assets/vendors/jquery.min.js"></script>
+        <script src="../assets/vendors/chart.min.js"></script>
+        <script src="../assets/vendors/chartjs-plugin-datalabels.min.js"></script>
+
+        <script>
+            // general options
+            const generalOptions = {
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            pointStyle: 'circle',
+                        }
+                    },
+                    tooltip: {
+                        borderWidth: 1,
+                        borderColor: '#DDE0E8',
+                        backgroundColor: '#fff',
+                        bodyColor: '#000',
+                        titleColor: '#000',
+                        rtl: $('html').attr('lang') === 'ar',
+                        bodyAlign: $('html').attr('lang') === 'ar' ? 'right' : 'left',
+                    },
+                },
+                scales: {
+                    x: {
+                        reverse: $('html').attr('lang') === 'ar',
+                        ticks: {
+                            padding: 20,
+                        },
+                        border: {
+                            dash: [5, 5],
+                            display: false
+                        },
+                        grid: {
+                            drawTicks: false,
+                            display: true
+                        },
+                    },
+                    y: {
+                        position: 'right',
+                        beginAtZero: true,
+                        ticks: {
+                            padding: 10,
+                        },
+                        border: {
+                            dash: [5, 5],
+                            display: false
+                        },
+                        grid: {
+                            drawTicks: false,
+                            display: true
+                        },
+                    }
+                }
+            }
+
+            // pie options
+            const pieOptions = {
+                options: {
+                    ...generalOptions,
+                    borderWidth: 0,
+                    plugins: {
+                        ...generalOptions.plugins,
+                        legend: {
+                            ...generalOptions.plugins.legend,
+                            display: true
+                        },
+                    },
+                    scales: {
+                        x: {
+                            display: false
+                        },
+                        y: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels],
+            }
+
+            // pie chart
+            const pieCtx = document.getElementById('pieChart1');
+            new Chart(pieCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['الصناعات الكيميائية', 'الصناعات الاستهلاكية', 'صناعة مواد البناء', 'الصناعات الهندسية', 'الصناعات الأخري'],
+                    datasets: [{
+                        data: [75, 11, 10, 3, 1],
+                        backgroundColor: ['#3775A3', '#639AC2', '#7CABCC', '#A5C5DC', '#C3D8E7']
+
+                    }]
+                },
+                ...pieOptions,
+            });
+        </script>
+
         <script src="../assets/vendors/bootstrap.bundle.min.js"></script>
         <script src="../assets/vendors/owl.carousel.min.js"></script>
         <script src="../assets/vendors/aos.js"></script>

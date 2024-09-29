@@ -148,7 +148,6 @@ function playTopVideo() {
 
 /*** next and prev ***/
 $(document).ready(function () {
-    console.log($('#sidf-navbar .active').parent().prev().find('.nav-link').attr('href'))
     if ($('#sidf-navbar').length) {
         // next
         var nextText = $('#sidf-navbar .active').parent().next().find('.nav-link').text();
