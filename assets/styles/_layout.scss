@@ -12,6 +12,13 @@
                 url(../images/pages/home/body-bg.svg) no-repeat top 35px left / 25%,
                 #f8f8f8;
         }
+
+        @media (max-width: 1199px) {
+            background:
+                url(../images/arrows/right/5.svg) no-repeat top 70px right 62vw,
+                url(../images/logo/1.svg) no-repeat top -2% right -40% / 60%,
+                #f8f8f8;
+        }
     }
 }
 

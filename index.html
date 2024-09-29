@@ -361,8 +361,8 @@
                 }, 8500);
 
                 setTimeout(() => {
-                    // loader.classList.add('hide')
-                }, 10000);
+                    loader.classList.add('hide')
+                }, 100);
             });
         </script>
 
@@ -399,7 +399,7 @@
                         const homeSide = document.querySelector('.home-side');
                         const homeTitle = document.querySelector('.home-title');
 
-                        const factor = window.innerWidth > 1500 ? 1100 : 1000;
+                        const factor = window.innerWidth > 1500 ? 1100 : (window.innerWidth >= 1200 ? 1000 : 890);
                         const lines = document.getElementById('progressLines');
                         const linesProgress = (parent.scrollTop / factor) * 100;
 
