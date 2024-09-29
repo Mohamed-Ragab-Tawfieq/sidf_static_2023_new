@@ -112,11 +112,17 @@
     margin-inline-start: 400px;
 
     @media (max-width: 1450px) {
-        padding-block: 850px 700px;
+        padding-block: 900px 700px;
     }
 
     @media (max-width: 1199px) {
         z-index: 10;
+        padding-block: 680px 700px;
+        margin-inline-start: 130px;
+    }
+
+    @media (max-width: 767px) {
+        padding-block: 850px 700px;
         margin-inline-start: -220px;
     }
 
@@ -148,7 +154,11 @@
 
         @media (max-width: 1199px) {
             margin-top: 195px;
-            margin-inline-start: 20px;
+            margin-inline-start: 18px;
+        }
+
+        @media (max-width: 767px) {
+            margin-inline-start: 22px;
         }
     }
 
@@ -232,8 +242,9 @@
             max-width: 200px;
 
             @media (min-width: 1200px) and (max-width: 1450px) {
-                bottom: auto;
                 top: 50px;
+                bottom: auto;
+                inset-inline-start: 17%;
             }
 
             @media (max-width: 1199px) {
@@ -251,6 +262,10 @@
             @media (min-width: 1200px) and (max-width: 1450px) {
                 font-size: 1.25rem;
             }
+        }
+
+        br {
+            display: block;
         }
 
         ul {
@@ -308,6 +323,10 @@
         @extend .flex-y-row;
         max-width: 150px;
         gap: 0.3rem;
+    }
+
+    br {
+        display: none;
     }
 
     .toggle-arrow {

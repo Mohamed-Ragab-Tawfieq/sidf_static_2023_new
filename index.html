@@ -162,8 +162,8 @@
                                 </h4>
                                 <ul>
                                     <li><a href="digitalization/projects.html">المشاريع الرئيسية المنجزة</a></li>
-                                    <li><a href="digitalization/services.html">الخدمات الرقمية المقدمة من الصندوق</a></li>
-                                    <li><a href="digitalization/joureny.html">رحلة الصندوق الصناعي في التحول الرقمي</a></li>
+                                    <li><a href="digitalization/services.html">الخدمات الرقمية المقدمة</a></li>
+                                    <li><a href="digitalization/joureny.html">رحلة الصندوق في التحول الرقمي</a></li>
                                     <li><a href="digitalization/technical-house.html">برنامج ترتيب البيت التقن</a></li>
                                     <li><a href="digitalization/awards.html">شهادات استحقاق و تجديد الأيزو</a></li>
                                 </ul>
@@ -231,7 +231,7 @@
                             <img src="assets/images/pages/home/03.png" class="absolute-center" alt="Title 3">
                             <div class="content">
                                 <h4 class="text-white fw-7">
-                                    أتجاهات و مؤشرات الأقتصاد المحلي
+                                    أتجاهات و مؤشرات الأقتصاد <br> المحلي
                                     <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
@@ -250,7 +250,7 @@
                                 </h4>
                                 <ul>
                                     <li><a href="strategy/goals.html">أهداف الصندوق الاستراتيجية</a></li>
-                                    <li><a href="strategy/priorities.html">أولويات استراتيجية الصندوق في 2023</a></li>
+                                    <li><a href="strategy/priorities.html">أولويات استراتيجية الصندوق 2023</a></li>
                                     <li><a href="strategy/achievements.html">أهم الإنجازات في 2023</a></li>
                                     <li><a href="strategy/indicators.html">مؤشــرات الأداء الرئيســة 2023م</a></li>
                                     <li><a href="strategy/awards.html">جوائز و شهادات مُميّزة</a></li>
@@ -373,7 +373,7 @@
                 });
 
                 element.classList.add('expand-hexagon');
-                element.parentElement.classList.add('expand-column');
+                // element.parentElement.classList.add('expand-column');
 
                 document.querySelectorAll('.hexagon').forEach(hex => {
                     if (hex !== element) {
@@ -386,9 +386,9 @@
                 document.querySelectorAll('.hexagon').forEach(hex => {
                     hex.classList.remove('expand-hexagon', 'collapse-hexagon');
                 });
-                document.querySelectorAll('.expand-column').forEach(column => {
-                    column.classList.remove('expand-column');
-                });
+                // document.querySelectorAll('.expand-column').forEach(column => {
+                //     column.classList.remove('expand-column');
+                // });
             }
 
             document.addEventListener('DOMContentLoaded', function () {
@@ -399,7 +399,7 @@
                         const homeSide = document.querySelector('.home-side');
                         const homeTitle = document.querySelector('.home-title');
 
-                        const factor = window.innerWidth > 1500 ? 1100 : (window.innerWidth >= 1200 ? 1000 : 890);
+                        const factor = window.innerWidth > 1500 ? 1100 : (window.innerWidth <= 767 ? 890 : 700);
                         const lines = document.getElementById('progressLines');
                         const linesProgress = (parent.scrollTop / factor) * 100;
 
