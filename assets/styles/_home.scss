@@ -197,14 +197,6 @@
         }
     }
 
-    &:not(.expand-hexagon) {
-        @media (max-width: 1199px) {
-            a {
-                pointer-events: none;
-            }
-        }
-    }
-
     // hover
     &.expand-hexagon {
         z-index: 30;
@@ -250,9 +242,14 @@
 
             @media (max-width: 1199px) {
                 top: 35px;
-                inset-inline-start: 10%;
                 max-width: 230px;
                 bottom: 20px;
+            }
+
+            &.custom {
+                @media (max-width: 1199px) {
+                    top: 65px;
+                }
             }
         }
 
@@ -310,6 +307,10 @@
         z-index: 10;
         max-width: 150px;
         transition: all 0.3s ease-in-out;
+
+        @media (max-width: 1199px) {
+            inset-inline-start: 18%;
+        }
     }
 
     .content {

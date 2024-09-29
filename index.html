@@ -81,10 +81,27 @@
         <header class="mobile-header collapsed" id="mobile-header">
             <div class="container">
                 <nav>
-                    <button class="btn"><img src="assets/images/icons/menu.svg" alt="menu"></button>
+                    <button class="btn" onclick="toggleHeader()"><img src="assets/images/icons/menu.svg" alt="menu"></button>
                     <a href="index.html"><img src="assets/images/logo.svg" width="77" class="logo" alt="logo"></a>
                     <button class="btn"><img src="assets/images/icons/search.svg" alt="search"></button>
                 </nav>
+
+                <div class="details">
+                    <button class="btn btn-close mb-4 ms-n4" onclick="toggleHeader()"><i class="bi bi-x-lg flex-center"></i></button>
+                    <nav class="d-flex flex-column align-items-start">
+                        <a href="/" class="h4 text-black op-6">الرئيسية</a>
+                        <a href="/about/in-lines.html" class="h4 text-black op-6">عن الصندوق</a>
+                        <a href="/statistics/loans.html" class="h4 text-black op-6">أبرز أرقام 2022</a>
+                        <a href="/eco-indicators/eco-status.html" class="h4 text-black op-6">مؤشرات اقتصاديه </a>
+                        <a href="/lending-activity/main.html" class="h4 text-black op-6">النشاط الإقراضي </a>
+                        <a href="/strategy/main.html" class="h4 text-black op-6">استراتيجية الصندوق</a>
+                        <a href="/digitalization/development.html" class="h4 text-black op-6">التحول الرقمي</a>
+                        <a href="/human/main.html" class="h4 text-black op-6">تنمية القدرات البشرية</a>
+                        <a href="/vaccines/types.html" class="h4 text-black op-6">دراسة صناعيه</a>
+                        <a href="/additive-manufacturing/main.html" class="h4 text-black op-6"> تحت الاضواء</a>
+                        <a href="/lending-stats/main.html" class="h4 text-black op-6">إحصائيات</a>
+                    </nav>
+                </div>
             </div>
         </header>
 
@@ -123,7 +140,7 @@
                             <div class="content">
                                 <h4 class="text-white fw-7">
                                     أبرز أرقام 2023م
-                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                    <button class="btn toggle-arrow flex-center" onclick="handleMobileHexagon(this)"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
                                     <li><a href="statistics/loans.html">أولا: النشاط الإقراضي</a></li>
@@ -140,7 +157,7 @@
                             <div class="content">
                                 <h4 class="text-white fw-7">
                                     النشاط الإقراضي للصندوق
-                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                    <button class="btn toggle-arrow flex-center" onclick="handleMobileHexagon(this)"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
                                     <li><a href="lending-activity/lending-activity.html">النشاط الإقراضي للصندوق</a></li>
@@ -158,7 +175,7 @@
                             <div class="content">
                                 <h4 class="text-white fw-7">
                                     التحول الرقمي و تقنية المعلومات
-                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                    <button class="btn toggle-arrow flex-center" onclick="handleMobileHexagon(this)"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
                                     <li><a href="digitalization/projects.html">المشاريع الرئيسية المنجزة</a></li>
@@ -176,7 +193,7 @@
                             <div class="content">
                                 <h4 class="text-white fw-7">
                                     الصندوق خلال 50 عامًا
-                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                    <button class="btn toggle-arrow flex-center" onclick="handleMobileHexagon(this)"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
                                     <li><a href="about/brief.html">الصندوق في سطور </a></li>
@@ -194,7 +211,7 @@
                             <div class="content">
                                 <h4 class="text-white fw-7">
                                     إحصاءات النشاط الاقراضي
-                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                    <button class="btn toggle-arrow flex-center" onclick="handleMobileHexagon(this)"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
                                     <li><a href="about/brief.html">الصندوق في سطور </a></li>
@@ -214,7 +231,7 @@
                             <div class="content">
                                 <h4 class="text-white fw-7">
                                     لمحة عن الصندوق
-                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                    <button class="btn toggle-arrow flex-center" onclick="handleMobileHexagon(this)"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
                                     <li><a href="about/brief.html">الصندوق في سطور </a></li>
@@ -229,10 +246,10 @@
                         <div class="hexagon" onmouseenter="handleHexagonHover(this)" onmouseleave="handleHexagonBlur()">
                             <h2 class="text-white fw-6 display-3">03</h2>
                             <img src="assets/images/pages/home/03.png" class="absolute-center" alt="Title 3">
-                            <div class="content">
+                            <div class="content custom">
                                 <h4 class="text-white fw-7">
                                     أتجاهات و مؤشرات الأقتصاد <br> المحلي
-                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                    <button class="btn toggle-arrow flex-center" onclick="handleMobileHexagon(this)"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
                                     <li><a href="eco-status/eco-status.html">أتجاهات و مؤشرات الأقتصاد المحلي </a></li>
@@ -246,7 +263,7 @@
                             <div class="content">
                                 <h4 class="text-white fw-7">
                                     استراتيجية الصندوق
-                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                    <button class="btn toggle-arrow flex-center" onclick="handleMobileHexagon(this)"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
                                     <li><a href="strategy/goals.html">أهداف الصندوق الاستراتيجية</a></li>
@@ -264,7 +281,7 @@
                             <div class="content">
                                 <h4 class="text-white fw-7">
                                     تنمية القدرات البشرية
-                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                    <button class="btn toggle-arrow flex-center" onclick="handleMobileHexagon(this)"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
                                     <li><a href="human-development/institutional-culture.html">أولا: الثقافة المؤسسية</a></li>
@@ -281,7 +298,7 @@
                             <div class="content">
                                 <h4 class="text-white fw-7">
                                     موضوع تحت الأضواء
-                                    <button class="btn toggle-arrow flex-center"><i class='material-icons'>arrow_forward_ios</i></button>
+                                    <button class="btn toggle-arrow flex-center" onclick="handleMobileHexagon(this)"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
                                     <li><a href="about/brief.html">الصندوق في سطور </a></li>
@@ -368,28 +385,38 @@
 
         <script>
             function handleHexagonHover(element) {
-                document.querySelectorAll('.hexagon').forEach(hex => {
-                    hex.classList.remove('expand-hexagon', 'collapse-hexagon');
-                });
+                if (window.innerWidth >= 992) {
+                    document.querySelectorAll('.hexagon').forEach(hex => {
+                        hex.classList.remove('expand-hexagon');
+                    });
 
-                element.classList.add('expand-hexagon');
-                // element.parentElement.classList.add('expand-column');
-
-                document.querySelectorAll('.hexagon').forEach(hex => {
-                    if (hex !== element) {
-                        hex.classList.add('collapse-hexagon');
-                    }
-                });
+                    element.classList.add('expand-hexagon');
+                }
             }
 
             function handleHexagonBlur() {
-                document.querySelectorAll('.hexagon').forEach(hex => {
-                    hex.classList.remove('expand-hexagon', 'collapse-hexagon');
-                });
-                // document.querySelectorAll('.expand-column').forEach(column => {
-                //     column.classList.remove('expand-column');
-                // });
+                if (window.innerWidth >= 992) {
+                    document.querySelectorAll('.hexagon').forEach(hex => {
+                        hex.classList.remove('expand-hexagon');
+                    });
+                }
             }
+
+            function handleMobileHexagon(element) {
+                if (window.innerWidth <= 991) {
+                    const currentHexagon = element.closest(".hexagon");
+                    const isExpanded = currentHexagon.classList.contains('expand-hexagon');
+
+                    document.querySelectorAll('.hexagon').forEach(hex => {
+                        hex.classList.remove('expand-hexagon');
+                    });
+
+                    if (!isExpanded) {
+                        currentHexagon.classList.add('expand-hexagon');
+                    }
+                }
+            }
+
 
             document.addEventListener('DOMContentLoaded', function () {
                 function handleHexagonsScroll() {

@@ -55,6 +55,13 @@ window.addEventListener('scroll', function () {
     }
 })
 
+/*** toggle header ***/
+function toggleHeader() {
+    document.getElementById('mobile-header').classList.toggle('collapsed');
+    document.getElementById('mobile-header').classList.toggle('expanded');
+}
+
+
 /*** about arrows ***/
 $(document).ready(function () {
     const aboutBrief = document.getElementById('first-section');
@@ -144,7 +151,6 @@ function playTopVideo() {
         document.getElementById('inner-top-img').classList.remove('video-playing');
     });
 }
-
 
 /*** next and prev ***/
 $(document).ready(function () {
