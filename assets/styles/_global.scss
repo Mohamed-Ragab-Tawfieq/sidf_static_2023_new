@@ -164,6 +164,24 @@ h6 {
     line-height: 1.75rem;
 }
 
+p {
+    &.fs-2 {
+        text-align: justify;
+    }
+
+    &.fs-3 {
+        text-align: justify;
+    }
+
+    &.fs-4 {
+        text-align: justify;
+    }
+
+    &.description {
+        text-align: justify;
+    }
+}
+
 h1,
 h2,
 h3,
