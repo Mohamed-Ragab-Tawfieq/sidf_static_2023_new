@@ -107,6 +107,7 @@
     padding-block: 1000px;
     transform: rotate(60deg);
     overflow: hidden auto;
+    transition: all 1s ease-in-out;
 
     margin-top: -670px;
     margin-inline-start: 400px;
@@ -131,13 +132,14 @@
     }
 
     &.end {
+        transition: all 1s ease-in-out;
+
         @media (min-width: 1200px) and (max-width: 1450px) {
             padding-block: 700px 1200px;
         }
 
         @media (max-width: 1199px) {
             margin-top: -870px;
-            transition: all 1s ease-in-out;
         }
     }
 }
@@ -238,13 +240,12 @@
 
         .content {
             top: 85px;
-            inset-inline-start: 15%;
+            inset-inline-start: 17%;
             max-width: 200px;
 
             @media (min-width: 1200px) and (max-width: 1450px) {
                 top: 50px;
                 bottom: auto;
-                inset-inline-start: 17%;
             }
 
             @media (max-width: 1199px) {
