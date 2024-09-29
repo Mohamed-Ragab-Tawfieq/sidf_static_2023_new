@@ -25,15 +25,6 @@
     }
 }
 
-@keyframes logoWrapperAnimate {
-    from {
-        transform: translateX(-20px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
 @keyframes lineAnimate {
     from {
         transform: scaleY(0);
@@ -156,6 +147,16 @@
     }
 }
 
+@keyframes logoScale3Responsive {
+    0% {
+        transform: translate(50%, 50%) scale(1);
+    }
+
+    100% {
+        transform: translate(80%, 50%) scale(2);
+    }
+}
+
 @keyframes logoScale2 {
     0% {
         transform: translate(50%, 50%) scale(1);
@@ -178,12 +179,10 @@
 
 @keyframes topImgAnimate {
     from {
-        // transform: translateY(-200px) translateX(-50%);
         opacity: 0;
     }
 
     to {
-        // transform: translateY(0) translateX(-50%);
         opacity: 1;
     }
 }
@@ -267,6 +266,12 @@
             animation:
                 logoScale 0.8s ease-in 6s forwards,
                 logoScale2Responsive 1.5s ease 8s forwards;
+        }
+
+        @media (max-width: 1199px) {
+            animation:
+                logoScale 0.8s ease-in 6s forwards,
+                logoScale3Responsive 1.5s ease 8s forwards;
         }
 
         img:first-of-type {
@@ -405,8 +410,17 @@
 
         animation: bottomImgAnimate 1.5s ease-in 4.5s forwards;
 
+        @media (max-width: 1199px) {
+            flex-direction: column;
+            gap: 10px;
+        }
+
         .progress-lines {
             width: 60vw;
+
+            @media (max-width: 1199px) {
+                display: none;
+            }
         }
     }
 
@@ -429,5 +443,9 @@
         animation:
             arrowsAnimate 1s ease-in 8s forwards,
             arrowsLight 1.2s ease-in 8.8s infinite;
+
+        @media (max-width: 1199px) {
+            inset-inline-start: 66vw;
+        }
     }
 }

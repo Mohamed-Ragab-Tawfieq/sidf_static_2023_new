@@ -350,16 +350,18 @@
                 setTimeout(() => {
                     loaderYears.style.transition = 'transform 0.5s ease-in';
                     if (window.innerWidth > 1450) {
-
                         loaderYears.style.transform = 'scale(1)';
-                    } else {
-
+                    } else if (window.innerWidth >= 1199) {
                         loaderYears.style.transform = 'scale(1) translateX(20px)';
+                    }
+                    else {
+                        loaderYears.style.transform = 'scale(0.4) translateX(-20px)';
+
                     }
                 }, 8500);
 
                 setTimeout(() => {
-                    loader.classList.add('hide')
+                    // loader.classList.add('hide')
                 }, 10000);
             });
         </script>
