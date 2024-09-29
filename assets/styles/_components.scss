@@ -308,10 +308,10 @@ details {
 
 /************** about **************/
 .first-section {
-    background: url("../images/logo/1.svg") no-repeat top -10% left;
+    background: url("../images/logo/1.svg") no-repeat top -20% left -25%;
 
     &.primary {
-        background: url("../images/logo/2.svg") no-repeat top -10% left / 30%;
+        background: url("../images/logo/2.svg") no-repeat top -10% left -15% / 30%;
     }
 
     &.aos-animate {
