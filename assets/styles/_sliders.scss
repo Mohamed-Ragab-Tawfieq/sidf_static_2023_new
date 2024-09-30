@@ -3,6 +3,10 @@
     flex-direction: row;
     width: 100%;
     margin-top: 50px !important;
+
+    @media (max-width: 1199px) {
+        margin-top: 30px !important;
+    }
 }
 
 .owl-prev,

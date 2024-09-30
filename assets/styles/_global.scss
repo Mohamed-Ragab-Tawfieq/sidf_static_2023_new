@@ -99,8 +99,9 @@ body {
     display: flex;
     flex-direction: column;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1199px) {
         font-size: clamp(0.75rem, 3.5vw, 1rem) !important;
+        overflow-x: hidden;
     }
 
     &.home {
@@ -164,17 +165,21 @@ h6 {
     line-height: 1.75rem;
 }
 
+h2.display-3 {
+    @media (max-width: 1199px) {
+        font-size: 2rem !important;
+    }
+}
+
 p {
-    &.fs-2 {
-        text-align: justify;
-    }
-
-    &.fs-3 {
-        text-align: justify;
-    }
-
+    &.fs-2,
+    &.fs-3,
     &.fs-4 {
         text-align: justify;
+
+        @media (max-width: 1199px) {
+            font-size: 1.13rem !important;
+        }
     }
 
     &.description {
@@ -288,6 +293,11 @@ section {
             width: 52px;
             opacity: 1;
             transition: all 1s ease-in-out;
+
+            @media (max-width: 1199px) {
+                margin-inline-start: 0;
+                width: 13px;
+            }
         }
     }
 }
@@ -314,6 +324,26 @@ section {
 
     .btn:last-of-type {
         background-color: #e8e6e6;
+    }
+
+    .fs-2 {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+
+        @media (max-width: 1199px) {
+            font-size: 1.13rem !important;
+
+            i {
+                font-size: 1rem !important;
+            }
+        }
+    }
+
+    .display-5 {
+        @media (max-width: 1199px) {
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -371,5 +401,13 @@ section {
 
     &.logo-2 {
         background: url("../images/logo/2.svg") no-repeat center left;
+    }
+}
+
+// sec-arrows
+.ms-11.ps-11 {
+    @media (max-width: 1199px) {
+        margin-inline-start: 0 !important;
+        padding-inline-start: 0 !important;
     }
 }

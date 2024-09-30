@@ -9,31 +9,52 @@ window.addEventListener('scroll', function () {
 });
 
 /*** about nav active ***/
-function handleAboutNav() {
+function handleSIDFNav() {
     document.addEventListener("DOMContentLoaded", function () {
         const navLinks = document.querySelectorAll(".sidf-navbar .nav-link");
+        // const activeLink = document.querySelector(".sidf-navbar .nav-link.active");
 
-        navLinks.forEach(link => {
+        navLinks?.forEach(link => {
             if (link.href === window.location.href) {
                 link.classList.add("active");
+
+                link?.addEventListener("click", (event) => {
+                    event.preventDefault();
+
+                    if (window.innerWidth <= 1199) {
+                        navLinks.forEach(link => {
+                            link.style.display = link.style.display === 'block' ? 'none' : 'block';
+                        });
+                    }
+                });
             }
         });
     });
 }
-handleAboutNav()
+handleSIDFNav()
 
 /*** header fixed ***/
 window.addEventListener('scroll', function () {
     const header = document.getElementById('inner-header');
+    const mobileHeader = document.getElementById('mobile-header');
+
+    const stickyHeader = header.offsetTop;
+    const stickyMobileHeader = mobileHeader.offsetTop;
+
     const progress = document.getElementById('sidf-navbar');
     const aboutBrief = document.getElementById('first-section');
     const welcomeArrows = document.querySelector('.inner-top-img .arrows');
-    const stickyHeader = header.offsetTop;
 
     if (window.scrollY > stickyHeader) {
         header?.classList.add('sticky');
     } else {
         header?.classList.remove('sticky');
+    }
+
+    if (window.scrollY > stickyMobileHeader) {
+        mobileHeader?.classList.add('sticky');
+    } else {
+        mobileHeader?.classList.remove('sticky');
     }
 
     if (window.scrollY > stickyHeader + 300) {
@@ -60,7 +81,6 @@ function toggleHeader() {
     document.getElementById('mobile-header').classList.toggle('collapsed');
     document.getElementById('mobile-header').classList.toggle('expanded');
 }
-
 
 /*** about arrows ***/
 $(document).ready(function () {

@@ -7,6 +7,10 @@
     background-color: $white;
     box-shadow: 0 5px 5px 0 rgba($black, 0.07);
 
+    @media (max-width: 1199px) {
+        padding-block: 14px 0 !important;
+    }
+
     &.sticky {
         position: fixed;
         inset: 61px 0 auto;
@@ -65,12 +69,34 @@
                 padding-block: 0.25rem;
             }
 
+            @media (max-width: 1199px) {
+                color: #8a8b8d !important;
+
+                margin-inline: 0.25rem;
+                padding-block: 0 !important;
+
+                font-weight: 500;
+                text-align: start;
+                border-radius: 0.25rem !important;
+            }
+
             &:not(.active) {
                 border: 1px solid transparent;
+
+                @media (max-width: 1199px) {
+                    display: none;
+                }
             }
 
             &.active {
                 @extend .btn-gradient;
+
+                @media (max-width: 1199px) {
+                    display: block !important;
+                    background:
+                        url("../images/icons/arrow-down.svg") no-repeat center left 1rem,
+                        #e8e6e6;
+                }
             }
 
             &:not(.active):hover {
@@ -108,6 +134,10 @@
 
         background-color: $success;
         transition: width 0.1s ease-in-out;
+
+        @media (max-width: 1199px) {
+            height: 1px;
+        }
 
         &.primary {
             background-color: $primary;
@@ -306,6 +336,44 @@ details {
     }
 }
 
+.sidf-counters {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.63rem;
+
+    .item {
+        position: relative;
+        background:
+            url("../images/arrows/left/3.svg") no-repeat center left 0.63rem,
+            $white;
+
+        width: 190px;
+        height: 150px;
+
+        border: 1px solid $success;
+        border-radius: 1rem;
+
+        @media (max-width: 1199px) {
+            width: 160px;
+            height: 125px;
+
+            &:first-of-type,
+            &:last-of-type {
+                margin-inline-start: auto !important;
+            }
+        }
+
+        h4 {
+            max-width: 180px;
+            text-align: center;
+
+            @media (max-width: 1199px) {
+                max-width: 150px;
+            }
+        }
+    }
+}
+
 /************** about **************/
 .first-section {
     background: url("../images/logo/1.svg") no-repeat top -20% left -25%;
@@ -426,30 +494,6 @@ details {
     }
 }
 
-.about-counters {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2.63rem;
-
-    .item {
-        position: relative;
-        background:
-            url("../images/arrows/left/3.svg") no-repeat center left 0.63rem,
-            $white;
-
-        width: 190px;
-        height: 150px;
-
-        border: 1px solid $success;
-        border-radius: 1rem;
-
-        h4 {
-            max-width: 180px;
-            text-align: center;
-        }
-    }
-}
-
 .sidf-slider-wrap {
     &.aos-animate {
         .owl-nav {
@@ -475,7 +519,7 @@ details {
             height: 100%;
 
             background-color: rgba($black, 0.25);
-            backdrop-filter: blur(1px);
+            backdrop-filter: blur(2px);
             border-radius: 1rem;
         }
 
@@ -496,6 +540,11 @@ details {
                     rgba(#6ba440, 0.4) 84.54%,
                     rgba(#70aa42, 0.4) 106.54%
                 );
+            }
+        }
+
+        &.no-blur {
+            &::after {
                 backdrop-filter: none;
             }
         }
@@ -542,11 +591,20 @@ details {
         }
     }
 
+    .graph-bars.vertical {
+        @media (max-width: 1199px) {
+            display: none !important;
+        }
+    }
+
     .bars-graph {
         position: relative;
         background: url("../images/top-img/1.png") no-repeat center / cover;
         padding: 1rem 3.5rem;
-        border-radius: 40px;
+
+        @media (min-width: 1200px) {
+            border-radius: 40px;
+        }
     }
 }
 
@@ -557,6 +615,7 @@ details {
     padding: 0.38rem;
     border-radius: 0.38rem;
 }
+
 // vertical
 .graph-bars.vertical {
     &.aos-animate {

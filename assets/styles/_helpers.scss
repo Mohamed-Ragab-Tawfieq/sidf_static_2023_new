@@ -88,7 +88,7 @@
 .sec-padding {
     padding-block: 80px;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1199px) {
         padding-block: 40px;
     }
 }
@@ -98,7 +98,7 @@
     gap: 1rem;
 
     &:not(.grid-icon):not([class*="grid-md"]):not([class*="grid-xs"]) {
-        @media (max-width: 991px) {
+        @media (max-width: 1199px) {
             display: flex !important;
             flex-direction: column;
         }
@@ -250,12 +250,6 @@
     opacity: 1 !important;
 }
 
-.m-xs-0 {
-    @media (max-width: 767px) {
-        margin: 0 !important;
-    }
-}
-
 @for $fw from 3 through 9 {
     .fw-#{$fw} {
         font-weight: #{$fw * 100} !important;
@@ -283,20 +277,16 @@
         }
     }
 
-    .grid-lg-#{$i} {
-        @media (min-width: 992px) {
-            grid-template-columns: repeat(#{$i}, 1fr) !important;
-        }
-    }
-
     .grid-md-#{$i} {
-        @media (min-width: 768px) and (max-width: 991px) {
+        @media (max-width: 1199px) {
+            display: grid !important;
             grid-template-columns: repeat(#{$i}, 1fr) !important;
         }
     }
 
     .grid-xs-#{$i} {
         @media (max-width: 767px) {
+            display: grid !important;
             grid-template-columns: repeat(#{$i}, 1fr) !important;
         }
     }
@@ -307,6 +297,24 @@
 
     .span-#{$i} {
         grid-column: span $i;
+    }
+
+    .span-xl-#{$i} {
+        @media (min-width: 1200px) {
+            grid-column: span $i;
+        }
+    }
+
+    .span-md-#{$i} {
+        @media (max-width: 1199px) {
+            grid-column: span $i;
+        }
+    }
+
+    .span-xs-#{$i} {
+        @media (max-width: 767px) {
+            grid-column: span $i;
+        }
     }
 }
 

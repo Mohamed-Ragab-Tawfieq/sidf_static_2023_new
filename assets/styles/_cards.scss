@@ -8,6 +8,10 @@
     color: $success;
     transition: all 0.5s ease-in-out;
 
+    @media (max-width: 1199px) {
+        padding: 1rem;
+    }
+
     &.primary {
         border-color: $primary;
 
@@ -101,7 +105,10 @@
 
     .description {
         color: #6d6e71;
-        max-width: 75%;
+
+        @media (min-width: 1200px) {
+            max-width: 75%;
+        }
     }
 
     .grid-icon {
