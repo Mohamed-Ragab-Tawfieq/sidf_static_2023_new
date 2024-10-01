@@ -374,7 +374,7 @@ details {
     }
 }
 
-/************** about **************/
+/************** 01 about **************/
 .first-section {
     background: url("../images/logo/1.svg") no-repeat top -20% left -25%;
 
@@ -411,6 +411,10 @@ details {
 
     @media (min-width: 1200px) and (max-width: 1450px) {
         height: 390px;
+    }
+
+    @media (max-width: 1199px) {
+        height: 270px;
     }
 
     &.video-playing {
@@ -477,6 +481,11 @@ details {
         transform: translateY(50%) scale(1);
         inset-inline-end: 200px;
         transition: all 1s ease-in-out;
+
+        @media (max-width: 1199px) {
+            inset-inline-end: 20px;
+            width: 100px;
+        }
 
         &.hide {
             bottom: 0;
@@ -771,35 +780,53 @@ details {
 
     &.ceo {
         .counter-card:first-of-type {
-            top: 18%;
+            top: 25%;
             inset-inline-start: 25%;
+
+            @media (max-width: 1199px) {
+                top: 35%;
+                inset-inline-start: 3%;
+            }
         }
 
         .counter-card:last-of-type {
-            bottom: 27%;
-            inset-inline-end: 14%;
+            bottom: 0;
+            inset-inline-end: 0;
+
+            @media (max-width: 1199px) {
+                bottom: -4%;
+            }
         }
     }
 
     .counter-card {
+        @media (max-width: 1199px) {
+            width: 110px;
+            height: 80px;
+        }
+
         &:first-of-type {
             position: absolute;
-            top: 17%;
-            inset-inline-start: 19%;
+            top: 30%;
+            inset-inline-start: 22%;
             z-index: 10;
         }
 
         &:last-of-type {
             position: absolute;
-            bottom: 31%;
-            inset-inline-end: 14%;
+            bottom: 5%;
+            inset-inline-end: 2%;
         }
 
         &.top-left {
             position: absolute;
-            top: 6%;
-            inset-inline-end: 4%;
+            top: 16%;
+            inset-inline-end: -6%;
             z-index: 10;
+
+            @media (max-width: 1199px) {
+                inset-inline-end: 0;
+            }
         }
     }
 }

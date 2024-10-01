@@ -95,13 +95,13 @@ body {
 
     text-align: start;
     min-height: 100vh;
+    overflow-x: hidden;
 
     display: flex;
     flex-direction: column;
 
     @media (max-width: 1199px) {
         font-size: clamp(0.75rem, 3.5vw, 1rem) !important;
-        overflow-x: hidden;
     }
 
     &.home {
