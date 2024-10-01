@@ -63,7 +63,7 @@
             @media (max-width: 1199px) {
                 content: url("../images/icons/arrow-down.svg");
                 position: absolute;
-                bottom: 4px;
+                bottom: 0.88rem;
                 inset-inline-end: 1rem;
                 z-index: 10;
                 animation: ulArrowAnimate 2s ease-in forwards;
@@ -637,6 +637,10 @@ details {
         @media (min-width: 1200px) {
             border-radius: 40px;
         }
+
+        @media (max-width: 1199px) {
+            background-size: auto;
+        }
     }
 }
 
@@ -736,6 +740,31 @@ details {
 
     .number {
         padding-inline: 20px 120px;
+    }
+}
+
+// vertical mobile
+.graph-bars.d-none {
+    @media (min-width: 1200px) {
+        display: grid !important;
+        gap: 1rem;
+    }
+}
+
+// vertical mobile
+.graph-bars.horizontal.d-lg-none {
+    .item {
+        text-align: center;
+        background: url("../images/bars/bar-6.svg") no-repeat center/cover;
+    }
+
+    .btn-gradient {
+        height: 3rem;
+        margin-block: 0.25rem;
+    }
+
+    .graph-date {
+        height: 2.5rem;
     }
 }
 

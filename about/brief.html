@@ -19,7 +19,7 @@
         <header class="inner-header collapsed" id="inner-header">
             <div class="container">
                 <nav class="flex-between flex-row">
-                    <div class="flex-y-row gap-2">
+                    <div class="align-items-center gap-2" style="display: grid; grid-template-columns: 45px 1fr;">
                         <button class="btn" onclick="toggleHeader()"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
                         <a href="../index.html"><img src="../assets/images/logo.svg" width="77" alt="logo"></a>
                     </div>
@@ -298,14 +298,14 @@
                         </div>
 
                         <!-- lg -->
-                        <div class="graph-bars d-grid d-md-none align-items-end vertical" style="grid-template-columns: repeat(7, 1fr);" data-aos="fade-up" data-aos-duration="700">
+                        <div class="graph-bars d-none align-items-end vertical" style="display: grid; grid-template-columns: repeat(7, 1fr);" data-aos="fade-up" data-aos-duration="700">
                             <div>
                                 <div class="item">
                                     <h2 class="number purecounter display-1 op-7 fw-7 text-center" data-purecounter-end="105">105</h2>
                                     <h4 class="op-7 fw-4">مليار دولار</h4>
                                     <div class="btn-gradient" style="height: 110px;"></div>
                                 </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">2019</h5>
+                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto" style="color: #30461e;">2019</h5>
                             </div>
                             <div>
                                 <div class="item">
@@ -313,7 +313,7 @@
                                     <h4 class="op-7 fw-4">مليار دولار</h4>
                                     <div class="btn-gradient" style="height: 80px;"></div>
                                 </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">2017</h5>
+                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto" style="color: #30461e;">2017</h5>
                             </div>
                             <div>
                                 <div class="item">
@@ -321,7 +321,7 @@
                                     <h4 class="op-7 fw-4">مليار دولار</h4>
                                     <div class="btn-gradient" style="height: 60px;"></div>
                                 </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">2012</h5>
+                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto" style="color: #30461e;">2012</h5>
                             </div>
                             <div>
                                 <div class="item">
@@ -329,7 +329,7 @@
                                     <h4 class="op-7 fw-4">مليار دولار</h4>
                                     <div class="btn-gradient" style="height: 40px;"></div>
                                 </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">2005</h5>
+                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto" style="color: #30461e;">2005</h5>
                             </div>
                             <div>
                                 <div class="item">
@@ -337,7 +337,7 @@
                                     <h4 class="op-7 fw-4">مليار دولار</h4>
                                     <div class="btn-gradient" style="height: 30px;"></div>
                                 </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">1992</h5>
+                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto" style="color: #30461e;">1992</h5>
                             </div>
                             <div>
                                 <div class="item">
@@ -345,7 +345,7 @@
                                     <h4 class="op-7 fw-4">مليار دولار</h4>
                                     <div class="btn-gradient" style="height: 20px;"></div>
                                 </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">1975</h5>
+                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto" style="color: #30461e;">1975</h5>
                             </div>
                             <div>
                                 <div class="item">
@@ -353,41 +353,85 @@
                                     <h4 class="op-7 fw-4">مليار دولار</h4>
                                     <div class="btn-gradient" style="height: 8px;"></div>
                                 </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">1974</h5>
+                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto" style="color: #30461e;">1974</h5>
                             </div>
                         </div>
 
                         <!-- mobile -->
-                        <div class="graph-bars horizontal d-lg-none" data-aos="fade-up" data-aos-duration="700">
-                            <div class="flex-y-row gap-2">
-                                <h4 class="graph-date fw-7 flex-center">2023</h4>
-                                <div class="item" style="width: 85%; background: url('../assets/images/bars/bar-5.svg') no-repeat center / cover">
-                                    <div class="btn-gradient primary horizontal"></div>
-                                    <div class="flex-center flex-column number" style="padding-inline: 20px 120px;">
-                                        <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="109152">109152</h2>
-                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                        <div class="graph-bars horizontal gap-2 d-lg-none" data-aos="fade-up" data-aos-duration="700">
+                            <div class="align-items-center gap-2" style="display: grid; grid-template-columns: 45px 1fr;">
+                                <h4 class="graph-date fw-7 flex-center" style="color: #30461e;">2019</h4>
+                                <div class="item" style="width: 100%">
+                                    <div class="btn-gradient horizontal"></div>
+                                    <div class="flex-center flex-column number" style="padding-inline: 20px 50px">
+                                        <h2 class="purecounter display-6 fw-7" style="color: #30461e;" data-purecounter-end="105">105</h2>
+                                        <h6 class="fw-4 f-18 text-nowrap mt-n3" style="color: #30461e;">مليار دولار</h6>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="flex-y-row gap-2">
-                                <h4 class="graph-date fw-7 flex-center">2022</h4>
-                                <div class="item" style="width: 80%; background: url('../assets/images/bars/bar-5.svg') no-repeat center / cover">
-                                    <div class="btn-gradient primary horizontal"></div>
-                                    <div class="flex-center flex-column number" style="padding-inline: 20px 120px;">
-                                        <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="99403">99403</h2>
-                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                            <div class="align-items-center gap-2" style="display: grid; grid-template-columns: 45px 1fr;">
+                                <h4 class="graph-date fw-7 flex-center" style="color: #30461e;">2017</h4>
+                                <div class="item" style="width: 90%">
+                                    <div class="btn-gradient horizontal"></div>
+                                    <div class="flex-center flex-column number" style="padding-inline: 20px 50px">
+                                        <h2 class="purecounter display-6 fw-7" style="color: #30461e;" data-purecounter-end="65">65</h2>
+                                        <h6 class="fw-4 f-18 text-nowrap mt-n3" style="color: #30461e;">مليار دولار</h6>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="flex-y-row gap-2">
-                                <h4 class="graph-date fw-7 flex-center">2021</h4>
-                                <div class="item" style="width: 75%; background: url('../assets/images/bars/bar-5.svg') no-repeat center / cover">
-                                    <div class="btn-gradient primary horizontal"></div>
-                                    <div class="flex-center flex-column number" style="padding-inline: 20px 120px;">
-                                        <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="93993">93993</h2>
-                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                            <div class="align-items-center gap-2" style="display: grid; grid-template-columns: 45px 1fr;">
+                                <h4 class="graph-date fw-7 flex-center" style="color: #30461e;">2012</h4>
+                                <div class="item" style="width: 82%">
+                                    <div class="btn-gradient horizontal"></div>
+                                    <div class="flex-center flex-column number" style="padding-inline: 20px 50px">
+                                        <h2 class="purecounter display-6 fw-7" style="color: #30461e;" data-purecounter-end="40">40</h2>
+                                        <h6 class="fw-4 f-18 text-nowrap mt-n3" style="color: #30461e;">مليار دولار</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="align-items-center gap-2" style="display: grid; grid-template-columns: 45px 1fr;">
+                                <h4 class="graph-date fw-7 flex-center" style="color: #30461e;">2005</h4>
+                                <div class="item" style="width: 75%">
+                                    <div class="btn-gradient horizontal"></div>
+                                    <div class="flex-center flex-column number" style="padding-inline: 20px 50px">
+                                        <h2 class="purecounter display-6 fw-7" style="color: #30461e;" data-purecounter-end="20">20</h2>
+                                        <h6 class="fw-4 f-18 text-nowrap mt-n3" style="color: #30461e;">مليار دولار</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="align-items-center gap-2" style="display: grid; grid-template-columns: 45px 1fr;">
+                                <h4 class="graph-date fw-7 flex-center" style="color: #30461e;">1992</h4>
+                                <div class="item" style="width: 70%">
+                                    <div class="btn-gradient horizontal"></div>
+                                    <div class="flex-center flex-column number" style="padding-inline: 20px 50px">
+                                        <h2 class="purecounter display-6 fw-7" style="color: #30461e;" data-purecounter-end="7">7</h2>
+                                        <h6 class="fw-4 f-18 text-nowrap mt-n3" style="color: #30461e;">مليار دولار</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="align-items-center gap-2" style="display: grid; grid-template-columns: 45px 1fr;">
+                                <h4 class="graph-date fw-7 flex-center" style="color: #30461e;">1975</h4>
+                                <div class="item" style="width: 67%">
+                                    <div class="btn-gradient horizontal"></div>
+                                    <div class="flex-center flex-column number" style="padding-inline: 20px 50px">
+                                        <h2 class="purecounter display-6 fw-7" style="color: #30461e;" data-purecounter-end="3">3</h2>
+                                        <h6 class="fw-4 f-18 text-nowrap mt-n3" style="color: #30461e;">مليار دولار</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="align-items-center gap-2" style="display: grid; grid-template-columns: 45px 1fr;">
+                                <h4 class="graph-date fw-7 flex-center" style="color: #30461e;">1974</h4>
+                                <div class="item" style="width: 62%">
+                                    <div class="btn-gradient horizontal"></div>
+                                    <div class="flex-center flex-column number" style="padding-inline: 20px 50px">
+                                        <h2 class="purecounter display-6 fw-7" style="color: #30461e;" data-purecounter-end="0.5" data-purecounter-decimals="1">0.5</h2>
+                                        <h6 class="fw-4 f-18 text-nowrap mt-n3" style="color: #30461e;">مليار دولار</h6>
                                     </div>
                                 </div>
                             </div>
