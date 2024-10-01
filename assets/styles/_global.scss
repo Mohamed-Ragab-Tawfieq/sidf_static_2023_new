@@ -171,6 +171,10 @@ h2.display-3 {
     }
 }
 
+[data-aos] {
+    max-width: 100%;
+}
+
 p {
     &.fs-2,
     &.fs-3,
@@ -381,7 +385,9 @@ section {
 }
 
 .sec-arrow-end-right {
-    background: url("../images/arrows/right/3.svg") no-repeat bottom -10% left / 15%;
+    @media (min-width: 1200px) {
+        background: url("../images/arrows/right/3.svg") no-repeat bottom -10% left / 15%;
+    }
 }
 
 .sec-logo-start {

@@ -56,6 +56,31 @@
         }
     }
 
+    ul {
+        position: relative;
+
+        &::after {
+            @media (max-width: 1199px) {
+                content: url("../images/icons/arrow-down.svg");
+                position: absolute;
+                bottom: 4px;
+                inset-inline-end: 1rem;
+                z-index: 10;
+                animation: ulArrowAnimate 2s ease-in forwards;
+            }
+
+            @keyframes ulArrowAnimate {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
     .nav-item {
         .nav-link {
             background-color: #e8e6e6;
@@ -93,9 +118,7 @@
 
                 @media (max-width: 1199px) {
                     display: block !important;
-                    background:
-                        url("../images/icons/arrow-down.svg") no-repeat center left 1rem,
-                        #e8e6e6;
+                    background: #e8e6e6 !important;
                 }
             }
 
@@ -807,14 +830,14 @@ details {
 
         &:first-of-type {
             position: absolute;
-            top: 30%;
-            inset-inline-start: 22%;
+            top: 34%;
+            inset-inline-start: 2%;
             z-index: 10;
         }
 
         &:last-of-type {
             position: absolute;
-            bottom: 5%;
+            bottom: -6%;
             inset-inline-end: 2%;
         }
 
