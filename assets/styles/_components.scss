@@ -27,6 +27,7 @@
         }
 
         ul {
+            gap: 0.25rem;
             transform: translateX(100px);
             animation: ulAnimation 1s both;
         }
@@ -199,7 +200,7 @@
     }
 }
 
-details {
+.sidf-accordion {
     &[open] {
         summary {
             color: $white;
@@ -226,11 +227,43 @@ details {
 
     summary {
         width: 100%;
+        border-radius: 1rem;
+
+        padding: 1.5rem;
+        margin-bottom: 2.5rem;
+
+        font-size: 3rem;
+        font-weight: 700;
 
         &::marker {
             content: none;
         }
     }
+}
+
+.sec-arrows-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    width: 100%;
+    margin-inline-start: 2.75rem;
+    padding-inline-start: 2.75rem;
+
+    @media (max-width: 1199px) {
+        gap: 0.25rem;
+    }
+}
+
+.sec-title {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.sec-text {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    color: $gray-500;
 }
 
 // lines
@@ -517,6 +550,14 @@ details {
             transform-origin: bottom;
             transition: all 1s ease-in-out;
         }
+    }
+
+    .title {
+        position: relative;
+        z-index: 10;
+        color: $white;
+        font-size: 5rem;
+        font-weight: 700;
     }
 
     .display-1,
@@ -994,6 +1035,14 @@ details {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
 }
 
 /************** lending-activity **************/
