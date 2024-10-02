@@ -265,7 +265,7 @@
         }
 
         @media (max-width: 1199px) {
-            height: 1px;
+            height: 2px;
         }
 
         &.primary {
@@ -1258,7 +1258,7 @@
 
     .icon {
         @media (max-width: 1199px) {
-            width: 40px;
+            width: 40px !important;
             min-width: auto !important;
         }
     }
@@ -1267,7 +1267,7 @@
 .statistics-human-icons-2 {
     .icon {
         @media (max-width: 1199px) {
-            width: 40px;
+            width: 40px !important;
             min-width: auto !important;
         }
     }
@@ -1281,7 +1281,76 @@
 
     .icon {
         @media (max-width: 1199px) {
-            width: 40px;
+            width: 40px !important;
+            min-width: auto !important;
+        }
+    }
+}
+
+.statistics-digital {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 2rem;
+
+    @media (max-width: 1199px) {
+        align-items: start;
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    &.no-reverse {
+        @media (max-width: 1199px) {
+            flex-direction: column;
+        }
+    }
+
+    .wrapper {
+        @media (max-width: 1199px) {
+            display: grid;
+            grid-template-columns: 40px auto;
+            grid-template-rows: auto auto;
+
+            gap: 0 0.5rem;
+            padding-inline: 0 !important;
+
+            .title {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    .number {
+        font-size: 80px;
+        font-weight: 700;
+
+        display: flex;
+        margin-inline-end: auto;
+
+        color: $primary;
+
+        @media (max-width: 1199px) {
+            font-size: 2.5rem;
+        }
+    }
+
+    .title {
+        color: $blue-500;
+        max-width: 80%;
+
+        font-size: 4rem;
+        font-weight: 500;
+
+        @media (max-width: 1199px) {
+            font-size: 2rem;
+            max-width: 100%;
+        }
+    }
+
+    .icon {
+        @media (max-width: 1199px) {
+            width: 40px !important;
             min-width: auto !important;
         }
     }

@@ -274,7 +274,7 @@ section {
 
             @media (max-width: 1199px) {
                 margin-inline-start: 0;
-                width: 13px;
+                width: 20px;
             }
         }
     }
@@ -290,7 +290,7 @@ section {
 }
 
 .text-primary-light {
-    color: #3980b3;
+    color: $blue-500;
 }
 
 .routing-links {
