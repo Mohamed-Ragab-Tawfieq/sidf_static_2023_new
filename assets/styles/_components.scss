@@ -594,6 +594,7 @@
     .modal-dialog {
         min-width: 100%;
         margin-top: 0;
+        margin-inline: 0;
     }
 
     .modal-content {
@@ -719,11 +720,13 @@
                 display: block;
                 padding: 1.5rem 0;
                 border-radius: 1rem;
+
+                position: absolute;
+
                 background-color: rgba($white, 0.32);
                 backdrop-filter: blur(3px);
 
                 @media (min-width: 1200px) {
-                    position: absolute;
                     top: 0;
                     inset-inline-end: 2rem;
                 }
