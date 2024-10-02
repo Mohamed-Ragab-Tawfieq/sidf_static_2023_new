@@ -28,13 +28,18 @@ function handleMobileNav() {
         const selectMenu = document.getElementById("sidf-navbar-mobile");
 
         if (ulMenu) {
-
             Array.from(ulMenu.getElementsByTagName("li")).forEach((li) => {
                 const link = li.querySelector("a");
                 const option = document.createElement("option");
 
                 option.textContent = link.textContent;
                 option.value = link.href;
+
+                // Set option as selected if window href matches option value
+                if (window.location.href === link.href) {
+                    option.selected = true;
+                }
+
                 selectMenu.appendChild(option);
             });
 
@@ -43,9 +48,8 @@ function handleMobileNav() {
             });
         }
     });
-
 }
-handleMobileNav()
+handleMobileNav();
 
 /*** inner modal ***/
 function handleHover(linkId, menuId) {
