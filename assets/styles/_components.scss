@@ -1106,10 +1106,50 @@
 
 .about-tree {
     .tree {
-        width: 1180px;
-        height: 727px;
-        margin: auto;
-        background: url("../images/pages/about/structure/tree.svg") no-repeat top center / contain;
+        &.lg {
+            width: 1180px;
+            height: 727px;
+            margin: auto;
+            background: url("../images/pages/about/structure/tree.svg") no-repeat top center / contain;
+
+            @media (max-width: 1199px) {
+                display: none;
+            }
+        }
+
+        &.mobile {
+            width: 340px;
+            height: 1050px;
+
+            margin: auto;
+            animation: imgAnimate 1s ease-in-out forwards;
+
+            background: url(../images/pages/about/structure/tree-2.svg) no-repeat center;
+            background-size: 100% 95%;
+
+            @keyframes imgAnimate {
+                from {
+                    background-position-y: bottom;
+                }
+
+                to {
+                    background-position-y: top;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                display: none;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                width: 345px;
+                height: 1043px;
+            }
+
+            li {
+                font-size: 0.75rem;
+            }
+        }
 
         .bottom-children {
             display: grid;

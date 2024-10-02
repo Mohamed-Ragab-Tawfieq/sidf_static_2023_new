@@ -140,6 +140,20 @@
         z-index: 10;
         padding-block: 0.44rem;
         margin-bottom: -1rem;
+        text-align: start;
+
+        span {
+            font-weight: 700;
+
+            &:first-of-type {
+                margin-inline-start: 1rem;
+                font-size: 1.13rem;
+            }
+
+            &:last-of-type {
+                font-size: 1.38rem;
+            }
+        }
     }
 
     .body {
@@ -148,6 +162,20 @@
         border-radius: 1rem;
         padding-top: 2rem;
         overflow: hidden;
+        text-align: start;
+
+        .title {
+            font-size: 1.13rem;
+            font-weight: 600;
+            margin-inline: 1rem;
+            color: $success;
+        }
+
+        .role {
+            font-size: 1.13rem;
+            color: $gray-500;
+            margin-inline: 1rem;
+        }
     }
 
     .progress-lines {
