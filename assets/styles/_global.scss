@@ -308,6 +308,10 @@ section {
         padding: 2.5rem;
         text-align: start;
 
+        @media (max-width: 1199px) {
+            padding: 1.25rem;
+        }
+
         &.btn-success {
             color: $white !important;
         }

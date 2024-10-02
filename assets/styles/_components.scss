@@ -267,6 +267,10 @@
 
     font-size: 1.5rem;
     font-weight: 500;
+
+    @media (min-width: 1200px) {
+        display: none;
+    }
 }
 
 .first-section {
@@ -559,6 +563,168 @@
 
             @media (max-width: 1199px) {
                 max-width: 150px;
+            }
+        }
+    }
+}
+
+.inner-modal {
+    .modal-dialog {
+        min-width: 100%;
+        margin-top: 0;
+    }
+
+    .modal-content {
+        background:
+            url("../images/modal-bg.png") no-repeat center left / contain,
+            $white;
+
+        padding-bottom: 2rem;
+
+        border-radius: 0;
+        border: none;
+
+        @media (max-width: 1199px) {
+            background:
+                url("../images/modal-bg.png") no-repeat center / 350%,
+                $white;
+        }
+    }
+
+    .modal-header {
+        border-bottom: none;
+
+        .close-btn {
+            background-color: $white;
+            color: $success;
+
+            box-shadow: 0px 4px 14px 10px rgba($black, 0.05);
+            border-radius: 50%;
+            font-size: 2rem;
+
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    .modal-body {
+        display: grid;
+        grid-template-columns: 38vw 50vw;
+
+        @media (max-width: 1199px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .main-list {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            color: $gray-500;
+            padding: 0.75rem 1.5rem;
+            line-height: 0.6;
+            width: 100%;
+            text-align: start;
+
+            @media (max-width: 1450px) {
+                padding: 0.6rem 1.5rem;
+            }
+
+            @media (max-width: 1199px) {
+                color: $white;
+                border-radius: 0;
+            }
+
+            &.active {
+                @extend .btn-gradient;
+                border-radius: 0.5rem;
+                line-height: 1;
+                margin-bottom: 0.25rem;
+
+                @media (max-width: 1199px) {
+                    border: none;
+                }
+            }
+
+            &:not(.active) {
+                border-block: 1px solid #e4e7e1;
+            }
+
+            span {
+                font-size: 2.5rem;
+
+                @media (max-width: 1450px) {
+                    font-size: 2rem;
+                }
+
+                @media (max-width: 1199px) {
+                    font-size: 1.5rem;
+                }
+
+                &:first-of-type {
+                    font-weight: 400;
+                    margin-inline-end: 1rem;
+                }
+
+                &:last-of-type {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .chid-wrapper {
+        height: 100%;
+
+        .child-menu {
+            display: none;
+
+            &.show {
+                display: block;
+                padding: 1.5rem 0;
+                border-radius: 1rem;
+                background-color: rgba($white, 0.32);
+                backdrop-filter: blur(3px);
+
+                @media (min-width: 1200px) {
+                    position: absolute;
+                    top: 0;
+                    inset-inline-end: 2rem;
+                }
+
+                @media (max-width: 1199px) {
+                    padding: 0.5rem 0;
+                    margin-top: 1rem;
+                }
+
+                li {
+                    padding-inline: 1.5rem 2rem;
+
+                    &:not(:hover):not(:last-of-type) {
+                        border-bottom: 1px solid #a4ae9c;
+                    }
+
+                    &:hover {
+                        background:
+                            url("../images/arrows/right/6.svg") no-repeat center left,
+                            rgba(#3b5c27, 0.5);
+                    }
+                }
+
+                a {
+                    color: $white;
+                    font-size: 2.5rem;
+                    font-weight: 600;
+
+                    @media (max-width: 1450px) {
+                        font-size: 2rem;
+                    }
+
+                    @media (max-width: 1199px) {
+                        font-size: 1.5rem;
+                    }
+                }
             }
         }
     }

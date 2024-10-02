@@ -20,7 +20,8 @@
             <div class="container">
                 <nav class="flex-between flex-row">
                     <div class="flex-y-row gap-2">
-                        <button class="btn" onclick="toggleHeader()"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+
                         <a href="../index.html"><img src="../assets/images/logo.svg" width="77" alt="logo"></a>
                     </div>
 
@@ -378,6 +379,151 @@
                 </div>
             </section>
         </main>
+
+        <!-- inner modal -->
+        <div class="modal inner-modal fade" id="innerModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
+                            <i class='material-icons flex-center'>close</i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="main-list">
+                            <li>
+                                <button type="button" class="btn" id="link-1">
+                                    <span>01</span>
+                                    <span>لمحة عن الصندوق </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-2">
+                                    <span>02</span>
+                                    <span>أبرز أرقام 2023م</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-3">
+                                    <span>03</span>
+                                    <span>أتجاهات ومؤشرات الأقتصاد المحلي</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-4">
+                                    <span>04</span>
+                                    <span>النشاط الإقراضي للصندوق</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-5">
+                                    <span>05</span>
+                                    <span>استراتيجية الصندوق</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-6">
+                                    <span>06</span>
+                                    <span>التحول الرقمي و تقنية المعلومات</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-7">
+                                    <span>07</span>
+                                    <span>تنمية القدرات البشرية </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-8">
+                                    <span>08</span>
+                                    <span>الصندوق خلال 50 عاما</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-9">
+                                    <span>09</span>
+                                    <span>دراسة صناعية: صناعة الحديد والصلب</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-10">
+                                    <span>10</span>
+                                    <span>إحصاءات النشاط الاقراضي</span>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="chid-wrapper">
+                            <ul class="child-menu" id="menu-1">
+                                <li><a href="../about/brief.html">الصندوق في سطور </a></li>
+                                <li><a href="../about/board.html">مجلس الإدارة </a></li>
+                                <li><a href="../about/org-structure.html">الهيكل التنظيمي</a></li>
+                                <li><a href="../about/chariman-intro.html">كلمة معالي رئيس مجلس الإدارة</a></li>
+                                <li><a href="../about/ceo-word.html">كلمة سعادة الرئيس التنفيذي</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-2">
+                                <li><a href="../statistics/loans.html">أولا: النشاط الإقراضي</a></li>
+                                <li><a href="../statistics/digital-transformation.html">ثانيا: التحول الرقمي</a></li>
+                                <li><a href="../statistics/sponsor.html">ثالثا: البرامج التحفيزبة</a></li>
+                                <li><a href="../statistics/human-capital.html">رابعا: تطوير رأس المال البشري</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-3">
+                                <li><a href="../eco-status/eco-status.html">أتجاهات و مؤشرات الأقتصاد المحلي </a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-4">
+                                <li><a href="../lending-activity/lending-activity.html">النشاط الإقراضي للصندوق</a></li>
+                                <li><a href="../lending-activity/sectoral-distribution.html">التوزيع القطاعي للقروض المعتمدة</a></li>
+                                <li><a href="../lending-activity/geographic-distribution.html">التوزيع الجغرافي للقروض المعتمدة</a></li>
+                                <li><a href="../lending-activity/incentive-programs.html">البرامج التحفيزية</a></li>
+                                <li><a href="../lending-activity/production-projects.html">المشاريع التي بدأت الإنتاج</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-5">
+                                <li><a href="goals.html">أهداف الصندوق الاستراتيجية</a></li>
+                                <li><a href="priorities.html">أولويات استراتيجية الصندوق 2023</a></li>
+                                <li><a href="achievements.html">أهم الإنجازات في 2023</a></li>
+                                <li><a href="indicators.html">مؤشــرات الأداء الرئيســة 2023م</a></li>
+                                <li><a href="awards.html">جوائز و شهادات مُميّزة</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-6">
+                                <li><a href="../digitalization/projects.html">المشاريع الرئيسية المنجزة</a></li>
+                                <li><a href="../digitalization/services.html">الخدمات الرقمية المقدمة</a></li>
+                                <li><a href="../digitalization/joureny.html">رحلة الصندوق في التحول الرقمي</a></li>
+                                <li><a href="../digitalization/technical-house.html">برنامج ترتيب البيت التقن</a></li>
+                                <li><a href="../digitalization/awards.html">شهادات استحقاق و تجديد الأيزو</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-7">
+                                <li><a href="../human-development/institutional-culture.html">أولا: الثقافة المؤسسية</a></li>
+                                <li><a href="../human-development/recruitment.html">ثانيًا: التوظيف</a></li>
+                                <li><a href="../human-development/training-programs.html">ثالثــًا: برامج التدريب والتأهيل</a></li>
+                                <li><a href="../human-development/academy.html">رابعًا: أكاديمية الصندوق الصناعي</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-8">
+                                <li><a href="../50-years/50-years.html">الصندوق خلال 50 عامًا</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-9">
+                                <li><a href="../industrial-study/intro.html">المقدمة</a></li>
+                                <li><a href="../industrial-study/global-indicators.html">المؤشرات العالمية الرئيسية</a></li>
+                                <li><a href="../industrial-study/regional-indicators.html">المؤشرات اإلقليمية الرئيسية</a></li>
+                                <li><a href="../industrial-study/ksa-market.html">حجم الطلب في السوق السعودي</a></li>
+                                <li><a href="../industrial-study/challenges-opportunities.html">التحديات والفرص</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-10">
+                                <li><a href="../lending-statistics/lending-statistics.html">الصندوق في سطور </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src=" ../assets/vendors/jquery.min.js"></script>
         <script src="../assets/vendors/bootstrap.bundle.min.js"></script>

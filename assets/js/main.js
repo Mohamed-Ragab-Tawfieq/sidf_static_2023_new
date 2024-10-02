@@ -11,7 +11,7 @@ window.addEventListener('scroll', function () {
 /*** about nav active ***/
 function handleSIDFNav() {
     document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(".sidf-navbar .nav-link");
+        const navLinks = document.querySelectorAll(".sidf-navbar .nav-link, .inner-modal nav a");
 
         navLinks?.forEach(link => {
             if (link.href === window.location.href) {
@@ -45,6 +45,36 @@ function handleMobileNav() {
 
 }
 handleMobileNav()
+
+/*** inner modal ***/
+function handleHover(linkId, menuId) {
+    const link = document.getElementById(linkId);
+    const menu = document.getElementById(menuId);
+
+    link.addEventListener('click', function () {
+        document.querySelectorAll('.inner-modal .main-list .btn').forEach(item => {
+            item?.classList.remove('active')
+        })
+
+        document.querySelectorAll('.inner-modal .child-menu').forEach(menu => {
+            menu?.classList.remove('show')
+        })
+
+        link?.classList.add('active');
+        menu?.classList.toggle('show');
+    });
+}
+
+handleHover('link-1', 'menu-1');
+handleHover('link-2', 'menu-2');
+handleHover('link-3', 'menu-3');
+handleHover('link-4', 'menu-4');
+handleHover('link-5', 'menu-5');
+handleHover('link-6', 'menu-6');
+handleHover('link-7', 'menu-7');
+handleHover('link-8', 'menu-8');
+handleHover('link-9', 'menu-9');
+handleHover('link-10', 'menu-10');
 
 /*** header fixed ***/
 window.addEventListener('scroll', function () {
@@ -88,12 +118,6 @@ window.addEventListener('scroll', function () {
         welcomeArrows?.classList.remove('hide');
     }
 })
-
-/*** toggle header ***/
-function toggleHeader() {
-    document.getElementById('mobile-header').classList.toggle('collapsed');
-    document.getElementById('mobile-header').classList.toggle('expanded');
-}
 
 /*** about arrows ***/
 $(document).ready(function () {
