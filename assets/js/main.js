@@ -50,19 +50,26 @@ handleMobileNav()
 function handleHover(linkId, menuId) {
     const link = document.getElementById(linkId);
     const menu = document.getElementById(menuId);
+    const closeBtn = document.querySelectorAll('.child-menu .close-btn');
 
-    link.addEventListener('click', function () {
+    link?.addEventListener('click', function () {
         document.querySelectorAll('.inner-modal .main-list .btn').forEach(item => {
-            item?.classList.remove('active')
+            item.classList.remove('active')
         })
 
         document.querySelectorAll('.inner-modal .child-menu').forEach(menu => {
-            menu?.classList.remove('show')
+            menu.classList.remove('show')
         })
 
-        link?.classList.add('active');
-        menu?.classList.toggle('show');
+        link.classList.add('active');
+        menu.classList.toggle('show');
     });
+
+    closeBtn?.forEach(btn => {
+        btn.addEventListener('click', function () {
+            btn.closest('.child-menu').classList.remove('show')
+        })
+    })
 }
 
 handleHover('link-1', 'menu-1');

@@ -132,6 +132,12 @@
 
         @media (min-width: 1200px) and (max-width: 1450px) {
             inset: 53px 0 auto;
+            padding-block: 6px;
+        }
+
+        @media (max-width: 1199px) {
+            inset: 54px 0 auto;
+            padding-block: 0.38rem;
         }
 
         ul {
@@ -181,7 +187,7 @@
             text-align: center;
 
             @media (min-width: 1200px) and (max-width: 1450px) {
-                padding-block: 0.25rem;
+                padding-block: 0.1rem;
             }
 
             @media (max-width: 1199px) {
@@ -244,6 +250,10 @@
         background-color: $success;
         transition: width 0.1s ease-in-out;
 
+        @media (max-width: 1450px) {
+            height: 3px;
+        }
+
         @media (max-width: 1199px) {
             height: 1px;
         }
@@ -255,15 +265,13 @@
 }
 
 .sidf-navbar-mobile {
-    max-width: 100%;
-    width: 100%;
-    height: 2.25rem;
+    opacity: 0.7;
+    padding-block: 0;
 
     border: none;
     border-radius: 0.25rem;
 
     background-color: #e8e6e6;
-    color: #8a8b8d;
 
     font-size: 1.5rem;
     font-weight: 500;
@@ -638,12 +646,25 @@
 
             &.active {
                 @extend .btn-gradient;
+                position: relative;
                 border-radius: 0.5rem;
                 line-height: 1;
                 margin-bottom: 0.25rem;
 
                 @media (max-width: 1199px) {
                     border: none;
+                }
+
+                &::after {
+                    content: url("../images/icons/arrow-left.svg");
+                    position: absolute;
+                    inset-inline-end: 1rem;
+                    bottom: 50%;
+                    transform: translateY(50%);
+
+                    @media (max-width: 1199px) {
+                        transform: translateY(50%) scale(0.7);
+                    }
                 }
             }
 
@@ -696,10 +717,35 @@
                 @media (max-width: 1199px) {
                     padding: 0.5rem 0;
                     margin-top: 1rem;
+
+                    top: 10%;
+                    right: 50%;
+                    transform: translateX(50%);
+
+                    width: 90%;
+                    backdrop-filter: blur(8px) brightness(0.8);
+                }
+
+                .close-btn {
+                    font-size: 1.5rem;
+                    padding: 0;
+                    color: $white;
+
+                    display: flex;
+                    margin-inline-start: auto;
                 }
 
                 li {
                     padding-inline: 1.5rem 2rem;
+
+                    &:first-of-type {
+                        border-bottom: none !important;
+                        padding-inline: 0.5rem;
+
+                        @media (min-width: 1200px) {
+                            display: none;
+                        }
+                    }
 
                     &:not(:hover):not(:last-of-type) {
                         border-bottom: 1px solid #a4ae9c;
@@ -746,46 +792,6 @@
         height: 280px;
         border-radius: 1rem;
 
-        &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-
-            width: 100%;
-            height: 100%;
-
-            background-color: rgba($black, 0.25);
-            backdrop-filter: blur(2px);
-            border-radius: 1rem;
-        }
-
-        &.primary {
-            &::after {
-                background: linear-gradient(180deg, rgba(#3c80b0, 0.4) -0.99%, rgba(#165578, 0.4) 95.36%), transparent;
-                backdrop-filter: none;
-            }
-        }
-
-        &.success {
-            &::after {
-                background: linear-gradient(
-                    0deg,
-                    rgba(#386732, 0.4) 6.54%,
-                    rgba(#467836, 0.4) 24.54%,
-                    rgba(#5d933c, 0.4) 56.54%,
-                    rgba(#6ba440, 0.4) 84.54%,
-                    rgba(#70aa42, 0.4) 106.54%
-                );
-            }
-        }
-
-        &.no-blur {
-            &::after {
-                backdrop-filter: none;
-            }
-        }
-
         .icon {
             position: absolute;
             top: 40px;
@@ -799,7 +805,12 @@
             position: absolute;
             bottom: 2rem;
             inset-inline: 24px;
+
             z-index: 5;
+            color: $white;
+
+            font-size: 2rem;
+            font-weight: 700;
 
             @media (min-width: 1200px) and (max-width: 1450px) {
                 inset-inline: 1rem;
