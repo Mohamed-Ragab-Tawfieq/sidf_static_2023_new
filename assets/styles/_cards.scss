@@ -1,3 +1,13 @@
+@keyframes cardArrowAnimate {
+    from {
+        transform: translate(-100px);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
 .vision-card {
     position: relative;
     padding: 32px 56px;

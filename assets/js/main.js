@@ -27,20 +27,21 @@ function handleMobileNav() {
         const ulMenu = document.querySelector(".sidf-navbar ul");
         const selectMenu = document.getElementById("sidf-navbar-mobile");
 
-        Array.from(ulMenu.getElementsByTagName("li")).forEach((li) => {
-            const link = li.querySelector("a");
-            const option = document.createElement("option");
-            option.textContent = link.textContent;
-            option.value = link.href;
+        if (ulMenu) {
 
-            // Append option to select
-            selectMenu.appendChild(option);
-        });
+            Array.from(ulMenu.getElementsByTagName("li")).forEach((li) => {
+                const link = li.querySelector("a");
+                const option = document.createElement("option");
 
-        // Navigate to selected option
-        selectMenu.addEventListener("change", function () {
-            window.location.href = this.value;
-        });
+                option.textContent = link.textContent;
+                option.value = link.href;
+                selectMenu.appendChild(option);
+            });
+
+            selectMenu.addEventListener("change", function () {
+                window.location.href = this.value;
+            });
+        }
     });
 
 }

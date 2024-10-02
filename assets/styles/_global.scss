@@ -368,7 +368,9 @@ section {
 }
 
 .sec-arrow-end {
-    background: url("../images/arrows/left/3.svg") no-repeat center left / contain;
+    @media (min-width: 1200px) {
+        background: url("../images/arrows/left/3.svg") no-repeat center left / contain;
+    }
 
     @media (min-width: 1200px) and (max-width: 1450px) {
         background-size: 28%;

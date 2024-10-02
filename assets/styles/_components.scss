@@ -1,4 +1,14 @@
 /************** general **************/
+@keyframes cardArrowAnimate {
+    from {
+        transform: translate(-100px);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
 .inner-top-img {
     position: relative;
     overflow: hidden;
@@ -283,6 +293,10 @@
 
 .first-section {
     background: url("../images/logo/1.svg") no-repeat top -20% left -25%;
+
+    @media (max-width: 1199px) {
+        background: url(../images/logo/1.svg) no-repeat top -5% left -50% / 60%;
+    }
 
     &.primary {
         background: url("../images/logo/2.svg") no-repeat top -10% left -15% / 30%;
@@ -868,6 +882,64 @@
     border-radius: 0.38rem;
 }
 
+.about-board-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    li {
+        position: relative;
+        overflow: hidden;
+        padding: 1rem;
+
+        border: 1px solid #72a647;
+        border-radius: 0.88rem;
+
+        @media (max-width: 1199px) {
+            width: 100%;
+        }
+
+        &:hover {
+            background: linear-gradient(
+                0deg,
+                #386732 6.54%,
+                #467836 24.54%,
+                #5d933c 56.54%,
+                #6ba440 84.54%,
+                #70aa42 106.54%
+            );
+
+            .title,
+            .description {
+                color: $white;
+            }
+
+            .arrow {
+                animation: cardArrowAnimate 1s ease;
+            }
+        }
+    }
+
+    .title {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .description {
+        color: $gray-500;
+        max-width: 85%;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .arrow {
+        position: absolute;
+        inset-inline-end: 1.5rem;
+        top: -0.5rem;
+    }
+}
+
 // vertical
 .graph-bars.vertical {
     &.aos-animate {
@@ -998,6 +1070,34 @@
 
     &.primary {
         background: url("../images/pages/about/board-2.svg") no-repeat center;
+    }
+
+    &.lg {
+        @media (max-width: 1199px) {
+            display: none;
+        }
+    }
+
+    &.mobile {
+        background-size: cover;
+        height: 500px;
+        margin-bottom: 0;
+
+        @media (min-width: 1200px) {
+            display: none;
+        }
+
+        .board-card {
+            margin: auto;
+        }
+
+        .body {
+            filter: drop-shadow(0 0px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        .owl-nav {
+            display: none !important;
+        }
     }
 }
 

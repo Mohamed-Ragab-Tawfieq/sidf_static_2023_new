@@ -45,7 +45,7 @@
                             <p class="text">صندوق التنمية الصناعية السعودي</p>
                         </div>
 
-                        <div class="flex-center">
+                        <div class="flex-center mt-n2">
                             <div class="line"></div>
                             <img src="assets/images/icons/logo/50-years-2.png" width="60" class="years white-img" alt="50-years">
                         </div>
@@ -78,33 +78,6 @@
             </div>
         </div>
 
-        <header class="mobile-header collapsed" id="mobile-header">
-            <div class="container">
-                <nav>
-                    <button class="btn" onclick="toggleHeader()"><img src="assets/images/icons/menu.svg" alt="menu"></button>
-                    <a href="index.html"><img src="assets/images/logo.svg" width="77" class="logo" alt="logo"></a>
-                    <button class="btn"><img src="assets/images/icons/search.svg" alt="search"></button>
-                </nav>
-
-                <div class="details">
-                    <button class="btn btn-close mb-4 ms-n4" onclick="toggleHeader()"></button>
-                    <nav class="d-flex flex-column align-items-start">
-                        <a href="/" class="h4 text-black op-6">الرئيسية</a>
-                        <a href="about/brief.html" class="h4 text-black op-6">عن الصندوق</a>
-                        <a href="statistics/loans.html" class="h4 text-black op-6">أبرز أرقام 2022</a>
-                        <a href="eco-status/eco-status.html" class="h4 text-black op-6">مؤشرات اقتصاديه </a>
-                        <a href="lending-activity/lending-activity.html" class="h4 text-black op-6">النشاط الإقراضي </a>
-                        <a href="strategy/goals.html" class="h4 text-black op-6">استراتيجية الصندوق</a>
-                        <a href="digitalization/projects.html" class="h4 text-black op-6">التحول الرقمي</a>
-                        <a href="human-development/institutional-culture.html" class="h4 text-black op-6">تنمية القدرات البشرية</a>
-                        <a href="50-years/50-years.html" class="h4 text-black op-6">الصندوق خلال 50 عامًا</a>
-                        <a href="industrial-study/intro.html" class="h4 text-black op-6">دراسة صناعية: صناعة الحديد و الصلب</a>
-                        <a href="lending-statistics/lending-statistics.html" class="h4 text-black op-6">إحصاءات النشاط الاقراضي</a>
-                    </nav>
-                </div>
-            </div>
-        </header>
-
         <header class="main-header sticky" id="main-header">
             <div class="container">
                 <nav class="flex-between">
@@ -118,6 +91,16 @@
                         <button class="btn px-1" type="button"> <img src="assets/images/icons/search.svg" alt="search"> </button>
                         <button class="btn px-1 fw-5" type="button"> EN </button>
                     </div>
+                </nav>
+            </div>
+        </header>
+
+        <header class="mobile-header collapsed" id="mobile-header">
+            <div class="container">
+                <nav>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+                    <a href="index.html"><img src="../assets/images/logo.svg" width="77" class="logo" alt="logo"></a>
+                    <button class="btn"><img src="../assets/images/icons/search.svg" alt="search"></button>
                 </nav>
             </div>
         </header>
@@ -345,6 +328,199 @@
                             <img src="assets/images/icons/globe-1.svg" alt="globe">
                         </a>
                         <img src="assets/images/icons/qr.png" width="28" alt="QR">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- inner modal -->
+        <div class="modal inner-modal fade" id="innerModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
+                            <i class='material-icons flex-center'>close</i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="main-list">
+                            <li>
+                                <button type="button" class="btn" id="link-1">
+                                    <span>01</span>
+                                    <span>لمحة عن الصندوق </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-2">
+                                    <span>02</span>
+                                    <span>أبرز أرقام 2023م</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-3">
+                                    <span>03</span>
+                                    <span>أتجاهات ومؤشرات الأقتصاد المحلي</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-4">
+                                    <span>04</span>
+                                    <span>النشاط الإقراضي للصندوق</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-5">
+                                    <span>05</span>
+                                    <span>استراتيجية الصندوق</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-6">
+                                    <span>06</span>
+                                    <span>التحول الرقمي و تقنية المعلومات</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-7">
+                                    <span>07</span>
+                                    <span>تنمية القدرات البشرية </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-8">
+                                    <span>08</span>
+                                    <span>الصندوق خلال 50 عاما</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-9">
+                                    <span>09</span>
+                                    <span>دراسة صناعية: صناعة الحديد والصلب</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-10">
+                                    <span>10</span>
+                                    <span>إحصاءات النشاط الاقراضي</span>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="chid-wrapper">
+                            <ul class="child-menu" id="menu-1">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="brief.html">الصندوق في سطور </a></li>
+                                <li><a href="board.html">مجلس الإدارة </a></li>
+                                <li><a href="org-structure.html">الهيكل التنظيمي</a></li>
+                                <li><a href="chariman-intro.html">كلمة معالي رئيس مجلس الإدارة</a></li>
+                                <li><a href="ceo-word.html">كلمة سعادة الرئيس التنفيذي</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-2">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../statistics/loans.html">أولا: النشاط الإقراضي</a></li>
+                                <li><a href="../statistics/digital-transformation.html">ثانيا: التحول الرقمي</a></li>
+                                <li><a href="../statistics/sponsor.html">ثالثا: البرامج التحفيزبة</a></li>
+                                <li><a href="../statistics/human-capital.html">رابعا: تطوير رأس المال البشري</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-3">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../statistics/loans.html">أولا: النشاط الإقراضي</a></li>
+                                <li><a href="../eco-status/eco-status.html">أتجاهات و مؤشرات الأقتصاد المحلي </a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-4">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../statistics/loans.html">أولا: النشاط الإقراضي</a></li>
+                                <li><a href="../lending-activity/lending-activity.html">النشاط الإقراضي للصندوق</a></li>
+                                <li><a href="../lending-activity/sectoral-distribution.html">التوزيع القطاعي للقروض المعتمدة</a></li>
+                                <li><a href="../lending-activity/geographic-distribution.html">التوزيع الجغرافي للقروض المعتمدة</a></li>
+                                <li><a href="../lending-activity/incentive-programs.html">البرامج التحفيزية</a></li>
+                                <li><a href="../lending-activity/production-projects.html">المشاريع التي بدأت الإنتاج</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-5">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../statistics/loans.html">أولا: النشاط الإقراضي</a></li>
+                                <li><a href="../strategy/goals.html">أهداف الصندوق الاستراتيجية</a></li>
+                                <li><a href="../strategy/priorities.html">أولويات استراتيجية الصندوق 2023</a></li>
+                                <li><a href="../strategy/achievements.html">أهم الإنجازات في 2023</a></li>
+                                <li><a href="../strategy/indicators.html">مؤشــرات الأداء الرئيســة 2023م</a></li>
+                                <li><a href="../strategy/awards.html">جوائز و شهادات مُميّزة</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-6">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../statistics/loans.html">أولا: النشاط الإقراضي</a></li>
+                                <li><a href="../digitalization/projects.html">المشاريع الرئيسية المنجزة</a></li>
+                                <li><a href="../digitalization/services.html">الخدمات الرقمية المقدمة</a></li>
+                                <li><a href="../digitalization/joureny.html">رحلة الصندوق في التحول الرقمي</a></li>
+                                <li><a href="../digitalization/technical-house.html">برنامج ترتيب البيت التقن</a></li>
+                                <li><a href="../digitalization/awards.html">شهادات استحقاق و تجديد الأيزو</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-7">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../statistics/loans.html">أولا: النشاط الإقراضي</a></li>
+                                <li><a href="../human-development/institutional-culture.html">أولا: الثقافة المؤسسية</a></li>
+                                <li><a href="../human-development/recruitment.html">ثانيًا: التوظيف</a></li>
+                                <li><a href="../human-development/training-programs.html">ثالثــًا: برامج التدريب والتأهيل</a></li>
+                                <li><a href="../human-development/academy.html">رابعًا: أكاديمية الصندوق الصناعي</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-8">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../statistics/loans.html">أولا: النشاط الإقراضي</a></li>
+                                <li><a href="../50-years/50-years.html">الصندوق خلال 50 عامًا</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-9">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../statistics/loans.html">أولا: النشاط الإقراضي</a></li>
+                                <li><a href="../industrial-study/intro.html">المقدمة</a></li>
+                                <li><a href="../industrial-study/global-indicators.html">المؤشرات العالمية الرئيسية</a></li>
+                                <li><a href="../industrial-study/regional-indicators.html">المؤشرات اإلقليمية الرئيسية</a></li>
+                                <li><a href="../industrial-study/ksa-market.html">حجم الطلب في السوق السعودي</a></li>
+                                <li><a href="../industrial-study/challenges-opportunities.html">التحديات والفرص</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-10">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../statistics/loans.html">أولا: النشاط الإقراضي</a></li>
+                                <li><a href="../lending-statistics/lending-statistics.html">الصندوق في سطور </a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
