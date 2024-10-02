@@ -165,32 +165,6 @@ h6 {
     line-height: 1.75rem;
 }
 
-h2.display-3 {
-    @media (max-width: 1199px) {
-        font-size: 2rem !important;
-    }
-}
-
-[data-aos] {
-    max-width: 100%;
-}
-
-p {
-    &.fs-2,
-    &.fs-3,
-    &.fs-4 {
-        text-align: justify;
-
-        @media (max-width: 1199px) {
-            font-size: 1.13rem !important;
-        }
-    }
-
-    &.description {
-        text-align: justify;
-    }
-}
-
 h1,
 h2,
 h3,
@@ -320,12 +294,27 @@ section {
 }
 
 .routing-links {
-    .btn-success {
-        color: $white !important;
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
 
-    .btn:last-of-type {
-        background-color: #e8e6e6;
+    .btn {
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 1rem;
+        padding: 2.5rem;
+        text-align: start;
+
+        &.btn-success {
+            color: $white !important;
+        }
+
+        &:last-of-type {
+            background-color: #e8e6e6;
+        }
     }
 
     .fs-2 {
@@ -340,10 +329,6 @@ section {
                 font-size: 1rem !important;
             }
         }
-    }
-
-    .sec-arrows {
-        display: none;
     }
 
     .display-5 {

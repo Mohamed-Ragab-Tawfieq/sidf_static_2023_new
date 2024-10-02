@@ -12,26 +12,39 @@ window.addEventListener('scroll', function () {
 function handleSIDFNav() {
     document.addEventListener("DOMContentLoaded", function () {
         const navLinks = document.querySelectorAll(".sidf-navbar .nav-link");
-        // const activeLink = document.querySelector(".sidf-navbar .nav-link.active");
 
         navLinks?.forEach(link => {
             if (link.href === window.location.href) {
                 link.classList.add("active");
-
-                link?.addEventListener("click", (event) => {
-                    event.preventDefault();
-
-                    if (window.innerWidth <= 1199) {
-                        navLinks.forEach(link => {
-                            link.style.display = link.style.display === 'block' ? 'none' : 'block';
-                        });
-                    }
-                });
             }
         });
     });
 }
 handleSIDFNav()
+
+function handleMobileNav() {
+    document.addEventListener("DOMContentLoaded", function () {
+        const ulMenu = document.querySelector(".sidf-navbar ul");
+        const selectMenu = document.getElementById("sidf-navbar-mobile");
+
+        Array.from(ulMenu.getElementsByTagName("li")).forEach((li) => {
+            const link = li.querySelector("a");
+            const option = document.createElement("option");
+            option.textContent = link.textContent;
+            option.value = link.href;
+
+            // Append option to select
+            selectMenu.appendChild(option);
+        });
+
+        // Navigate to selected option
+        selectMenu.addEventListener("change", function () {
+            window.location.href = this.value;
+        });
+    });
+
+}
+handleMobileNav()
 
 /*** header fixed ***/
 window.addEventListener('scroll', function () {
