@@ -1356,122 +1356,59 @@
     }
 }
 
-/************** charts **************/
-.aos-animate.donut-chart {
-    animation: donutRotate 0.5s ease-in forwards;
-
-    .circle {
-        transform: translate(50%, 50%) scale(1);
-        transition: all 1.2s ease;
-    }
-
-    @keyframes donutRotate {
-        from {
-            transform: rotate(0);
-        }
-
-        to {
-            transform: rotate(360deg);
-        }
-    }
-}
-
-.donut-chart {
+.statistics-loans-sectors {
     position: relative;
-    padding-inline: 3rem;
-    margin-inline: 3rem;
 
-    @media (min-width: 1200px) and (max-width: 1450px) {
-        padding-inline: 1rem;
-        margin-inline: 1rem;
-    }
+    .chart-circle {
+        inset-inline-start: 180px;
 
-    .circle {
-        @extend .absolute-center;
-        @extend .flex-center;
-        flex-direction: column;
-
-        width: 104px;
-        height: 104px;
-
-        background-color: $blue-100;
-        border-radius: 50%;
-        transform: translate(50%, 50%) scale(0);
-
-        * {
-            line-height: 0.7;
-        }
-    }
-
-    .biggest {
-        position: absolute;
-        bottom: 2rem;
-        text-align: center;
-
-        .title {
-            color: $blue-100;
-            font-size: 2rem;
-
-            &.light {
-                color: #ecf2f7;
-            }
-        }
-
-        .value {
-            background-color: $blue-100;
-            color: rgba($primary, 0.8);
-
-            font-size: 2rem;
-            border-radius: 0.5rem;
-            padding: 0.2rem 0.7rem;
-
-            &.light {
-                background-color: #e7edf2;
-            }
+        @media (max-width: 1199px) {
+            transform: none;
+            bottom: auto;
+            top: 90px;
+            inset-inline-start: 35%;
         }
     }
 }
 
-.chart-label-circle {
+.statistics-loans-geo {
+    position: relative;
+
+    .chart-circle {
+        inset-inline-end: 140px;
+
+        @media (max-width: 1199px) {
+            transform: none;
+            bottom: auto;
+            top: 90px;
+            inset-inline-end: auto;
+            inset-inline-start: 35%;
+        }
+    }
+}
+
+/************** charts **************/
+.chart-circle {
     @extend .flex-center;
-
-    width: 1rem;
-    height: 1rem;
-
-    border-radius: 50%;
-    margin-inline-end: 0.38rem;
-}
-
-.chart-label {
-    background:
-        url("../images/arrows/left/7.svg") no-repeat center right 0.25rem / contain,
-        $blue-100;
-    color: rgba($primary, 0.8);
-
-    margin-inline-start: 2px;
-    border-radius: 0.5rem;
-
-    padding-block: 0.25rem;
-    padding-inline: 2rem 0.5rem;
-}
-
-.chart-labels-list {
-    display: flex;
     flex-direction: column;
-    gap: 2rem;
 
-    li {
-        display: flex;
-        align-items: center;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
 
-        font-size: 1.5rem;
-        font-weight: 700;
+    width: 104px;
+    height: 104px;
+
+    background-color: $blue-100;
+    border-radius: 50%;
+    z-index: 50;
+
+    * {
+        line-height: 0.7;
     }
 }
 
 .chart-wrapper {
-    margin: auto;
-
     .apexcharts-legend {
         justify-content: center !important;
         flex-direction: column !important;
