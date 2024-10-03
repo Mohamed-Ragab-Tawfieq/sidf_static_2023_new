@@ -250,55 +250,21 @@
             <!-- section -->
             <section class="sec-dark-primary sec-logo-start logo-2" data-aos="fade-up" data-aos-duration="700">
                 <div class="container sec-padding position-relative">
-                    <div class="flex-between">
-                        <div class="sec-arrows-wrapper">
-                            <img src="../assets/images/arrows/left/7.svg" class="sec-arrows" width="52" alt="arrows">
-                            <h2 class="charts-title sec-title text-primary w-lg-3 w-xxl-2" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine"> التوزيع القطاعي لقيمة القروض المعتمدة خلال عام 2023م</h2>
+                    <div class="flex-between sec-arrows-wrapper">
+                        <img src="../assets/images/arrows/left/7.svg" class="sec-arrows lg" width="52" alt="arrows">
 
-                            <div class="donut-chart" data-aos="fade-up" data-aos-duration="700">
-                                <canvas id="pieChart1" width="390" height="390"></canvas>
-                                <!-- <img src="../assets/images/charts/1.svg" class="donut-img" alt="chart" loading="lazy">
-                                <div class="circle">
-                                    <h3 class="text-primary display-4 fw-6 purecounter" data-purecounter-end="12.9" data-purecounter-decimals="1">12.9</h3>
-                                    <h4 class="text-primary-light fw-5">مليار ريال</h4>
-                                </div>
-                                <div class="biggest" style="inset-inline-start: 30%;">
-                                    <h2 class="title fw-7">الصناعات الكيميائية</h2>
-                                    <span class="value fw-7 purecounter counter-percent" data-purecounter-end="62">62%</span>
-                                </div> -->
-                            </div>
+                        <h2 class="charts-title sec-title text-primary w-lg-3 w-xxl-2" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine"> التوزيع القطاعي لقيمة القروض المعتمدة خلال عام 2023م</h2>
 
-                            <!-- <ul class="chart-labels-list" data-aos="fade-up" data-aos-duration="700">
-                                <li class="flex-y-row text-primary h2 fw-7">
-                                    <span class="chart-label-circle" style="background-color: var(--blue-100);"></span>
-                                    <span class="text-nowrap">الصناعات الأخري</span>
-                                    <span class="chart-label purecounter counter-percent" data-purecounter-end="1">1%</span>
-                                </li>
-                                <li class="flex-y-row text-primary h2 fw-7">
-                                    <span class="chart-label-circle" style="background-color: #A5C5DC;"></span>
-                                    <span class="text-nowrap">الصناعات الهندسية</span>
-                                    <span class="chart-label purecounter counter-percent" data-purecounter-end="11">11%</span>
-                                </li>
-                                <li class="flex-y-row text-primary h2 fw-7">
-                                    <span class="chart-label-circle" style="background-color: #7CABCC;"></span>
-                                    <span class="text-nowrap">صناعة مواد البناء</span>
-                                    <span class="chart-label purecounter counter-percent" data-purecounter-end="3">3%</span>
-                                </li>
-                                <li class="flex-y-row text-primary h2 fw-7">
-                                    <span class="chart-label-circle" style="background-color: #6399C1;"></span>
-                                    <span class="text-nowrap">الصناعات الاستهلاكية</span>
-                                    <span class="chart-label purecounter counter-percent" data-purecounter-end="10">10%</span>
-                                </li>
-                            </ul> -->
-                        </div>
+                        <!-- chart -->
+                        <div id="sectorsChart" class="chart-wrapper" data-aos="fade-up" data-aos-duration="700"></div>
+                    </div>
 
-                        <div class="progress-lines primary vertical end">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
+                    <div class="progress-lines primary vertical end">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                 </div>
             </section>
@@ -306,49 +272,13 @@
             <!-- section -->
             <section data-aos="fade-up" data-aos-duration="700">
                 <div class="container sec-padding position-relative">
-                    <div class="flex-between">
-                        <div>
-                            <div class="flex-y-row gap-4 sec-logo-end logo-2">
-                                <img src="../assets/images/arrows/left/7.svg" class="sec-arrows" width="52" alt="arrows">
+                    <div class="flex-between flex-column-reverse flex-lg-row sec-arrows-wrapper sec-logo-end logo-2">
+                        <img src="../assets/images/arrows/left/7.svg" class="sec-arrows lg" width="52" alt="arrows">
 
-                                <ul class="chart-labels-list" data-aos="fade-up" data-aos-duration="700">
-                                    <li class="flex-y-row text-primary h2 fw-7">
-                                        <span class="chart-label-circle" style="background-color: var(--blue-100);"></span>
-                                        <span class="text-nowrap">جازان</span>
-                                        <span class="chart-label purecounter counter-percent" data-purecounter-end="8">8%</span>
-                                    </li>
-                                    <li class="flex-y-row text-primary h2 fw-7">
-                                        <span class="chart-label-circle" style="background-color: #A5C5DC;"></span>
-                                        <span class="text-nowrap">الرياض</span>
-                                        <span class="chart-label purecounter counter-percent" data-purecounter-end="13">13%</span>
-                                    </li>
-                                    <li class="flex-y-row text-primary h2 fw-7">
-                                        <span class="chart-label-circle" style="background-color: #7CABCC;"></span>
-                                        <span class="text-nowrap">المناطق الأخري</span>
-                                        <span class="chart-label purecounter counter-percent" data-purecounter-end="8">8%</span>
-                                    </li>
-                                    <li class="flex-y-row text-primary h2 fw-7">
-                                        <span class="chart-label-circle" style="background-color: #6399C1;"></span>
-                                        <span class="text-nowrap">مكة المكرمة</span>
-                                        <span class="chart-label purecounter counter-percent" data-purecounter-end="9">9%</span>
-                                    </li>
-                                </ul>
+                        <!-- chart -->
+                        <div id="geoChart" class="chart-wrapper" data-aos="fade-up" data-aos-duration="700"></div>
 
-                                <div class="donut-chart" data-aos="fade-up" data-aos-duration="700">
-                                    <img src="../assets/images/charts/2.svg" class="donut-img" alt="chart" loading="lazy">
-                                    <div class="circle">
-                                        <h3 class="text-primary display-4 fw-6 purecounter" data-purecounter-end="12.9" data-purecounter-decimals="1">12.9</h3>
-                                        <h4 class="text-primary-light fw-5">مليار ريال</h4>
-                                    </div>
-                                    <div class="biggest" style="inset-inline-start: 43%;">
-                                        <h2 class="title fw-7">المنطقة الشرقية</h2>
-                                        <span class="value fw-7 purecounter counter-percent" data-purecounter-end="75">75%</span>
-                                    </div>
-                                </div>
-
-                                <h2 class="charts-title sec-title text-primary w-lg-3 mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine"> التوزيع الجغرافي لقيمة القروض المعتمدة خلال عام 2023م</h2>
-                            </div>
-                        </div>
+                        <h2 class="charts-title sec-title text-primary w-lg-3 mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine"> التوزيع الجغرافي لقيمة القروض المعتمدة خلال عام 2023م</h2>
                     </div>
                 </div>
             </section>
@@ -570,102 +500,118 @@
         </div>
 
         <script src="../assets/vendors/jquery.min.js"></script>
-        <script src="../assets/vendors/chart.min.js"></script>
-        <script src="../assets/vendors/chartjs-plugin-datalabels.min.js"></script>
+        <script src="../assets/vendors/apexcharts.js"></script>
 
+        <!-- sectors -->
         <script>
-            // general options
-            const generalOptions = {
-                plugins: {
-                    legend: {
-                        display: false,
-                        position: 'bottom',
-                        labels: {
-                            usePointStyle: true,
-                            pointStyle: 'circle',
+            var sectorsOptions = {
+                series: [75, 11, 10, 3, 1],
+                chart: {
+                    type: 'pie',
+                    height: 600,
+                    width: 600
+                },
+                labels: ['الصناعات الكيميائية', 'الصناعات الاستهلاكية', 'صناعة مواد البناء', 'الصناعات الهندسية', 'الصناعات الأخري'],
+                responsive: [{
+                    breakpoint: 1199,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
                         }
+                    }
+                }],
+                colors: ['#3775A3', '#639AC2', '#7CABCC', '#A5C5DC', '#C3D8E7'],
+                legend: {
+                    position: 'left',
+                    formatter: function (seriesName, opts) {
+                        return seriesName + " - " + "%" + opts.w.globals.series[opts.seriesIndex];
+                    }
+                },
+                dataLabels: {
+                    enabled: true,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'normal',
                     },
-                    tooltip: {
-                        borderWidth: 1,
-                        borderColor: '#DDE0E8',
-                        backgroundColor: '#fff',
-                        bodyColor: '#000',
-                        titleColor: '#000',
-                        rtl: $('html').attr('lang') === 'ar',
-                        bodyAlign: $('html').attr('lang') === 'ar' ? 'right' : 'left',
+                    formatter: function (val, opts) {
+                        return val.toFixed(0) + '%';
+                    },
+                    dropShadow: {
+                        enabled: false
                     },
                 },
-                scales: {
-                    x: {
-                        reverse: $('html').attr('lang') === 'ar',
-                        ticks: {
-                            padding: 20,
-                        },
-                        border: {
-                            dash: [5, 5],
-                            display: false
-                        },
-                        grid: {
-                            drawTicks: false,
-                            display: true
-                        },
-                    },
+
+                tooltip: {
                     y: {
-                        position: 'right',
-                        beginAtZero: true,
-                        ticks: {
-                            padding: 10,
-                        },
-                        border: {
-                            dash: [5, 5],
-                            display: false
-                        },
-                        grid: {
-                            drawTicks: false,
-                            display: true
-                        },
+                        formatter: function (val) {
+                            return val + '%';
+                        }
                     }
                 }
             }
 
-            // pie options
-            const pieOptions = {
-                options: {
-                    ...generalOptions,
-                    borderWidth: 0,
-                    plugins: {
-                        ...generalOptions.plugins,
+            var chart = new ApexCharts(document.querySelector("#sectorsChart"), sectorsOptions);
+
+            chart.render();
+        </script>
+
+        <!-- geo -->
+        <script>
+            var geoOptions = {
+                series: [62, 13, 9, 8, 8,],
+                chart: {
+                    type: 'pie',
+                    height: 600,
+                    width: 600
+                },
+                labels: ['المنطقة الشرقية', 'الرياض', 'مكة المكرمة', 'جازان', 'المناطق الأخري'],
+                responsive: [{
+                    breakpoint: 1199,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
                         legend: {
-                            ...generalOptions.plugins.legend,
-                            display: true
-                        },
-                    },
-                    scales: {
-                        x: {
-                            display: false
-                        },
-                        y: {
-                            display: false
+                            position: 'bottom'
                         }
                     }
+                }],
+                colors: ['#3775A3', '#639AC2', '#7CABCC', '#A5C5DC', '#C3D8E7'],
+                legend: {
+                    position: 'right',
+                    formatter: function (seriesName, opts) {
+                        return seriesName + " - " + "%" + opts.w.globals.series[opts.seriesIndex];
+                    }
                 },
-                plugins: [ChartDataLabels],
+                dataLabels: {
+                    enabled: true,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'normal',
+                    },
+                    formatter: function (val, opts) {
+                        return val.toFixed(0) + '%';
+                    },
+                    dropShadow: {
+                        enabled: false
+                    },
+                },
+
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val + '%';
+                        }
+                    }
+                }
             }
 
-            // pie chart
-            const pieCtx = document.getElementById('pieChart1');
-            new Chart(pieCtx, {
-                type: 'pie',
-                data: {
-                    labels: ['الصناعات الكيميائية', 'الصناعات الاستهلاكية', 'صناعة مواد البناء', 'الصناعات الهندسية', 'الصناعات الأخري'],
-                    datasets: [{
-                        data: [75, 11, 10, 3, 1],
-                        backgroundColor: ['#3775A3', '#639AC2', '#7CABCC', '#A5C5DC', '#C3D8E7']
+            var chart = new ApexCharts(document.querySelector("#geoChart"), geoOptions);
 
-                    }]
-                },
-                ...pieOptions,
-            });
+            chart.render();
         </script>
 
         <script src="../assets/vendors/bootstrap.bundle.min.js"></script>

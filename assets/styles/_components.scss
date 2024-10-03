@@ -1469,6 +1469,29 @@
     }
 }
 
+.chart-wrapper {
+    margin: auto;
+
+    .apexcharts-legend {
+        justify-content: center !important;
+        flex-direction: column !important;
+
+        @media (max-width: 1199px) {
+            top: 300px !important;
+        }
+
+        .apexcharts-legend-series {
+            flex-direction: row-reverse;
+            gap: 0.5rem;
+
+            .apexcharts-legend-text {
+                font: 700 1.5rem "Sarmady" !important;
+                color: $primary !important;
+            }
+        }
+    }
+}
+
 /************** lending-activity **************/
 .geo-map {
     path[fill="#7CABCC"] {
