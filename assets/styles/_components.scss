@@ -1585,13 +1585,11 @@
 }
 
 /************** 04 lending-activity **************/
-.lending-activity-sec1 {
+.sec-4-1-2 {
     .graph-bars {
-        @media (max-width: 1199px) {
-            flex-direction: row !important;
-
-            & > div {
-                min-width: 50%;
+        .mt-n6 {
+            @media (max-width: 1199px) {
+                margin-top: -1rem !important;
             }
         }
     }
