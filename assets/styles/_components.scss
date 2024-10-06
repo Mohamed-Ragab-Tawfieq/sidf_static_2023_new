@@ -129,6 +129,30 @@
         padding: 14px 4px 1px;
     }
 
+    @keyframes progressAnimation {
+        0% {
+            top: -100%;
+        }
+
+        100% {
+            top: 0;
+        }
+    }
+
+    @keyframes ulAnimation {
+        0% {
+            transform: translateX(100px);
+        }
+
+        50% {
+            transform: translateX(-100px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
     &.sticky {
         position: fixed;
         inset: 61px 0 auto;
@@ -157,31 +181,7 @@
         }
     }
 
-    @keyframes progressAnimation {
-        0% {
-            top: -100%;
-        }
-
-        100% {
-            top: 0;
-        }
-    }
-
-    @keyframes ulAnimation {
-        0% {
-            transform: translateX(100px);
-        }
-
-        50% {
-            transform: translateX(-100px);
-        }
-
-        100% {
-            transform: translateX(0);
-        }
-    }
-
-    ul.nav.nav-pills[class*="grid"] {
+    &#sidf-navbar ul {
         @media (max-width: 1199px) {
             display: none !important;
         }
@@ -304,18 +304,28 @@
 
     &.aos-animate {
         .sec-arrows {
-            transition: all 0.5s ease-in-out 1s;
-
-            @media (min-width: 1200px) and (max-width: 1450px) {
-                transition: all 0.3 ease-in;
-            }
+            transition: all 1s ease-in-out 0.5s;
         }
     }
 
     .sec-arrows {
-        @media (min-width: 1200px) and (max-width: 1450px) {
-            margin-inline-start: 0;
-        }
+        inset-inline-start: 50vw;
+        width: 200px;
+    }
+}
+
+.counter-section {
+    display: grid;
+    grid-template-columns: auto 26vw;
+    gap: 3rem;
+
+    &.reverse {
+        grid-template-columns: 26vw auto;
+    }
+
+    @media (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -396,14 +406,15 @@
     align-items: center;
     gap: 1.5rem;
 
+    position: relative;
     width: 100%;
-    margin-inline-start: 2.75rem;
-    padding-inline-start: 2.75rem;
+    // margin-inline-start: 2.75rem;
+    // padding-inline-start: 2.75rem;
 
     @media (max-width: 1199px) {
         gap: 0.25rem;
-        margin-inline-start: 0;
-        padding-inline-start: 0;
+        // margin-inline-start: 0;
+        // padding-inline-start: 0;
     }
 }
 
@@ -423,6 +434,7 @@
 
     @media (max-width: 1199px) {
         font-size: 1.13rem;
+        line-height: 20px;
     }
 }
 
@@ -577,6 +589,25 @@
             &:last-of-type {
                 margin-inline-start: auto !important;
             }
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: 700;
+            color: $success;
+            text-align: center;
+
+            @media (max-width: 1199px) {
+                font-size: 3.75rem;
+            }
+        }
+
+        .description {
+            font-style: 1.25rem;
+            font-weight: 500;
+
+            color: $success;
+            text-align: center;
         }
 
         h4 {
@@ -788,6 +819,48 @@
                         font-size: 1.5rem;
                     }
                 }
+            }
+        }
+    }
+}
+
+// charts
+.chart-circle {
+    @extend .flex-center;
+    flex-direction: column;
+
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+
+    width: 104px;
+    height: 104px;
+
+    background-color: $blue-100;
+    border-radius: 50%;
+    z-index: 50;
+
+    * {
+        line-height: 0.7;
+    }
+}
+
+.chart-wrapper {
+    .apexcharts-legend {
+        justify-content: center !important;
+        flex-direction: column !important;
+
+        @media (max-width: 1199px) {
+            top: 300px !important;
+        }
+
+        .apexcharts-legend-series {
+            flex-direction: row-reverse;
+            gap: 0.5rem;
+
+            .apexcharts-legend-text {
+                font: 700 1.5rem "Sarmady" !important;
+                color: $primary !important;
             }
         }
     }
@@ -1242,7 +1315,7 @@
     }
 }
 
-/************** statistics **************/
+/************** 02 statistics **************/
 // loans
 .charts-title {
     @media (min-width: 1200px) and (max-width: 1450px) {
@@ -1387,49 +1460,96 @@
     }
 }
 
-/************** charts **************/
-.chart-circle {
-    @extend .flex-center;
-    flex-direction: column;
+/************** 03 eco-status **************/
+.eco-status-counters1 {
+    width: 380px;
+    margin: auto;
 
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-
-    width: 104px;
-    height: 104px;
-
-    background-color: $blue-100;
-    border-radius: 50%;
-    z-index: 50;
-
-    * {
-        line-height: 0.7;
+    @media (max-width: 1199px) {
+        width: 350px;
     }
-}
 
-.chart-wrapper {
-    .apexcharts-legend {
-        justify-content: center !important;
-        flex-direction: column !important;
-
+    .item {
         @media (max-width: 1199px) {
-            top: 300px !important;
+            width: 190px;
+            height: 150px;
         }
 
-        .apexcharts-legend-series {
-            flex-direction: row-reverse;
-            gap: 0.5rem;
+        &:first-of-type {
+            margin-inline-start: auto !important;
+        }
 
-            .apexcharts-legend-text {
-                font: 700 1.5rem "Sarmady" !important;
-                color: $primary !important;
+        &:last-of-type {
+            @media (max-width: 1199px) {
+                margin-inline-start: 0 !important;
             }
         }
     }
 }
 
-/************** lending-activity **************/
+.three-counter {
+    position: relative;
+    margin: auto;
+
+    width: 370px;
+    height: 395px;
+
+    @media (max-width: 1199px) {
+        width: 335px;
+        height: 320px;
+    }
+
+    .item {
+        width: 175px;
+        height: 135px;
+
+        @media (max-width: 1199px) {
+            width: 160px;
+            padding: 0.5rem;
+        }
+
+        &:nth-child(1) {
+            position: absolute;
+            top: 1rem;
+            inset-inline-end: 0;
+        }
+
+        &:nth-child(2) {
+            position: absolute;
+            inset-inline-start: 0;
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+
+        &:nth-child(3) {
+            position: absolute;
+            bottom: 1rem;
+            inset-inline-end: 0;
+        }
+    }
+}
+
+.eco-status-sec3 {
+    .counter-section {
+        @media (max-width: 1199px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.eco-status-sec4 {
+    @media (max-width: 1199px) {
+        background: url("../images/logo/3.svg") no-repeat top 3.5rem center / 88%;
+    }
+    .img-fluid {
+        @media (max-width: 1199px) {
+            display: none;
+        }
+    }
+}
+
+/************** 04 lending-activity **************/
 .geo-map {
     path[fill="#7CABCC"] {
         &:hover {

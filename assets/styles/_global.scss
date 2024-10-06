@@ -256,9 +256,11 @@ section {
     position: relative;
 
     .sec-arrows {
-        margin-top: -600px;
-        margin-inline-start: -80px;
+        position: absolute;
+        top: -600px;
+        inset-inline-start: -60px;
 
+        width: 52px;
         opacity: 0;
         transition: all 1s ease-in-out;
 
@@ -271,8 +273,8 @@ section {
 
     &.aos-animate {
         .sec-arrows {
-            margin-top: 0;
-            margin-inline-start: -80px;
+            top: -20px;
+            inset-inline-start: -60px;
 
             width: 52px;
             opacity: 1;
