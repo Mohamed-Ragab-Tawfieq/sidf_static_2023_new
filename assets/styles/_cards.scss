@@ -127,13 +127,19 @@
         }
     }
 
+    h6.f-18 {
+        @media (max-width: 1199px) {
+            font-size: 0.9rem !important;
+        }
+    }
+
     .grid-icon {
         grid-template-rows: 1.5rem auto;
     }
 
     img {
-        &[width="56"],
-        &[width="60"] {
+        &[src*="../assets/images/icons"],
+        &[src*="../assets/images/medals"] {
             @media (max-width: 1199px) {
                 width: 40px !important;
             }
