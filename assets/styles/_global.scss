@@ -242,6 +242,10 @@ table {
         color: $white;
         border-radius: 0 !important;
         padding-block: 1.6rem !important;
+
+        @media (max-width: 1199px) {
+            font-size: 1.25rem;
+        }
     }
 
     td {
@@ -249,6 +253,10 @@ table {
         font-weight: 500;
         color: $gray-500 !important;
         padding-block: 1.6rem !important;
+
+        @media (max-width: 1199px) {
+            font-size: 1.25rem;
+        }
     }
 }
 
