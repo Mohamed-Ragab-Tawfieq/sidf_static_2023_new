@@ -319,7 +319,7 @@
 
     .span-md-#{$i} {
         @media (max-width: 1199px) {
-            grid-column: span $i;
+            grid-column: span $i !important;
         }
     }
 

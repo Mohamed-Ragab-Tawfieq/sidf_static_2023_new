@@ -83,16 +83,17 @@
             </nav>
 
             <!-- section -->
-            <section class="first-section primary sec-padding" id="first-section" data-aos="fade-up" data-aos-duration="700">
+            <section class="first-section primary sec-padding sec-4-3-1" id="first-section" data-aos="fade-up" data-aos-duration="700">
                 <div class="container">
                     <div class="sec-arrows-wrapper">
                         <img src="../assets/images/arrows/left/7.svg" class="sec-arrows" width="52" alt="arrows">
-                        <div class="w-lg-3">
-                            <h1 class="sec-title text-primary">ثانياً: التوزيع الجغرافي للقروض المعتمدة</h1>
-                            <p class="sec-text" data-aos="fade-up" data-aos-duration="700">
-                                التوزيع التراكمي لعدد وقيمة القروض المعتمدة حسب مناطق المملكة حتى نهاية عام 2023م
-                            </p>
-                        </div>
+                        <h1 class="sec-title text-primary">ثانياً: التوزيع الجغرافي للقروض المعتمدة</h1>
+                    </div>
+
+                    <div class="flex-between align-items-start">
+                        <p class="sec-text" data-aos="fade-up" data-aos-duration="700">
+                            التوزيع التراكمي لعدد وقيمة القروض المعتمدة حسب مناطق المملكة حتى نهاية عام 2023م
+                        </p>
 
                         <svg class="geo-map" width="912" height="550" viewBox="0 0 912 550" fill="none" xmlns="http://www.w3.org/2000/svg" data-aos="fade-up" data-aos-duration="1000">
                             <defs>
@@ -443,13 +444,12 @@
                                 </filter>
                             </defs>
                         </svg>
-
                     </div>
                 </div>
             </section>
 
             <!-- section -->
-            <section class="sec-dark-primary" data-aos="fade-up" data-aos-duration="700">
+            <section class="sec-dark-primary sec-4-2-2" data-aos="fade-up" data-aos-duration="700">
                 <div class="container sec-padding position-relative">
                     <div class="progress-lines primary vertical end">
                         <div></div>
@@ -461,7 +461,7 @@
                     <div class="sec-arrows-wrapper">
                         <img src="../assets/images/arrows/left/7.svg" class="sec-arrows" width="52" alt="arrows">
 
-                        <div class="flex-between w-100" data-aos="fade-up" data-aos-duration="700">
+                        <div class="flex-between flex-row w-100" data-aos="fade-up" data-aos-duration="700">
                             <h2 class="sec-title text-primary">التوزيع الجغرافي للقروض المعتمدة خلال عام 2023م</h2>
 
                             <div class="dropdown dots-dropdown px-8">
@@ -487,79 +487,29 @@
                     </div>
 
                     <div class="grid-2 mt-12" data-aos="fade-up" data-aos-duration="700">
-                        <div class="flex-y-row">
-                            <div>
-                                <h5 class="text-primary fw-7 text-center w-lg-3 mx-auto">عدد القروض المعتمدة خلال عام 2023م</h5>
-                                <div class="donut-chart px-0" data-aos="fade-up" data-aos-duration="700">
-                                    <img src="../assets/images/charts/3.svg" class="donut-img" style="max-width: 310px;" alt="chart" loading="lazy">
-                                    <div class="circle" style="width: 83px; height: 83px;">
-                                        <h3 class="text-primary h1 fw-7 purecounter" data-purecounter-end="134">134</h3>
-                                        <h5 class="text-primary-light fw-5">قرضـــًا</h5>
-                                    </div>
-                                    <div class="biggest" style="bottom: 62%; inset-inline-start: 20%;">
-                                        <h4 class="title fw-7" style="font-size: 1.5rem;">الرياض</h4>
-                                        <span class="value fw-7 purecounter counter-percent" style="font-size: 1.5rem;" data-purecounter-end="37">37%</span>
-                                    </div>
-                                    <div class="biggest" style="bottom: 42%; inset-inline-start: 62%;">
-                                        <h4 class="title fw-7 text-nowrap text-primary" style="font-size: 1.5rem;">المنطقة الشرقية</h4>
-                                        <span class="value light fw-7 purecounter counter-percent" style="font-size: 1.5rem;" data-purecounter-end="31">31%</span>
-                                    </div>
-                                    <div class="biggest" style="inset-inline-start: 25%; bottom: 16%;">
-                                        <h4 class="title fw-7" style="font-size: 1.5rem;">مكة المكرمة</h4>
-                                        <span class="value fw-7 purecounter counter-percent" style="font-size: 1.5rem;" data-purecounter-end="22">22%</span>
+                        <div>
+                            <h5 class="text-primary fw-7 text-center w-lg-2 mx-auto">عدد القروض المعتمدة خلال عام 2023م</h5>
+
+                            <!-- chart -->
+                            <div class="statistics-loans-geo px-12">
+                                <div id="geoChart1" class="chart-wrapper" data-aos="fade-up" data-aos-duration="700">
+                                    <div class="chart-circle end">
+                                        <h3 class="text-primary display-4 fw-6 purecounter" data-purecounter-end="134">134</h3>
+                                        <h4 class="text-primary-light fw-5">قرضـــًا</h4>
                                     </div>
                                 </div>
                             </div>
-
-                            <ul class="chart-labels-list h-50 justify-content-between">
-                                <li class="text-primary">
-                                    <span class="text-nowrap mx-1">القصيم</span>
-                                    <span class="chart-label-circle" style="background-color: #C1D6E5;"></span>
-                                    <span class="chart-label purecounter counter-percent py-0" data-purecounter-end="4">4%</span>
-                                </li>
-                                <li class="text-primary">
-                                    <span class="text-nowrap mx-1">المناطق الأخري</span>
-                                    <span class="chart-label-circle" style="background-color: #7CABCC;"></span>
-                                    <span class="chart-label purecounter counter-percent py-0" data-purecounter-end="6">6%</span>
-                                </li>
-                            </ul>
                         </div>
 
-                        <div class="flex-y-row">
-                            <ul class="chart-labels-list">
-                                <li class="text-primary">
-                                    <span class="chart-label purecounter counter-percent py-0" data-purecounter-end="8">8%</span>
-                                    <span class="chart-label-circle mx-1" style="background-color: var(--blue-100);"></span>
-                                    <span class="text-nowrap">جازان</span>
-                                </li>
-                                <li class="text-primary">
-                                    <span class="chart-label purecounter counter-percent py-0" data-purecounter-end="13">13%</span>
-                                    <span class="chart-label-circle mx-1" style="background-color: #A5C5DC;"></span>
-                                    <span class="text-nowrap">الرياض</span>
-                                </li>
-                                <li class="text-primary">
-                                    <span class="chart-label purecounter counter-percent py-0" data-purecounter-end="8">8%</span>
-                                    <span class="chart-label-circle mx-1" style="background-color: #7CABCC;"></span>
-                                    <span class="text-nowrap">المناطق الأخري</span>
-                                </li>
-                                <li class="text-primary">
-                                    <span class="chart-label purecounter counter-percent py-0" data-purecounter-end="9">9%</span>
-                                    <span class="chart-label-circle mx-1" style="background-color: #6399C1;"></span>
-                                    <span class="text-nowrap">مكة المكرمة</span>
-                                </li>
-                            </ul>
+                        <div>
+                            <h5 class="text-primary fw-7 text-center w-lg-2 mx-auto">قيمة القروض المعتمدة خلال عام 2023م </h5>
 
-                            <div>
-                                <h5 class="text-primary fw-7 text-center w-lg-3 mx-auto">قيمة القروض المعتمدة خلال عام 2023م </h5>
-                                <div class="donut-chart px-5" data-aos="fade-up" data-aos-duration="700">
-                                    <img src="../assets/images/charts/2.svg" class="donut-img" style="max-width: 310px;" alt="chart" loading="lazy">
-                                    <div class="circle" style="width: 83px; height: 83px;">
-                                        <h3 class="text-primary h1 fw-7 purecounter" data-purecounter-end="12.9" data-purecounter-decimals="1">12.9</h3>
-                                        <h5 class="text-primary-light fw-5">مليار ريال</h5>
-                                    </div>
-                                    <div class="biggest" style="inset-inline-start: 43%;">
-                                        <h4 class="title fw-7" style="font-size: 1.5rem;">المنطقة الشرقية</h4>
-                                        <span class="value fw-7 purecounter counter-percent" style="font-size: 1.5rem;" data-purecounter-end="75">75%</span>
+                            <!-- chart -->
+                            <div class="statistics-loans-geo px-12">
+                                <div id="geoChart2" class="chart-wrapper" data-aos="fade-up" data-aos-duration="700">
+                                    <div class="chart-circle">
+                                        <h3 class="text-primary display-4 fw-6 purecounter" data-purecounter-end="12.9" data-purecounter-decimals="1">12.9</h3>
+                                        <h4 class="text-primary-light fw-5">مليار ريال</h4>
                                     </div>
                                 </div>
                             </div>
@@ -569,13 +519,15 @@
             </section>
 
             <!-- section -->
-            <section class="sec-padding" data-aos="fade-up" data-aos-duration="700">
+            <section class="sec-padding sec-4-2-3" data-aos="fade-up" data-aos-duration="700">
                 <div class="container">
                     <div class="sec-arrows-wrapper">
                         <img src="../assets/images/arrows/left/7.svg" class="sec-arrows" width="52" alt="arrows">
 
-                        <div class="flex-between w-100" data-aos="fade-up" data-aos-duration="700">
-                            <h2 class="sec-title text-primary">التوزيع الجغرافي التراكمي للقروض المعتمدة بنهاية عام 2023م</h2>
+                        <div class="flex-between flex-row w-100" data-aos="fade-up" data-aos-duration="700">
+                            <h2 class="sec-title text-primary">
+                                التوزيع الجغرافي التراكمي للقروض المعتمدة بنهاية عام 2023م
+                            </h2>
 
                             <div class="dropdown dots-dropdown px-8">
                                 <button class="btn flex-center" type=" button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -600,76 +552,33 @@
                     </div>
 
                     <div class="grid-2 mt-12" data-aos="fade-up" data-aos-duration="700">
-                        <div class="flex-y-row">
-                            <div>
-                                <h5 class="text-primary fw-7 text-center w-lg-3 mx-auto">عدد القروض المعتمدة بنهاية عام 2023م </h5>
-                                <div class="donut-chart px-0" data-aos="fade-up" data-aos-duration="700">
-                                    <img src="../assets/images/charts/4.svg" class="donut-img" style="max-width: 310px;" alt="chart" loading="lazy">
-                                    <div class="circle" style="width: 83px; height: 83px;">
-                                        <h3 class="text-primary h1 mt-2 fw-7 purecounter" data-purecounter-end="5038">5038</h3>
-                                        <h5 class="text-primary-light fw-5">قرضـــًا</h5>
-                                    </div>
-                                    <div class="biggest" style="bottom: 62%; inset-inline-start: 20%;">
-                                        <h4 class="title fw-7" style="font-size: 1.5rem;">الرياض</h4>
-                                        <span class="value fw-7 purecounter counter-percent" style="font-size: 1.5rem;" data-purecounter-end="36">36%</span>
-                                    </div>
-                                    <div class="biggest" style="bottom: 42%; inset-inline-start: 62%;">
-                                        <h4 class="title fw-7 text-nowrap text-primary" style="font-size: 1.5rem;">المنطقة الشرقية</h4>
-                                        <span class="value light fw-7 purecounter counter-percent" style="font-size: 1.5rem;" data-purecounter-end="27">27%</span>
-                                    </div>
-                                    <div class="biggest" style="inset-inline-start: 25%; bottom: 16%;">
-                                        <h4 class="title fw-7" style="font-size: 1.5rem;">مكة المكرمة</h4>
-                                        <span class="value fw-7 purecounter counter-percent" style="font-size: 1.5rem;" data-purecounter-end="24">24%</span>
+                        <div>
+                            <h5 class="text-primary fw-7 text-center w-lg-2 mx-auto">
+                                عدد القروض المعتمدة بنهاية عام 2023م
+                            </h5>
+
+                            <!-- chart -->
+                            <div class="statistics-loans-geo px-12">
+                                <div id="geoTotalChart1" class="chart-wrapper" data-aos="fade-up" data-aos-duration="700">
+                                    <div class="chart-circle end">
+                                        <h3 class="text-primary display-5 fw-6 purecounter" data-purecounter-end="5038"></h3>
+                                        <h4 class="text-primary-light fw-5">قرضـــًا</h4>
                                     </div>
                                 </div>
                             </div>
-
-                            <ul class="chart-labels-list h-50 justify-content-between">
-                                <li class="text-primary">
-                                    <span class="text-nowrap mx-1">المناطق الأخرى</span>
-                                    <span class="chart-label-circle" style="background-color: #C1D6E5;"></span>
-                                    <span class="chart-label purecounter counter-percent py-0" data-purecounter-end="8">8%</span>
-                                </li>
-                                <li class="text-primary">
-                                    <span class="text-nowrap mx-1">المدينة المنورة</span>
-                                    <span class="chart-label-circle" style="background-color: #7CABCC;"></span>
-                                    <span class="chart-label purecounter counter-percent py-0" data-purecounter-end="5">5%</span>
-                                </li>
-                            </ul>
                         </div>
 
-                        <div class="flex-y-row">
-                            <ul class="chart-labels-list">
-                                <li class="text-primary">
-                                    <span class="chart-label purecounter counter-percent py-0" data-purecounter-end="10">10%</span>
-                                    <span class="chart-label-circle mx-1" style="background-color: var(--blue-100);"></span>
-                                    <span class="text-nowrap">المدينة المنورة</span>
-                                </li>
-                            </ul>
+                        <div>
+                            <h5 class="text-primary fw-7 text-center w-lg-2 mx-auto">
+                                قيمة القروض المعتمدة بنهاية عام 2023م
+                            </h5>
 
-                            <div>
-                                <h5 class="text-primary fw-7 text-center w-lg-3 mx-auto">قيمة القروض المعتمدة بنهاية عام 2023م </h5>
-                                <div class="donut-chart px-5" data-aos="fade-up" data-aos-duration="700">
-                                    <img src="../assets/images/charts/5.svg" class="donut-img" style="max-width: 310px;" alt="chart" loading="lazy">
-                                    <div class="circle" style="width: 83px; height: 83px;">
-                                        <h3 class="text-primary h1 fw-7 purecounter mt-2" data-purecounter-end="225.7" data-purecounter-decimals="1">225.7</h3>
-                                        <h5 class="text-primary-light fw-5">مليار ريال</h5>
-                                    </div>
-                                    <div class="biggest" style="bottom: 49%; inset-inline-start: 13%;">
-                                        <h4 class="title fw-7 text-primary" style="font-size: 1.5rem;">الرياض</h4>
-                                        <span class="value light fw-7 purecounter counter-percent" style="font-size: 1.5rem;" data-purecounter-end="27">27%</span>
-                                    </div>
-                                    <div class="biggest" style="bottom: 63%; inset-inline-start: 52%;">
-                                        <h4 class="title fw-7 text-nowrap" style="font-size: 1.5rem;">المنطقة الشرقية</h4>
-                                        <span class="value fw-7 purecounter counter-percent" style="font-size: 1.5rem;" data-purecounter-end="41">41%</span>
-                                    </div>
-                                    <div class="biggest" style="inset-inline-start: 14%; bottom: 18%;">
-                                        <h4 class="title light fw-7" style="font-size: 1.5rem;">المناطق الأخري</h4>
-                                        <span class="value fw-7 purecounter counter-percent" style="font-size: 1.5rem;" data-purecounter-end="20">20%</span>
-                                    </div>
-                                    <div class="biggest" style="inset-inline-start: 43%;">
-                                        <h4 class="title light fw-7" style="font-size: 1.5rem;">مكة المكرمة</h4>
-                                        <span class="value fw-7 purecounter counter-percent" style="font-size: 1.5rem;" data-purecounter-end="20">20%</span>
+                            <!-- chart -->
+                            <div class="statistics-loans-geo px-12">
+                                <div id="geoTotalChart2" class="chart-wrapper" data-aos="fade-up" data-aos-duration="700">
+                                    <div class="chart-circle">
+                                        <h3 class="text-primary display-5 fw-6 purecounter" data-purecounter-end="225.7" data-purecounter-decimals="1"></h3>
+                                        <h4 class="text-primary-light fw-5">مليار ريال</h4>
                                     </div>
                                 </div>
                             </div>
@@ -679,7 +588,7 @@
             </section>
 
             <!-- section -->
-            <section class="sec-padding" data-aos="fade-up" data-aos-duration="700">
+            <section class="sec-padding sec-4-2-4" data-aos="fade-up" data-aos-duration="700">
                 <div class="container">
                     <div class="sec-arrows-wrapper">
                         <img src="../assets/images/arrows/left/7.svg" class="sec-arrows" width="52" alt="arrows">
@@ -696,8 +605,8 @@
                                         <img src="../assets/images/maps/riyadh.png" class="img-fluid" alt="riyadh" loading="lazy">
                                     </div>
 
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض المعتمدة خلال عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض المعتمدة خلال عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -745,8 +654,8 @@
                                 </div>
 
                                 <div class="grid-2 px-8 mt-8" style="grid-template-columns: 65% 35%;" data-aos="fade-up" data-aos-duration="700">
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض التراكمية حتى نهاية عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض التراكمية حتى نهاية عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -801,7 +710,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="109152">109152</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -812,7 +721,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="99403">99403</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -823,7 +732,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="93993">93993</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -842,8 +751,8 @@
                                         <img src="../assets/images/maps/riyadh.png" class="img-fluid" alt="riyadh" loading="lazy">
                                     </div>
 
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض المعتمدة خلال عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض المعتمدة خلال عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -891,8 +800,8 @@
                                 </div>
 
                                 <div class="grid-2 px-8 mt-8" style="grid-template-columns: 65% 35%;" data-aos="fade-up" data-aos-duration="700">
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض التراكمية حتى نهاية عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض التراكمية حتى نهاية عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -947,7 +856,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="109152">109152</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -958,7 +867,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="99403">99403</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -969,7 +878,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="93993">93993</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -988,8 +897,8 @@
                                         <img src="../assets/images/maps/riyadh.png" class="img-fluid" alt="riyadh" loading="lazy">
                                     </div>
 
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض المعتمدة خلال عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض المعتمدة خلال عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1037,8 +946,8 @@
                                 </div>
 
                                 <div class="grid-2 px-8 mt-8" style="grid-template-columns: 65% 35%;" data-aos="fade-up" data-aos-duration="700">
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض التراكمية حتى نهاية عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض التراكمية حتى نهاية عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1093,7 +1002,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="109152">109152</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1104,7 +1013,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="99403">99403</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1115,7 +1024,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="93993">93993</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1134,8 +1043,8 @@
                                         <img src="../assets/images/maps/riyadh.png" class="img-fluid" alt="riyadh" loading="lazy">
                                     </div>
 
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض المعتمدة خلال عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض المعتمدة خلال عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1183,8 +1092,8 @@
                                 </div>
 
                                 <div class="grid-2 px-8 mt-8" style="grid-template-columns: 65% 35%;" data-aos="fade-up" data-aos-duration="700">
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض التراكمية حتى نهاية عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض التراكمية حتى نهاية عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1239,7 +1148,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="109152">109152</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1250,7 +1159,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="99403">99403</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1261,7 +1170,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="93993">93993</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1280,8 +1189,8 @@
                                         <img src="../assets/images/maps/riyadh.png" class="img-fluid" alt="riyadh" loading="lazy">
                                     </div>
 
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض المعتمدة خلال عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض المعتمدة خلال عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1329,8 +1238,8 @@
                                 </div>
 
                                 <div class="grid-2 px-8 mt-8" style="grid-template-columns: 65% 35%;" data-aos="fade-up" data-aos-duration="700">
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض التراكمية حتى نهاية عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض التراكمية حتى نهاية عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1385,7 +1294,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="109152">109152</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1396,7 +1305,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="99403">99403</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1407,7 +1316,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="93993">93993</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1426,8 +1335,8 @@
                                         <img src="../assets/images/maps/riyadh.png" class="img-fluid" alt="riyadh" loading="lazy">
                                     </div>
 
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض المعتمدة خلال عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض المعتمدة خلال عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1475,8 +1384,8 @@
                                 </div>
 
                                 <div class="grid-2 px-8 mt-8" style="grid-template-columns: 65% 35%;" data-aos="fade-up" data-aos-duration="700">
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض التراكمية حتى نهاية عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض التراكمية حتى نهاية عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1531,7 +1440,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="109152">109152</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1542,7 +1451,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="99403">99403</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1553,7 +1462,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="93993">93993</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1572,8 +1481,8 @@
                                         <img src="../assets/images/maps/riyadh.png" class="img-fluid" alt="riyadh" loading="lazy">
                                     </div>
 
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض المعتمدة خلال عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض المعتمدة خلال عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1621,8 +1530,8 @@
                                 </div>
 
                                 <div class="grid-2 px-8 mt-8" style="grid-template-columns: 65% 35%;" data-aos="fade-up" data-aos-duration="700">
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض التراكمية حتى نهاية عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض التراكمية حتى نهاية عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1677,7 +1586,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="109152">109152</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1688,7 +1597,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="99403">99403</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1699,7 +1608,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="93993">93993</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1718,8 +1627,8 @@
                                         <img src="../assets/images/maps/riyadh.png" class="img-fluid" alt="riyadh" loading="lazy">
                                     </div>
 
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض المعتمدة خلال عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض المعتمدة خلال عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1767,8 +1676,8 @@
                                 </div>
 
                                 <div class="grid-2 px-8 mt-8" style="grid-template-columns: 65% 35%;" data-aos="fade-up" data-aos-duration="700">
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض التراكمية حتى نهاية عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض التراكمية حتى نهاية عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1823,7 +1732,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="109152">109152</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1834,7 +1743,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="99403">99403</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1845,7 +1754,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="93993">93993</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1864,8 +1773,8 @@
                                         <img src="../assets/images/maps/riyadh.png" class="img-fluid" alt="riyadh" loading="lazy">
                                     </div>
 
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض المعتمدة خلال عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض المعتمدة خلال عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1913,8 +1822,8 @@
                                 </div>
 
                                 <div class="grid-2 px-8 mt-8" style="grid-template-columns: 65% 35%;" data-aos="fade-up" data-aos-duration="700">
-                                    <div class="vision-card primary grid-3">
-                                        <h3 class="fw-7 text-primary span-3">القروض التراكمية حتى نهاية عام 2023م</h3>
+                                    <div class="vision-card primary grid-3 grid-md-2">
+                                        <h3 class="fw-7 text-primary span-3 span-md-2">القروض التراكمية حتى نهاية عام 2023م</h3>
 
                                         <div class="flex-y-row gap-2">
                                             <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
@@ -1969,7 +1878,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="109152">109152</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1980,7 +1889,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="99403">99403</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1991,7 +1900,7 @@
                                                     <div class="btn-gradient primary horizontal"></div>
                                                     <div class="flex-center flex-column number" style="padding-inline: 20px 70px;">
                                                         <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="93993">93993</h2>
-                                                        <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                                        <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2006,7 +1915,7 @@
 
 
             <!-- section -->
-            <section class="sec-dark-primary" data-aos="fade-up" data-aos-duration="700">
+            <section class="sec-dark-primary sec-4-2-5" data-aos="fade-up" data-aos-duration="700">
                 <div class="container sec-padding position-relative">
                     <div class="progress-lines primary vertical end">
                         <div></div>
@@ -2029,7 +1938,7 @@
                             <img src="../assets/images/maps/1.png" width="368" class="img-fluid" alt="map" loading="lazy">
                         </div>
 
-                        <div class="vision-card primary grid-2 p-8">
+                        <div class="vision-card primary grid-2 grid-md-2 p-8">
                             <div class="flex-y-row gap-2">
                                 <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
                                 <div>
@@ -2064,7 +1973,7 @@
                     <h3 class="fw-7 text-primary mt-8" data-aos="fade-up" data-aos-duration="700">القروض التراكمية حتى نهاية عام 2023م</h3>
 
                     <div class="grid-2 pe-12 mt-3" style="grid-template-columns: 40% 60%;" data-aos="fade-up" data-aos-duration="700">
-                        <div class="vision-card primary grid-2">
+                        <div class="vision-card primary grid-2 grid-md-2">
                             <div class="flex-y-row gap-2">
                                 <img src="../assets/images/icons/file-02.svg" width="56" alt="file">
                                 <div>
@@ -2095,7 +2004,7 @@
                             </div>
                         </div>
 
-                        <div class="rounded-4 border border-primary" style="padding: 2rem;">
+                        <div class="rounded-4 border border-primary last-card" style="padding: 2rem;">
                             <div class="graph-bars horizontal" data-aos="fade-up" data-aos-duration="700">
                                 <div class="flex-y-row gap-2">
                                     <h4 class="graph-date fw-7 flex-center">2023</h4>
@@ -2103,7 +2012,7 @@
                                         <div class="btn-gradient primary horizontal"></div>
                                         <div class="flex-center flex-column number" style="padding-inline: 20px 120px;">
                                             <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="109152">109152</h2>
-                                            <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                            <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -2114,7 +2023,7 @@
                                         <div class="btn-gradient primary horizontal"></div>
                                         <div class="flex-center flex-column number" style="padding-inline: 20px 120px;">
                                             <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="99403">99403</h2>
-                                            <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                            <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -2125,7 +2034,7 @@
                                         <div class="btn-gradient primary horizontal"></div>
                                         <div class="flex-center flex-column number" style="padding-inline: 20px 120px;">
                                             <h2 class="purecounter display-6 fw-7 text-primary" data-purecounter-end="93993">93993</h2>
-                                            <h6 class="fw-4 f-18 text-primary mt-n3">ملايين الريالات</h6>
+                                            <h6 class="fw-4 f-18 text-primary mt-n3 text-nowrap">ملايين الريالات</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -2352,6 +2261,232 @@
         </div>
 
         <script src=" ../assets/vendors/jquery.min.js"></script>
+        <script src="../assets/vendors/apexcharts.js"></script>
+
+        <!-- geo 1 -->
+        <script>
+            var geoOptions = {
+                series: [37, 31, 22, 6, 4],
+                chart: {
+                    type: 'pie',
+                    height: 600,
+                    width: 600
+                },
+                labels: ['الرياض', 'المنطقة الشرقية', 'مكة المكرمة', 'المناطق الأخري', 'القصيم'],
+                responsive: [{
+                    breakpoint: 1199,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }],
+                colors: ['#3775A3', '#639AC2', '#7CABCC', '#A5C5DC', '#C3D8E7'],
+                legend: {
+                    position: 'left',
+                    formatter: function (seriesName, opts) {
+                        return seriesName + " - " + "%" + opts.w.globals.series[opts.seriesIndex];
+                    }
+                },
+                dataLabels: {
+                    enabled: true,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'normal',
+                    },
+                    formatter: function (val, opts) {
+                        return val.toFixed(0) + '%';
+                    },
+                    dropShadow: {
+                        enabled: false
+                    },
+                },
+
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val + '%';
+                        }
+                    }
+                }
+            }
+
+            var chart = new ApexCharts(document.querySelector("#geoChart1"), geoOptions);
+
+            chart.render();
+        </script>
+
+        <!-- geo 2 -->
+        <script>
+            var geoOptions = {
+                series: [62, 13, 9, 8, 8,],
+                chart: {
+                    type: 'pie',
+                    height: 600,
+                    width: 600
+                },
+                labels: ['الرياض', 'المنطقة الشرقية', 'مكة المكرمة', 'المناطق الأخري', 'المدينة المنورة'],
+                responsive: [{
+                    breakpoint: 1199,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }],
+                colors: ['#3775A3', '#639AC2', '#7CABCC', '#A5C5DC', '#C3D8E7'],
+                legend: {
+                    position: 'right',
+                    formatter: function (seriesName, opts) {
+                        return seriesName + " - " + "%" + opts.w.globals.series[opts.seriesIndex];
+                    }
+                },
+                dataLabels: {
+                    enabled: true,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'normal',
+                    },
+                    formatter: function (val, opts) {
+                        return val.toFixed(0) + '%';
+                    },
+                    dropShadow: {
+                        enabled: false
+                    },
+                },
+
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val + '%';
+                        }
+                    }
+                }
+            }
+
+            var chart = new ApexCharts(document.querySelector("#geoChart2"), geoOptions);
+
+            chart.render();
+        </script>
+
+        <!-- geo total 1 -->
+        <script>
+            var geoOptions = {
+                series: [36, 27, 24, 8, 5],
+                chart: {
+                    type: 'pie',
+                    height: 600,
+                    width: 600
+                },
+                labels: ['الرياض', 'المنطقة الشرقية', 'مكة المكرمة', 'المناطق الأخري', 'المدينة المنورة'],
+                responsive: [{
+                    breakpoint: 1199,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }],
+                colors: ['#3775A3', '#639AC2', '#7CABCC', '#A5C5DC', '#C3D8E7'],
+                legend: {
+                    position: 'left',
+                    formatter: function (seriesName, opts) {
+                        return seriesName + " - " + "%" + opts.w.globals.series[opts.seriesIndex];
+                    }
+                },
+                dataLabels: {
+                    enabled: true,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'normal',
+                    },
+                    formatter: function (val, opts) {
+                        return val.toFixed(0) + '%';
+                    },
+                    dropShadow: {
+                        enabled: false
+                    },
+                },
+
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val + '%';
+                        }
+                    }
+                }
+            }
+
+            var chart = new ApexCharts(document.querySelector("#geoTotalChart1"), geoOptions);
+
+            chart.render();
+        </script>
+
+        <!-- geo total 2 -->
+        <script>
+            var geoOptions = {
+                series: [41, 15, 20, 14, 10],
+                chart: {
+                    type: 'pie',
+                    height: 600,
+                    width: 600
+                },
+                labels: ['المنطقة الشرقية', 'الرياض', 'مكة المكرمة', 'جازان', 'المناطق الأخري'],
+                responsive: [{
+                    breakpoint: 1199,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }],
+                colors: ['#3775A3', '#639AC2', '#7CABCC', '#A5C5DC', '#C3D8E7'],
+                legend: {
+                    position: 'right',
+                    formatter: function (seriesName, opts) {
+                        return seriesName + " - " + "%" + opts.w.globals.series[opts.seriesIndex];
+                    }
+                },
+                dataLabels: {
+                    enabled: true,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'normal',
+                    },
+                    formatter: function (val, opts) {
+                        return val.toFixed(0) + '%';
+                    },
+                    dropShadow: {
+                        enabled: false
+                    },
+                },
+
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val + '%';
+                        }
+                    }
+                }
+            }
+
+            var chart = new ApexCharts(document.querySelector("#geoTotalChart2"), geoOptions);
+
+            chart.render();
+        </script>
+
         <script src="../assets/vendors/bootstrap.bundle.min.js"></script>
         <script src="../assets/vendors/owl.carousel.min.js"></script>
         <script src="../assets/vendors/aos.js"></script>

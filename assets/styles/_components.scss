@@ -300,6 +300,10 @@
 
     &.primary {
         background: url("../images/logo/2.svg") no-repeat top -10% left -15% / 30%;
+
+        @media (max-width: 1199px) {
+            background: url(../images/logo/2.svg) no-repeat top -5% left -85% / 70%;
+        }
     }
 
     &.aos-animate {
@@ -377,6 +381,10 @@
                     url("../images/arrows/bottom/1.svg") no-repeat left 2rem center,
                     linear-gradient(180deg, #3c80b0 -0.99%, #165578 95.36%);
             }
+
+            @media (max-width: 1199px) {
+                background-size: 22%, cover;
+            }
         }
     }
 
@@ -398,6 +406,11 @@
 
         font-size: 3rem;
         font-weight: 700;
+
+        @media (max-width: 1199px) {
+            font-size: 1.5rem;
+            padding: 1.75rem 1rem;
+        }
 
         &::marker {
             content: none;
@@ -850,6 +863,12 @@
 }
 
 .chart-wrapper {
+    @media (max-width: 1199px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .apexcharts-legend {
         justify-content: center !important;
         flex-direction: column !important;
@@ -1439,6 +1458,13 @@
     .chart-circle {
         inset-inline-start: 180px;
 
+        &.end {
+            @media (max-width: 1199px) {
+                inset-inline-start: 140px;
+                inset-inline-end: auto;
+            }
+        }
+
         @media (max-width: 1199px) {
             transform: none;
             bottom: auto;
@@ -1454,12 +1480,17 @@
     .chart-circle {
         inset-inline-end: 140px;
 
+        &.end {
+            inset-inline-start: 140px;
+            inset-inline-end: auto;
+        }
+
         @media (max-width: 1199px) {
             transform: none;
             bottom: auto;
             top: 90px;
             inset-inline-end: auto;
-            inset-inline-start: 35%;
+            inset-inline-start: 100px !important;
         }
     }
 }
@@ -1567,6 +1598,11 @@
 }
 
 .geo-map {
+    @media (max-width: 1199px) {
+        max-width: 100%;
+        height: 300px;
+    }
+
     path[fill="#7CABCC"] {
         &:hover {
             animation: mapAnimate 0.3s ease-in-out forwards;
@@ -1579,6 +1615,28 @@
 
             to {
                 fill: url("#hoverGradient");
+            }
+        }
+    }
+}
+
+.sec-4-2-5 {
+    .last-card {
+        @media (max-width: 1199px) {
+            padding: 0.7rem !important;
+        }
+
+        .graph-bars {
+            .item {
+                @media (max-width: 1199px) {
+                    background: url("../images/bars/7.svg") no-repeat center !important;
+                }
+            }
+
+            .number {
+                @media (max-width: 1199px) {
+                    padding-inline: 0 80px !important;
+                }
             }
         }
     }

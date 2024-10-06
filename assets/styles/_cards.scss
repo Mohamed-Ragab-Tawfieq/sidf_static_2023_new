@@ -121,8 +121,23 @@
         }
     }
 
+    h3 {
+        @media (max-width: 1199px) {
+            font-size: 1.38rem;
+        }
+    }
+
     .grid-icon {
         grid-template-rows: 1.5rem auto;
+    }
+
+    img {
+        &[width="56"],
+        &[width="60"] {
+            @media (max-width: 1199px) {
+                width: 40px !important;
+            }
+        }
     }
 }
 
