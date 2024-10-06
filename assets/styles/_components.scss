@@ -338,6 +338,10 @@
         font-size: 1.5rem;
         border: 1px solid #c3d8e7;
 
+        @media (max-width: 1199px) {
+            padding: 0.25rem;
+        }
+
         &.show {
             i {
                 transform: rotate(360deg);
@@ -1550,6 +1554,18 @@
 }
 
 /************** 04 lending-activity **************/
+.lending-activity-sec1 {
+    .graph-bars {
+        @media (max-width: 1199px) {
+            flex-direction: row !important;
+
+            & > div {
+                min-width: 50%;
+            }
+        }
+    }
+}
+
 .geo-map {
     path[fill="#7CABCC"] {
         &:hover {
