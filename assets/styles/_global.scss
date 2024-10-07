@@ -309,54 +309,6 @@ section {
     color: $blue-500;
 }
 
-.routing-links {
-    nav {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-
-    .btn {
-        display: flex;
-        flex-direction: column;
-
-        border-radius: 1rem;
-        padding: 2.5rem;
-        text-align: start;
-
-        @media (max-width: 1199px) {
-            padding: 1.25rem;
-        }
-
-        &.btn-success {
-            color: $white !important;
-        }
-
-        &:last-of-type {
-            background-color: #e8e6e6;
-        }
-    }
-
-    .fs-2 {
-        display: flex;
-        align-items: center;
-        gap: 0.25rem;
-
-        @media (max-width: 1199px) {
-            font-size: 1.13rem !important;
-
-            i {
-                font-size: 1rem !important;
-            }
-        }
-    }
-
-    .display-5 {
-        @media (max-width: 1199px) {
-            font-size: 1.5rem;
-        }
-    }
-}
 
 .counter-percent {
     position: relative;

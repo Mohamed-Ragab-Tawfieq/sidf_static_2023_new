@@ -248,3 +248,12 @@ $(document).ready(function () {
         }
     }
 });
+
+/*** rate ***/
+$(function () {
+    $('#rateit').bind('rated', function (e) {
+        var rating = $(this).rateit('value');
+        // Round the rating to the nearest whole number
+        $(this).rateit('value', Math.round(rating));
+    });
+});
