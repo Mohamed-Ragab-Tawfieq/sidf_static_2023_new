@@ -254,27 +254,16 @@
 
     &:hover {
         &::after {
-            @extend .white-img;
+            animation: awardAnimate 1s ease forwards;
         }
 
-        * {
-            transition: all 0.5s ease-in-out;
-        }
-
-        .body {
-            &::after {
-                transform: scaleY(1);
-                transform-origin: bottom;
-                transition: transform 0.5s ease-in-out;
+        @keyframes awardAnimate {
+            from {
+                transform: translateX(-100px);
             }
 
-            img {
-                @extend .white-img;
-            }
-
-            * {
-                color: $white;
-                opacity: 1 !important;
+            to {
+                transform: translateX(0);
             }
         }
     }
@@ -284,26 +273,6 @@
         padding-inline-end: 2rem;
         border-top-right-radius: 1rem;
         border-top-left-radius: 1rem;
-    }
-
-    .body {
-        position: relative;
-
-        &::after {
-            @extend .btn-gradient;
-            transform: scaleY(0);
-
-            content: "";
-            position: absolute;
-            top: 0;
-            z-index: -1;
-
-            width: 100%;
-            height: 100%;
-
-            border-bottom-left-radius: 1rem;
-            border-bottom-right-radius: 1rem;
-        }
     }
 }
 
