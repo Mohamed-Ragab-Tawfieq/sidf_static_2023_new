@@ -250,9 +250,19 @@
         position: absolute;
         top: 0;
         inset-inline-start: 0;
+
+        @media (max-width: 1199px) {
+            transform: scale(0.7) !important;
+            top: -11px !important;
+            inset-inline-start: -14px !important;
+        }
     }
 
     &:hover {
+        @media (max-width: 1199px) {
+            box-shadow: 0 2px 1rem rgba($black, 0.2);
+        }
+
         &::after {
             animation: awardAnimate 1s ease forwards;
         }
