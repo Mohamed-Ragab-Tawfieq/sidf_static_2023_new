@@ -1636,6 +1636,27 @@
     }
 }
 
+/************** 05 strategy **************/
+.sec-5-4-1 {
+    .indicators-table {
+        tbody {
+            tr {
+                &:nth-of-type(odd) {
+                    td {
+                        background: #edecec;
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    td {
+                        background: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /************** 06 about **************/
 .sec-6-2-2 {
     overflow: hidden;
