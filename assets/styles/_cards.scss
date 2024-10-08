@@ -288,6 +288,7 @@
 
 .iso-card {
     position: relative;
+    border: 1px solid #a5c5dc !important;
 
     &::after {
         content: url("../images/arrows/right/4.svg");
@@ -297,19 +298,17 @@
         inset-inline-end: 0;
     }
 
+    .title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #4d4e50;
+    }
+
     &:hover {
+        @extend .btn-gradient-primary;
+
         &::after {
-            animation: arrowAnimate 0.5s ease-in-out;
-        }
-
-        @keyframes arrowAnimate {
-            from {
-                inset-inline-end: 100px;
-            }
-
-            to {
-                inset-inline-end: 0;
-            }
+            content: none;
         }
     }
 }
