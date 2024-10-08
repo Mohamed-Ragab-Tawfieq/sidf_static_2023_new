@@ -313,3 +313,45 @@
         }
     }
 }
+
+.house-card {
+    @extend .flex-center;
+    flex-direction: column;
+
+    position: relative;
+    text-align: center;
+    padding: 2rem 0.88rem;
+    background-color: $white;
+
+    border-radius: 1rem;
+    border: 1px solid #7cabcc;
+
+    &::after {
+        content: url("../images/arrows/left/9.svg");
+        position: absolute;
+        top: 0;
+        inset-inline-end: 0;
+    }
+
+    &:hover {
+        @extend .btn-gradient-primary;
+
+        &::after {
+            animation: houseCardAnimate 1s ease;
+        }
+
+        @keyframes houseCardAnimate {
+            from {
+                transform: translateX(50px);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        * {
+            color: $white !important;
+        }
+    }
+}

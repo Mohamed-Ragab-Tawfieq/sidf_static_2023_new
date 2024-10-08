@@ -1154,7 +1154,7 @@
     margin-bottom: 150px;
 
     &.primary {
-        background: url("../images/pages/about/board-2.svg") no-repeat center;
+        background: url("../images/pages/about/board-2.svg") no-repeat center / 80%;
     }
 
     &.lg {
@@ -1670,5 +1670,81 @@
 
         background-color: #c3d8e7;
         border-radius: 50%;
+    }
+}
+
+.sec-6-4-1 {
+    .donut-chart {
+        position: relative;
+
+        width: 183px;
+        height: 183px;
+
+        &.center {
+            width: 325px;
+            height: 325px;
+
+            .chart-circle {
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+        .chart-circle {
+            @extend .absolute-center;
+
+            width: 83px;
+            height: 83px;
+        }
+    }
+
+    .about-board {
+        height: 1000px;
+
+        @media (max-width: 1199px) {
+            display: none;
+        }
+
+        .top-item {
+            margin-top: -12rem;
+        }
+    }
+
+    .owl-carousel {
+        @media (min-width: 1200px) {
+            display: none;
+        }
+    }
+
+    .donut-chart {
+        @media (max-width: 1199px) {
+            width: 200px !important;
+            height: 200px !important;
+        }
+
+        img {
+            @media (max-width: 1199px) {
+                width: 200px !important;
+                height: 200px !important;
+            }
+        }
+    }
+
+    .item {
+        @extend .flex-center;
+        flex-direction: column;
+    }
+
+    .owl-nav {
+        margin-top: 0 !important;
+
+        button {
+            border-color: $primary !important;
+            color: $primary !important;
+        }
+    }
+
+    .owl-dots .owl-dot.active span {
+        background: $primary !important;
     }
 }
