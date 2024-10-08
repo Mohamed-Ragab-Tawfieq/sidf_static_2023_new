@@ -84,10 +84,10 @@
                     <a href="index.html"><img src="assets/images/logo.svg" class="logo" alt="logo"></a>
 
                     <div class="flex-between">
-                        <a href="about.html" class="btn px-1 btn-info flex-y-row gap-2 f-18 px-8">
+                        <button type="button" class="btn px-1 btn-info flex-y-row gap-2 f-18 px-8" data-bs-toggle="modal" data-bs-target="#downloadModal">
                             <img src="assets/images/icons/download-04.svg" class="white-img" alt="download">
                             تحميل التقرير السنوي 2023
-                        </a>
+                        </button>
                         <button class="btn px-1" type="button"> <img src="assets/images/icons/search.svg" alt="search"> </button>
                         <button class="btn px-1 fw-5" type="button"> EN </button>
                     </div>
@@ -520,6 +520,60 @@
                                 <li><a href="../statistics/loans.html">أولا: النشاط الإقراضي</a></li>
                                 <li><a href="../lending-statistics/lending-statistics.html">الصندوق في سطور </a></li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- download modal -->
+        <div class="modal download-modal fade" id="downloadModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <!-- step 1 -->
+                    <div class="step-1" id="step-1">
+                        <div class="modal-header">
+                            <div class="flex-between w-100">
+                                <h4 class="title">تحميل ملف التقرير السنوي 2023</h4>
+                                <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
+                                    <i class='material-icons flex-center'>close</i>
+                                </button>
+                            </div>
+                            <p class="description">لتحميل الملف يجب ادخال رقم الإقامة من ثم إدخال رقم التحقق المرسل الي رقم الهاتف المحمول</p>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="body-title">برجاء إدخال رقم الإقامة</h5>
+                            <input class="form-control" placeholder="مثلا 232311445332">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-gradient" onclick="downloadFile()">تحميل الملف</button>
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                    </div>
+
+                    <!-- step 2 -->
+                    <div class="step-2" id="step-2">
+                        <div class="modal-header">
+                            <div class="flex-between w-100">
+                                <h4 class="title">إدخال رقم التحقق</h4>
+                                <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
+                                    <i class='material-icons flex-center'>close</i>
+                                </button>
+                            </div>
+                            <p class="description">تم إرسال رقم التحقق على رقم +699 *** **** *27</p>
+                        </div>
+                        <div class="modal-body">
+                            <div class="otp-container">
+                                <input maxlength="1" class="form-control otp-input" id="otp1" oninput="OTPMoveToNext(this, 'otp2')">
+                                <input maxlength="1" class="form-control otp-input" id="otp2" oninput="OTPMoveToNext(this, 'otp3')">
+                                <input maxlength="1" class="form-control otp-input" id="otp3" oninput="OTPMoveToNext(this, 'otp4')">
+                                <input maxlength="1" class="form-control otp-input" id="otp4" oninput="OTPMoveToNext(this, '')">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="" class="btn btn-gradient" download>تأكيد</a>
+                            <span class="time">00:00</span>
+                            <button class="btn reset">إعادة إرسال رقم التحقق</button>
                         </div>
                     </div>
                 </div>

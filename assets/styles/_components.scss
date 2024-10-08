@@ -155,7 +155,7 @@
 
     &.sticky {
         position: fixed;
-        inset: 60px 0 auto;
+        inset: 110px 0 auto;
         z-index: 25;
 
         border-top: 1px solid #ddd;
@@ -164,14 +164,9 @@
         transition: all 0.3s ease-in-out;
         animation: progressAnimation 0.3s;
 
-        @media (min-width: 1200px) and (max-width: 1450px) {
-            inset: 53px 0 auto;
+        @media (max-width: 1450px) {
+            inset: 88px 0 auto;
             padding-block: 6px;
-        }
-
-        @media (max-width: 1199px) {
-            inset: 53px 0 auto;
-            padding-block: 0.38rem;
         }
 
         ul {
@@ -638,209 +633,6 @@
     }
 }
 
-.inner-modal {
-    .modal-dialog {
-        min-width: 100%;
-        margin-top: 0;
-        margin-inline: 0;
-    }
-
-    .modal-content {
-        background:
-            url("../images/modal-bg.png") no-repeat center left / contain,
-            $white;
-
-        padding-bottom: 2rem;
-
-        border-radius: 0;
-        border: none;
-
-        @media (max-width: 1199px) {
-            background:
-                url("../images/modal-bg.png") no-repeat center / 350%,
-                $white;
-        }
-    }
-
-    .modal-header {
-        border-bottom: none;
-
-        .close-btn {
-            background-color: $white;
-            color: $success;
-
-            box-shadow: 0px 4px 14px 10px rgba($black, 0.05);
-            border-radius: 50%;
-            font-size: 2rem;
-
-            width: 48px;
-            height: 48px;
-        }
-    }
-
-    .modal-body {
-        display: grid;
-        grid-template-columns: 38vw 50vw;
-
-        @media (max-width: 1199px) {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    .main-list {
-        display: flex;
-        flex-direction: column;
-
-        .btn {
-            color: $gray-500;
-            padding: 0.75rem 1.5rem;
-            line-height: 0.6;
-            width: 100%;
-            text-align: start;
-
-            @media (max-width: 1450px) {
-                padding: 0.6rem 1.5rem;
-            }
-
-            @media (max-width: 1199px) {
-                color: $white;
-                border-radius: 0;
-            }
-
-            &.active {
-                @extend .btn-gradient;
-                position: relative;
-                border-radius: 0.5rem;
-                line-height: 1;
-                margin-bottom: 0.25rem;
-
-                @media (max-width: 1199px) {
-                    border: none;
-                }
-
-                &::after {
-                    content: url("../images/icons/arrow-left.svg");
-                    position: absolute;
-                    inset-inline-end: 1rem;
-                    bottom: 50%;
-                    transform: translateY(50%);
-
-                    @media (max-width: 1199px) {
-                        transform: translateY(50%) scale(0.7);
-                    }
-                }
-            }
-
-            &:not(.active) {
-                border-block: 1px solid #e4e7e1;
-            }
-
-            span {
-                font-size: 2.5rem;
-
-                @media (max-width: 1450px) {
-                    font-size: 2rem;
-                }
-
-                @media (max-width: 1199px) {
-                    font-size: 1.5rem;
-                }
-
-                &:first-of-type {
-                    font-weight: 400;
-                    margin-inline-end: 1rem;
-                }
-
-                &:last-of-type {
-                    font-weight: 700;
-                }
-            }
-        }
-    }
-
-    .chid-wrapper {
-        height: 100%;
-
-        .child-menu {
-            display: none;
-
-            &.show {
-                display: block;
-                padding: 1.5rem 0;
-                border-radius: 1rem;
-
-                position: absolute;
-
-                background-color: rgba($white, 0.32);
-                backdrop-filter: blur(3px);
-
-                @media (min-width: 1200px) {
-                    top: 0;
-                    inset-inline-end: 2rem;
-                }
-
-                @media (max-width: 1199px) {
-                    padding: 0.5rem 0;
-                    margin-top: 1rem;
-
-                    top: 10%;
-                    right: 50%;
-                    transform: translateX(50%);
-
-                    width: 90%;
-                    backdrop-filter: blur(8px) brightness(0.8);
-                }
-
-                .close-btn {
-                    font-size: 1.5rem;
-                    padding: 0;
-                    color: $white;
-
-                    display: flex;
-                    margin-inline-start: auto;
-                }
-
-                li {
-                    padding-inline: 1.5rem 2rem;
-
-                    &:first-of-type {
-                        border-bottom: none !important;
-                        padding-inline: 0.5rem;
-
-                        @media (min-width: 1200px) {
-                            display: none;
-                        }
-                    }
-
-                    &:not(:hover):not(:last-of-type) {
-                        border-bottom: 1px solid #a4ae9c;
-                    }
-
-                    &:hover {
-                        background:
-                            url("../images/arrows/right/6.svg") no-repeat center left,
-                            rgba(#3b5c27, 0.5);
-                    }
-                }
-
-                a {
-                    color: $white;
-                    font-size: 2.5rem;
-                    font-weight: 600;
-
-                    @media (max-width: 1450px) {
-                        font-size: 2rem;
-                    }
-
-                    @media (max-width: 1199px) {
-                        font-size: 1.5rem;
-                    }
-                }
-            }
-        }
-    }
-}
-
 // charts
 .chart-circle {
     @extend .flex-center;
@@ -1054,6 +846,28 @@
         @media (max-width: 1199px) {
             font-size: 1.5rem;
         }
+    }
+}
+
+.download-btn {
+    @extend .btn-gradient;
+
+    @extend .flex-center;
+    gap: 0.5rem;
+
+    border-radius: 0.25rem;
+    border: none;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    position: relative;
+    color: $white !important;
+    width: fit-content;
+    padding: 0.3rem 2.5rem;
+
+    &.primary {
+        @extend .btn-gradient-primary;
     }
 }
 

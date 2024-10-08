@@ -72,7 +72,11 @@
 }
 
 .mobile-header {
-    padding-block: 0.5rem;
+    padding-block: 2.2rem;
+
+    @media (max-width: 1450px) {
+        padding-block: 1.5rem;
+    }
 
     @media (min-width: 992px) {
         display: none;

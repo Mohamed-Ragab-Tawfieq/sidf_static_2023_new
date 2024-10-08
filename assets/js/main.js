@@ -249,11 +249,18 @@ $(document).ready(function () {
     }
 });
 
-/*** rate ***/
-$(function () {
-    $('#rateit').bind('rated', function (e) {
-        var rating = $(this).rateit('value');
-        // Round the rating to the nearest whole number
-        $(this).rateit('value', Math.round(rating));
-    });
-});
+/*** download modal ***/
+function downloadFile() {
+    const step1 = document.getElementById('step-1')
+    const step2 = document.getElementById('step-2')
+
+    step2.classList.add('d-block')
+    step1.classList.add('d-none')
+}
+
+function OTPMoveToNext(current, nextFieldId) {
+    if (current.value.length === 1 && nextFieldId !== '') {
+        const next = document.getElementById(nextFieldId)
+        next?.focus();
+    }
+}
