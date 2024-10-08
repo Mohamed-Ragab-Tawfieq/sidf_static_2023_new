@@ -169,6 +169,10 @@
             padding-block: 6px;
         }
 
+        @media (max-width: 1199px) {
+            inset: 85px 0 auto;
+        }
+
         ul {
             gap: 0.25rem;
             transform: translateX(100px);
@@ -1618,6 +1622,35 @@
                     padding-inline: 0 80px !important;
                 }
             }
+        }
+    }
+}
+
+/************** 06 about **************/
+.sec-6-2-2 {
+    overflow: hidden;
+
+    .flex-between {
+        @media (max-width: 1199px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .bg {
+        @media (min-width: 1200px) {
+            position: absolute;
+            inset-block: 0;
+            inset-inline-end: 0;
+
+            border-start-start-radius: 2rem;
+            border-end-start-radius: 2rem;
+
+            height: 100%;
+            margin-inline-end: -1rem;
+        }
+
+        @media (max-width: 1199px) {
+            border-radius: 1rem;
         }
     }
 }
