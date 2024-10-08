@@ -115,6 +115,11 @@
             font-size: 3rem;
         }
     }
+
+    .text {
+        position: relative;
+        z-index: 10;
+    }
 }
 
 .sidf-navbar {
