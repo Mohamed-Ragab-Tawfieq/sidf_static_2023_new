@@ -245,6 +245,7 @@ table {
 
         @media (max-width: 1199px) {
             font-size: 1.25rem;
+            padding-block: 1rem !important;
         }
     }
 
@@ -308,7 +309,6 @@ section {
 .text-primary-light {
     color: $blue-500;
 }
-
 
 .counter-percent {
     position: relative;
