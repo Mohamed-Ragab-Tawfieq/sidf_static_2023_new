@@ -58,7 +58,7 @@
         transition:
             top 1s ease-in-out,
             left 1s ease-in-out;
-        color: #6a522f;
+        color: $gold-dark;
 
         @media (max-width: 1199px) {
             padding-top: 1.25rem;

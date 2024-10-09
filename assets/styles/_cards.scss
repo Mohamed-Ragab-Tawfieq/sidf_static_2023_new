@@ -354,3 +354,44 @@
         }
     }
 }
+
+.gold-card {
+    border: 1px solid $gold;
+    border-radius: 1.06rem;
+
+    position: relative;
+    padding: 0.5rem 1rem 1rem;
+    text-align: center;
+
+    &::after {
+        content: url("../images/arrows/left/11.svg");
+        position: absolute;
+        top: 0;
+        inset-inline-end: 0;
+    }
+
+    &:hover {
+        @extend .btn-gradient-gold;
+
+        * {
+            color: $white !important;
+        }
+    }
+
+    .description {
+        font-weight: 500;
+        color: $gold;
+        text-align: justify;
+    }
+
+    .number {
+        font-weight: 700;
+        font-size: 4rem;
+        color: $gold-dark;
+    }
+
+    .unit {
+        font-weight: 500;
+        color: $gold;
+    }
+}
