@@ -193,6 +193,18 @@
         @media (max-width: 1199px) {
             display: none !important;
         }
+
+        &.grid-6 {
+            gap: 0.5rem;
+        }
+
+        &.sm {
+            .nav-link {
+                @media (max-width: 1450px) {
+                    font-size: 1.38rem;
+                }
+            }
+        }
     }
 
     .nav-item {
@@ -857,6 +869,10 @@
         padding: 2.5rem;
         text-align: start;
 
+        @media (max-width: 1450px) {
+            padding: 1.75rem;
+        }
+
         @media (max-width: 1199px) {
             padding: 1.25rem;
         }
@@ -885,6 +901,10 @@
     }
 
     .display-5 {
+        @media (max-width: 1450px) {
+            font-size: 2rem;
+        }
+
         @media (max-width: 1199px) {
             font-size: 1.5rem;
         }
@@ -2003,6 +2023,11 @@
         font-size: 1.5rem;
         color: $gray-500;
         text-align: justify;
+
+        @media (max-width: 1199px) {
+            font-size: 1.13rem;
+            line-height: 20px;
+        }
     }
 }
 
@@ -2029,6 +2054,10 @@
         color: $gray-500;
         font-weight: 500;
         margin-top: 2rem;
+
+        @media (max-width: 1199px) {
+            font-size: 1.5rem;
+        }
     }
 
     .counter-section {
@@ -2041,6 +2070,11 @@
         width: 470px;
         height: 470px;
 
+        @media (max-width: 1199px) {
+            width: 350px;
+            height: 350px;
+        }
+
         .chart-circle {
             @extend .absolute-center;
 
@@ -2050,15 +2084,36 @@
             text-align: center;
             background-color: #f1f6ed;
 
+            @media (max-width: 1199px) {
+                transform: none !important;
+                right: auto !important;
+
+                width: 100px;
+                height: 100px;
+            }
+
             .title {
                 color: $success-dark;
+                line-height: 2.63rem;
                 font-size: 2.5rem;
                 font-weight: 700;
+
+                @media (max-width: 1199px) {
+                    font-size: 2rem;
+                    line-height: 2rem;
+                }
             }
         }
 
         .apexcharts-legend {
-            flex-direction: row !important;
+            @media (min-width: 1200px) {
+                flex-direction: row !important;
+            }
+
+            @media (max-width: 1199px) {
+                top: auto !important;
+                bottom: 0;
+            }
 
             .apexcharts-legend-series .apexcharts-legend-text {
                 color: $success !important;
@@ -2072,6 +2127,10 @@
 
             font-size: 1.75rem;
             font-weight: 500;
+
+            @media (max-width: 1199px) {
+                font-size: 1.13rem;
+            }
         }
     }
 
@@ -2089,6 +2148,8 @@
 
         @media (max-width: 1199px) {
             display: flex;
+            justify-content: center;
+            margin-top: 3rem;
         }
 
         &.aos-animate {
@@ -2128,17 +2189,15 @@
             height: 100%;
 
             &::after {
-                @media (min-width: 1200px) {
-                    content: "";
-                    position: absolute;
-                    inset-inline: 0;
-                    top: 3rem;
-                    bottom: 3rem;
-                    z-index: -1;
+                content: "";
+                position: absolute;
+                inset-inline: 0;
+                top: 3rem;
+                bottom: 3rem;
+                z-index: -1;
 
-                    width: 100%;
-                    background: linear-gradient(180deg, rgba(247, 243, 236, 0) 0%, #f7f3ec 27.8%);
-                }
+                width: 100%;
+                background: linear-gradient(180deg, rgba(247, 243, 236, 0) 0%, #f7f3ec 27.8%);
             }
         }
     }
@@ -2157,6 +2216,11 @@
         .description {
             font-size: 1.5rem;
             color: $success;
+
+            @media (max-width: 1199px) {
+                font-size: 1.13rem;
+                line-height: 20px;
+            }
         }
     }
 }

@@ -118,7 +118,7 @@ window.addEventListener('scroll', function () {
         aboutBrief?.classList.remove('arrows-move');
     }
 
-    if (window.scrollY > stickyHeader + 600) {
+    if ((window.scrollY > stickyHeader + 600) || ((window.scrollY > stickyHeader + 500) && (window.innerWidth < 1450)) || ((window.scrollY > stickyHeader + 200) && (window.innerWidth <= 1199))) {
         progress?.classList.add('sticky');
     } else {
         progress?.classList.remove('sticky');
