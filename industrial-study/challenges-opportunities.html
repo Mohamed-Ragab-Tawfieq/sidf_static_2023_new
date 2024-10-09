@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="../assets/vendors/owl.carousel.min.css">
         <link rel="stylesheet" href="../assets/vendors/owl.theme.default.min.css">
         <link rel="stylesheet" href="../assets/vendors/rateit.min.css">
+        <link rel="stylesheet" href="../assets/vendors/rateit.min.css">
         <link rel="stylesheet" href="../assets/styles/main.min.css">
     </head>
 
@@ -20,18 +21,19 @@
         <header class="inner-header collapsed" id="inner-header">
             <div class="container">
                 <nav class="flex-between flex-row">
-                    <div class="flex-y-row gap-2">
-                        <button class="btn" onclick="toggleHeader()"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+                    <div class="align-items-center gap-2" style="display: grid; grid-template-columns: 45px 1fr;">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+
                         <a href="../index.html"><img src="../assets/images/logo.svg" width="77" alt="logo"></a>
                     </div>
 
                     <h2 class="site-name"><a href="../index.html">التقــرير السنوي 2023</a></h2>
 
                     <div class="flex-between">
-                        <a href="" class="download-btn" download>
+                        <button type="button" class="btn download-btn" data-bs-toggle="modal" data-bs-target="#downloadModal">
                             تحميل ملف الفصل 9
                             <img src="../assets/images/icons/download-04.svg" class="white-img" alt="download">
-                        </a>
+                        </button>
                         <button class="btn px-1 text-success"><img src="../assets/images/icons/search.svg" alt="search"></button>
                         <button class="btn px-1 fw-5" type="button"> EN </button>
                     </div>
@@ -52,93 +54,74 @@
         <main class="main-content">
             <section>
                 <div class="inner-top-img" id="inner-top-img" data-aos="fade-up" data-aos-duration="500">
-                    <img src="../assets/images/top-img/1.png" class="top-img absolute-center" alt=" welcome image">
-
-                    <button class="btn play-btn absolute-center" id="play-btn" onclick="playTopVideo()">
-                        <i class='material-icons'>play_circle_filled</i>
-                    </button>
-
-                    <video class="top-video absolute-center" id="top-video" controls muted>
-                        <source src="../assets/videos/1-brief.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-
-                    <h2 class="title">01</h2>
-                    <h2 class="title">لمحة عن الصندوق</h2>
+                    <img src="../assets/images/top-img/9.png" class="top-img absolute-center" alt=" welcome image">
+                    <h2 class="title">09</h2>
+                    <h2 class="title">دراسة صناعية: صناعة الحديد و الصلب</h2>
                     <img src="../assets/images/arrows/left/4.svg" class="arrows img-fluid" width="200" alt="arrows">
                 </div>
             </section>
 
             <nav class="sidf-navbar" id="sidf-navbar">
-                <ul class="nav nav-pills grid-5">
+                <ul class="nav nav-pills grid-6">
                     <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
-                        <a class="nav-link" href="brief.html">الصندوق في سطور</a>
+                        <a class="nav-link" href="intro.html">المقدمة</a>
                     </li>
                     <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
-                        <a class="nav-link" href="board.html">مجلس الإدارة</a>
+                        <a class="nav-link" href="global-indicators.html">المؤشرات العالمية الرئيسية</a>
                     </li>
                     <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
-                        <a class="nav-link" href="org-structure.html">الهيكل التنظيمي</a>
+                        <a class="nav-link" href="regional-indicators.html">المؤشرات اإلقليمية الرئيسية</a>
                     </li>
                     <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
-                        <a class="nav-link" href="chariman-intro.html">كلمة معالي رئيس مجلس الإدارة</a>
+                        <a class="nav-link" href="ksa-market.html">حجم الطلب في السوق السعودي</a>
                     </li>
                     <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
-                        <a class="nav-link" href="ceo-word.html">كلمة سعادة الرئيس التنفيذي</a>
+                        <a class="nav-link" href="challenges-opportunities.html">التحديات والفرص</a>
+                    </li>
+                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                        <a class="nav-link" href="conclusion.html">الخلاصة</a>
                     </li>
                 </ul>
 
+                <select id="sidf-navbar-mobile" class="sidf-navbar-mobile form-select"></select>
                 <div class="progress" id="top-progress"></div>
             </nav>
 
             <!-- section -->
-            <section class="first-section sec-padding" id="first-section" data-aos="fade-up" data-aos-duration="700">
+            <section class="first-section sec-padding sec-9-5-1" id="first-section" data-aos="fade-up" data-aos-duration="700">
                 <div class="container">
+                    <div class="sec-arrows-wrapper">
+                        <img src="../assets/images/arrows/left/2.svg" class="sec-arrows" width="52" alt="arrows">
+                        <div>
+                            <h1 class="sec-title text-success" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine">
+                                التحديات والفرص
+                            </h1>
+                            <h2 class="sec-subtitle text-success" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine">
+                                التحديات التي تواجه القطاع
+                            </h2>
+                        </div>
+                    </div>
+
                     <div class="counter-section">
                         <div>
-                            <div class="sec-arrows-wrapper">
-                                <img src="../assets/images/arrows/left/2.svg" class="sec-arrows" width="52" alt="arrows">
-                                <h1 class="sec-title text-success" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine"> الصندوق في سطور </h1>
-                            </div>
                             <p class="sec-text" data-aos="fade-up" data-aos-duration="700">
-                                تأسس صندوق التنمية الصناعية السعودي في عام 1394هـ (1974م) ، برأس مال مبدئي بلغ 500 مليون ريال لتوفير التمكين المالي للقطاع
-                                الصناعي في المملكة. وتم رفع رأسماله تدريجيًا حتى أصبح 105 مليارات ريال في عام 1440هـ (2019م). وقام الصندوق الصناعي على مدار 48
-                                عاما بتقديم الدعم الصناعي وفقا لاحتياجات كل مرحلة من خلال تعزيز فرص الاستثمار الصناعي وتطوير الصناعة المحلية ورفع مستوى أدائها،
-                                وتطوير المؤسسات التنافسية، ودعم المبادرات الاستراتيجية، فضلاً عن توسعه في نطاق الدعم ليشمل عددا من القطاعات الواعدة في مجالات
-                                الصناعة والطاقة والتعدين والخدمات اللوجستية، ليكون المُمكن المالي الرئيس للتحول الصناعي في المملكة العربية السعودية. وفي عام
-                                2021م اكتملت عملية انتقال الصندوق الصناعي لمبناه الجديد في مركز الملك عبد الله المالي بالرياض، ليبدأ منه عهدًا جديدًا أساسه المزيد من
-                                الثقة لتنمية وتطوير الاقتصاد الوطني.
+                                هنــــاك تحديــــات متعددة فــــي القطــــاع و التي قد تــــؤدي إلى مواقف صعبة لبعض الأطراف (المنتجين و المستخدمين النهائييــن) من حيث المنافسة و الربحية. يمكن تلخيص التحديات الرئيسية التي يواجهها القطاع في النقاط أدناه من وجهات نظر مختلفة:
                             </p>
-
-                            <div class="progress-lines success" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
+                            <p class="sec-text sec-text-circle" data-aos="fade-up" data-aos-duration="700">
+                                تقلـــب أسعار المواد الخام. تتسم أسعار بيع كتل الصلـــب بالتقلـــب الشديد و تعتمد علي العديد من العوامل مثل السعر الدولي و مستوي الطلب المحلي و العالمي و توافر خردة الحديد (Steel Scrap)
+                            </p>
+                            <p class="sec-text sec-text-circle" data-aos="fade-up" data-aos-duration="700">
+                                نقص المواد الخام الرئيسية(خردة الحديد): يوجد نقص فـــي خردة الحديد في المملكة العربية السعودية و حتي عل المستوي العالمي
+                            </p>
                         </div>
 
-                        <div class="sidf-counters">
-                            <div class="item flex-center flex-column ms-auto" data-aos="fade-down" data-aos-easing="ease-in-sine">
-                                <h2 class="display-2 text-success fw-7 purecounter" data-purecounter-end="105">105</h2>
-                                <h4 class="fw-5 text-success">مليار ريال عام 2019م</h4>
-                            </div>
-                            <div class="item flex-center flex-column" data-aos="fade-up" data-aos-easing="ease-in-sine">
-                                <h2 class="display-2 text-success fw-7 purecounter" data-purecounter-end="20">20</h2>
-                                <h4 class="fw-5 text-success">مليار ريال عام 2005م</h4>
-                            </div>
-                            <div class="item flex-center flex-column ms-auto" data-aos="fade-up" data-aos-easing="ease-in-sine">
-                                <h2 class="display-2 text-success fw-7 purecounter" data-purecounter-end="500">500</h2>
-                                <h4 class="fw-5 text-success">مليون ريال تأسس عام 1974م برأس مال مبدئي</h4>
-                            </div>
-                        </div>
+                        <img src="../assets/images/pages/industrial-study/4.png" class="img-fluid rounded-4" width="385" height="257" alt="steel" data-aos="flip-left" data-aos-duration="700">
                     </div>
                 </div>
             </section>
 
             <!-- section -->
-            <section class="sec-dark sidf-slider-wrap" data-aos="fade-up" data-aos-duration="700">
+            <section class="sec-dark sec-9-5-2" data-aos="fade-up" data-aos-duration="700">
                 <div class="container sec-padding position-relative">
                     <div class="progress-lines success vertical end">
                         <div></div>
@@ -147,197 +130,27 @@
                         <div></div>
                     </div>
 
-                    <div>
-                        <div class="sec-arrows-wrapper">
-                            <img src="../assets/images/arrows/left/2.svg" class="sec-arrows" width="52" alt="arrows">
-                            <h2 class="sec-title text-success" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine"> أهدافنا الاستراتيجية </h2>
-                        </div>
-                        <p class="fs-2 op-7 w-lg-7 mb-10" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine">
-                            و يعمل الصندوق الصناعي بشــــكل فعال لتوفير الدعم المالي والاستشــــاري وتقديم الحلــــول المبتكرة لنمو و تطــــور الصناعة المحلية ورفع مستوى أدائها، لتحقيق الأهداف التالية:
-                        </p>
-
-                        <div class="owl-carousel owl-theme sidf-slider" id="sidf-slider">
-                            <div class="item">
-                                <div class="content">
-                                    <img src="../assets/images/icons/logo/logo.svg" class="icon white-img" alt="logo">
-                                    <img src="https://picsum.photos/id/48/1000" class="slider-img" alt="slide">
-                                    <a class="text-white h2 fw-7" href="">رفع كفاءة وأداء المنشآت وتحقيق الاستدامة</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="content">
-                                    <img src="../assets/images/icons/logo/logo.svg" class="icon white-img" alt="logo">
-                                    <img src="https://picsum.photos/id/48/1000" class="slider-img" alt="slide">
-                                    <a class="text-white h2 fw-7" href="">دعم المنتج المحلي</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="content">
-                                    <img src="../assets/images/icons/logo/logo.svg" class="icon white-img" alt="logo">
-                                    <img src="https://picsum.photos/id/48/1000" class="slider-img" alt="slide">
-                                    <a class="text-white h2 fw-7" href="">تعزيز الصادرات غير النفطية</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="content">
-                                    <img src="../assets/images/icons/logo/logo.svg" class="icon white-img" alt="logo">
-                                    <img src="https://picsum.photos/id/48/1000" class="slider-img" alt="slide">
-                                    <a class="text-white h2 fw-7" href="">التكامل بين القطاع الصناعي والقطاعات الأخرى</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="content">
-                                    <img src="../assets/images/icons/logo/logo.svg" class="icon white-img" alt="logo">
-                                    <img src="https://picsum.photos/id/48/1000" class="slider-img" alt="slide">
-                                    <a class="text-white h2 fw-7" href="">رفع كفاءة وأداء المنشآت وتحقيق الاستدامة</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="content">
-                                    <img src="../assets/images/icons/logo/logo.svg" class="icon white-img" alt="logo">
-                                    <img src="https://picsum.photos/id/48/1000" class="slider-img" alt="slide">
-                                    <a class="text-white h2 fw-7" href="">دعم المنتج المحلي</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="content">
-                                    <img src="../assets/images/icons/logo/logo.svg" class="icon white-img" alt="logo">
-                                    <img src="https://picsum.photos/id/48/1000" class="slider-img" alt="slide">
-                                    <a class="text-white h2 fw-7" href="">تعزيز الصادرات غير النفطية</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="content">
-                                    <img src="../assets/images/icons/logo/logo.svg" class="icon white-img" alt="logo">
-                                    <img src="https://picsum.photos/id/48/1000" class="slider-img" alt="slide">
-                                    <a class="text-white h2 fw-7" href="">التكامل بين القطاع الصناعي والقطاعات الأخرى</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- section -->
-            <section class="sec-padding" id="vision-card" data-aos="fade-up" data-aos-duration="700">
-                <div class="container">
                     <div class="sec-arrows-wrapper">
                         <img src="../assets/images/arrows/left/2.svg" class="sec-arrows" width="52" alt="arrows">
-
-                        <ul class="grid-2 w-100">
-                            <li class="vision-card" data-aos="fade-up" data-aos-duration="700">
-                                <h2 class="display-5 fw-7">الرؤية</h2>
-                                <p class="description text-success fs-2">
-                                    تعزيز القدرة التنافسية للمنظومة، وتحسين جاذبية الاستثمارات، عبر تقديم منتجات وخدمات تمويلية وغير تمويلية.
-                                </p>
-                            </li>
-                            <li class="vision-card" data-aos="fade-up" data-aos-duration="700">
-                                <h2 class="display-5 fw-7">الرسالة</h2>
-                                <p class="description text-success fs-2">
-                                    صندوق تنمية صناعي، يمّكن تحول المملكة العربية السعودية لتصبح قوة صناعية رائدة، ومنصة لوجستية عالمية.
-                                </p>
-                            </li>
-                            <li class="vision-card span-2" data-aos="fade-up" data-aos-duration="700">
-                                <h2 class="display-5 fw-7">القيم</h2>
-                                <ul class="grid-5">
-                                    <li class="grid-icon">
-                                        <img src="../assets/images/pages/about/values/1.svg" class="no-filter" alt="value">
-                                        <h5 class="fw-7">نجاح العميل</h5>
-                                        <p>ندعــــم نجــــاح عمائنــــا حيــــث إن نجاحهم هو نجاحنا.</p>
-                                    </li>
-                                    <li class="grid-icon">
-                                        <img src="../assets/images/pages/about/values/2.svg" class="no-filter" alt="value">
-                                        <h5 class="fw-7">التمكين</h5>
-                                        <p>نســــعى لتمكين الآخريــــن، لنحقق العمــــل معــــاً ونحقــــق المخرجات بكفاءة عالية.</p>
-                                    </li>
-                                    <li class="grid-icon">
-                                        <img src="../assets/images/pages/about/values/3.svg" class="no-filter" alt="value">
-                                        <h5 class="fw-7">التعاون</h5>
-                                        <p>نعمــــل كجــــزء مــــن فريق يســــعى إلى تحقيــــق النمو والازدهــــار لبلدنا الغالي.</p>
-                                    </li>
-                                    <li class="grid-icon">
-                                        <img src="../assets/images/pages/about/values/4.svg" class="no-filter" alt="value">
-                                        <h5 class="fw-7">التنمية</h5>
-                                        <p>التنميــــة فــــي صميــــم عملنــــا وهي الدافع لكل ما نقوم به.</p>
-                                    </li>
-                                    <li class="grid-icon">
-                                        <img src="../assets/images/pages/about/values/5.svg" class="no-filter" alt="value">
-                                        <h5 class="fw-7">الاعتمادية</h5>
-                                        <p>يمكن الاعتماد علينــــا في أي عمل يوكل إلينا، وبالقرارات التي نتخذها.</p>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
                     </div>
-                </div>
-            </section>
 
-            <!-- section -->
-            <section class="bars-graph-wrap sec-padding sec-dark" data-aos="fade-up" data-aos-duration="700">
-                <div class="container">
-                    <div class="bars-graph">
-                        <div class="sec-arrows-wrapper">
-                            <img src="../assets/images/arrows/left/2.svg" class="sec-arrows" width="52" alt="arrows">
-                            <h2 class="sec-title text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine"> تطور رأس مال الصندوق </h2>
-                        </div>
+                    <div class="counter-section reverse">
+                        <img src="../assets/images/pages/industrial-study/1.png" class="img-fluid rounded-4" width="385" height="257" alt="steel" data-aos="flip-left" data-aos-duration="700">
 
-                        <div class="graph-bars d-grid align-items-end vertical" style="grid-template-columns: repeat(7, 1fr);" data-aos="fade-up" data-aos-duration="700">
-                            <div>
-                                <div class="item">
-                                    <h2 class="number purecounter display-1 op-7 fw-7 text-center" data-purecounter-end="105">105</h2>
-                                    <h4 class="op-7 fw-4">مليار دولار</h4>
-                                    <div class="btn-gradient" style="height: 110px;"></div>
-                                </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">2019</h5>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <h2 class="number purecounter display-1 op-7 fw-7 text-center" data-purecounter-end="65">65</h2>
-                                    <h4 class="op-7 fw-4">مليار دولار</h4>
-                                    <div class="btn-gradient" style="height: 80px;"></div>
-                                </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">2017</h5>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <h2 class="number purecounter display-1 op-7 fw-7 text-center" data-purecounter-end="40">40</h2>
-                                    <h4 class="op-7 fw-4">مليار دولار</h4>
-                                    <div class="btn-gradient" style="height: 60px;"></div>
-                                </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">2012</h5>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <h2 class="number purecounter display-1 op-7 fw-7 text-center" data-purecounter-end="20">20</h2>
-                                    <h4 class="op-7 fw-4">مليار دولار</h4>
-                                    <div class="btn-gradient" style="height: 40px;"></div>
-                                </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">2005</h5>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <h2 class="number purecounter display-1 op-7 fw-7 text-center" data-purecounter-end="7">7</h2>
-                                    <h4 class="op-7 fw-4">مليار دولار</h4>
-                                    <div class="btn-gradient" style="height: 30px;"></div>
-                                </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">1992</h5>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <h2 class="number purecounter display-1 op-7 fw-7 text-center" data-purecounter-end="3">3</h2>
-                                    <h4 class="op-7 fw-4">مليار دولار</h4>
-                                    <div class="btn-gradient" style="height: 20px;"></div>
-                                </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">1975</h5>
-                            </div>
-                            <div>
-                                <div class="item">
-                                    <h2 class="number purecounter display-1 op-7 fw-7 text-center" data-purecounter-end="0.5" data-purecounter-decimals="1">0.5</h2>
-                                    <h4 class="op-7 fw-4">مليار دولار</h4>
-                                    <div class="btn-gradient" style="height: 8px;"></div>
-                                </div>
-                                <h5 class="graph-date fw-7 bg-white mt-1 w-fit mx-auto">1974</h5>
-                            </div>
+                        <div>
+                            <h4 class="sec-subtitle text-success">فرص القطاع</h4>
+                            <p class="sec-text" data-aos="fade-up" data-aos-duration="700">
+                                علــــى الرغم من التحديــــات الصناعية المذكــــورة أعاله، هناك فرص يمكن استغلالها في قطاع صناعة حديد التسليح:
+                            </p>
+                            <p class="sec-text sec-text-circle" data-aos="fade-up" data-aos-duration="700">
+                                مشــــاريع البنيــــة التحتية الجديــــدة التي ينفذهــــا صندوق الاســــتثمارات العامــــة. التطويــــرات الضخمــــة واســــعة النطاق في مشاريع البنية التحتية و الاقتصادية و الصناعية و المدن لتجديد المرافــــق و الخدمات المقدمة في البلاد لتعزيز فرص الأعمال.
+                            </p>
+                            <p class="sec-text sec-text-circle" data-aos="fade-up" data-aos-duration="700">
+                                إطلاق الحكومــــة للعديد من المبادرات: و التي تتمثل في زيادة معدل تملــــك المنازل و برامــــج المحتوى المحلي و المنتجــــات المصنعــــة محليــــًا فــــي المملكــــة العربيــــة السعودية، مما يوفر احتياجًا مغريًا للمنتج المحلي.
+                            </p>
+                            <p class="sec-text sec-text-circle" data-aos="fade-up" data-aos-duration="700">
+                                توافر فرص التصدير إلى البلدان المجاورة، مستفيدة من المبادرات التي تهدف لتطوير البنية التحتية.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -346,35 +159,293 @@
             <!-- section -->
             <section class="sec-padding routing-links">
                 <div class="container">
-                    <div class="sec-arrows-wrapper">
-                        <img src="../assets/images/arrows/left/2.svg" class="sec-arrows" width="52" alt="arrows">
+                    <nav>
+                        <div class="visitors">
+                            <div class="grid-icon mt-2">
+                                <img src="../assets/images/icons/eye.svg" class="mt-2" alt="eye">
+                                <h2 class="title">عدد الزائرين</h2>
+                                <h2 class="value">233443</h2>
+                            </div>
 
-                        <nav class="grid-2 grid-md-2 w-100">
-                            <a href="" class="btn rounded-4 p-10 text-start btn-success d-flex flex-column">
-                                <span class="fs-2">
-                                    <i class='material-icons' style="font-size: 20px;"> format_indent_decrease </i>
-                                    الموضوع التالي
-                                </span>
-                                <span class="display-5 fw-6" id="next-page">البرامج والمنتجات التمويلية</span>
-                            </a>
-                            <a href="" class="btn rounded-4 p-10 text-start d-flex flex-column">
-                                <span class="op-7 fs-2">
-                                    <i class='material-icons' style="font-size: 20px;"> format_indent_increase </i>
-                                    الموضوع السابق
-                                </span>
-                                <span class="op-7 display-5 fw-6" id="prev-page">كلمة سعادة الرئيس التنفيذي </span>
-                            </a>
-                        </nav>
-                    </div>
+                            <div class="divider"></div>
+
+                            <div>
+                                <div class="flex-y-row gap-1">
+                                    <img src="../assets/images/icons/user-star-01.svg" alt="rate">
+                                    <h2 class="title">تقييم</h2>
+                                </div>
+
+                                <div class="star-rating">
+                                    <input type="radio" name="rating" id="rating-1"><label for="rating-1"></label>
+                                    <input type="radio" name="rating" id="rating-2"><label for="rating-2"></label>
+                                    <input type="radio" name="rating" id="rating-3"><label for="rating-3"></label>
+                                    <input type="radio" name="rating" id="rating-4"><label for="rating-4"></label>
+                                    <input type="radio" name="rating" id="rating-5"><label for="rating-5"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="" class="btn btn-success">
+                            <span class="fs-2">
+                                <i class='material-icons fs-5'> format_indent_decrease </i>
+                                الموضوع التالي
+                            </span>
+                            <span class="display-5 fw-6" id="next-page">البرامج والمنتجات التمويلية</span>
+                        </a>
+
+                        <a href="" class="btn">
+                            <span class="op-7 fs-2">
+                                <i class='material-icons fs-5'> format_indent_increase </i>
+                                الموضوع السابق
+                            </span>
+                            <span class="op-7 display-5 fw-6" id="prev-page">كلمة سعادة الرئيس التنفيذي </span>
+                        </a>
+                    </nav>
                 </div>
             </section>
         </main>
+
+        <!-- inner modal -->
+        <div class="modal inner-modal fade" id="innerModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
+                            <i class='material-icons flex-center'>close</i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="main-list">
+                            <li>
+                                <button type="button" class="btn" id="link-1">
+                                    <span>01</span>
+                                    <span>لمحة عن الصندوق </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-2">
+                                    <span>02</span>
+                                    <span>أبرز أرقام 2023م</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-3">
+                                    <span>03</span>
+                                    <span>أتجاهات ومؤشرات الأقتصاد المحلي</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-4">
+                                    <span>04</span>
+                                    <span>النشاط الإقراضي للصندوق</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-5">
+                                    <span>05</span>
+                                    <span>استراتيجية الصندوق</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-6">
+                                    <span>06</span>
+                                    <span>التحول الرقمي و تقنية المعلومات</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-7">
+                                    <span>07</span>
+                                    <span>تنمية القدرات البشرية </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-8">
+                                    <span>08</span>
+                                    <span>الصندوق خلال 50 عاما</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-9">
+                                    <span>09</span>
+                                    <span>دراسة صناعية: صناعة الحديد والصلب</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-10">
+                                    <span>10</span>
+                                    <span>إحصاءات النشاط الاقراضي</span>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="chid-wrapper">
+                            <ul class="child-menu" id="menu-1">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="brief.html">الصندوق في سطور </a></li>
+                                <li><a href="board.html">مجلس الإدارة </a></li>
+                                <li><a href="org-structure.html">الهيكل التنظيمي</a></li>
+                                <li><a href="chariman-intro.html">كلمة معالي رئيس مجلس الإدارة</a></li>
+                                <li><a href="ceo-word.html">كلمة سعادة الرئيس التنفيذي</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-2">
+                                <li><a href="../statistics/loans.html">أولا: النشاط الإقراضي</a></li>
+                                <li><a href="../statistics/digital-transformation.html">ثانيا: التحول الرقمي</a></li>
+                                <li><a href="../statistics/sponsor.html">ثالثا: البرامج التحفيزبة</a></li>
+                                <li><a href="../statistics/human-capital.html">رابعا: تطوير رأس المال البشري</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-3">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../eco-status/eco-status.html">أتجاهات و مؤشرات الأقتصاد المحلي </a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-4">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../lending-activity/lending-activity.html">النشاط الإقراضي للصندوق</a></li>
+                                <li><a href="../lending-activity/sectoral-distribution.html">التوزيع القطاعي للقروض المعتمدة</a></li>
+                                <li><a href="../lending-activity/geographic-distribution.html">التوزيع الجغرافي للقروض المعتمدة</a></li>
+                                <li><a href="../lending-activity/incentive-programs.html">البرامج التحفيزية</a></li>
+                                <li><a href="../lending-activity/production-projects.html">المشاريع التي بدأت الإنتاج</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-5">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../strategy/goals.html">أهداف الصندوق الاستراتيجية</a></li>
+                                <li><a href="../strategy/priorities.html">أولويات استراتيجية الصندوق 2023</a></li>
+                                <li><a href="../strategy/achievements.html">أهم الإنجازات في 2023</a></li>
+                                <li><a href="../strategy/indicators.html">مؤشــرات الأداء الرئيســة 2023م</a></li>
+                                <li><a href="../strategy/awards.html">جوائز و شهادات مُميّزة</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-6">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../digitalization/projects.html">المشاريع الرئيسية المنجزة</a></li>
+                                <li><a href="../digitalization/services.html">الخدمات الرقمية المقدمة</a></li>
+                                <li><a href="../digitalization/joureny.html">رحلة الصندوق في التحول الرقمي</a></li>
+                                <li><a href="../digitalization/technical-house.html">برنامج ترتيب البيت التقني</a></li>
+                                <li><a href="../digitalization/awards.html">شهادات استحقاق و تجديد الأيزو</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-7">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../human-development/institutional-culture.html">أولا: الثقافة المؤسسية</a></li>
+                                <li><a href="../human-development/recruitment.html">ثانيًا: التوظيف</a></li>
+                                <li><a href="../human-development/training-programs.html">ثالثــًا: برامج التدريب والتأهيل</a></li>
+                                <li><a href="../human-development/academy.html">رابعًا: أكاديمية الصندوق الصناعي</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-8">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../50-years/50-years.html">الصندوق خلال 50 عامًا</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-9">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../industrial-study/intro.html">المقدمة</a></li>
+                                <li><a href="../industrial-study/global-indicators.html">المؤشرات العالمية الرئيسية</a></li>
+                                <li><a href="../industrial-study/regional-indicators.html">المؤشرات اإلقليمية الرئيسية</a></li>
+                                <li><a href="../industrial-study/ksa-market.html">حجم الطلب في السوق السعودي</a></li>
+                                <li><a href="../industrial-study/challenges-opportunities.html">التحديات والفرص</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-10">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../lending-statistics/lending-statistics.html">إحصاءات النشاط الاقراضي </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- download modal -->
+        <div class="modal download-modal fade" id="downloadModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <!-- step 1 -->
+                    <div class="step-1" id="step-1">
+                        <div class="modal-header">
+                            <div class="flex-between w-100">
+                                <h4 class="title">تحميل ملف الفصل 1</h4>
+                                <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
+                                    <i class='material-icons flex-center'>close</i>
+                                </button>
+                            </div>
+                            <p class="description">لتحميل الملف يجب ادخال رقم الإقامة من ثم إدخال رقم التحقق المرسل الي رقم الهاتف المحمول</p>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="body-title">برجاء إدخال رقم الإقامة</h5>
+                            <input class="form-control" placeholder="مثلا 232311445332">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-gradient" onclick="downloadFile()">تحميل الملف</button>
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                    </div>
+
+                    <!-- step 2 -->
+                    <div class="step-2" id="step-2">
+                        <div class="modal-header">
+                            <div class="flex-between w-100">
+                                <h4 class="title">إدخال رقم التحقق</h4>
+                                <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
+                                    <i class='material-icons flex-center'>close</i>
+                                </button>
+                            </div>
+                            <p class="description">تم إرسال رقم التحقق على رقم +699 *** **** *27</p>
+                        </div>
+                        <div class="modal-body">
+                            <div class="otp-container">
+                                <input maxlength="1" class="form-control otp-input" id="otp1" oninput="OTPMoveToNext(this, 'otp2')">
+                                <input maxlength="1" class="form-control otp-input" id="otp2" oninput="OTPMoveToNext(this, 'otp3')">
+                                <input maxlength="1" class="form-control otp-input" id="otp3" oninput="OTPMoveToNext(this, 'otp4')">
+                                <input maxlength="1" class="form-control otp-input" id="otp4" oninput="OTPMoveToNext(this, '')">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="" class="btn btn-gradient" download>تأكيد</a>
+                            <span class="time">00:00</span>
+                            <button class="btn reset">إعادة إرسال رقم التحقق</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="../assets/vendors/jquery.min.js"></script>
         <script src="../assets/vendors/bootstrap.bundle.min.js"></script>
         <script src="../assets/vendors/owl.carousel.min.js"></script>
         <script src="../assets/vendors/aos.js"></script>
         <script src="../assets/vendors/purecounter_vanilla.js"></script>
+        <script src="../assets/vendors/jquery.rateit.min.js"></script>
         <script src="../assets/js/main.js"></script>
     </body>
 

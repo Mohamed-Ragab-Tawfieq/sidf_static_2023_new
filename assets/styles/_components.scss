@@ -441,13 +441,9 @@
 
     position: relative;
     width: 100%;
-    // margin-inline-start: 2.75rem;
-    // padding-inline-start: 2.75rem;
 
     @media (max-width: 1199px) {
         gap: 0.25rem;
-        // margin-inline-start: 0;
-        // padding-inline-start: 0;
     }
 }
 
@@ -460,8 +456,18 @@
     }
 }
 
+.sec-subtitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    opacity: 0.8;
+
+    @media (max-width: 1199px) {
+        font-size: 1.75rem;
+    }
+}
+
 .sec-text {
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-top: 1.5rem;
     color: $gray-500;
 
@@ -1956,13 +1962,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
             align-items: end;
-
-            // @media (max-width: 1199px) {
-            //     display: flex;
-            //     justify-content: flex-start;
-            //     align-items: flex-start;
-            //     flex-direction: column;
-            // }
         }
 
         .wrapper {
@@ -2004,5 +2003,178 @@
         font-size: 1.5rem;
         color: $gray-500;
         text-align: justify;
+    }
+}
+
+.sec-text-circle {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        inset-inline-start: -1rem;
+
+        width: 0.75rem;
+        height: 0.75rem;
+
+        background-color: $success;
+        opacity: 0.7;
+        border-radius: 50%;
+    }
+}
+
+.sec-9-4-3 {
+    p.sec-subtitle {
+        color: $gray-500;
+        font-weight: 500;
+        margin-top: 2rem;
+    }
+
+    .counter-section {
+        grid-template-columns: 1fr 40%;
+    }
+
+    .chart-wrapper {
+        position: relative;
+
+        width: 470px;
+        height: 470px;
+
+        .chart-circle {
+            @extend .absolute-center;
+
+            width: 150px;
+            height: 150px;
+
+            text-align: center;
+            background-color: #f1f6ed;
+
+            .title {
+                color: $success-dark;
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+        }
+
+        .apexcharts-legend {
+            flex-direction: row !important;
+
+            .apexcharts-legend-series .apexcharts-legend-text {
+                color: $success !important;
+            }
+        }
+
+        & + .description {
+            color: $success;
+            max-width: 470px;
+            text-align: center;
+
+            font-size: 1.75rem;
+            font-weight: 500;
+        }
+    }
+
+    .bar-bg {
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        transform: scaleY(0);
+    }
+
+    .graph-bars {
+        @media (min-width: 1200px) {
+            width: 65%;
+            align-items: end;
+        }
+
+        @media (max-width: 1199px) {
+            display: flex;
+        }
+
+        &.aos-animate {
+            .bar-bg {
+                animation: goldBarAnimate 1s ease 0.5s forwards;
+                transform-origin: bottom;
+
+                @keyframes goldBarAnimate {
+                    from {
+                        transform: scaleY(0);
+                    }
+
+                    to {
+                        transform: scaleY(1);
+                    }
+                }
+            }
+        }
+
+        .bar-number {
+            color: $success-dark;
+        }
+
+        .four-bars {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            align-items: end;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            position: relative;
+            height: 100%;
+
+            &::after {
+                @media (min-width: 1200px) {
+                    content: "";
+                    position: absolute;
+                    inset-inline: 0;
+                    top: 3rem;
+                    bottom: 3rem;
+                    z-index: -1;
+
+                    width: 100%;
+                    background: linear-gradient(180deg, rgba(247, 243, 236, 0) 0%, #f7f3ec 27.8%);
+                }
+            }
+        }
+    }
+}
+
+.sec-9-4-4 {
+    .vision-card {
+        border-width: 1px;
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: $success;
+        }
+
+        .description {
+            font-size: 1.5rem;
+            color: $success;
+        }
+    }
+}
+
+.sec-9-5-1 {
+    .sec-text-circle {
+        margin-inline-start: 1rem;
+    }
+
+    .img-fluid {
+        @media (min-width: 1200px) {
+            margin-top: -5rem;
+        }
+    }
+}
+
+.sec-9-5-2 {
+    .sec-text-circle {
+        margin-inline-start: 1rem;
     }
 }
