@@ -611,10 +611,20 @@
                 }
             }
 
-            var chart = new ApexCharts(document.querySelector("#steelChart"), options);
 
-            chart.render();
+            function checkAndRenderChart() {
+                const chart = new ApexCharts(document.querySelector("#steelChart"), options);
+                const chartAnimate = document.getElementById('steelChart');
+
+                if (chartAnimate.classList.contains('aos-animate')) {
+                    chart.render();
+                    window.removeEventListener('scroll', checkAndRenderChart);
+                }
+            }
+
+            window.addEventListener('scroll', checkAndRenderChart);
         </script>
+
         <script src="../assets/vendors/bootstrap.bundle.min.js"></script>
         <script src="../assets/vendors/aos.js"></script>
         <script src="../assets/vendors/purecounter_vanilla.js"></script>

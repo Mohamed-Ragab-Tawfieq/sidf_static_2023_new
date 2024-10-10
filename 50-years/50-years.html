@@ -107,7 +107,7 @@
                                 <h4>قروض الصندوق المصروفة التراكمية</h4>
                                 <h4>رأس مال الصندوق المدفوع</h4>
                             </div>
-                            <div id="lineChart"></div>
+                            <div id="lineChart" data-aos="fade-up" data-aos-duration="700"></div>
                         </div>
                     </div>
                 </div>
@@ -641,8 +641,18 @@
                 }
             }
 
-            var chart = new ApexCharts(document.querySelector("#lineChart"), options);
-            chart.render();
+
+            function checkAndRenderChart() {
+                const chart = new ApexCharts(document.querySelector("#lineChart"), options);
+                const chartAnimate = document.getElementById('lineChart');
+
+                if (chartAnimate.classList.contains('aos-animate')) {
+                    chart.render();
+                    window.removeEventListener('scroll', checkAndRenderChart);
+                }
+            }
+
+            window.addEventListener('scroll', checkAndRenderChart);
         </script>
 
         <script src="../assets/vendors/bootstrap.bundle.min.js"></script>

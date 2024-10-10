@@ -587,7 +587,7 @@
 
         <!-- sectors -->
         <script>
-            var sectorsOptions = {
+            var options1 = {
                 series: [75, 11, 10, 3, 1],
                 chart: {
                     type: 'pie',
@@ -636,14 +636,22 @@
                 }
             }
 
-            var chart = new ApexCharts(document.querySelector("#sectorsChart"), sectorsOptions);
+            function checkAndRenderChart1() {
+                const chart = new ApexCharts(document.querySelector("#sectorsChart"), options1);
+                const chartAnimate = document.getElementById('sectorsChart');
 
-            chart.render();
+                if (chartAnimate.classList.contains('aos-animate')) {
+                    chart.render();
+                    window.removeEventListener('scroll', checkAndRenderChart1);
+                }
+            }
+
+            window.addEventListener('scroll', checkAndRenderChart1);
         </script>
 
         <!-- geo -->
         <script>
-            var geoOptions = {
+            var options2 = {
                 series: [62, 13, 9, 8, 8,],
                 chart: {
                     type: 'pie',
@@ -692,9 +700,17 @@
                 }
             }
 
-            var chart = new ApexCharts(document.querySelector("#geoChart"), geoOptions);
+            function checkAndRenderChart2() {
+                const chart = new ApexCharts(document.querySelector("#geoChart"), options2);
+                const chartAnimate = document.getElementById('geoChart');
 
-            chart.render();
+                if (chartAnimate.classList.contains('aos-animate')) {
+                    chart.render();
+                    window.removeEventListener('scroll', checkAndRenderChart2);
+                }
+            }
+
+            window.addEventListener('scroll', checkAndRenderChart2);
         </script>
 
         <script src="../assets/vendors/bootstrap.bundle.min.js"></script>

@@ -2445,7 +2445,7 @@
 
         <!-- geo 1 -->
         <script>
-            var geoOptions = {
+            var options1 = {
                 series: [37, 31, 22, 6, 4],
                 chart: {
                     type: 'pie',
@@ -2494,14 +2494,22 @@
                 }
             }
 
-            var chart = new ApexCharts(document.querySelector("#geoChart1"), geoOptions);
+            function checkAndRenderChart1() {
+                const chart = new ApexCharts(document.querySelector("#geoChart1"), options1);
+                const chartAnimate = document.getElementById('geoChart1');
 
-            chart.render();
+                if (chartAnimate.classList.contains('aos-animate')) {
+                    chart.render();
+                    window.removeEventListener('scroll', checkAndRenderChart1);
+                }
+            }
+
+            window.addEventListener('scroll', checkAndRenderChart1);
         </script>
 
         <!-- geo 2 -->
         <script>
-            var geoOptions = {
+            var options2 = {
                 series: [62, 13, 9, 8, 8,],
                 chart: {
                     type: 'pie',
@@ -2550,14 +2558,22 @@
                 }
             }
 
-            var chart = new ApexCharts(document.querySelector("#geoChart2"), geoOptions);
+            function checkAndRenderChart2() {
+                const chart = new ApexCharts(document.querySelector("#geoChart2"), options2);
+                const chartAnimate = document.getElementById('geoChart2');
 
-            chart.render();
+                if (chartAnimate.classList.contains('aos-animate')) {
+                    chart.render();
+                    window.removeEventListener('scroll', checkAndRenderChart2);
+                }
+            }
+
+            window.addEventListener('scroll', checkAndRenderChart2);
         </script>
 
         <!-- geo total 1 -->
         <script>
-            var geoOptions = {
+            var options3 = {
                 series: [36, 27, 24, 8, 5],
                 chart: {
                     type: 'pie',
@@ -2606,14 +2622,22 @@
                 }
             }
 
-            var chart = new ApexCharts(document.querySelector("#geoTotalChart1"), geoOptions);
+            function checkAndRenderChart3() {
+                const chart = new ApexCharts(document.querySelector("#geoTotalChart1"), options3);
+                const chartAnimate = document.getElementById('geoTotalChart1');
 
-            chart.render();
+                if (chartAnimate.classList.contains('aos-animate')) {
+                    chart.render();
+                    window.removeEventListener('scroll', checkAndRenderChart3);
+                }
+            }
+
+            window.addEventListener('scroll', checkAndRenderChart3);
         </script>
 
         <!-- geo total 2 -->
         <script>
-            var geoOptions = {
+            var options4 = {
                 series: [41, 15, 20, 14, 10],
                 chart: {
                     type: 'pie',
@@ -2662,9 +2686,17 @@
                 }
             }
 
-            var chart = new ApexCharts(document.querySelector("#geoTotalChart2"), geoOptions);
+            function checkAndRenderChart4() {
+                const chart = new ApexCharts(document.querySelector("#geoTotalChart2"), options4);
+                const chartAnimate = document.getElementById('geoTotalChart2');
 
-            chart.render();
+                if (chartAnimate.classList.contains('aos-animate')) {
+                    chart.render();
+                    window.removeEventListener('scroll', checkAndRenderChart4);
+                }
+            }
+
+            window.addEventListener('scroll', checkAndRenderChart4);
         </script>
 
         <script src="../assets/vendors/bootstrap.bundle.min.js"></script>

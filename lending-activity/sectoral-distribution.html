@@ -1319,7 +1319,7 @@
 
         <!-- sectors 1 -->
         <script>
-            var sectorsOptions = {
+            var options1 = {
                 series: [75, 11, 10, 3, 1],
                 chart: {
                     type: 'pie',
@@ -1368,14 +1368,22 @@
                 }
             }
 
-            var chart = new ApexCharts(document.querySelector("#sectorsChart1"), sectorsOptions);
+            function checkAndRenderChart1() {
+                const chart = new ApexCharts(document.querySelector("#sectorsChart1"), options1);
+                const chartAnimate = document.getElementById('sectorsChart1');
 
-            chart.render();
+                if (chartAnimate.classList.contains('aos-animate')) {
+                    chart.render();
+                    window.removeEventListener('scroll', checkAndRenderChart1);
+                }
+            }
+
+            window.addEventListener('scroll', checkAndRenderChart1);
         </script>
 
         <!-- sectors 2 -->
         <script>
-            var sectorsOptions = {
+            var options2 = {
                 series: [75, 11, 10, 3, 1],
                 chart: {
                     type: 'pie',
@@ -1424,9 +1432,17 @@
                 }
             }
 
-            var chart = new ApexCharts(document.querySelector("#sectorsChart2"), sectorsOptions);
+            function checkAndRenderChart2() {
+                const chart = new ApexCharts(document.querySelector("#sectorsChart2"), options2);
+                const chartAnimate = document.getElementById('sectorsChart2');
 
-            chart.render();
+                if (chartAnimate.classList.contains('aos-animate')) {
+                    chart.render();
+                    window.removeEventListener('scroll', checkAndRenderChart2);
+                }
+            }
+
+            window.addEventListener('scroll', checkAndRenderChart2);
         </script>
 
         <script src="../assets/vendors/bootstrap.bundle.min.js"></script>
