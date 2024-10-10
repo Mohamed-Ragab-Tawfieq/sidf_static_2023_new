@@ -101,15 +101,14 @@
         .btn {
             font-size: 2rem;
             font-weight: 700;
-            padding: 1rem 5rem;
+            padding: 0.5rem 5rem;
 
             @media (max-width: 1199px) {
                 font-size: 1.25rem;
                 padding: 0.5rem 1.5rem;
             }
 
-            &.btn-gradient,
-            .btn-gradient-primary {
+            &:first-of-type {
                 border: none;
 
                 @media (min-width: 1200px) {

@@ -42,11 +42,11 @@
 }
 
 .text-gold {
-    color: $gold;
+    color: $gold !important;
 }
 
 .text-gold-dark {
-    color: $gold-dark;
+    color: $gold-dark !important;
 }
 
 .btn-gradient {
@@ -100,7 +100,7 @@
 
 .btn-gold {
     background: $gold !important;
-    color: $white;
+    color: $white !important;
 }
 
 .sec-padding {
