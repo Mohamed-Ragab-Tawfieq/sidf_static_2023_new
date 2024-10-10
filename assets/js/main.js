@@ -235,6 +235,10 @@ $(document).ready(function () {
             $('.routing-links a:first-of-type').attr('style', 'display: none !important');
         }
 
+        if ($('#sidf-navbar .nav-item').length === 1) {
+            $('.routing-links .visitors').addClass('flex-grow-0 mx-auto');
+        }
+
         // prev
         var prevText = $('#sidf-navbar .active').parent().prev().find('.nav-link').text();
         var prevHref = $('#sidf-navbar .active').parent().prev().find('.nav-link').attr('href');
