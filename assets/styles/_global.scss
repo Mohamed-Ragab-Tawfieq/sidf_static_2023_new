@@ -300,10 +300,8 @@ section {
         opacity: 0;
         transition: all 1s ease-in-out;
 
-        &.lg {
-            @media (max-width: 991px) {
-                display: none !important;
-            }
+        @media (max-width: 991px) {
+            display: none !important;
         }
     }
 
