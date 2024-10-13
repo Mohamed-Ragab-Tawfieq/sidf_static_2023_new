@@ -23,12 +23,12 @@
     }
 
     &.primary {
-        border-color: $primary;
+        border-color: #7cabcc;
 
         &:hover {
             background:
                 url("../images/arrows/left/5.svg") no-repeat center left 50px / contain,
-                linear-gradient(180deg, #3c80b0 -0.99%, #165578 95.36%);
+                linear-gradient(180deg, #3c80b0 -0.99%, #165578 95.36%) !important;
         }
     }
 

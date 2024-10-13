@@ -16,6 +16,14 @@
     filter: invert(39%) sepia(224%) saturate(1068%) hue-rotate(50deg) brightness(50%) contrast(95%);
 }
 
+.primary-img {
+    filter: invert(44%) sepia(83%) saturate(387%) hue-rotate(162deg) brightness(81%) contrast(89%);
+}
+
+.primary-dark-img {
+    filter: invert(44%) sepia(83%) saturate(387%) hue-rotate(162deg) brightness(72%) contrast(89%);
+}
+
 .no-filter {
     filter: none !important;
 }
