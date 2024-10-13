@@ -12,7 +12,7 @@
 .inner-top-img {
     position: relative;
     overflow: hidden;
-    height: 470px;
+    height: 455px;
     padding: 70px 56px;
 
     display: flex;
@@ -20,7 +20,7 @@
     justify-content: center;
 
     @media (min-width: 1200px) and (max-width: 1450px) {
-        height: 390px;
+        height: 385px;
     }
 
     @media (max-width: 1199px) {
