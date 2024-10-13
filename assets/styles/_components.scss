@@ -2048,12 +2048,13 @@
 
 .sec-text-circle {
     position: relative;
+    padding-inline-start: 1.5rem;
 
     &::before {
         content: "";
         position: absolute;
         top: 0;
-        inset-inline-start: -1rem;
+        inset-inline-start: 0;
 
         width: 0.75rem;
         height: 0.75rem;
@@ -2150,9 +2151,20 @@
     }
 
     .bar-bg {
+        position: relative;
+        overflow: hidden;
+        transform: scaleY(0);
+
         border-top-right-radius: 8px;
         border-top-left-radius: 8px;
-        transform: scaleY(0);
+
+        &::before {
+            content: url("../images/arrows/top/4.svg");
+            position: absolute;
+            top: 0.7rem;
+            right: 50%;
+            transform: translateX(50%);
+        }
     }
 
     .graph-bars {
