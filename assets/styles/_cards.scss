@@ -395,3 +395,99 @@
         color: $gold;
     }
 }
+
+.dash-card {
+    background-color: $white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    min-height: 430px;
+
+    @media (max-width: 1450px) {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+        font-weight: 700;
+
+        color: $gray-700;
+        margin-block: 0.5rem 1rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: $gray-500;
+    }
+
+    .apexcharts-legend {
+        overflow: visible !important;
+        justify-content: center !important;
+        top: auto !important;
+        bottom: 50%;
+    }
+
+    .apexcharts-legend-text {
+        font-size: 1.25rem !important;
+
+        @media (max-width: 1450px) {
+            font-size: 1rem !important;
+        }
+    }
+
+    .apexcharts-legend-marker {
+        margin-inline-end: 0.5rem;
+    }
+
+    .apexcharts-datalabels-group {
+        @media (max-width: 1450px) {
+            flex-direction: column-reverse;
+        }
+
+        text {
+            font-size: 2.5rem;
+            font-weight: 800;
+            @extend .success-img;
+
+            @media (max-width: 1450px) {
+                font-size: 2rem;
+                transform: translateY(-10px);
+            }
+
+            &:first-of-type {
+                opacity: 0;
+                font-size: 0.5rem !important;
+            }
+        }
+    }
+}
+
+.dash-card.total {
+    header {
+        @extend .flex-between;
+
+        .title {
+            margin-bottom: 0;
+        }
+
+        .nav-tabs {
+            border: 1px solid #d2d2d3;
+            border-radius: 0.5rem;
+
+            .nav-link {
+                border: none;
+                border-radius: 0.38rem;
+
+                color: $gray-400;
+                margin: 0.25rem;
+                padding-block: 0.31rem;
+
+                &.active {
+                    background-color: #f1f6ed;
+                    color: $success-dark;
+                    border-radius: 0.38rem;
+                }
+            }
+        }
+    }
+}

@@ -10,8 +10,8 @@
     height: 100vh;
 
     main {
-        margin-block: 20px 50px;
-        height: calc(100vh - 110px);
+        padding: 1.5rem;
+        height: calc(100vh - 90px);
         overflow-y: auto;
         margin-inline-end: 20px;
         padding-inline-end: 8px;
@@ -69,13 +69,17 @@
     background-color: $white;
 
     .title {
-        font-size: 1.88rem;
-        font-weight: 600;
+        a {
+            font-size: 1.88rem !important;
+            font-weight: 600;
+            color: #4e3418;
+        }
     }
 
     .lang-btn {
         font-size: 1.25rem;
         font-weight: 500;
+        color: #4e3418;
     }
 }
 
@@ -112,45 +116,42 @@
     label {
         font-size: 1.25rem;
         font-weight: 500;
+        padding-inline: 1rem;
         color: $gray-400;
     }
 
     .items-list {
-        height: calc(100vh - 130px);
         overflow-x: hidden;
         overflow-y: auto;
+
+        padding-inline: 1rem;
+        height: calc(100vh - 110px);
+
+        display: flex;
+        flex-direction: column;
 
         &::-webkit-scrollbar {
             width: 4px;
         }
-    }
 
-    a {
-        &:hover {
-            color: $black;
+        .item {
+            display: flex;
+            gap: 1rem;
+
+            padding: 0.4rem 1.25rem;
+            color: $gray-500;
+            border-radius: 0.5rem;
+
+            font-size: 1.5rem;
+            font-weight: 500;
+
+            &.active {
+                @extend .btn-gradient;
+
+                .icon {
+                    @extend .white-img;
+                }
+            }
         }
-    }
-}
-
-.dash-side-menu {
-    @media (max-width: 1199px) {
-        inset-inline-start: -100vw;
-        top: 100px;
-    }
-
-    .link-text {
-        padding-inline: 0;
-    }
-
-    .side-menu-item a {
-        display: none;
-    }
-}
-
-.side-menu-item {
-    justify-content: center;
-
-    .dropdown-toggle {
-        display: none;
     }
 }

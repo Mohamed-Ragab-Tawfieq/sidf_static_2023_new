@@ -11,7 +11,7 @@ window.addEventListener('scroll', function () {
 /*** about nav active ***/
 function handleSIDFNav() {
     document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(".sidf-navbar .nav-link, .inner-modal nav a");
+        const navLinks = document.querySelectorAll(".sidf-navbar .nav-link, .inner-modal nav a, .dash-side-menu .item");
 
         navLinks?.forEach(link => {
             if (link.href === window.location.href) {
