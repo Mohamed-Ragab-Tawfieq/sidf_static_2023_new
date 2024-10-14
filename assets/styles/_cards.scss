@@ -491,3 +491,135 @@
         }
     }
 }
+
+.dots-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $white;
+    padding: 1.63rem 1.25rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px 4px rgba($black, 0.05);
+
+    header {
+        @extend .flex-between;
+
+        .dots-dropdown {
+            & > .btn {
+                width: 2rem;
+                height: 2rem;
+                background-color: $white;
+            }
+
+            .dropdown-menu {
+                top: 1rem !important;
+                inset-inline-start: -2rem !important;
+
+                border-radius: 0.75rem;
+                padding: 1rem 0.75rem;
+                box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.13);
+
+                &::before {
+                    content: url("../images/icons/triangle.svg");
+                    position: absolute;
+                    top: -0.7rem;
+                    inset-inline-start: 2.5rem;
+                    filter: drop-shadow(0px -4px 4px rgba(0, 0, 0, 0.05));
+                }
+            }
+
+            .dropdown-item {
+                padding-block: 0.4rem;
+
+                &:hover {
+                    background-color: #f1f6ed;
+                }
+
+                a {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+
+        .number {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+    }
+
+    .main-title {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    .number {
+        font-size: 2.5rem;
+        font-weight: 700;
+
+        color: #30461e;
+        display: flex;
+        margin-top: auto;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        gap: 0.19rem;
+
+        .counter-percent {
+            font-size: 1.13rem;
+            font-weight: 700;
+        }
+
+        .material-icons {
+            font-size: 1.3rem;
+            margin-inline-start: -0.25rem;
+        }
+
+        .day,
+        .counter-plus {
+            color: $gray-400;
+            font-size: 1.13rem;
+            font-weight: 500;
+        }
+    }
+
+    &.success {
+        header .number,
+        .main-title,
+        .counter-percent,
+        .material-icons {
+            color: $success;
+        }
+
+        .dots-dropdown > .btn {
+            border-color: $success;
+        }
+    }
+
+    &.primary {
+        header .number,
+        .main-title,
+        .counter-percent,
+        .material-icons {
+            color: $primary;
+        }
+
+        .dots-dropdown > .btn {
+            border-color: $primary;
+        }
+    }
+
+    &.gold {
+        header .number,
+        .main-title,
+        .counter-percent,
+        .material-icons {
+            color: $gold;
+        }
+
+        .dots-dropdown > .btn {
+            border-color: $gold;
+        }
+    }
+}
