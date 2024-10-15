@@ -162,6 +162,16 @@
     color: $gray-700;
 }
 
+.dash-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 1450px) {
+        gap: 0.7rem;
+    }
+}
+
 .dash-table {
     th {
         padding-block: 0.35rem !important;
@@ -189,7 +199,6 @@
             }
         }
     }
-
 }
 
 .pagination {

@@ -268,3 +268,21 @@ function OTPMoveToNext(current, nextFieldId) {
         next?.focus();
     }
 }
+
+/*** dashboard selects ***/
+function handleDashboardSelects() {
+    const select = document.querySelectorAll('.dots-card select')
+    select?.forEach(item => {
+        item.addEventListener('change', function () {
+            item.closest('.dots-card').querySelectorAll('.data-content').forEach(function (content) {
+                content.style.display = 'none';
+            });
+
+            const selectedValue = this.value;
+            item.closest('.dots-card').querySelector('.data-' + selectedValue).style.display = 'block';
+            item.closest('.dots-card').querySelector('.dropdown-menu').classList.remove('show')
+        })
+    });
+}
+
+handleDashboardSelects();
