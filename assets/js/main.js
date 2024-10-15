@@ -286,3 +286,9 @@ function handleDashboardSelects() {
 }
 
 handleDashboardSelects();
+
+/*** mobile menu ***/
+function toggleMobileMenu() {
+    const menu = document.getElementById('dash-side-menu');
+    menu?.classList.toggle('collapsed')
+}

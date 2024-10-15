@@ -412,6 +412,10 @@
 
         color: $gray-700;
         margin-block: 0.5rem 1rem;
+
+        @media (max-width: 1199px) {
+            font-size: 1.75rem;
+        }
     }
 
     .subtitle {
@@ -422,16 +426,31 @@
 
     .apexcharts-legend {
         overflow: visible !important;
-        justify-content: center !important;
-        top: auto !important;
-        bottom: 50%;
+
+        @media (min-width: 1200px) {
+            justify-content: center !important;
+            top: auto !important;
+            bottom: 50%;
+        }
+
+        @media (max-width: 1199px) {
+            flex-direction: column !important;
+            flex-wrap: nowrap !important;
+        }
     }
 
     .apexcharts-legend-text {
         font-size: 1.25rem !important;
+        font-family: "Sarmady" !important;
 
         @media (max-width: 1450px) {
             font-size: 1rem !important;
+        }
+    }
+
+    .apexcharts-xaxis-texts-g {
+        @media (max-width: 1199px) {
+            transform: translateY(20px) translateX(-20px) !important;
         }
     }
 
@@ -466,6 +485,10 @@
     header {
         @extend .flex-between;
 
+        @media (max-width: 1199px) {
+            align-items: start !important;
+        }
+
         .title {
             margin-bottom: 0;
         }
@@ -481,6 +504,14 @@
                 color: $gray-400;
                 margin: 0.25rem;
                 padding-block: 0.31rem;
+
+                font-size: 1.5rem;
+                font-weight: 500;
+
+                @media (max-width: 1199px) {
+                    padding-block: 0;
+                    font-size: 1.2rem;
+                }
 
                 &.active {
                     background-color: #f1f6ed;
@@ -505,14 +536,25 @@
         padding: 1.63rem 0.8rem;
     }
 
+    @media (max-width: 1199px) {
+        padding: 1rem;
+    }
+
     header {
         @extend .flex-between;
+        flex-direction: row;
 
         .dots-dropdown {
             & > .btn {
                 width: 2rem;
                 height: 2rem;
                 background-color: $white;
+
+                @media (max-width: 1199px) {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    font-size: 1rem;
+                }
             }
 
             .dropdown-menu {
@@ -523,12 +565,20 @@
                 padding: 1rem 0.75rem;
                 box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.13);
 
+                @media (max-width: 1199px) {
+                    inset-inline: auto -1rem !important;
+                }
+
                 &::before {
                     content: url("../images/icons/triangle.svg");
                     position: absolute;
                     top: -0.7rem;
                     inset-inline-start: 2.5rem;
                     filter: drop-shadow(0px -4px 4px rgba(0, 0, 0, 0.05));
+
+                    @media (max-width: 1199px) {
+                        inset-inline: auto 1rem !important;
+                    }
                 }
 
                 &.end {

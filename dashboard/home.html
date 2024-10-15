@@ -15,13 +15,9 @@
 
     <body id="body">
         <div class="dash-layout">
-            <aside class="dash-side-menu">
+            <aside class="dash-side-menu collapsed" id="dash-side-menu">
                 <div class="logo">
                     <img src="../assets/images/logo.svg" width="130" class="img-fluid" alt="logo">
-
-                    <button class="btn toggle-side-btn" onclick="toggleCollapse()">
-                        <img src="../assets/images/icons/undo.svg" alt="undo">
-                    </button>
                 </div>
 
                 <label>التصفح</label>
@@ -48,8 +44,10 @@
 
             <div class="dash-content">
                 <header class="dash-header">
-                    <div></div>
+                    <button class="btn toggle-btn" onclick="toggleMobileMenu()"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+                    <div class="empty"></div>
                     <h1 class="title"><a href="home.html">لوحة التحكم للتقــرير التفاعلي 2023</a></h1>
+                    <img src="../assets/images/logo.svg" width="95" class="img-fluid logo" alt="logo">
                     <button class="btn lang-btn">EN</button>
                 </header>
 
@@ -132,6 +130,17 @@
                             position: 'left'
                         }
                     }
+                },
+                {
+                    breakpoint: 1199,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
                 }],
                 colors: ['#30461E', '#517632', '#72A410', '#A1C384', '#D3E3C6', '#19364B', '#2B5C7F', '#3980B3', '#7CABCC', '#C3D8E7'],
                 legend: {
@@ -189,6 +198,17 @@
                             position: 'left'
                         }
                     }
+                },
+                {
+                    breakpoint: 1199,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
                 }],
                 colors: ['#30461E', '#517632', '#72A410', '#A1C384', '#D3E3C6', '#19364B', '#2B5C7F', '#3980B3', '#7CABCC', '#C3D8E7'],
                 legend: {
@@ -241,7 +261,7 @@
                 },
                 plotOptions: {
                     bar: {
-                        borderRadius: 10,
+                        borderRadius: window.innerWidth >= 1200 ? 10 : 2,
                         horizontal: false,
                         columnWidth: '38%',
                     }
