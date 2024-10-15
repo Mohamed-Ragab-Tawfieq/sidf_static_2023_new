@@ -161,3 +161,62 @@
     font-weight: 700;
     color: $gray-700;
 }
+
+.dash-table {
+    th {
+        padding-block: 0.35rem !important;
+        font-size: 1.25rem;
+        font-weight: 500;
+
+        &:first-of-type {
+            border-start-start-radius: 0.25rem !important;
+        }
+
+        &:last-of-type {
+            border-start-end-radius: 0.25rem !important;
+        }
+    }
+
+    td {
+        border: none;
+        padding-block: 1rem !important;
+    }
+
+    tbody {
+        tr:nth-of-type(odd) {
+            td {
+                background-color: #f1f6ed;
+            }
+        }
+    }
+
+}
+
+.pagination {
+    justify-content: center;
+
+    .page-item {
+        border-radius: 0 !important;
+
+        &:first-of-type {
+            .page-link {
+                background-color: #f0f1f1;
+                border-start-start-radius: 0.5rem !important;
+                border-end-start-radius: 0.5rem !important;
+            }
+        }
+
+        &:last-of-type {
+            .page-link {
+                background-color: #f0f1f1;
+                border-start-end-radius: 0.5rem !important;
+                border-end-end-radius: 0.5rem !important;
+            }
+        }
+
+        .page-link {
+            border-radius: 0;
+            color: $gray-500;
+        }
+    }
+}

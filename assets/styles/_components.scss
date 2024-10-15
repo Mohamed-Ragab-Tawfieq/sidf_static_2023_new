@@ -398,6 +398,7 @@
 
         .dropdown-item {
             padding-block: 0.8rem;
+            cursor: pointer;
         }
     }
 }
@@ -794,8 +795,12 @@
 
 // rate
 .star-rating {
-    direction: ltr;
+    direction: ltr !important;
     display: inline-block;
+
+    &.disabled {
+        pointer-events: none;
+    }
 
     &.primary {
         input {

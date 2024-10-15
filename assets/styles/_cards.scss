@@ -530,6 +530,7 @@
 
             .dropdown-item {
                 padding-block: 0.4rem;
+                border-radius: 0.75rem;
 
                 &:hover {
                     background-color: #f1f6ed;
@@ -559,6 +560,27 @@
         color: #30461e;
         display: flex;
         margin-top: auto;
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        margin-top: 0.5rem;
+
+        .star-rating {
+            label {
+                width: 0.88rem;
+                height: 0.88rem;
+            }
+        }
+
+        .text {
+            line-height: 0.8;
+            font-weight: 500;
+            color: $gray-500;
+        }
     }
 
     footer {
@@ -622,4 +644,9 @@
             border-color: $gold;
         }
     }
+}
+
+.table-card {
+    @extend .dash-card;
+    border: radius 0.5rem;
 }
