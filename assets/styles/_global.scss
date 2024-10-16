@@ -329,7 +329,7 @@ section {
 .counter-percent {
     position: relative;
 
-    &::after {
+    &::before {
         content: "%";
     }
 }
