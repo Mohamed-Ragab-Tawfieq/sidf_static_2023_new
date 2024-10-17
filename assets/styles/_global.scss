@@ -258,13 +258,14 @@ table {
     }
 
     &.success {
-        th {
+        th,
+        tfoot td {
             @extend .btn-gradient;
         }
 
         th,
         td {
-            border-color: #639ac2;
+            border-color: rgba($black, 0.2);
         }
 
         &.custom {
@@ -370,7 +371,7 @@ section {
 
 // backgrounds
 .sec-dark {
-    background-color: #f1f6ed !important;
+    background-color: $light-success !important;
 }
 
 .sec-dark-primary {

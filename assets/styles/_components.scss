@@ -718,7 +718,7 @@
     width: 104px;
     height: 104px;
 
-    background-color: #f1f6ed;
+    background-color: $light-success;
     border-radius: 50%;
     z-index: 50;
 
@@ -1926,29 +1926,66 @@
 }
 
 /************** 05 strategy **************/
-.sec-5-4-1 {
-    .indicators-table {
-        tbody {
-            tr {
-                &:nth-of-type(odd) {
-                    td {
-                        background: #edecec;
-                    }
+.indicators-table {
+    th {
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+            width: 18%;
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-of-type(odd) {
+                td {
+                    background: #edecec;
+                }
+            }
+
+            &:nth-of-type(3) {
+                td {
+                    background: $white;
+                }
+            }
+
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+                td:nth-of-type(1) {
+                    text-align: start;
+                    padding-inline-start: 0;
                 }
 
-                &:nth-of-type(3) {
-                    td {
-                        background: $white;
-                    }
+                td:nth-of-type(2) {
+                    text-align: center;
+                    padding-inline-start: 0.5rem;
                 }
             }
         }
 
-        tfoot {
-            td {
-                background: #f1f6ed !important;
-                font-weight: 700;
-                color: $gray-500 !important;
+        td {
+            &:nth-of-type(2) {
+                text-align: start;
+                padding-inline-start: 0;
+            }
+        }
+    }
+
+    tfoot {
+        td {
+            background: $light-success !important;
+            font-weight: 700;
+            color: $gray-500 !important;
+        }
+    }
+
+    &.dark {
+        tbody {
+            tr {
+                &:nth-of-type(3) {
+                    td {
+                        background: $light-success;
+                    }
+                }
             }
         }
     }
@@ -1996,7 +2033,7 @@
         width: 83px;
         height: 83px;
 
-        background-color: #f1f6ed;
+        background-color: $light-success;
         border-radius: 50%;
     }
 }
@@ -2291,7 +2328,7 @@
             height: 150px;
 
             text-align: center;
-            background-color: #f1f6ed;
+            background-color: $light-success;
 
             @media (max-width: 1199px) {
                 transform: none !important;

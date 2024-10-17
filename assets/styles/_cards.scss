@@ -526,7 +526,7 @@
                 }
 
                 &.active {
-                    background-color: #f1f6ed;
+                    background-color: $light-success;
                     color: $success-dark;
                     border-radius: 0.38rem;
                 }
@@ -612,7 +612,7 @@
                     option {
                         &:checked,
                         &:hover {
-                            background-color: #f1f6ed !important;
+                            background-color: $light-success !important;
                         }
                     }
                 }
@@ -623,7 +623,7 @@
                 border-radius: 0.75rem;
 
                 &:hover {
-                    background-color: #f1f6ed;
+                    background-color: $light-success;
                 }
 
                 a {
