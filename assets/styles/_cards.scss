@@ -323,19 +323,22 @@
     background-color: $white;
 
     border-radius: 1rem;
-    border: 1px solid #7cabcc;
+    border: 1px solid $success;
 
     &::after {
         content: url("../images/arrows/left/9.svg");
         position: absolute;
         top: 0;
         inset-inline-end: 0;
+
+        @extend .success-img;
     }
 
     &:hover {
-        @extend .btn-gradient-primary;
+        @extend .btn-gradient;
 
         &::after {
+            @extend .white-img;
             animation: houseCardAnimate 1s ease;
         }
 

@@ -517,7 +517,7 @@
     color: $gray-500;
 
     .material-icons {
-        color: #7cabcc;
+        color: rgba($success, 0.8);
         margin-top: 0.25rem;
         font-size: 1rem;
     }
@@ -1996,7 +1996,7 @@
         width: 83px;
         height: 83px;
 
-        background-color: #c3d8e7;
+        background-color: #f1f6ed;
         border-radius: 50%;
     }
 }
