@@ -488,59 +488,6 @@
             }
         }
     }
-
-    .apexcharts-menu-item {
-        font-family: "Sarmady";
-        font-size: 1rem;
-    }
-
-    .apexcharts-menu {
-        border-radius: 0.5rem;
-
-        &.hide {
-            display: none !important;
-        }
-
-        .apexcharts-menu-item {
-            text-indent: -9999px;
-
-            &:hover {
-                border-radius: 0.5rem;
-                background-color: #eee;
-            }
-
-            &:not(:last-of-type) {
-                border-bottom: 1px solid #eee;
-            }
-        }
-
-        :nth-child(1) {
-            background:
-                url("../images/icons/filetype-svg.svg") no-repeat center right 1rem / 1.2rem,
-                url("../images/icons/download-2.svg") no-repeat center left 1rem / 1rem;
-        }
-
-        :nth-child(2) {
-            background:
-                url("../images/icons/filetype-png.svg") no-repeat center right 1rem / 1.2rem,
-                url("../images/icons/download-2.svg") no-repeat center left 1rem / 1rem;
-        }
-
-        :nth-child(3) {
-            background:
-                url("../images/icons/filetype-csv.svg") no-repeat center right 1rem / 1.2rem,
-                url("../images/icons/download-2.svg") no-repeat center left 1rem / 1rem;
-        }
-    }
-
-    .apexcharts-menu-icon {
-        i {
-            font-size: 1.5rem;
-            border: 1px solid $success;
-            border-radius: 0.25rem;
-            margin-inline-start: -1rem;
-        }
-    }
 }
 
 .dash-card.total {

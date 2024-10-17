@@ -107,7 +107,7 @@
                                 <h4>قروض الصندوق المصروفة التراكمية</h4>
                                 <h4>رأس مال الصندوق المدفوع</h4>
                             </div>
-                            <div id="lineChart" data-aos="fade-up" data-aos-duration="700"></div>
+                            <div id="lineChart"></div>
                         </div>
                     </div>
                 </div>
@@ -598,10 +598,21 @@
                 chart: {
                     type: 'line',
                     height: 400,
+                    background: 'linear-gradient( 0deg, #ba9e61 -205.37%, #b79a5e -129.05%, #ad8f56 -59.49%, #9d7d47 7.44%, #866333 72.41%, #805c2e 87.03% )',
                     foreColor: '#FFFFFF',
                     toolbar: {
+                        show: true,
+                        offsetX: 0,
+                        offsetY: 0,
                         tools: {
                             download: "<i class='material-icons'>more_vert</i>",
+                            selection: false,
+                            zoom: false,
+                            zoomin: false,
+                            zoomout: false,
+                            pan: false,
+                            reset: false,
+                            customIcons: []
                         }
                     }
                 },
@@ -618,7 +629,7 @@
                         style: {
                             colors: '#FFFFFF',
                         }
-                    }
+                    },
                 },
                 yaxis: {
                     min: 0,
@@ -652,9 +663,23 @@
                 const chart = new ApexCharts(document.querySelector("#lineChart"), options);
                 const chartAnimate = document.getElementById('lineChart');
 
-                if (chartAnimate.classList.contains('aos-animate')) {
+                if (chartAnimate.closest('.chart-card').classList.contains('aos-animate')) {
                     chart.render();
                     window.removeEventListener('scroll', checkAndRenderChart);
+
+                    const btn = document.querySelectorAll('.apexcharts-menu-icon i');
+
+                    btn.forEach(btn => {
+                        btn?.addEventListener('click', function () {
+                            const menu = btn.closest('.apexcharts-toolbar').querySelector('.apexcharts-menu');
+
+                            if (!(menu.classList.contains('apexcharts-menu-open'))) {
+                                return
+                            }
+
+                            menu.classList.toggle('hide');
+                        })
+                    })
                 }
             }
 

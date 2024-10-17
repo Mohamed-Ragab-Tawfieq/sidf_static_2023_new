@@ -789,6 +789,77 @@
     }
 }
 
+.apexcharts-menu {
+    border-radius: 0.5rem;
+
+    &.hide {
+        display: none !important;
+    }
+
+    .apexcharts-menu-item {
+        position: relative;
+        color: rgba($black, 0);
+
+        font-family: "Sarmady";
+        font-size: 1rem;
+
+        &:hover {
+            border-radius: 0.5rem;
+            background-color: #eee;
+        }
+
+        &:not(:last-of-type) {
+            border-bottom: 1px solid #eee;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 50%;
+            transform: translateY(50%);
+
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+
+        &::after {
+            background: url("../images/icons/download-2.svg") no-repeat center / cover;
+            inset-inline-end: 1rem;
+        }
+    }
+
+    :nth-child(1) {
+        &::before {
+            background: url("../images/icons/filetype-svg.svg") no-repeat center / cover;
+            inset-inline-start: 1rem;
+        }
+    }
+
+    :nth-child(2) {
+        &::before {
+            background: url("../images/icons/filetype-png.svg") no-repeat center / cover;
+            inset-inline-start: 1rem;
+        }
+    }
+
+    :nth-child(3) {
+        &::before {
+            background: url("../images/icons/filetype-csv.svg") no-repeat center / cover;
+            inset-inline-start: 1rem;
+        }
+    }
+}
+
+.apexcharts-menu-icon {
+    i {
+        font-size: 1.5rem;
+        border: 1px solid $success;
+        border-radius: 0.25rem;
+        margin-inline-start: -1rem;
+    }
+}
+
 .visitors {
     display: flex;
     justify-content: space-around;
@@ -2063,6 +2134,19 @@
                 @media (max-width: 1450px) {
                     font-size: 1rem;
                 }
+            }
+        }
+
+        .apexcharts-menu-icon {
+            color: $white;
+        }
+
+        .apexcharts-menu-item {
+            direction: rtl;
+
+            &::before,
+            &::after {
+                @extend .gold-img;
             }
         }
     }

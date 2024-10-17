@@ -306,18 +306,19 @@ function toggleMobileMenu() {
 
 /*** dashboard downloads ***/
 function handleDashDownload() {
-    const btn = document.querySelector('.apexcharts-menu-icon i');
-    const menu = document.querySelector('.apexcharts-menu');
+    const btn = document.querySelectorAll('.apexcharts-menu-icon i');
 
-    if (btn) {
-        btn.addEventListener('click', () => {
+    btn.forEach(btn => {
+        btn?.addEventListener('click', function () {
+            const menu = btn.closest('.apexcharts-toolbar').querySelector('.apexcharts-menu');
+
             if (!(menu.classList.contains('apexcharts-menu-open'))) {
                 return
             }
 
             menu.classList.toggle('hide');
-        });
-    }
+        })
+    })
 }
 handleDashDownload()
 
