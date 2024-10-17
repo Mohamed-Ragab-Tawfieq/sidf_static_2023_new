@@ -151,6 +151,9 @@ $(document).ready(function () {
         $('.owl-carousel').owlCarousel({
             loop: true,
             autoplay: true,
+            autoplaySpeed: 1000,
+            autoplayTimeout: 2000,
+            navSpeed: 2000,
             margin: 10,
             nav: true,
             rtl: true,
@@ -220,6 +223,14 @@ function playTopVideo() {
         document.getElementById('inner-top-img').classList.remove('video-playing');
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const playBtn = document.getElementById("play-btn");
+
+    setTimeout(() => {
+        playBtn?.click()
+    }, 1000);
+});
 
 /*** next and prev ***/
 $(document).ready(function () {
@@ -292,3 +303,22 @@ function toggleMobileMenu() {
     const menu = document.getElementById('dash-side-menu');
     menu?.classList.toggle('collapsed')
 }
+
+/*** dashboard downloads ***/
+function handleDashDownload() {
+    const btn = document.querySelector('.apexcharts-menu-icon i');
+    const menu = document.querySelector('.apexcharts-menu');
+
+    if (btn) {
+        btn.addEventListener('click', () => {
+            if (!(menu.classList.contains('apexcharts-menu-open'))) {
+                return
+            }
+
+            menu.classList.toggle('hide');
+        });
+    }
+}
+handleDashDownload()
+
+

@@ -518,7 +518,7 @@
 
     .material-icons {
         color: #7cabcc;
-        margin-top: .25rem;
+        margin-top: 0.25rem;
         font-size: 1rem;
     }
 }
@@ -718,7 +718,7 @@
     width: 104px;
     height: 104px;
 
-    background-color: $blue-100;
+    background-color: #f1f6ed;
     border-radius: 50%;
     z-index: 50;
 
@@ -748,7 +748,21 @@
 
             .apexcharts-legend-text {
                 font: 700 1.5rem "Sarmady" !important;
-                color: $primary !important;
+                color: $success !important;
+            }
+        }
+    }
+
+    &.primary {
+        .chart-circle {
+            background-color: $blue-100;
+        }
+
+        .apexcharts-legend {
+            .apexcharts-legend-series {
+                .apexcharts-legend-text {
+                    color: $primary !important;
+                }
             }
         }
     }
@@ -1430,8 +1444,12 @@
         &:first-of-type {
             position: absolute;
             z-index: 10;
-            top: 25%;
-            inset-inline-start: 25%;
+            bottom: 40%;
+            inset-inline-start: 20%;
+
+            @media (max-width: 1450px) {
+                inset-inline-start: 5%;
+            }
 
             @media (max-width: 1199px) {
                 top: 35%;
@@ -1451,12 +1469,35 @@
 
         &.top-left {
             position: absolute;
-            top: 16%;
-            inset-inline-end: -6%;
+            top: -8%;
+            inset-inline-end: -5%;
             z-index: 10;
 
             @media (max-width: 1199px) {
-                inset-inline-end: 0;
+                inset-inline-end: -2%;
+                top: -13%;
+            }
+        }
+    }
+}
+
+.sec-1-1-4 {
+    @media (max-width: 767px) {
+        padding: 0 !important;
+    }
+
+    .container-lg {
+        @media (max-width: 767px) {
+            padding: 0 !important;
+        }
+    }
+
+    &.aos-animate {
+        .sec-arrows {
+            @media (min-width: 1200px) {
+                top: 0;
+                inset-inline-start: 4px;
+                width: 36px;
             }
         }
     }
