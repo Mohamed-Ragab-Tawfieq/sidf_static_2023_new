@@ -1388,10 +1388,6 @@
     height: 1500px;
     margin-bottom: 150px;
 
-    &.primary {
-        background: url("../images/pages/about/board-2.svg") no-repeat center / 80%;
-    }
-
     &.lg {
         @media (max-width: 1199px) {
             display: none;
@@ -2103,6 +2099,10 @@
 }
 
 .sec-6-4-1 {
+    .about-board {
+        background-image: url("../images/pages/about/board-2.svg");
+    }
+
     .donut-chart {
         position: relative;
 
