@@ -190,6 +190,7 @@
 
     .modal-header {
         border-bottom: none;
+        padding-inline: 3.5rem;
 
         .close-btn {
             background-color: $white;
@@ -206,7 +207,12 @@
 
     .modal-body {
         display: grid;
-        grid-template-columns: 38vw 50vw;
+        grid-template-columns: 42vw 50vw;
+        padding-inline: 3.5rem;
+
+        @media (max-width: 1450px) {
+            grid-template-columns: 41vw 50vw;
+        }
 
         @media (max-width: 1199px) {
             grid-template-columns: 1fr;
@@ -223,6 +229,7 @@
             line-height: 0.6;
             width: 100%;
             text-align: start;
+            border-radius: 0;
 
             @media (max-width: 1450px) {
                 padding: 0.6rem 1.5rem;
@@ -238,7 +245,7 @@
                 position: relative;
                 border-radius: 0.5rem;
                 line-height: 1;
-                margin-bottom: 0.25rem;
+                margin-block: 0.25rem;
 
                 @media (max-width: 1199px) {
                     border: none;
