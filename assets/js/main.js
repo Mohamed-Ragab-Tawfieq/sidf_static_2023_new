@@ -322,4 +322,11 @@ function handleDashDownload() {
 }
 handleDashDownload()
 
+/*** rating ***/
+function toggleRate() {
+    const stars = document.getElementById('star-rating')
+
+    stars?.closest('.rating').classList.toggle('collapsed')
+}
+
 

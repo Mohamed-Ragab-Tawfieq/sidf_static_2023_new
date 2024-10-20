@@ -905,66 +905,157 @@
 }
 
 // rate
-.star-rating {
-    direction: ltr !important;
-    display: inline-block;
+.rating {
+    @extend .flex-center;
 
-    &.disabled {
-        pointer-events: none;
+    position: fixed;
+    top: 300px;
+    inset-inline-end: 0;
+    z-index: 50;
+    transition: all 0.5s ease-in-out;
+
+    &.collapsed {
+        inset-inline-end: -426px;
+        transition: all 0.5s ease-in-out;
+
+        @media (max-width: 1199px) {
+            inset-inline-end: -300px;
+        }
+
+        .wrapper {
+            .white-img {
+                display: block;
+            }
+
+            .close-btn {
+                display: none;
+            }
+        }
     }
 
-    &.primary {
-        input {
-            &:checked ~ label {
-                background-image: url("../images/icons/stars/3.svg");
+    .wrapper {
+        @extend .flex-center;
+        gap: 0.5rem;
+        flex-direction: column;
+
+        width: 3rem;
+        background-color: #30461e;
+        padding: 0.5rem 0;
+        text-align: center;
+
+        border-radius: 0.5rem;
+        border-start-end-radius: 0;
+        border-end-end-radius: 0;
+
+        .title {
+            color: $white;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 2rem;
+
+            @media (max-width: 1199px) {
+                font-size: 1.5rem;
             }
         }
 
-        input:checked + label:hover,
-        input:checked + label:hover ~ label,
-        label:hover,
-        label:hover ~ label {
-            background-image: url("../images/icons/stars/3.svg");
+        .white-img {
+            display: none;
         }
     }
 
-    &.gold {
-        input {
-            &:checked ~ label {
-                background-image: url("../images/icons/stars/4.svg");
+    .star-rating {
+        width: 425px;
+        padding: 2.5rem;
+        text-align: center;
+
+        box-shadow: 0 2px 4px rgba($black, 0.04);
+        background-color: $white;
+
+        border-radius: 1rem;
+        border-start-end-radius: 0;
+        border-end-end-radius: 0;
+
+        @media (max-width: 1199px) {
+            width: 300px;
+            padding: 2.5rem 1rem;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: $gray-500;
+
+            @media (max-width: 1199px) {
+                font-size: 1.75rem;
             }
         }
 
-        input:checked + label:hover,
-        input:checked + label:hover ~ label,
-        label:hover,
-        label:hover ~ label {
-            background-image: url("../images/icons/stars/4.svg");
+        .stars {
+            direction: ltr !important;
+            display: inline-block;
+
+            &.disabled {
+                pointer-events: none;
+            }
+
+            &.primary {
+                input {
+                    &:checked ~ label {
+                        background-image: url("../images/icons/stars/3.svg");
+                    }
+                }
+
+                input:checked + label:hover,
+                input:checked + label:hover ~ label,
+                label:hover,
+                label:hover ~ label {
+                    background-image: url("../images/icons/stars/3.svg");
+                }
+            }
+
+            &.gold {
+                input {
+                    &:checked ~ label {
+                        background-image: url("../images/icons/stars/4.svg");
+                    }
+                }
+
+                input:checked + label:hover,
+                input:checked + label:hover ~ label,
+                label:hover,
+                label:hover ~ label {
+                    background-image: url("../images/icons/stars/4.svg");
+                }
+            }
+
+            input {
+                display: none;
+
+                &:checked ~ label {
+                    background-image: url("../images/icons/stars/2.svg");
+                }
+            }
+
+            label {
+                width: 3.5rem;
+                height: 3.5rem;
+
+                background: url("../images/icons/stars/1.svg") no-repeat center / cover;
+                cursor: pointer;
+                display: inline-block;
+
+                @media (max-width: 1199px) {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+
+            input:checked + label:hover,
+            input:checked + label:hover ~ label,
+            label:hover,
+            label:hover ~ label {
+                background-image: url("../images/icons/stars/2.svg");
+            }
         }
-    }
-
-    input {
-        display: none;
-
-        &:checked ~ label {
-            background-image: url("../images/icons/stars/2.svg");
-        }
-    }
-
-    label {
-        width: 1.75rem;
-        height: 1.75rem;
-
-        background: url("../images/icons/stars/1.svg") no-repeat center / cover;
-        cursor: pointer;
-        display: inline-block;
-    }
-
-    input:checked + label:hover,
-    input:checked + label:hover ~ label,
-    label:hover,
-    label:hover ~ label {
-        background-image: url("../images/icons/stars/2.svg");
     }
 }
 
@@ -980,7 +1071,16 @@
         & > * {
             display: flex;
             flex-grow: 1;
-            min-width: 33.33%;
+        }
+
+        a {
+            &:first-of-type {
+                order: 3;
+            }
+
+            &:last-of-type {
+                order: 2;
+            }
         }
     }
 
