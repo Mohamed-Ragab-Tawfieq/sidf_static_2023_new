@@ -1780,6 +1780,70 @@
     }
 }
 
+.sec-2-2-1 {
+    .sec-text {
+        @media (min-width: 1200px) {
+            margin-top: -1rem;
+        }
+    }
+
+    .grid-icon {
+        :nth-child(3) {
+            @media (min-width: 1200px) {
+                margin-top: -3rem;
+            }
+        }
+    }
+
+    .wrapper {
+        @media (max-width: 1199px) {
+            flex-direction: column-reverse !important;
+        }
+
+        .grid-2 {
+            @media (max-width: 1199px) {
+                gap: 0.5rem;
+            }
+        }
+    }
+
+    .icon {
+        @media (max-width: 1199px) {
+            width: 60px;
+            min-width: auto !important;
+        }
+    }
+
+    .title {
+        font-size: 4rem;
+        font-weight: 700;
+        color: $success;
+
+        @media (max-width: 1199px) {
+            font-size: 2.5rem;
+        }
+    }
+
+    .description {
+        font-size: 1.75rem;
+        font-weight: 500;
+        color: $gray-500;
+
+        @media (max-width: 1199px) {
+            font-size: 1.25rem;
+        }
+
+        &.small {
+            font-size: 1.13rem;
+            font-weight: 400;
+
+            @media (max-width: 1199px) {
+                font-size: 1.13rem;
+            }
+        }
+    }
+}
+
 /************** 03 eco-status **************/
 .sec-3-1-1 .sidf-counters {
     width: 380px;
