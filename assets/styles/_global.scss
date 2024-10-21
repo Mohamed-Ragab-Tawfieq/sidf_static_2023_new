@@ -379,12 +379,14 @@ section {
 }
 
 .sec-arrow-end {
-    @media (min-width: 1200px) {
-        background: url("../images/arrows/left/3.svg") no-repeat center left / contain;
-    }
+    position: relative;
 
-    @media (min-width: 1200px) and (max-width: 1450px) {
-        background-size: 28%;
+    &::after {
+        content: url("../images/arrows/left/12.svg");
+        position: absolute;
+        top: 0;
+        inset-inline-end: 100px;
+        // transform: scale(7);
     }
 }
 

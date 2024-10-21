@@ -154,7 +154,7 @@ $(document).ready(function () {
             autoplaySpeed: 1000,
             autoplayTimeout: 2000,
             navSpeed: 2000,
-            margin: 10,
+            margin: 16,
             nav: true,
             rtl: true,
             navText: [
