@@ -329,4 +329,11 @@ function toggleRate() {
     stars?.closest('.rating').classList.toggle('collapsed')
 }
 
+/*** percent ***/
+function handlePercent() {
+    document.body.innerHTML = document.body.innerHTML.replace(/%(\d+)/g, '$1%');
+}
+
+handlePercent()
+
 
