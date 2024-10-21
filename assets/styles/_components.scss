@@ -470,6 +470,10 @@
     font-size: 4rem;
     font-weight: 700;
 
+    &.text-success {
+        color: $success-dark !important;
+    }
+
     @media (max-width: 1199px) {
         font-size: 2rem;
     }
