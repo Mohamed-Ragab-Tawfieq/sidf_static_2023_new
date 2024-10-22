@@ -153,7 +153,7 @@ $(document).ready(function () {
             autoplay: true,
             autoplaySpeed: 1000,
             autoplayTimeout: 2000,
-            navSpeed: 2000,
+            navSpeed: 500,
             margin: 16,
             nav: true,
             rtl: true,
