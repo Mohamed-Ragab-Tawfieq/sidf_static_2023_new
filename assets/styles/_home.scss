@@ -286,6 +286,44 @@
                 }
             }
         }
+
+        &.big {
+            h2 {
+                top: -10px;
+                inset-inline-start: 20%;
+
+                @media (min-width: 1200px) and (max-width: 1450px) {
+                    top: 0;
+                }
+            }
+
+            .content {
+                top: 40px;
+                max-width: 240px;
+
+                @media (min-width: 1200px) and (max-width: 1450px) {
+                    top: 25px;
+                }
+
+                h4 {
+                    display: none !important;
+                }
+            }
+
+            li {
+                a {
+                    max-width: 240px;
+
+                    @media (min-width: 1200px) and (max-width: 1450px) {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
+        }
     }
 
     img {
