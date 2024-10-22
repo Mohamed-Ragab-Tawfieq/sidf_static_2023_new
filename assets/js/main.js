@@ -331,7 +331,11 @@ function toggleRate() {
 
 /*** percent ***/
 function handlePercent() {
-    document.body.innerHTML = document.body.innerHTML.replace(/%(\d+)/g, '$1%');
+    const mainContent = document.querySelector('.main-content')
+
+    if (mainContent) {
+        mainContent.innerHTML = mainContent.innerHTML.replace(/%(\d+(\.\d+)?)/g, '$1%');
+    }
 }
 
 handlePercent()

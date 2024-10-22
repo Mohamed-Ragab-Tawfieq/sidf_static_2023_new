@@ -4,7 +4,10 @@
     // }
 
     .home & {
+        position: relative;
         overflow: hidden;
+        transition: all 0.5s ease-in-out;
+
         background:
             url(../images/arrows/left/6.svg) no-repeat top 130px right 38vw / 14%,
             url(../images/pages/home/body-bg.svg) no-repeat top 35px left / 25%,
@@ -22,6 +25,15 @@
                 url(../images/arrows/right/5.svg) no-repeat top 70px right 62vw,
                 url(../images/logo/1.svg) no-repeat top -2% right -40% / 60%,
                 #f8f8f8;
+        }
+
+        &.end {
+            // background-size: 5%, 25%;
+            background-position:
+                top -25% right -3%,
+                top 35px left;
+
+            transition: all 0.5s ease-in-out;
         }
     }
 }

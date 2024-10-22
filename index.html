@@ -223,11 +223,11 @@
                             <img src="assets/images/pages/home/03.png" class="absolute-center" alt="Title 3">
                             <div class="content custom">
                                 <h4 class="text-white fw-7">
-                                    أتجاهات و مؤشرات الأقتصاد <br> المحلي
+                                    اتجاهات و مؤشرات الأقتصاد <br> المحلي
                                     <button class="btn toggle-arrow flex-center" onclick="handleMobileHexagon(this)"><i class='material-icons'>arrow_forward_ios</i></button>
                                 </h4>
                                 <ul>
-                                    <li><a href="eco-status/eco-status.html">أتجاهات و مؤشرات الأقتصاد المحلي </a></li>
+                                    <li><a href="eco-status/eco-status.html">اتجاهات و مؤشرات الأقتصاد المحلي </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -359,7 +359,7 @@
                             <li>
                                 <button type="button" class="btn" id="link-3">
                                     <span>03</span>
-                                    <span>أتجاهات ومؤشرات الأقتصاد المحلي</span>
+                                    <span>اتجاهات ومؤشرات الأقتصاد المحلي</span>
                                 </button>
                             </li>
                             <li>
@@ -435,7 +435,7 @@
                                         <i class='material-icons flex-center'>close</i>
                                     </button>
                                 </li>
-                                <li><a href="../eco-status/eco-status.html">أتجاهات و مؤشرات الأقتصاد المحلي </a></li>
+                                <li><a href="../eco-status/eco-status.html">اتجاهات و مؤشرات الأقتصاد المحلي </a></li>
                             </ul>
 
                             <ul class="child-menu" id="menu-4">
@@ -594,7 +594,7 @@
 
                 setTimeout(() => {
                     loader.classList.add('hide')
-                }, 10000);
+                }, 10);
             });
         </script>
 
@@ -635,24 +635,27 @@
 
             document.addEventListener('DOMContentLoaded', function () {
                 function handleHexagonsScroll() {
-                    const parent = document.querySelector('.hexagons-wrap');
+                    const hexagonsWrap = document.querySelector('.hexagons-wrap');
 
-                    parent?.addEventListener('scroll', function () {
+                    hexagonsWrap?.addEventListener('scroll', function () {
                         const homeSide = document.querySelector('.home-side');
                         const homeTitle = document.querySelector('.home-title');
+                        const mainContent = document.querySelector('.main-content');
 
                         const factor = window.innerWidth > 1500 ? 1100 : (window.innerWidth <= 767 ? 890 : 700);
                         const lines = document.getElementById('progressLines');
-                        const linesProgress = (parent.scrollTop / factor) * 100;
+                        const linesProgress = (hexagonsWrap.scrollTop / factor) * 100;
 
                         lines.style.width = linesProgress + 'vw';
 
-                        if (parent.scrollTop > 0) {
-                            parent.classList.add('end');
+                        if (hexagonsWrap.scrollTop > 0) {
+                            hexagonsWrap.classList.add('end');
                             homeSide?.classList.add('bottom');
+                            mainContent?.classList.add('end');
                         } else {
-                            parent.classList.remove('end');
+                            hexagonsWrap.classList.remove('end');
                             homeSide?.classList.remove('bottom');
+                            mainContent?.classList.remove('end');
                         }
                     });
                 }
