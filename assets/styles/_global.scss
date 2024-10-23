@@ -220,6 +220,8 @@ label.required {
 }
 
 table {
+    margin-top: 2rem;
+
     th,
     td {
         vertical-align: middle;
@@ -248,6 +250,10 @@ table {
         th,
         td {
             border-color: #639ac2;
+        }
+
+        tfoot td {
+            color: $primary !important;
         }
 
         &.custom {
