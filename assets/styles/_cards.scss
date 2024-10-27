@@ -713,11 +713,11 @@
         .subtitle,
         .counter-percent,
         .material-icons {
-            color: $success-dark;
+            color: $success;
         }
 
         .dots-dropdown > .btn {
-            border-color: $success;
+            border-color: rgba($success, 0.3);
         }
     }
 
@@ -726,11 +726,11 @@
         .main-title,
         .counter-percent,
         .material-icons {
-            color: $primary;
+            color: rgba($primary, 0.7);
         }
 
         .dots-dropdown > .btn {
-            border-color: $primary;
+            border-color: rgba($primary, 0.3);
         }
     }
 
@@ -739,11 +739,11 @@
         .main-title,
         .counter-percent,
         .material-icons {
-            color: $gold;
+            color: rgba($gold, 0.7);
         }
 
         .dots-dropdown > .btn {
-            border-color: $gold;
+            border-color: rgba($gold, 0.3);
         }
     }
 }
