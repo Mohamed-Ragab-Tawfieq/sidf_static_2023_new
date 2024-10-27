@@ -20,18 +20,18 @@
                     <div class="flex-y-row gap-2">
                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
 
-                        <a href="../index.html"><img src="../assets/images/logo.svg" width="77" alt="logo"></a>
+                        <a href="../index.html"><img src="../assets/images/logo.svg" width="140" alt="logo"></a>
                     </div>
 
                     <h2 class="site-name"><a href="../index.html">التقــرير السنوي 2023</a></h2>
 
                     <div class="flex-between">
                         <button type="button" class="btn download-btn primary" data-bs-toggle="modal" data-bs-target="#downloadModal">
-                            تحميل ملف الفصل 4
+                            تحميل ملف القسم 4
                             <img src="../assets/images/icons/download-04.svg" class="white-img" alt="download">
                         </button>
                         <button class="btn px-1 text-success"><img src="../assets/images/icons/search.svg" alt="search"></button>
-                        <button class="btn px-1 fw-5" type="button"> EN </button>
+                        <button class="btn lang-btn" type="button"> EN </button>
                     </div>
                 </nav>
             </div>
@@ -41,7 +41,7 @@
             <div class="container">
                 <nav>
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
-                    <a href="index.html"><img src="../assets/images/logo.svg" width="77" class="logo" alt="logo"></a>
+                    <a href="index.html"><img src="../assets/images/logo.svg" width="140" class="logo" alt="logo"></a>
                     <button class="btn"><img src="../assets/images/icons/search.svg" alt="search"></button>
                 </nav>
             </div>
@@ -51,6 +51,16 @@
             <section>
                 <div class="inner-top-img" id="inner-top-img" data-aos="fade-up" data-aos-duration="500">
                     <img src="../assets/images/top-img/4.png" class="top-img absolute-center" alt=" welcome image">
+
+                    <button class="btn play-btn absolute-center" id="play-btn" onclick="playTopVideo()">
+                        <i class='material-icons'>play_circle_filled</i>
+                    </button>
+
+                    <video class="top-video absolute-center" id="top-video" controls muted>
+                        <source src="../assets/videos/5-lending-activity.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
                     <h2 class="title">04</h2>
                     <h2 class="title">النشاط الإقراضي للصندوق</h2>
                     <img src="../assets/images/arrows/left/1.svg" class="arrows img-fluid" width="200" alt="arrows">
@@ -59,19 +69,19 @@
 
             <nav class="sidf-navbar" id="sidf-navbar">
                 <ul class="nav nav-pills grid-5">
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link primary" href="lending-activity.html">النشاط الإقراضي للصندوق</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link primary" href="sectoral-distribution.html">التوزيع القطاعي للقروض المعتمدة</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link primary" href="geographic-distribution.html">التوزيع الجغرافي للقروض المعتمدة</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link primary" href="incentive-programs.html">البرامج التحفيزية</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link primary" href="production-projects.html">المشاريع التي بدأت الإنتاج</a>
                     </li>
                 </ul>
@@ -90,11 +100,11 @@
                         </div>
 
                         <p class="sec-text w-lg-6" data-aos="fade-up" data-aos-duration="700">
-                            واصــــل الصندوق نشــــاطه فــــي تنمية القطاع الصناعــــي المحلي، من خلال توفير طيف واســــع من القروض لدعم المشــــاريع بمختلف القطاعــــات المتنوعة في المملكة، حيث اعتمد الصندوق نسبة عالية من القروض للمشاريع الصناعية التي تقع في المناطق و المدن الواعدة؛ وفقـــًا للأرقام المبينة:
+                            واصــــل الصندوق نشــــاطه فــــي تنمية القطاع الصناعــــي المحلي، من خلال توفير طيف واســــع من القروض لدعم المشــــاريع بمختلف القطاعــــات المتنوعة في المملكة، حيث اعتمد الصندوق نسبة عالية من القروض للمشاريع الصناعية التي تقع في المناطق والمدن الواعدة؛ وفقـــًا للأرقام المبينة:
                         </p>
 
                         <div class="flex-between flex-row" data-aos="fade-up" data-aos-duration="700">
-                            <h2 class="sec-title text-primary"> القروض المعتمدة خلال الفترة (2021-2023م) </h2>
+                            <h2 class="sec-title text-primary mt-8"> القروض المعتمدة خلال الفترة (2021-2023م) </h2>
 
                             <div class="dropdown dots-dropdown">
                                 <button class="btn flex-center" type=" button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -117,15 +127,15 @@
                             </div>
                         </div>
 
-                        <h2 class="text-primary op-8 fw-7 my-6">عدد القروض المعتمدة</h2>
+                        <h2 class="text-primary op-8 fw-7 my-6" data-aos="fade-up" data-aos-duration="700">عدد القروض المعتمدة</h2>
 
                         <div class="graph-bars horizontal" data-aos="fade-up" data-aos-duration="700">
                             <div class="d-flex align-items-start gap-2">
-                                <h4 class="graph-date fw-7 flex-center">2021</h4>
-                                <div class="item" style="width: 78%;">
+                                <h4 class="graph-date fw-7 flex-center">2023</h4>
+                                <div class="item" style="width: 90%;">
                                     <div class="btn-gradient primary horizontal"></div>
                                     <div class="flex-center flex-column number">
-                                        <h2 class="purecounter display-5 fw-7 text-primary" data-purecounter-end="117">117</h2>
+                                        <h2 class="purecounter display-5 fw-7 text-primary" data-purecounter-end="134">134</h2>
                                         <h6 class="bar-unit text-primary">قرضاً</h6>
                                     </div>
                                 </div>
@@ -141,11 +151,11 @@
                                 </div>
                             </div>
                             <div class="d-flex align-items-start gap-2">
-                                <h4 class="graph-date fw-7 flex-center">2023</h4>
-                                <div class="item" style="width: 90%;">
+                                <h4 class="graph-date fw-7 flex-center">2021</h4>
+                                <div class="item" style="width: 78%;">
                                     <div class="btn-gradient primary horizontal"></div>
                                     <div class="flex-center flex-column number">
-                                        <h2 class="purecounter display-5 fw-7 text-primary" data-purecounter-end="134">134</h2>
+                                        <h2 class="purecounter display-5 fw-7 text-primary" data-purecounter-end="117">117</h2>
                                         <h6 class="bar-unit text-primary">قرضاً</h6>
                                     </div>
                                 </div>
@@ -307,7 +317,7 @@
                             </li>
 
                             <li class="vision-card primary span-2" data-aos="fade-up" data-aos-duration="700">
-                                <h2 class="fs-1 fw-7 text-primary">قطاعات برنامج تطوير الصناعة الوطنية و الخدمات اللوجستية (ندلب)</h2>
+                                <h2 class="fs-1 fw-7 text-primary">قطاعات برنامج تطوير الصناعة الوطنية والخدمات اللوجستية (ندلب)</h2>
                                 <div class="grid-4 grid-md-2">
                                     <div class="flex-y-row gap-2">
                                         <img src="../assets/images/icons/factory-02.svg" class="primary-img" width="80" alt="factory">
@@ -352,11 +362,11 @@
 
                     <div class="grid-2 mt-8" style="grid-template-columns: 43% 57%;">
                         <p class="sec-text" data-aos="fade-up" data-aos-duration="700">
-                            بشــــكل عام، تثبت الأرقام التي حققها الصندوق منذ إنشــــائه عام 1974م و حتى نهاية العام المالي 2023م، نجاح المشــــاريع المســــتفيدة من القروض المقدمة منه، إلى جانب الدعم الاستشــــاري الذي يقدمه الصندوق لهذه المشــــاريع في كل من المجالات الفنية، و الإدارية، و المالية و التســــويقية.
+                            بشــــكل عام، تثبت الأرقام التي حققها الصندوق منذ إنشــــائه عام 1974م وحتى نهاية العام المالي 2023م، نجاح المشــــاريع المســــتفيدة من القروض المقدمة منه، إلى جانب الدعم الاستشــــاري الذي يقدمه الصندوق لهذه المشــــاريع في كل من المجالات الفنية، والإدارية، والمالية والتســــويقية.
                         </p>
 
                         <div class="vision-card primary">
-                            <h2 class="fs-1 fw-7 text-primary">قروض للمناطق و المدن الواعدة</h2>
+                            <h2 class="fs-1 fw-7 text-primary">قروض للمناطق والمدن الواعدة</h2>
                             <div class="grid-2">
                                 <div class="flex-y-row gap-2">
                                     <img src="../assets/images/icons/file-02.svg" alt="file">
@@ -413,7 +423,7 @@
                             </div>
                         </div>
 
-                        <a href="" class="btn btn-success">
+                        <a href="" class="btn btn-primary">
                             <span class="fs-2">
                                 <i class='material-icons fs-5'> format_indent_decrease </i>
                                 الموضوع التالي
@@ -477,7 +487,7 @@
                             <li>
                                 <button type="button" class="btn" id="link-6">
                                     <span>06</span>
-                                    <span>التحول الرقمي و تقنية المعلومات</span>
+                                    <span>التحول الرقمي وتقنية المعلومات</span>
                                 </button>
                             </li>
                             <li>
@@ -535,7 +545,7 @@
                                         <i class='material-icons flex-center'>close</i>
                                     </button>
                                 </li>
-                                <li><a href="../eco-status/eco-status.html">اتجاهات و مؤشرات الأقتصاد المحلي </a></li>
+                                <li><a href="../eco-status/eco-status.html">اتجاهات ومؤشرات الأقتصاد المحلي </a></li>
                             </ul>
 
                             <ul class="child-menu" id="menu-4">
@@ -559,7 +569,7 @@
                                 <li><a href="../strategy/priorities.html">أولويات استراتيجية الصندوق 2023</a></li>
                                 <li><a href="../strategy/achievements.html">أهم الإنجازات في 2023</a></li>
                                 <li><a href="../strategy/indicators.html">مؤشــرات الأداء الرئيسية 2023م</a></li>
-                                <li><a href="../strategy/awards.html">جوائز و شهادات مُميّزة</a></li>
+                                <li><a href="../strategy/awards.html">جوائز وشهادات مُميّزة</a></li>
                             </ul>
 
                             <ul class="child-menu" id="menu-6">
@@ -571,7 +581,7 @@
                                 <li><a href="../digitalization/services.html">الخدمات الرقمية المقدمة</a></li>
                                 <li><a href="../digitalization/joureny.html">رحلة الصندوق في التحول الرقمي</a></li>
                                 <li><a href="../digitalization/technical-house.html">برنامج ترتيب البيت التقني</a></li>
-                                <li><a href="../digitalization/awards.html">شهادات استحقاق و تجديد الأيزو</a></li>
+                                <li><a href="../digitalization/awards.html">شهادات استحقاق وتجديد الأيزو</a></li>
                             </ul>
 
                             <ul class="child-menu" id="menu-7">
@@ -604,7 +614,7 @@
                                 <li><a href="../industrial-study/regional-indicators.html">المؤشرات الإقليمية الرئيسية</a></li>
                                 <li><a href="../industrial-study/ksa-market.html">حجم الطلب في السوق السعودي</a></li>
                                 <li><a href="../industrial-study/success-factors.html">عوامل النجاح</a></li>
-                                <li><a href="../industrial-study/challenges-opportunities.html">الفرص و التحديات</a></li>
+                                <li><a href="../industrial-study/challenges-opportunities.html">الفرص والتحديات</a></li>
                                 <li><a href="../industrial-study/conclusion.html">الخلاصة</a></li>
                             </ul>
 
@@ -629,7 +639,7 @@
                     <div class="step-1" id="step-1">
                         <div class="modal-header">
                             <div class="flex-between w-100">
-                                <h4 class="title">تحميل ملف الفصل 4</h4>
+                                <h4 class="title">تحميل ملف القسم 4</h4>
                                 <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
                                     <i class='material-icons flex-center'>close</i>
                                 </button>

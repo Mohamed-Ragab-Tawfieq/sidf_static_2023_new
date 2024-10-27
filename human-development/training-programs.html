@@ -20,18 +20,18 @@
                     <div class="flex-y-row gap-2">
                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
 
-                        <a href="../index.html"><img src="../assets/images/logo.svg" width="77" alt="logo"></a>
+                        <a href="../index.html"><img src="../assets/images/logo.svg" width="140" alt="logo"></a>
                     </div>
 
                     <h2 class="site-name"><a href="../index.html">التقــرير السنوي 2023</a></h2>
 
                     <div class="flex-between">
                         <button type="button" class="btn download-btn" data-bs-toggle="modal" data-bs-target="#downloadModal">
-                            تحميل ملف الفصل 7
+                            تحميل ملف القسم 7
                             <img src="../assets/images/icons/download-04.svg" class="white-img" alt="download">
                         </button>
                         <button class="btn px-1 text-success"><img src="../assets/images/icons/search.svg" alt="search"></button>
-                        <button class="btn px-1 fw-5" type="button"> EN </button>
+                        <button class="btn lang-btn" type="button"> EN </button>
                     </div>
                 </nav>
             </div>
@@ -41,7 +41,7 @@
             <div class="container">
                 <nav>
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
-                    <a href="index.html"><img src="../assets/images/logo.svg" width="77" class="logo" alt="logo"></a>
+                    <a href="index.html"><img src="../assets/images/logo.svg" width="140" class="logo" alt="logo"></a>
                     <button class="btn"><img src="../assets/images/icons/search.svg" alt="search"></button>
                 </nav>
             </div>
@@ -51,10 +51,20 @@
             <section>
                 <div class="inner-top-img" id="inner-top-img" data-aos="fade-up" data-aos-duration="500">
                     <img src="../assets/images/top-img/7.png" class="top-img absolute-center" alt=" welcome image">
+
+                    <button class="btn play-btn absolute-center" id="play-btn" onclick="playTopVideo()">
+                        <i class='material-icons'>play_circle_filled</i>
+                    </button>
+
+                    <video class="top-video absolute-center" id="top-video" controls muted>
+                        <source src="../assets/videos/6-human-development.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
                     <h2 class="title">07</h2>
                     <h2 class="title">تنمية القدرات البشرية</h2>
                     <h4 class="text h2 text-white fw-5 lh-1 mb-4 w-lg-9">
-                        يواصــــل صندوق التنمية الصناعية الســــعودي جهــــوده الدؤوبة من أجل تطبيق أعلى معاييــــر الجودة و الكفاءة المعتمدة على المســــتوى العالمي؛ و ذلــــك بهدف تطوير بيئــــة العمل في كافة مناشــــط الصندوق لجعلها بيئة تنافسية تســــهم في استقطاب أبرز المواهب و الكفاءات و الخبرات الوطنية المتميزة؛ و قد حقق الصندوق خلال عام 2023م مجموعة من الإنجازات المتميزة، و التي كان من أبرزها:
+                        يواصــــل صندوق التنمية الصناعية الســــعودي جهــــوده الدؤوبة من أجل تطبيق أعلى معاييــــر الجودة والكفاءة المعتمدة على المســــتوى العالمي؛ وذلــــك بهدف تطوير بيئــــة العمل في كافة مناشــــط الصندوق لجعلها بيئة تنافسية تســــهم في استقطاب أبرز المواهب والكفاءات والخبرات الوطنية المتميزة؛ وقد حقق الصندوق خلال عام 2023م مجموعة من الإنجازات المتميزة، والتي كان من أبرزها:
                     </h4>
                     <img src="../assets/images/arrows/left/4.svg" class="arrows img-fluid" width="200" alt="arrows">
                 </div>
@@ -62,16 +72,16 @@
 
             <nav class="sidf-navbar" id="sidf-navbar">
                 <ul class="nav nav-pills grid-4">
-                    <li class=" nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class=" nav-item">
                         <a class="nav-link" href="institutional-culture.html">أولا: الثقافة المؤسسية</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link" href="recruitment.html">ثانيًا: التوظيف</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link" href="training-programs.html">ثالثــًا: برامج التدريب والتأهيل</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link" href="academy.html">رابعًا: أكاديمية الصندوق الصناعي</a>
                     </li>
                 </ul>
@@ -86,25 +96,25 @@
                     <div>
                         <div class="sec-arrows-wrapper">
                             <img src="../assets/images/arrows/left/2.svg" class="sec-arrows" width="52" alt="arrows">
-                            <h1 class="sec-title text-success" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine"> ثالثــًا: برامج التدريب والتأهيل </h1>
+                            <h1 class="sec-title text-success" data-aos="fade-up" data-aos-duration="700"> ثالثــًا: برامج التدريب والتأهيل </h1>
                         </div>
                         <p class="sec-text w-lg-7" data-aos="fade-up" data-aos-duration="700">
-                            يحــــرص صنــــدوق التنميــــة الصناعيــــة الســــعودي مــــن خلال إدارة المــــوارد البشــــرية علــــى تأهيــــل و تدريــــب الكــــوادر الســــعودية بمختلــــف الفئــــات الوظيفيــــة عــــن طريــــق تطبيق البرامــــج التدريبيــــة المتخصصــــة و ذات العلاقــــة بطبيعــــة عمــــل الصنــــدوق، حيــــث اشــــتملت هــــذه البرامــــج التــــي تم تنفيذهــــا خلال عــــام التقريــــر علــــى مجموعــــة مــــن الــــدورات الأساســــية المتخصصــــة، و حلقــــات النقــــاش، و الــــدورات القصيرة، و المعــــارض و الدورات التدريبيــــة، و ورش العمل، و المؤتمــــرات المهنية، إضافــــة إلى دورات التدريــــب العملي على رأس العمل، حيث جــــاءت على النحو التالي:
+                            يحــــرص صنــــدوق التنميــــة الصناعيــــة الســــعودي مــــن خلال إدارة المــــوارد البشــــرية علــــى تأهيــــل وتدريــــب الكــــوادر الســــعودية بمختلــــف الفئــــات الوظيفيــــة عــــن طريــــق تطبيق البرامــــج التدريبيــــة المتخصصــــة وذات العلاقــــة بطبيعــــة عمــــل الصنــــدوق، حيــــث اشــــتملت هــــذه البرامــــج التــــي تم تنفيذهــــا خلال عــــام التقريــــر علــــى مجموعــــة مــــن الــــدورات الأساســــية المتخصصــــة، وحلقــــات النقــــاش، والــــدورات القصيرة، والمعــــارض والدورات التدريبيــــة، وورش العمل، والمؤتمــــرات المهنية، إضافــــة إلى دورات التدريــــب العملي على رأس العمل، حيث جــــاءت على النحو التالي:
                         </p>
 
                         <ul class="grid-3 mt-8">
                             <li class="vision-card" data-aos="fade-up" data-aos-duration="700">
                                 <img src="../assets/images/icons/globe-1.svg" class="success-img" width="43" alt="">
-                                <h3 class="fs-1 fw-7">
+                                <h3 class="fs-1 fw-7 text-success-dark">
                                     <span class="purecounter" data-purecounter-end="34">34</span>
                                     <span>مبتعثــًا</span>
                                 </h3>
-                                <p class="fs-4">ابتعث 7 منهم في أفضل عشر جامعات في العالم، و ابتعث 5 منهم في الابتعاث الداخلي بالمملكة.</p>
+                                <p class="fs-4">ابتعث 7 منهم في أفضل عشر جامعات في العالم، وابتعث 5 منهم في الابتعاث الداخلي بالمملكة.</p>
                             </li>
 
                             <li class="vision-card" data-aos="fade-up" data-aos-duration="700">
                                 <img src="../assets/images/icons/saudi-person.svg" class="success-img" width="43" alt="">
-                                <h3 class="fs-1 fw-7">
+                                <h3 class="fs-1 fw-7 text-success-dark">
                                     <span class="purecounter" data-purecounter-end="5">5</span>
                                     <span>موظفين</span>
                                 </h3>
@@ -113,16 +123,16 @@
 
                             <li class="vision-card" data-aos="fade-up" data-aos-duration="700">
                                 <img src="../assets/images/icons/user-group.svg" class="success-dark-img" width="43" alt="">
-                                <h3 class="fs-1 fw-7">
+                                <h3 class="fs-1 fw-7 text-success-dark">
                                     <span class="purecounter" data-purecounter-end="753">753</span>
                                     <span>موظفــًا</span>
                                 </h3>
-                                <p class="fs-4">شاركوا في برامج التدريب القصير و أنشطة المؤتمرات و المعارض.</p>
+                                <p class="fs-4">شاركوا في برامج التدريب القصير وأنشطة المؤتمرات والمعارض.</p>
                             </li>
 
                             <li class="vision-card" data-aos="fade-up" data-aos-duration="700">
                                 <img src="../assets/images/awards/15.svg" class="success-img" width="50" alt="">
-                                <h3 class="fs-1 fw-7">
+                                <h3 class="fs-1 fw-7 text-success-dark">
                                     <span class="purecounter" data-purecounter-end="7">7</span>
                                     <span>موظفين</span>
                                 </h3>
@@ -131,7 +141,7 @@
 
                             <li class="vision-card" data-aos="fade-up" data-aos-duration="700">
                                 <img src="../assets/images/awards/16.svg" class="success-img img-fluid" alt="">
-                                <h3 class="fs-1 fw-7">
+                                <h3 class="fs-1 fw-7 text-success-dark">
                                     <span class="purecounter" data-purecounter-end="2">2</span>
                                     <span>موظف</span>
                                 </h3>
@@ -140,7 +150,7 @@
 
                             <li class="vision-card" data-aos="fade-up" data-aos-duration="700">
                                 <img src="../assets/images/icons/message-multiple-01.svg" class="success-img" width="43" alt="">
-                                <h3 class="fs-1 fw-7">
+                                <h3 class="fs-1 fw-7 text-success-dark">
                                     <span class="purecounter" data-purecounter-end="9">9</span>
                                     <span>موظفين</span>
                                 </h3>
@@ -149,16 +159,16 @@
 
                             <li class="vision-card" data-aos="fade-up" data-aos-duration="700">
                                 <img src="../assets/images/icons/workshop-1.svg" class="success-dark-img" width="43" alt="">
-                                <h3 class="fs-1 fw-7">
+                                <h3 class="fs-1 fw-7 text-success-dark">
                                     <span class="purecounter" data-purecounter-end="2">2</span>
                                     <span>موظف</span>
                                 </h3>
-                                <p class="fs-4">تدربوا في Phoenix Club و Talento</p>
+                                <p class="fs-4">تدربوا في Phoenix Club وTalento</p>
                             </li>
 
                             <li class="vision-card" data-aos="fade-up" data-aos-duration="700">
                                 <img src="../assets/images/awards/14.svg" class="success-img" width="50" alt="">
-                                <h3 class="fs-1 fw-7">
+                                <h3 class="fs-1 fw-7 text-success-dark">
                                     <span class="purecounter" data-purecounter-end="20">20</span>
                                     <span>موظف</span>
                                 </h3>
@@ -171,7 +181,7 @@
 
                             <li class="vision-card" data-aos="fade-up" data-aos-duration="700">
                                 <img src="../assets/images/icons/lesson-class-1.svg" class="success-dark-img" width="43" alt="">
-                                <h3 class="fs-1 fw-7">
+                                <h3 class="fs-1 fw-7 text-success-dark">
                                     <span class="purecounter" data-purecounter-end="8">8</span>
                                     <span>ورش عمل</span>
                                 </h3>
@@ -199,7 +209,7 @@
                     <div>
                         <div class="grid-2 px-12">
                             <ul>
-                                <li class="fs-2 fw-6 text-success" data-aos="fade-up" data-aos-duration="700">التدريب التعاوني:</li>
+                                <li class="fs-2 fw-6 text-success-dark" data-aos="fade-up" data-aos-duration="700">التدريب التعاوني:</li>
                                 <li class="d-flex gap-1" data-aos="fade-up" data-aos-duration="700">
                                     <i class='material-icons fs-6 mt-1' style="color: #A1C384;">circle</i>
                                     <p class="sec-text mt-0"> تم استقبال وتدريب (90) متدربا تعاونيا خلال عام 2023 وذلك لتأهيلهم وإكسابهم الخبرات اللازمة للدخول في سوق العمل.
@@ -213,7 +223,7 @@
                             </ul>
 
                             <ul>
-                                <li class="fs-2 fw-6 text-success" data-aos="fade-up" data-aos-duration="700">اتفاقيات التدريب:</li>
+                                <li class="fs-2 fw-6 text-success-dark" data-aos="fade-up" data-aos-duration="700">اتفاقيات التدريب:</li>
                                 <li class="d-flex gap-1" data-aos="fade-up" left-aos-duration="700">
                                     <i class='material-icons fs-6 mt-1' style="color: #A1C384;">circle</i>
                                     <p class="sec-text mt-0">
@@ -225,7 +235,7 @@
                                 <li class="d-flex gap-1" data-aos="fade-up" left-aos-duration="700">
                                     <i class='material-icons fs-6 mt-1' style="color: #A1C384;">circle</i>
                                     <p class="sec-text mt-0">
-                                        تم تفعيل اتفاقية منصة التعلم الإلكتروني Future X منذ شهر أغسطس في الصندوق، و التي تحتوي على أكثرمن 8000 برنامج تدريبي مع مقدمي التدريب مثل Edx و Coursera. وتم تسجيل أكثر من 300 متدرب من الصندوق على 13 مساراً تدريبياًً مختلفاًً مخصصاً لموظفي الصندوق احتوى على 150 برنامجاً تدريبياً مستهدفاً للمهارات العامة وكذلك المهارات الفنية والتخصصية مثل (الصناعة، الطاقة، التعدين، التحول الرقمي والقيادة) </p>
+                                        تم تفعيل اتفاقية منصة التعلم الإلكتروني Future X منذ شهر أغسطس في الصندوق، والتي تحتوي على أكثرمن 8000 برنامج تدريبي مع مقدمي التدريب مثل Edx وCoursera. وتم تسجيل أكثر من 300 متدرب من الصندوق على 13 مساراً تدريبياًً مختلفاًً مخصصاً لموظفي الصندوق احتوى على 150 برنامجاً تدريبياً مستهدفاً للمهارات العامة وكذلك المهارات الفنية والتخصصية مثل (الصناعة، الطاقة، التعدين، التحول الرقمي والقيادة) </p>
                                 </li>
                                 <li class="d-flex gap-1" data-aos="fade-up" left-aos-duration="700">
                                     <i class='material-icons fs-6 mt-1' style="color: #A1C384;">circle</i>
@@ -334,7 +344,7 @@
                             <li>
                                 <button type="button" class="btn" id="link-6">
                                     <span>06</span>
-                                    <span>التحول الرقمي و تقنية المعلومات</span>
+                                    <span>التحول الرقمي وتقنية المعلومات</span>
                                 </button>
                             </li>
                             <li>
@@ -392,7 +402,7 @@
                                         <i class='material-icons flex-center'>close</i>
                                     </button>
                                 </li>
-                                <li><a href="../eco-status/eco-status.html">اتجاهات و مؤشرات الأقتصاد المحلي </a></li>
+                                <li><a href="../eco-status/eco-status.html">اتجاهات ومؤشرات الأقتصاد المحلي </a></li>
                             </ul>
 
                             <ul class="child-menu" id="menu-4">
@@ -416,7 +426,7 @@
                                 <li><a href="../strategy/priorities.html">أولويات استراتيجية الصندوق 2023</a></li>
                                 <li><a href="../strategy/achievements.html">أهم الإنجازات في 2023</a></li>
                                 <li><a href="../strategy/indicators.html">مؤشــرات الأداء الرئيسية 2023م</a></li>
-                                <li><a href="../strategy/awards.html">جوائز و شهادات مُميّزة</a></li>
+                                <li><a href="../strategy/awards.html">جوائز وشهادات مُميّزة</a></li>
                             </ul>
 
                             <ul class="child-menu" id="menu-6">
@@ -428,7 +438,7 @@
                                 <li><a href="../digitalization/services.html">الخدمات الرقمية المقدمة</a></li>
                                 <li><a href="../digitalization/joureny.html">رحلة الصندوق في التحول الرقمي</a></li>
                                 <li><a href="../digitalization/technical-house.html">برنامج ترتيب البيت التقني</a></li>
-                                <li><a href="../digitalization/awards.html">شهادات استحقاق و تجديد الأيزو</a></li>
+                                <li><a href="../digitalization/awards.html">شهادات استحقاق وتجديد الأيزو</a></li>
                             </ul>
 
                             <ul class="child-menu" id="menu-7">
@@ -461,7 +471,7 @@
                                 <li><a href="../industrial-study/regional-indicators.html">المؤشرات الإقليمية الرئيسية</a></li>
                                 <li><a href="../industrial-study/ksa-market.html">حجم الطلب في السوق السعودي</a></li>
                                 <li><a href="../industrial-study/success-factors.html">عوامل النجاح</a></li>
-                                <li><a href="../industrial-study/challenges-opportunities.html">الفرص و التحديات</a></li>
+                                <li><a href="../industrial-study/challenges-opportunities.html">الفرص والتحديات</a></li>
                                 <li><a href="../industrial-study/conclusion.html">الخلاصة</a></li>
                             </ul>
 
@@ -486,7 +496,7 @@
                     <div class="step-1" id="step-1">
                         <div class="modal-header">
                             <div class="flex-between w-100">
-                                <h4 class="title">تحميل ملف الفصل 7</h4>
+                                <h4 class="title">تحميل ملف القسم 7</h4>
                                 <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
                                     <i class='material-icons flex-center'>close</i>
                                 </button>

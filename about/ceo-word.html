@@ -20,18 +20,18 @@
                     <div class="flex-y-row gap-2">
                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
 
-                        <a href="../index.html"><img src="../assets/images/logo.svg" width="77" alt="logo"></a>
+                        <a href="../index.html"><img src="../assets/images/logo.svg" width="140" alt="logo"></a>
                     </div>
 
                     <h2 class="site-name"><a href="../index.html">التقــرير السنوي 2023</a></h2>
 
                     <div class="flex-between">
                         <button type="button" class="btn download-btn" data-bs-toggle="modal" data-bs-target="#downloadModal">
-                            تحميل ملف الفصل 1
+                            تحميل ملف القسم 1
                             <img src="../assets/images/icons/download-04.svg" class="white-img" alt="download">
                         </button>
                         <button class="btn px-1 text-success"><img src="../assets/images/icons/search.svg" alt="search"></button>
-                        <button class="btn px-1 fw-5" type="button"> EN </button>
+                        <button class="btn lang-btn" type="button"> EN </button>
                     </div>
                 </nav>
             </div>
@@ -41,7 +41,7 @@
             <div class="container">
                 <nav>
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
-                    <a href="index.html"><img src="../assets/images/logo.svg" width="77" class="logo" alt="logo"></a>
+                    <a href="index.html"><img src="../assets/images/logo.svg" width="140" class="logo" alt="logo"></a>
                     <button class="btn"><img src="../assets/images/icons/search.svg" alt="search"></button>
                 </nav>
             </div>
@@ -51,6 +51,16 @@
             <section>
                 <div class="inner-top-img" id="inner-top-img" data-aos="fade-up" data-aos-duration="500">
                     <img src="../assets/images/top-img/1.png" class="top-img absolute-center" alt=" welcome image">
+
+                    <button class="btn play-btn absolute-center" id="play-btn" onclick="playTopVideo()">
+                        <i class='material-icons'>play_circle_filled</i>
+                    </button>
+
+                    <video class="top-video absolute-center" id="top-video" controls muted>
+                        <source src="../assets/videos/3-ceo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
                     <h2 class="title">01</h2>
                     <h2 class="title">لمحة عن الصندوق</h2>
                     <img src="../assets/images/arrows/left/4.svg" class="arrows img-fluid" width="200" alt="arrows">
@@ -59,19 +69,19 @@
 
             <nav class="sidf-navbar" id="sidf-navbar">
                 <ul class="nav nav-pills grid-5">
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link" href="brief.html">الصندوق في سطور</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link" href="board.html">مجلس الإدارة</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link" href="org-structure.html">الهيكل التنظيمي</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link" href="chariman-intro.html">كلمة معالي رئيس مجلس الإدارة</a>
                     </li>
-                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <li class="nav-item">
                         <a class="nav-link" href="ceo-word.html">كلمة سعادة الرئيس التنفيذي</a>
                     </li>
                 </ul>
@@ -89,15 +99,15 @@
                                 <div class="sec-arrows-wrapper">
                                     <img src="../assets/images/arrows/left/2.svg" class="sec-arrows" width="52" alt="arrows">
                                     <div>
-                                        <h1 class="sec-title text-success text-nowrap" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine"> كلمة سمو الرئيس التنفيذي</h1>
+                                        <h1 class="sec-title text-success text-nowrap" data-aos="fade-up" data-aos-duration="700"> كلمة سمو الرئيس التنفيذي</h1>
                                         <h2 class="display-4 fw-7 text-success d-none d-lg-block" data-aos="fade-up" data-aos-duration="700">سلطان بن خالد آل سعود</h2>
                                     </div>
                                 </div>
                                 <p class="sec-ceo-text" data-aos="fade-up" data-aos-duration="700">
-                                    منذ تأسيســــه في العام 1974م، لعب صندوق التنمية الصناعية الســــعودي دورًا رياديًا في تطوير و تنفيذ سياســــات و برامج التنمية الصناعية، ليصبح الممكّن المالي الرئيس لتحول المملكة إلى قوة صناعية رائدة و منصة لوجســــتية عالمية، حيث بلغ حجم تمويلات الصنــــدوق منذ تأسيســــه و حتى نهاية عام 2023م أكثر من 180 مليار ريال، دعم بها أكثر من 4000 مشــــروع بإجمالي اســــتثمارات تقدر بحوالي 700 مليار ريال.
+                                    منذ تأسيســــه في العام 1974م، لعب صندوق التنمية الصناعية الســــعودي دورًا رياديًا في تطوير وتنفيذ سياســــات وبرامج التنمية الصناعية، ليصبح الممكّن المالي الرئيس لتحول المملكة إلى قوة صناعية رائدة ومنصة لوجســــتية عالمية، حيث بلغ حجم تمويلات الصنــــدوق منذ تأسيســــه وحتى نهاية عام 2023م أكثر من 180 مليار ريال، دعم بها أكثر من 4000 مشــــروع بإجمالي اســــتثمارات تقدر بحوالي 700 مليار ريال.
                                 </p>
                                 <p class="sec-text d-none d-lg-block" data-aos="fade-up" data-aos-duration="700">
-                                    و على مدار خمســــة عقود، ارتفع الناتج المحلي الصناعي – بالأســــعار الثابتة و باستثناء التكرير – ليصل إلــــى 246 مليار ريال بمعدل 25 ضعفاً، كما تجاوز إجمالي ما اعتمده و صرفه الصندوق منــــذ إطلاق «رؤية الســــعودية 2030» و حتى نهايــــة 2023م، إجمالي ما اعتُمِــــد و صُرِف في السنوات الـ 36 الأولى من تأسيسه.
+                                    وعلى مدار خمســــة عقود، ارتفع الناتج المحلي الصناعي – بالأســــعار الثابتة وباستثناء التكرير – ليصل إلــــى 246 مليار ريال بمعدل 25 ضعفاً، كما تجاوز إجمالي ما اعتمده وصرفه الصندوق منــــذ إطلاق «رؤية الســــعودية 2030» وحتى نهايــــة 2023م، إجمالي ما اعتُمِــــد وصُرِف في السنوات الـ 36 الأولى من تأسيسه.
                                 </p>
                             </div>
 
@@ -119,20 +129,20 @@
                         </div>
 
                         <p class="sec-text mt-8 d-lg-none" data-aos="fade-up" data-aos-duration="700">
-                            و على مدار خمســــة عقود، ارتفع الناتج المحلي الصناعي – بالأســــعار الثابتة و باستثناء التكرير – ليصل إلــــى 246 مليار ريال بمعدل 25 ضعفا، كما تجاوز إجمالي ما اعتمده و صرفه الصندوق منــــذ إطلاق «رؤية الســــعودية 2030» و حتى نهايــــة 2023م، إجمالي ما اعتمــــد و صرِف في السنوات الـ 36 الأولى من تأسيسه.
+                            وعلى مدار خمســــة عقود، ارتفع الناتج المحلي الصناعي – بالأســــعار الثابتة وباستثناء التكرير – ليصل إلــــى 246 مليار ريال بمعدل 25 ضعفا، كما تجاوز إجمالي ما اعتمده وصرفه الصندوق منــــذ إطلاق «رؤية الســــعودية 2030» وحتى نهايــــة 2023م، إجمالي ما اعتمــــد وصرِف في السنوات الـ 36 الأولى من تأسيسه.
                         </p>
 
                         <p class="sec-text w-lg-7 w-xs-100" data-aos="fade-up" data-aos-duration="700">
-                            و خلال العام المالي 2023م، اعتمد الصندوق (134) قرضاً بقيمة 12.9 مليار ريال، لمشــــاريع متنوعة و نوعية فــــي قطاعات الصناعة و الطاقة و التعدين و الخدمات اللوجســــتية، تتجاوز قيمة استثماراتها 51 مليار ريال.
+                            وخلال العام المالي 2023م، اعتمد الصندوق (134) قرضاً بقيمة 12.9 مليار ريال، لمشــــاريع متنوعة ونوعية فــــي قطاعات الصناعة والطاقة والتعدين والخدمات اللوجســــتية، تتجاوز قيمة استثماراتها 51 مليار ريال.
                         </p>
                         <p class="sec-text w-lg-7 w-xs-100" data-aos="fade-up" data-aos-duration="700">
-                            و اســــتمرارا لرحلة الصندوق الصناعي في تنفيذ خططــــه التطويريــــة الطموحــــة و تطويــــر آليات العمــــل الداخلــــي و تنويــــع خدماتــــه و منتجاتــــه و برامجــــه لتطويــــر القطــــاع الصناعــــي، أطلــــق الصندوق نظام «واعي»، الذي أســــهم بنســــبة تجاوزت %80 في الرقمنة و تحسين العمليات الداخلية للمخاطر المؤسســــية و أتمتتها، إضافة إلــــى تعزيــــز كفاءة طــــرق التواصــــل الرقمي مع العــــملاء، و إطلاق نظــــام المراقبــــة الشــــاملة لخدمات تقنية المعلومات.
+                            واســــتمرارا لرحلة الصندوق الصناعي في تنفيذ خططــــه التطويريــــة الطموحــــة وتطويــــر آليات العمــــل الداخلــــي وتنويــــع خدماتــــه ومنتجاتــــه وبرامجــــه لتطويــــر القطــــاع الصناعــــي، أطلــــق الصندوق نظام «واعي»، الذي أســــهم بنســــبة تجاوزت %80 في الرقمنة وتحسين العمليات الداخلية للمخاطر المؤسســــية وأتمتتها، إضافة إلــــى تعزيــــز كفاءة طــــرق التواصــــل الرقمي مع العــــملاء، وإطلاق نظــــام المراقبــــة الشــــاملة لخدمات تقنية المعلومات.
                         </p>
                         <p class="sec-text w-lg-7 w-xs-100" data-aos="fade-up" data-aos-duration="700">
-                            و بلــــغ عدد المســــتفيدين من برامــــج أكاديمية الصندوق للعام 2023م (2,064) مســــتفيدا و مســــتفيدة، عبــــر التحاقهــــم بـــــ 68 برنامجــــا تدريبياً، التي قدمت بالشراكة مع أعرق الجهات التعليميــــة العالميــــة و الوطنيــــة الرائــــدة مثل: مركز ستانفورد للتطوير المهني، و مركز فيتش التعليمــــي، و جامعــــة الملــــك عبــــدالله للعلوم و التقنية، و غيرهــــا. كما خرجــــت الأكاديمية 45 طالبــــا و طالبة مــــن برنامــــج «نخــــب» لحديثي التخرج، منهــــم 8 متدربين من جهات منظومة الصناعة، و شــــملت إنجــــازات الأكاديمية للعام 2023م حصولهــــا علــــى الرخصــــة العامــــة للتدريب الإلكتروني من المركز الوطني للتعليم الإلكترونــــي. و قــــد تحققــــت هــــذه الإنجــــازات النوعيــــة فــــي الصنــــدوق بفضل مــــن الله، ثم بفضــــل قيادتنا الحكيمة التــــي هيأها الله لهذه البلاد، ولا يســــعني إلا أن أشــــكر جميع الجهات فــــي القطاعين العــــام و الخاص علــــى التكامل و العمــــل المشــــترك لتحقيــــق مســــتهدفات «رؤية الســــعودية 2030» فــــي تطوير و دعم الاقتصاد الوطني.
+                            وبلــــغ عدد المســــتفيدين من برامــــج أكاديمية الصندوق للعام 2023م (2,064) مســــتفيدا ومســــتفيدة، عبــــر التحاقهــــم بـــــ 68 برنامجــــا تدريبياً، التي قدمت بالشراكة مع أعرق الجهات التعليميــــة العالميــــة والوطنيــــة الرائــــدة مثل: مركز ستانفورد للتطوير المهني، ومركز فيتش التعليمــــي، وجامعــــة الملــــك عبــــدالله للعلوم والتقنية، وغيرهــــا. كما خرجــــت الأكاديمية 45 طالبــــا وطالبة مــــن برنامــــج «نخــــب» لحديثي التخرج، منهــــم 8 متدربين من جهات منظومة الصناعة، وشــــملت إنجــــازات الأكاديمية للعام 2023م حصولهــــا علــــى الرخصــــة العامــــة للتدريب الإلكتروني من المركز الوطني للتعليم الإلكترونــــي. وقــــد تحققــــت هــــذه الإنجــــازات النوعيــــة فــــي الصنــــدوق بفضل مــــن الله، ثم بفضــــل قيادتنا الحكيمة التــــي هيأها الله لهذه البلاد، ولا يســــعني إلا أن أشــــكر جميع الجهات فــــي القطاعين العــــام والخاص علــــى التكامل والعمــــل المشــــترك لتحقيــــق مســــتهدفات «رؤية الســــعودية 2030» فــــي تطوير ودعم الاقتصاد الوطني.
                         </p>
                         <p class="sec-text w-lg-7 w-xs-100" data-aos="fade-up" data-aos-duration="700">
-                            و فــــي الختــــام، أتوجــــه بأســــمى آيــــات الشــــكر و العرفــــان لمقــــام مــــولاي خــــادم الحرميــــن الشــــريفين الملك ســــلمان بن عبدالعزيز، و إلى ســــمو ســــيدي صاحب الســــمو الملكــــي الأمير محمد بن ســــلمان بــــن عبدالعزيز ولــــي العهد رئيس مجلــــس الوزراء - يحفظهمــــا الله - على دعمهمــــا الكبيــــر و المتواصل للقطاعــــات التي يســــتهدفها الصنــــدوق، حيــــث قــــادت رؤيتهما الحكيمة إلى تحقيق إنجازات تاريخية أســــهمت في تعزيــــز الاقتصاد الوطني، و الشــــكر موصول أيضــــا لجميع منســــوبي و منســــوبات الصندوق نظير جهودهــــم المميــــزة و الدؤوبــــة في رفعة و تقدم بلادنا الغالية.
+                            وفــــي الختــــام، أتوجــــه بأســــمى آيــــات الشــــكر والعرفــــان لمقــــام مــــولاي خــــادم الحرميــــن الشــــريفين الملك ســــلمان بن عبدالعزيز، وإلى ســــمو ســــيدي صاحب الســــمو الملكــــي الأمير محمد بن ســــلمان بــــن عبدالعزيز ولــــي العهد رئيس مجلــــس الوزراء - يحفظهمــــا الله - على دعمهمــــا الكبيــــر والمتواصل للقطاعــــات التي يســــتهدفها الصنــــدوق، حيــــث قــــادت رؤيتهما الحكيمة إلى تحقيق إنجازات تاريخية أســــهمت في تعزيــــز الاقتصاد الوطني، والشــــكر موصول أيضــــا لجميع منســــوبي ومنســــوبات الصندوق نظير جهودهــــم المميــــزة والدؤوبــــة في رفعة وتقدم بلادنا الغالية.
                         </p>
                     </div>
                 </div>
@@ -242,7 +252,7 @@
                             <li>
                                 <button type="button" class="btn" id="link-6">
                                     <span>06</span>
-                                    <span>التحول الرقمي و تقنية المعلومات</span>
+                                    <span>التحول الرقمي وتقنية المعلومات</span>
                                 </button>
                             </li>
                             <li>
@@ -300,7 +310,7 @@
                                         <i class='material-icons flex-center'>close</i>
                                     </button>
                                 </li>
-                                <li><a href="../eco-status/eco-status.html">اتجاهات و مؤشرات الأقتصاد المحلي </a></li>
+                                <li><a href="../eco-status/eco-status.html">اتجاهات ومؤشرات الأقتصاد المحلي </a></li>
                             </ul>
 
                             <ul class="child-menu" id="menu-4">
@@ -324,7 +334,7 @@
                                 <li><a href="../strategy/priorities.html">أولويات استراتيجية الصندوق 2023</a></li>
                                 <li><a href="../strategy/achievements.html">أهم الإنجازات في 2023</a></li>
                                 <li><a href="../strategy/indicators.html">مؤشــرات الأداء الرئيسية 2023م</a></li>
-                                <li><a href="../strategy/awards.html">جوائز و شهادات مُميّزة</a></li>
+                                <li><a href="../strategy/awards.html">جوائز وشهادات مُميّزة</a></li>
                             </ul>
 
                             <ul class="child-menu" id="menu-6">
@@ -336,7 +346,7 @@
                                 <li><a href="../digitalization/services.html">الخدمات الرقمية المقدمة</a></li>
                                 <li><a href="../digitalization/joureny.html">رحلة الصندوق في التحول الرقمي</a></li>
                                 <li><a href="../digitalization/technical-house.html">برنامج ترتيب البيت التقني</a></li>
-                                <li><a href="../digitalization/awards.html">شهادات استحقاق و تجديد الأيزو</a></li>
+                                <li><a href="../digitalization/awards.html">شهادات استحقاق وتجديد الأيزو</a></li>
                             </ul>
 
                             <ul class="child-menu" id="menu-7">
@@ -369,7 +379,7 @@
                                 <li><a href="../industrial-study/regional-indicators.html">المؤشرات الإقليمية الرئيسية</a></li>
                                 <li><a href="../industrial-study/ksa-market.html">حجم الطلب في السوق السعودي</a></li>
                                 <li><a href="../industrial-study/success-factors.html">عوامل النجاح</a></li>
-                                <li><a href="../industrial-study/challenges-opportunities.html">الفرص و التحديات</a></li>
+                                <li><a href="../industrial-study/challenges-opportunities.html">الفرص والتحديات</a></li>
                                 <li><a href="../industrial-study/conclusion.html">الخلاصة</a></li>
                             </ul>
 
@@ -394,7 +404,7 @@
                     <div class="step-1" id="step-1">
                         <div class="modal-header">
                             <div class="flex-between w-100">
-                                <h4 class="title">تحميل ملف الفصل 1</h4>
+                                <h4 class="title">تحميل ملف القسم 1</h4>
                                 <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
                                     <i class='material-icons flex-center'>close</i>
                                 </button>

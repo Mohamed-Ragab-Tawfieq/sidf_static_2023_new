@@ -93,41 +93,22 @@ window.addEventListener('scroll', function () {
     const header = document.getElementById('inner-header');
     const mobileHeader = document.getElementById('mobile-header');
 
-    const stickyHeader = header.offsetTop;
     const stickyMobileHeader = mobileHeader.offsetTop;
 
-    const progress = document.getElementById('sidf-navbar');
-    const aboutBrief = document.getElementById('first-section');
     const welcomeArrows = document.querySelector('.inner-top-img .arrows');
 
-    if (window.scrollY > stickyHeader) {
+    if (window.scrollY > 200) {
         header?.classList.add('sticky');
+        welcomeArrows?.classList.add('hide');
     } else {
         header?.classList.remove('sticky');
+        welcomeArrows?.classList.remove('hide');
     }
 
     if (window.scrollY > stickyMobileHeader) {
         mobileHeader?.classList.add('sticky');
     } else {
         mobileHeader?.classList.remove('sticky');
-    }
-
-    if (window.scrollY > stickyHeader + 300) {
-        aboutBrief?.classList.add('arrows-move');
-    } else {
-        aboutBrief?.classList.remove('arrows-move');
-    }
-
-    if ((window.scrollY > stickyHeader + 600) || ((window.scrollY > stickyHeader + 500) && (window.innerWidth < 1450)) || ((window.scrollY > stickyHeader + 200) && (window.innerWidth <= 1199))) {
-        progress?.classList.add('sticky');
-    } else {
-        progress?.classList.remove('sticky');
-    }
-
-    if (window.scrollY > 200) {
-        welcomeArrows?.classList.add('hide');
-    } else {
-        welcomeArrows?.classList.remove('hide');
     }
 })
 
