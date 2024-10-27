@@ -950,74 +950,74 @@
                 font-size: 1.75rem;
             }
         }
+    }
+}
 
-        .stars {
-            direction: ltr !important;
-            display: inline-block;
+.stars {
+    direction: ltr !important;
+    display: inline-block;
 
-            &.disabled {
-                pointer-events: none;
-            }
+    &.disabled {
+        pointer-events: none;
+    }
 
-            &.primary {
-                input {
-                    &:checked ~ label {
-                        background-image: url("../images/icons/stars/3.svg");
-                    }
-                }
-
-                input:checked + label:hover,
-                input:checked + label:hover ~ label,
-                label:hover,
-                label:hover ~ label {
-                    background-image: url("../images/icons/stars/3.svg");
-                }
-            }
-
-            &.gold {
-                input {
-                    &:checked ~ label {
-                        background-image: url("../images/icons/stars/4.svg");
-                    }
-                }
-
-                input:checked + label:hover,
-                input:checked + label:hover ~ label,
-                label:hover,
-                label:hover ~ label {
-                    background-image: url("../images/icons/stars/4.svg");
-                }
-            }
-
-            input {
-                display: none;
-
-                &:checked ~ label {
-                    background-image: url("../images/icons/stars/2.svg");
-                }
-            }
-
-            label {
-                width: 3.5rem;
-                height: 3.5rem;
-
-                background: url("../images/icons/stars/1.svg") no-repeat center / cover;
-                cursor: pointer;
-                display: inline-block;
-
-                @media (max-width: 1199px) {
-                    width: 2rem;
-                    height: 2rem;
-                }
-            }
-
-            input:checked + label:hover,
-            input:checked + label:hover ~ label,
-            label:hover,
-            label:hover ~ label {
-                background-image: url("../images/icons/stars/2.svg");
+    &.primary {
+        input {
+            &:checked ~ label {
+                background-image: url("../images/icons/stars/3.svg");
             }
         }
+
+        input:checked + label:hover,
+        input:checked + label:hover ~ label,
+        label:hover,
+        label:hover ~ label {
+            background-image: url("../images/icons/stars/3.svg");
+        }
+    }
+
+    &.gold {
+        input {
+            &:checked ~ label {
+                background-image: url("../images/icons/stars/4.svg");
+            }
+        }
+
+        input:checked + label:hover,
+        input:checked + label:hover ~ label,
+        label:hover,
+        label:hover ~ label {
+            background-image: url("../images/icons/stars/4.svg");
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked ~ label {
+            background-image: url("../images/icons/stars/2.svg");
+        }
+    }
+
+    label {
+        width: 3.5rem;
+        height: 3.5rem;
+
+        background: url("../images/icons/stars/1.svg") no-repeat center / cover;
+        cursor: pointer;
+        display: inline-block;
+
+        @media (max-width: 1199px) {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    input:checked + label:hover,
+    input:checked + label:hover ~ label,
+    label:hover,
+    label:hover ~ label {
+        background-image: url("../images/icons/stars/2.svg");
     }
 }
 
@@ -1119,6 +1119,20 @@
 
     &.gold {
         @extend .btn-gradient-gold;
+    }
+}
+
+.share-btn {
+    @extend .flex-center;
+
+    i {
+        font-size: 1.25rem;
+        opacity: 0.7;
+    }
+
+    &.end {
+        display: flex;
+        margin-inline-start: auto;
     }
 }
 

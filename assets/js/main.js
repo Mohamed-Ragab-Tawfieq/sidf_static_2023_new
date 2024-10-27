@@ -318,7 +318,27 @@ function handlePercent() {
         mainContent.innerHTML = mainContent.innerHTML.replace(/%(\d+(\.\d+)?)/g, '$1%');
     }
 }
-
 handlePercent()
 
+/*** tables export ***/
+function exportTableToCSV(tableId, filename) {
+    let csv = [];
+    const rows = document.querySelectorAll(`#${tableId} tr`);
 
+    rows.forEach(row => {
+        let rowData = [];
+        row.querySelectorAll("td, th").forEach(cell => {
+            rowData.push(cell.innerText);
+        });
+        csv.push(rowData.join(","));
+    });
+
+    const csvContent = "\uFEFF" + csv.join("\n");
+
+    const csvFile = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const downloadLink = document.createElement("a");
+
+    downloadLink.href = URL.createObjectURL(csvFile);
+    downloadLink.download = 'table';
+    downloadLink.click();
+}

@@ -233,6 +233,13 @@
                 background-color: $light-success;
             }
         }
+
+        .stars {
+            label {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
     }
 }
 

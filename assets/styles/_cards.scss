@@ -670,7 +670,7 @@
 
         margin-top: 0.5rem;
 
-        .star-rating {
+        .stars {
             label {
                 width: 0.88rem;
                 height: 0.88rem;
@@ -751,4 +751,10 @@
 .table-card {
     @extend .dash-card;
     border: radius 0.5rem;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

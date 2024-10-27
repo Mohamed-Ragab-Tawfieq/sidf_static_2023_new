@@ -725,10 +725,13 @@
                         </div>
 
                         <div class="table-card span-5">
-                            <h2 class="title">قائمة التحميلات</h2>
+                            <header>
+                                <h2 class="title">قائمة التحميلات</h2>
+                                <button class="btn share-btn" onclick="exportTableToCSV('table')"><i class='material-icons'>share</i></button>
+                            </header>
 
                             <div class="table-responsive">
-                                <table class="table dash-table">
+                                <table class="table dash-table" id="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">رقم الإقامة</th>
