@@ -419,8 +419,12 @@
 }
 
 .sec-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
+
+    .first-section & {
+        font-size: 4rem;
+    }
 
     &.text-success {
         color: $success-dark !important;
@@ -443,13 +447,14 @@
 
 .sec-text {
     font-size: 1.75rem;
+    line-height: 2.06rem;
     margin-top: 1.5rem;
     color: $gray-500;
     text-align: justify;
 
     @media (max-width: 1199px) {
         font-size: 1.13rem;
-        line-height: 20px;
+        line-height: 1.63rem;
     }
 }
 
@@ -1133,6 +1138,21 @@
     &.end {
         display: flex;
         margin-inline-start: auto;
+    }
+}
+
+.sec-img {
+    max-width: 100%;
+    border-start-start-radius: 1rem;
+    border-end-start-radius: 1rem;
+
+    @media (min-width: 1200px) {
+        position: absolute;
+        inset-inline-end: 0;
+    }
+
+    @media (max-width: 1199px) {
+        border-radius: 1rem;
     }
 }
 
@@ -2687,19 +2707,49 @@
 }
 
 .sec-9-5-1 {
+    position: relative;
+
     .sec-text-circle {
         margin-inline-start: 1rem;
     }
 
-    .img-fluid {
-        @media (min-width: 1200px) {
-            margin-top: -5rem;
-        }
+    .sec-img {
+        top: 100px;
     }
 }
 
 .sec-9-5-2 {
     .sec-text-circle {
         margin-inline-start: 1rem;
+    }
+}
+
+.sec-9-4-1 {
+    .counter-section {
+        grid-template-columns: auto 36vw;
+    }
+}
+
+.sec-9-7-1 {
+    .counter-section {
+        grid-template-columns: auto 30vw;
+    }
+
+    .sec-img {
+        top: 0;
+    }
+}
+
+.sec-9-8-1 {
+    position: relative;
+
+    .counter-section {
+        grid-template-columns: auto 28vw;
+
+        .img-fluid {
+            position: absolute;
+            inset-inline-end: 0;
+            top: 100px;
+        }
     }
 }
