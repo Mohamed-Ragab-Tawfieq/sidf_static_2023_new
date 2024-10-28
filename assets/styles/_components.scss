@@ -137,8 +137,20 @@
     background-color: $white;
     box-shadow: 0 5px 5px 0 rgba($black, 0.07);
 
+    @media (min-width: 1200px) and (max-width: 1450px) {
+        top: 94px;
+    }
+
+    @media (max-width: 1199px) {
+        top: 92px;
+    }
+
     @media (max-width: 1199px) {
         padding: 14px 4px 1px;
+    }
+
+    &.sticky {
+        border-top: 1px solid #eee;
     }
 
     &#sidf-navbar ul {
@@ -304,6 +316,10 @@
     display: grid;
     grid-template-columns: auto 26vw;
     gap: 3rem;
+
+    @media (min-width: 1200px) {
+        align-items: center;
+    }
 
     &.reverse {
         grid-template-columns: 26vw auto;
@@ -881,6 +897,18 @@
     z-index: 50;
     transition: all 0.5s ease-in-out;
 
+    &.primary {
+        .wrapper {
+            background-color: #19364b;
+        }
+    }
+
+    &.gold {
+        .wrapper {
+            background-color: #231b10;
+        }
+    }
+
     &.collapsed {
         inset-inline-end: -426px;
         transition: all 0.5s ease-in-out;
@@ -1028,26 +1056,13 @@
 
 .routing-links {
     nav {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
 
         @media (max-width: 1199px) {
-            flex-direction: column;
-        }
-
-        & > * {
             display: flex;
-            flex-grow: 1;
-        }
-
-        a {
-            &:first-of-type {
-                order: 3;
-            }
-
-            &:last-of-type {
-                order: 2;
-            }
+            flex-direction: column;
         }
     }
 
@@ -1056,47 +1071,72 @@
         flex-direction: column;
 
         border-radius: 1rem;
-        padding: 2.5rem;
+        padding: 1.88rem 2.25rem 1.5rem;
         text-align: start;
 
         @media (max-width: 1450px) {
-            padding: 1.75rem;
+            padding: 1.5rem;
         }
 
         @media (max-width: 1199px) {
             padding: 1.25rem;
         }
+    }
 
-        &.btn-success {
-            color: $white !important;
+    .home-link {
+        background-color: #f1f6ed;
+
+        .wrapper {
+            color: #6e6f72;
         }
 
-        &:last-of-type {
-            background-color: #e8e6e6;
+        .title {
+            color: #6e6f72;
         }
     }
 
-    .fs-2 {
+    .next-btn {
+        color: $white !important;
+    }
+
+    .prev-btn {
+        background-color: #e8e6e6;
+
+        .wrapper {
+            color: #6e6f72;
+        }
+
+        .title {
+            color: #6e6f72;
+        }
+    }
+
+    .wrapper {
         display: flex;
         align-items: center;
         gap: 0.25rem;
+        font-size: 1.5rem;
 
         @media (max-width: 1199px) {
             font-size: 1.13rem !important;
+        }
 
-            i {
-                font-size: 1rem !important;
+        img {
+            @media (max-width: 1199px) {
+                width: 0.88rem;
             }
         }
     }
 
-    .display-5 {
-        @media (max-width: 1450px) {
-            font-size: 2rem;
-        }
+    .title {
+        font-size: 2rem;
+        font-weight: 600;
 
         @media (max-width: 1199px) {
             font-size: 1.5rem;
+            width: fit-content;
+            line-height: 0.75;
+            border-bottom: 1px solid;
         }
     }
 }
@@ -1143,12 +1183,24 @@
 
 .sec-img {
     max-width: 100%;
+    max-height: 100%;
+
     border-start-start-radius: 1rem;
     border-end-start-radius: 1rem;
 
     @media (min-width: 1200px) {
         position: absolute;
         inset-inline-end: 0;
+
+        &.start {
+            inset-inline-end: auto;
+            inset-inline-start: 0;
+            z-index: -1;
+
+            border-radius: 0;
+            border-start-end-radius: 1rem;
+            border-end-end-radius: 1rem;
+        }
     }
 
     @media (max-width: 1199px) {
@@ -2053,10 +2105,31 @@
 }
 
 .sec-3-1-4 {
+    position: relative;
+
     @media (max-width: 1199px) {
         background: url("../images/logo/3.svg") no-repeat top 3.5rem center / 88%;
     }
-    .img-fluid {
+
+    .sec-img {
+        top: 0;
+
+        @media (max-width: 1199px) {
+            display: none;
+        }
+    }
+}
+
+.sec-3-1-5 {
+    position: relative;
+
+    @media (max-width: 1199px) {
+        background: url("../images/logo/3.svg") no-repeat top 3.5rem center / 88%;
+    }
+
+    .sec-img {
+        top: 0;
+
         @media (max-width: 1199px) {
             display: none;
         }
@@ -2064,7 +2137,7 @@
 }
 
 /************** 04 lending-activity **************/
-.sec-4-1-2 {
+.sec-4-1-1 {
     .graph-bars {
         .mt-n6 {
             @media (max-width: 1199px) {
@@ -2100,6 +2173,14 @@
     }
 }
 
+.sec-4-1-2 {
+    position: relative;
+
+    .sec-img {
+        top: 1rem;
+    }
+}
+
 .geo-map {
     @media (max-width: 1199px) {
         max-width: 100%;
@@ -2120,6 +2201,38 @@
                 fill: url("#hoverGradient");
             }
         }
+    }
+}
+
+.sec-4-2-2 {
+    .item {
+        background: url("../images/bars/bar-4.svg") no-repeat center / cover !important;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-inline: 20px 100px;
+
+        .purecounter {
+            font-size: 3rem;
+            font-weight: 700;
+            color: $primary;
+        }
+
+        .bar-unit {
+            color: $primary;
+            white-space: nowrap;
+        }
+    }
+
+    .number.purecounter {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $primary;
+        margin-top: 1.5rem;
     }
 }
 
@@ -2338,6 +2451,30 @@
     }
 }
 
+/************** 07 human **************/
+.sec-7-4-1 {
+    .sec-subtitle {
+        color: $success-dark;
+        margin-top: 2rem;
+    }
+
+    .sec-text {
+        margin-top: 0;
+    }
+
+    .wrapper {
+        @extend .grid-2;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 60vw auto;
+        margin-bottom: 2rem;
+
+        @media (min-width: 1200px) {
+            align-items: center;
+        }
+    }
+}
+
 /************** 08 50 years **************/
 .sec-8-1-1 {
     .counter-section {
@@ -2531,18 +2668,35 @@
     }
 
     .counter-section {
-        grid-template-columns: 1fr 40%;
+        grid-template-columns: 50vw 1fr;
+    }
+
+    .apexcharts-legend {
+        @media (min-width: 1200px) {
+            overflow: visible;
+            flex-wrap: nowrap !important;
+        }
+    }
+
+    .apexcharts-legend-text {
+        @media (min-width: 1200px) {
+            white-space: nowrap;
+        }
     }
 
     .chart-wrapper {
         position: relative;
 
-        width: 470px;
-        height: 470px;
+        width: 370px;
+        height: 370px;
 
         @media (max-width: 1199px) {
             width: 350px;
             height: 350px;
+        }
+
+        @media (min-width: 1200px) {
+            margin-inline-start: auto;
         }
 
         .chart-circle {
@@ -2592,7 +2746,7 @@
 
         & + .description {
             color: $success;
-            max-width: 470px;
+            max-width: 370px;
             text-align: center;
 
             font-size: 1.75rem;
@@ -2600,6 +2754,11 @@
 
             @media (max-width: 1199px) {
                 font-size: 1.13rem;
+            }
+
+            @media (min-width: 1200px) {
+                margin-inline-start: auto;
+                margin-top: -2rem;
             }
         }
     }
@@ -2741,14 +2900,10 @@
 }
 
 .sec-9-8-1 {
-    position: relative;
-
     .counter-section {
         grid-template-columns: auto 28vw;
 
-        .img-fluid {
-            position: absolute;
-            inset-inline-end: 0;
+        .sec-img {
             top: 100px;
         }
     }

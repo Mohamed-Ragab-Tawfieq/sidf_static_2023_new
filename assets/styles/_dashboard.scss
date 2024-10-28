@@ -213,6 +213,8 @@
 }
 
 .dash-table {
+    margin-top: 0;
+
     th {
         @extend .btn-gradient;
         padding-block: 0.35rem !important;

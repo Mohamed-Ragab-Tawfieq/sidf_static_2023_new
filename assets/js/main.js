@@ -93,22 +93,16 @@ window.addEventListener('scroll', function () {
     const header = document.getElementById('inner-header');
     const mobileHeader = document.getElementById('mobile-header');
 
-    const stickyMobileHeader = mobileHeader.offsetTop;
-
     const welcomeArrows = document.querySelector('.inner-top-img .arrows');
 
     if (window.scrollY > 200) {
         header?.classList.add('sticky');
+        mobileHeader?.classList.add('sticky');
         welcomeArrows?.classList.add('hide');
     } else {
         header?.classList.remove('sticky');
-        welcomeArrows?.classList.remove('hide');
-    }
-
-    if (window.scrollY > stickyMobileHeader) {
-        mobileHeader?.classList.add('sticky');
-    } else {
         mobileHeader?.classList.remove('sticky');
+        welcomeArrows?.classList.remove('hide');
     }
 })
 
@@ -341,4 +335,64 @@ function exportTableToCSV(tableId, filename) {
     downloadLink.href = URL.createObjectURL(csvFile);
     downloadLink.download = 'table';
     downloadLink.click();
+}
+
+/*** cards export ***/
+function generateCSV() {
+    const rows = [['رقم القسم', 'عنوان القسم', 'عنوان الصفحة', 'الإجمالي', 'نسبة التغيير', 'إجمالي اليوم']];
+    const cards = document.querySelectorAll('.dots-card'); // Select each card section
+    const fileName = document.querySelector('.dash-title').innerHTML
+
+    cards.forEach(card => {
+        const sectionNumber = card.querySelector('header .number').textContent.trim();
+
+        card.querySelectorAll('.data-content').forEach(content => {
+            const sectionTitle = content.querySelector('.main-title') ? content.querySelector('.main-title').textContent.trim() : '';
+            const pageTitle = content.querySelector('.subtitle') ? content.querySelector('.subtitle').textContent.trim() : '';
+            const number = content.querySelector('.number.purecounter') ? content.querySelector('.number.purecounter').getAttribute('data-purecounter-end') : '';
+            const counterPercent = content.querySelector('.counter-percent') ? content.querySelector('.counter-percent').getAttribute('data-purecounter-end') : '';
+            const counterPlus = content.querySelector('.counter-plus') ? content.querySelector('.counter-plus').getAttribute('data-purecounter-end') : '';
+
+            rows.push([sectionNumber, sectionTitle, pageTitle, number, counterPercent, counterPlus]);
+        });
+    });
+
+    let csvContent = "\uFEFF" + rows.map(e => e.join(",")).join("\n");
+
+    const encodedUri = encodeURI("data:text/csv;charset=utf-8," + csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", fileName);
+    document.body.appendChild(link); // Required for Firefox
+    link.click();
+}
+
+function generateRateCSV() {
+    const rows = [['رقم القسم', 'عنوان القسم', 'عنوان الصفحة', 'التقييم', 'عدد المشاركين', 'نسبة التغيير', 'إجمالي اليوم']];
+    const cards = document.querySelectorAll('.dots-card');
+    const fileName = document.querySelector('.dash-title').innerHTML
+
+    cards.forEach(card => {
+        const sectionNumber = card.querySelector('header .number').textContent.trim();
+
+        card.querySelectorAll('.data-content').forEach(content => {
+            const sectionTitle = content.querySelector('.main-title') ? content.querySelector('.main-title').textContent.trim() : '';
+            const subtitle = content.querySelector('.subtitle') ? content.querySelector('.subtitle').textContent.trim() : '';
+            const rateValue = content.querySelector('.number.purecounter') ? content.querySelector('.number.purecounter').getAttribute('data-purecounter-end') : '';
+            const rateTotal = content.querySelector('.rate-total') ? content.querySelector('.rate-total').getAttribute('data-purecounter-end') : '';
+            const counterPercent = content.querySelector('.counter-percent') ? content.querySelector('.counter-percent').getAttribute('data-purecounter-end') : '';
+            const counterPlus = content.querySelector('.counter-plus') ? content.querySelector('.counter-plus').getAttribute('data-purecounter-end') : '';
+
+            rows.push([sectionNumber, sectionTitle, subtitle, rateValue, rateTotal, counterPercent, counterPlus]);
+        });
+    });
+
+    let csvContent = "\uFEFF" + rows.map(e => e.join(",")).join("\n");
+
+    const encodedUri = encodeURI("data:text/csv;charset=utf-8," + csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", fileName);
+    document.body.appendChild(link); // Required for Firefox
+    link.click();
 }

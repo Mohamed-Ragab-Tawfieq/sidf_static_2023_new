@@ -18,12 +18,12 @@
             <div class="container">
                 <nav class="flex-between flex-row">
                     <div class="flex-y-row gap-2">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" width="36" alt="menu"></button>
 
-                        <a href="../index.html"><img src="../assets/images/logo.svg" width="140" alt="logo"></a>
+                        <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" width="200" alt="logo"></a>
                     </div>
 
-                    <h2 class="site-name"><a href="../index.html">التقــرير السنوي 2023</a></h2>
+                    <h2 class="site-name"><a href="../index.html" class="logo">التقــرير السنوي 2023</a></h2>
 
                     <div class="flex-between">
                         <button type="button" class="btn download-btn primary" data-bs-toggle="modal" data-bs-target="#downloadModal">
@@ -40,7 +40,7 @@
         <header class="mobile-header collapsed" id="mobile-header">
             <div class="container">
                 <nav>
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" width="36" alt="menu"></button>
                     <a href="index.html"><img src="../assets/images/logo.svg" width="140" class="logo" alt="logo"></a>
                     <button class="btn"><img src="../assets/images/icons/search.svg" alt="search"></button>
                 </nav>
@@ -101,7 +101,7 @@
                     </div>
 
                     <div class="counter-section">
-                        <div>
+                        <div class="w-lg-9">
                             <p class="sec-text" data-aos="fade-up" data-aos-duration="700">
                                 حقق صندوق التنمية الصناعية الســــعودي إنجازات رائدة في رحلــــة التحول الرقمــــي خلال عام 2023، حيث قام بتبســــيط العمليات من خلال الأتمتة، وكشــــف عــــن رؤى قابلة للتنفيذ بفضــــل تحليل البيانات، وعزز مشــــاركة العــــمال. وخلال عام 2024م، سيســــتمر الصندوق على تعزيز وتطوير العالقة بين قطاعات الأعمال وتقنية المعلومات للمساهمة في الأبتكار، واســــتخدام التقنيــــات المتطــــورة لتحســــين المرونــــة والقوة التنافســــية. وبالتعاون مــــع قطاعات الأعمال، تــــم تنفيذ عدة مشاريع رئيسية كجزء من برنامج ترتيب البيت التقني.
                             </p>
@@ -111,7 +111,7 @@
                             </p>
                         </div>
 
-                        <img src="../assets/images/pages/digitalization/1.png" class="img-fluid rounded-4" width="418" height="290" alt="conference" data-aos="flip-left" data-aos-duration="700">
+                        <img src="../assets/images/pages/digitalization/1.png" class="sec-img" width="548" height="347" alt="conference" data-aos="flip-left" data-aos-duration="700">
                     </div>
                 </div>
             </section>
@@ -257,7 +257,7 @@
             </section>
 
             <!-- rating -->
-            <div class="rating collapsed">
+            <div class="rating collapsed primary">
                 <button class="btn wrapper" onclick="toggleRate()">
                     <img src="../assets/images/icons/user-star-01.svg" class="white-img" alt="user star">
                     <img src="../assets/images/icons/close.svg" class="close-btn" alt="close">
@@ -266,7 +266,7 @@
 
                 <div class="star-rating" id="star-rating">
                     <h5 class="title">ما مدي رضاءك عن التقرير؟</h5>
-                    <div class="stars">
+                    <div class="stars primary">
                         <input type="radio" name="rating" id="rating-1"><label for="rating-1"></label>
                         <input type="radio" name="rating" id="rating-2"><label for="rating-2"></label>
                         <input type="radio" name="rating" id="rating-3"><label for="rating-3"></label>
@@ -280,7 +280,7 @@
             <section class="sec-padding routing-links">
                 <div class="container">
                     <nav>
-                        <div class="visitors">
+                        <div class="home-link">
                             <div class="grid-icon mt-2">
                                 <img src="../assets/images/icons/eye.svg" class="mt-2" alt="eye">
                                 <h2 class="title">عدد الزائرين</h2>
@@ -288,20 +288,20 @@
                             </div>
                         </div>
 
-                        <a href="" class="btn btn-primary">
-                            <span class="fs-2">
-                                <i class='material-icons fs-5'> format_indent_decrease </i>
+                        <a href="" class="btn btn-primary next-btn">
+                            <span class="wrapper">
+                                <img src="../assets/images/icons/next.svg" alt="next">
                                 الموضوع التالي
                             </span>
-                            <span class="display-5 fw-6" id="next-page">البرامج والمنتجات التمويلية</span>
+                            <span class="title" id="next-page">البرامج والمنتجات التمويلية</span>
                         </a>
 
-                        <a href="" class="btn">
-                            <span class="op-7 fs-2">
-                                <i class='material-icons fs-5'> format_indent_increase </i>
+                        <a href="" class="btn prev-btn">
+                            <span class="wrapper">
+                                <img src="../assets/images/icons/prev.svg" alt="next">
                                 الموضوع السابق
                             </span>
-                            <span class="op-7 display-5 fw-6" id="prev-page">كلمة سعادة الرئيس التنفيذي </span>
+                            <span class="title" id="prev-page">كلمة سعادة الرئيس التنفيذي </span>
                         </a>
                     </nav>
                 </div>

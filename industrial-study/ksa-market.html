@@ -18,12 +18,12 @@
             <div class="container">
                 <nav class="flex-between flex-row">
                     <div class="align-items-center gap-2" style="display: grid; grid-template-columns: 45px 1fr;">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" width="36" alt="menu"></button>
 
-                        <a href="../index.html"><img src="../assets/images/logo.svg" width="140" alt="logo"></a>
+                        <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" width="200" alt="logo"></a>
                     </div>
 
-                    <h2 class="site-name"><a href="../index.html">التقــرير السنوي 2023</a></h2>
+                    <h2 class="site-name"><a href="../index.html" class="logo">التقــرير السنوي 2023</a></h2>
 
                     <div class="flex-between">
                         <button type="button" class="btn download-btn" data-bs-toggle="modal" data-bs-target="#downloadModal">
@@ -40,7 +40,7 @@
         <header class="mobile-header collapsed" id="mobile-header">
             <div class="container">
                 <nav>
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" width="36" alt="menu"></button>
                     <a href="index.html"><img src="../assets/images/logo.svg" width="140" class="logo" alt="logo"></a>
                     <button class="btn"><img src="../assets/images/icons/search.svg" alt="search"></button>
                 </nav>
@@ -175,10 +175,6 @@
                             <p class="sec-text" data-aos="fade-up" data-aos-duration="700">
                                 شهد الطلب المحلي نموًا بمعدل سنوي مركب بلغ 9% خلال الفترة من 2020 إلـــي 2023, مدفوعًا بالمشاريع الصناعية وأبراج نقل الطاقة والتخزين ومشــــاريع البنية التحتية. وقد أدى هذا النمو إلى زيادة بمعدل ســــنوي مركــــب قدره %12 في كل من المبيعــــات المحلية والصــــادرات، ممــــا نتج عنه ارتفــــاع في الإنتاج المحلي بمعدل ســــنوي مركــــب قدره %12، مع معدل استغلال %69 من إجمالي الطاقة الإنتاجية خلال عــــام 2023. على الرغــــم من هذا النمو القــــوي، إلا أن الواردات قــــد ارتفعت أيضًا بمعدل ســــنوي مركب تجــــاوز %6، مدفوعة بالمشــــاريع الضخمة التــــي تتطلب أحجاما ثقيلــــة من المقاطع الفولاذية غيــــر المتوافرة محليًا. وتصنف الألــــواح الفولاذية إلى ثالثــــة أحجام: خفيــــف( 80< مم)، ومتوســــط ( 80 مم - 200 مــــم)، وثقيل (> 200 مم.) يوضح الرســــم البياني التالي توزيع السوق حسب الحجم في عام 2023:
                             </p>
-
-                            <p class="sec-text" data-aos="fade-up" data-aos-duration="700">
-                                من حيث تصنيــــف المنتجات، تعتبر العــــوارض المنتج الأكثر طلبًا في ســــوق الألــــواح الفولاذية بنســــبة %50 تقريبًا. يوضح الرســــم البيانــــي التالــــي توزيع المنتجــــات في الســــوق المحلي خلال عام 2023:
-                            </p>
                         </div>
 
                         <div>
@@ -193,9 +189,14 @@
                         </div>
                     </div>
 
+
+                    <p class="sec-text w-lg-6" data-aos="fade-up" data-aos-duration="700">
+                        من حيث تصنيــــف المنتجات، تعتبر العــــوارض المنتج الأكثر طلبًا في ســــوق الألــــواح الفولاذية بنســــبة %50 تقريبًا. يوضح الرســــم البيانــــي التالــــي توزيع المنتجــــات في الســــوق المحلي خلال عام 2023:
+                    </p>
+
                     <div class="graph-bars vertical" data-aos="fade-up" data-aos-duration="700">
                         <div class="wrapper">
-                            <h2 class="sec-text text-success fw-5 text-center" data-aos="fade-up" data-aos-duration="700">حجم سوق ألواح الفولاذ حسب المنتج - 2023</h2>
+                            <h2 class="sec-text text-success fw-5" data-aos="fade-up" data-aos-duration="700">حجم سوق ألواح الفولاذ حسب المنتج - 2023</h2>
                             <div class="four-bars">
                                 <div>
                                     <h2 class="bar-number purecounter counter-percent" data-purecounter-end="50"></h2>
@@ -315,7 +316,7 @@
             <section class="sec-padding routing-links">
                 <div class="container">
                     <nav>
-                        <div class="visitors">
+                        <div class="home-link">
                             <div class="grid-icon mt-2">
                                 <img src="../assets/images/icons/eye.svg" class="mt-2" alt="eye">
                                 <h2 class="title">عدد الزائرين</h2>
@@ -323,20 +324,20 @@
                             </div>
                         </div>
 
-                        <a href="" class="btn btn-success">
-                            <span class="fs-2">
-                                <i class='material-icons fs-5'> format_indent_decrease </i>
+                        <a href="" class="btn btn-success next-btn">
+                            <span class="wrapper">
+                                <img src="../assets/images/icons/next.svg" alt="next">
                                 الموضوع التالي
                             </span>
-                            <span class="display-5 fw-6" id="next-page">البرامج والمنتجات التمويلية</span>
+                            <span class="title" id="next-page">البرامج والمنتجات التمويلية</span>
                         </a>
 
-                        <a href="" class="btn">
-                            <span class="op-7 fs-2">
-                                <i class='material-icons fs-5'> format_indent_increase </i>
+                        <a href="" class="btn prev-btn">
+                            <span class="wrapper">
+                                <img src="../assets/images/icons/prev.svg" alt="next">
                                 الموضوع السابق
                             </span>
-                            <span class="op-7 display-5 fw-6" id="prev-page">كلمة سعادة الرئيس التنفيذي </span>
+                            <span class="title" id="prev-page">كلمة سعادة الرئيس التنفيذي </span>
                         </a>
                     </nav>
                 </div>
@@ -594,15 +595,15 @@
                 series: [31, 27, 42],
                 chart: {
                     type: 'pie',
-                    height: 470,
-                    width: 470
+                    height: 370,
+                    width: 370
                 },
                 labels: ['خفيفة', 'ثقيلة', 'متوسطة'],
                 responsive: [{
                     breakpoint: 1199,
                     options: {
                         chart: {
-                            width: 350
+                            width: 300
                         },
                         legend: {
                             position: 'bottom'

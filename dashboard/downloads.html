@@ -44,7 +44,7 @@
 
             <div class="dash-content">
                 <header class="dash-header">
-                    <button class="btn toggle-btn" onclick="toggleMobileMenu()"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+                    <button class="btn toggle-btn" onclick="toggleMobileMenu()"><img src="../assets/images/icons/menu.svg" width="36" alt="menu"></button>
                     <div class="empty"></div>
                     <h2 class="title"><a href="home.html">لوحة التحكم للتقــرير التفاعلي 2023</a></h2>
                     <img src="../assets/images/logo.svg" width="95" class="img-fluid logo" alt="logo">
@@ -61,7 +61,7 @@
                             </h1>
                         </div>
 
-                        <button class="btn download-btn">
+                        <button class="btn download-btn" onclick="generateCSV()">
                             تحميل ملف excel
                             <img src="/assets/images/icons/download-04.svg" class="white-img" alt="download">
                         </button>
@@ -743,7 +743,10 @@
                                 <table class="table dash-table" id="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">رقم الإقامة</th>
+                                            <th scope="col">رقم تسلسلي</th>
+                                            <th scope="col">الأسم</th>
+                                            <th scope="col">جهة العمل</th>
+                                            <th scope="col">المنطقة</th>
                                             <th scope="col">القسم</th>
                                             <th scope="col">التاريخ</th>
                                             <th scope="col">الوقت</th>
@@ -752,38 +755,38 @@
 
                                     <tbody>
                                         <tr>
-                                            <td>342323423232</td>
-                                            <td>اتجاهات ومؤشرات الأقتصاد المحلي</td>
+                                            <td>01</td>
+                                            <td>أحمد محمد محمود</td>
+                                            <td>المعاشات و التأمينات</td>
+                                            <td>الرياض</td>
+                                            <td>أتجاهات و مؤشرات الأقتصاد المحلي</td>
                                             <td>12 ديسمبر</td>
                                             <td>12:02 PM</td>
                                         </tr>
                                         <tr>
-                                            <td>342323423232</td>
-                                            <td>اتجاهات ومؤشرات الأقتصاد المحلي</td>
+                                            <td>02</td>
+                                            <td>أحمد محمد محمود</td>
+                                            <td>المعاشات و التأمينات</td>
+                                            <td>الرياض</td>
+                                            <td>أتجاهات و مؤشرات الأقتصاد المحلي</td>
                                             <td>12 ديسمبر</td>
                                             <td>12:02 PM</td>
                                         </tr>
                                         <tr>
-                                            <td>342323423232</td>
-                                            <td>اتجاهات ومؤشرات الأقتصاد المحلي</td>
+                                            <td>03</td>
+                                            <td>أحمد محمد محمود</td>
+                                            <td>المعاشات و التأمينات</td>
+                                            <td>الرياض</td>
+                                            <td>أتجاهات و مؤشرات الأقتصاد المحلي</td>
                                             <td>12 ديسمبر</td>
                                             <td>12:02 PM</td>
                                         </tr>
                                         <tr>
-                                            <td>342323423232</td>
-                                            <td>اتجاهات ومؤشرات الأقتصاد المحلي</td>
-                                            <td>12 ديسمبر</td>
-                                            <td>12:02 PM</td>
-                                        </tr>
-                                        <tr>
-                                            <td>342323423232</td>
-                                            <td>اتجاهات ومؤشرات الأقتصاد المحلي</td>
-                                            <td>12 ديسمبر</td>
-                                            <td>12:02 PM</td>
-                                        </tr>
-                                        <tr>
-                                            <td>342323423232</td>
-                                            <td>اتجاهات ومؤشرات الأقتصاد المحلي</td>
+                                            <td>04</td>
+                                            <td>أحمد محمد محمود</td>
+                                            <td>المعاشات و التأمينات</td>
+                                            <td>الرياض</td>
+                                            <td>أتجاهات و مؤشرات الأقتصاد المحلي</td>
                                             <td>12 ديسمبر</td>
                                             <td>12:02 PM</td>
                                         </tr>

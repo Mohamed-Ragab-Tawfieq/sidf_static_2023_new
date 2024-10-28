@@ -71,21 +71,9 @@
     }
 
     .lang-btn {
-        font-size: 1.3rem;
+        font-size: 1.75rem;
         font-weight: 500;
         padding-inline: 0.25rem;
-    }
-}
-
-.mobile-header {
-    padding-block: 0.7rem;
-
-    @media (min-width: 1200px) and (max-width: 1450px) {
-        padding-block: 0.5rem;
-    }
-
-    @media (min-width: 992px) {
-        display: none;
     }
 }
 
@@ -148,6 +136,17 @@
 
     @media (max-width: 1199px) {
         display: none;
+    }
+
+    .logo {
+        margin-inline-start: 1rem;
+    }
+
+    .site-name {
+        a {
+            font-size: 1.88rem;
+            font-weight: 600;
+        }
     }
 }
 
