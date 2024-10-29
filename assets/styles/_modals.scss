@@ -329,8 +329,8 @@
                     padding: 0;
                     color: $white;
 
-                    display: flex;
-                    margin-inline-start: auto;
+                    position: absolute;
+                    inset-inline-end: 8px;
                 }
 
                 li {

@@ -218,7 +218,7 @@ $(document).ready(function () {
         $('#next-page').parent().attr('href', nextHref);
 
         if ($('#sidf-navbar .nav-item:last-of-type .active').length) {
-            $('.routing-links a:first-of-type').attr('style', 'display: none !important');
+            $('.routing-links .next-btn').attr('style', 'display: none !important');
         }
 
         if ($('#sidf-navbar .nav-item').length === 1) {
@@ -234,7 +234,7 @@ $(document).ready(function () {
 
 
         if ($('#sidf-navbar .nav-item:first-of-type .active').length) {
-            $('.routing-links a:last-of-type').attr('style', 'display: none !important');
+            $('.routing-links .prev-btn').attr('style', 'display: none !important');
         }
     }
 });

@@ -53,19 +53,9 @@
 
                 <main id="dash-main">
                     <div class="grid-2">
-                        <div class="dash-card">
-                            <h2 class="title">التحميلات لكل قسم</h2>
-                            <div id="downloadsChart"></div>
-                        </div>
-
-                        <div class="dash-card">
-                            <h2 class="title">التقييمات لكل قسم</h2>
-                            <div id="rateChart"></div>
-                        </div>
-
                         <div class="dash-card total span-2">
                             <header>
-                                <h2 class="title">التحميلات لكل قسم</h2>
+                                <h2 class="title">احصائيات التحميلات</h2>
 
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="nav-item" role="presentation">
@@ -101,6 +91,17 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="dash-card">
+                            <h2 class="title">احصائيات الزائرين</h2>
+                            <div id="downloadsChart"></div>
+                        </div>
+
+                        <div class="dash-card">
+                            <h2 class="title">احصائيات التقييمات</h2>
+                            <div id="rateChart"></div>
+                        </div>
+
                     </div>
                 </main>
             </div>
@@ -110,7 +111,251 @@
         <script src="../assets/vendors/jquery.min.js"></script>
         <script src="../assets/vendors/apexcharts.js"></script>
 
-        <!-- downloads -->
+        <!-- day downloads -->
+        <script>
+            var dayChartOptions = {
+                series: [{
+                    data: [340, 340, 410, 350, 305, 220, 305, 350, 210, 290]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    toolbar: {
+                        tools: {
+                            download: false
+                        }
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        borderRadius: window.innerWidth >= 1200 ? 10 : 2,
+                        horizontal: false,
+                        columnWidth: '38%',
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                xaxis: {
+                    categories: ['لمحة عن الصندوق', 'أبرز الأرقام', 'مؤشرات الأقتصاد', 'النشاط الإقراضي', 'استراتيجية الصندوق', 'التحول الرقمي', 'تنمية القدرات البشرية', '50 عامًا', 'دراسة صناعية', 'إحصاءات النشاط الاقراضي'],
+                    position: 'bottom',
+
+                },
+                yaxis: {
+                    labels: {
+                        formatter: function (value) {
+                            return value.toFixed(0);
+                        }
+                    },
+                    min: 0,
+                    max: 700,
+                    tickAmount: 7,
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        type: "vertical",
+                        gradientToColors: ['#386732'], // Ending color
+                        stops: [0, 100]
+                    }
+                },
+                colors: ['#66bb6a'],
+                grid: {
+                    show: true,
+                    borderColor: '#e7e7e7',
+                    strokeDashArray: 4,
+                },
+            };
+
+            const dayChart = new ApexCharts(document.querySelector("#dayChart"), dayChartOptions);
+            dayChart.render();
+        </script>
+
+        <!-- week downloads -->
+        <script>
+            var weekChartOptions = {
+                series: [{
+                    data: [340, 340, 410, 350, 305, 220, 305, 350, 210, 290]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    toolbar: {
+                        tools: {
+                            download: "<i class='material-icons'>more_vert</i>",
+                        }
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        borderRadius: 10,
+                        horizontal: false,
+                        columnWidth: '38%',
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                xaxis: {
+                    categories: ['لمحة عن الصندوق', 'أبرز الأرقام', 'مؤشرات الأقتصاد', 'النشاط الإقراضي', 'استراتيجية الصندوق', 'التحول الرقمي', 'تنمية القدرات البشرية', '50 عامًا', 'دراسة صناعية', 'إحصاءات النشاط الاقراضي'],
+                    position: 'bottom',
+
+                },
+                yaxis: {
+                    labels: {
+                        formatter: function (value) {
+                            return value.toFixed(0);
+                        }
+                    },
+                    min: 0,
+                    max: 700,
+                    tickAmount: 7,
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        type: "vertical",
+                        gradientToColors: ['#386732'], // Ending color
+                        stops: [0, 100]
+                    }
+                },
+                colors: ['#66bb6a'],
+                grid: {
+                    show: true,
+                    borderColor: '#e7e7e7',
+                    strokeDashArray: 4,
+                },
+            };
+
+            const weekChart = new ApexCharts(document.querySelector("#weekChart"), weekChartOptions);
+            weekChart.render();
+        </script>
+
+        <!-- month downloads -->
+        <script>
+            var monthChartOptions = {
+                series: [{
+                    data: [340, 340, 410, 350, 305, 220, 305, 350, 210, 290]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    toolbar: {
+                        tools: {
+                            download: "<i class='material-icons'>more_vert</i>",
+                        }
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        borderRadius: 10,
+                        horizontal: false,
+                        columnWidth: '38%',
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                xaxis: {
+                    categories: ['لمحة عن الصندوق', 'أبرز الأرقام', 'مؤشرات الأقتصاد', 'النشاط الإقراضي', 'استراتيجية الصندوق', 'التحول الرقمي', 'تنمية القدرات البشرية', '50 عامًا', 'دراسة صناعية', 'إحصاءات النشاط الاقراضي'],
+                    position: 'bottom',
+
+                },
+                yaxis: {
+                    labels: {
+                        formatter: function (value) {
+                            return value.toFixed(0);
+                        }
+                    },
+                    min: 0,
+                    max: 700,
+                    tickAmount: 7,
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        type: "vertical",
+                        gradientToColors: ['#386732'], // Ending color
+                        stops: [0, 100]
+                    }
+                },
+                colors: ['#66bb6a'],
+                grid: {
+                    show: true,
+                    borderColor: '#e7e7e7',
+                    strokeDashArray: 4,
+                },
+            };
+
+            const monthChart = new ApexCharts(document.querySelector("#monthChart"), monthChartOptions);
+            monthChart.render();
+        </script>
+
+        <!-- year downloads -->
+        <script>
+            var yearChartOptions = {
+                series: [{
+                    data: [340, 340, 410, 350, 305, 220, 305, 350, 210, 290]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    toolbar: {
+                        tools: {
+                            download: "<i class='material-icons'>more_vert</i>",
+                        }
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        borderRadius: 10,
+                        horizontal: false,
+                        columnWidth: '38%',
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                xaxis: {
+                    categories: ['لمحة عن الصندوق', 'أبرز الأرقام', 'مؤشرات الأقتصاد', 'النشاط الإقراضي', 'استراتيجية الصندوق', 'التحول الرقمي', 'تنمية القدرات البشرية', '50 عامًا', 'دراسة صناعية', 'إحصاءات النشاط الاقراضي'],
+                    position: 'bottom',
+
+                },
+                yaxis: {
+                    labels: {
+                        formatter: function (value) {
+                            return value.toFixed(0);
+                        }
+                    },
+                    min: 0,
+                    max: 700,
+                    tickAmount: 7,
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        type: "vertical",
+                        gradientToColors: ['#386732'], // Ending color
+                        stops: [0, 100]
+                    }
+                },
+                colors: ['#66bb6a'],
+                grid: {
+                    show: true,
+                    borderColor: '#e7e7e7',
+                    strokeDashArray: 4,
+                },
+            };
+
+            const yearChart = new ApexCharts(document.querySelector("#yearChart"), yearChartOptions);
+            yearChart.render();
+        </script>
+
+        <!-- visitors -->
         <script>
             var downloadsChartOptions = {
                 series: [634, 654, 12343, 565, 898, 443, 85, 9, 231, 1265],
@@ -127,7 +372,7 @@
                         }
                     }
                 },
-                labels: ['القسم 1', 'القسم 2', 'القسم 3', 'القسم 4', 'القسم 5', 'القسم 6', 'القسم 7', 'القسم 8', 'القسم 9', 'القسم 10'],
+                labels: ['لمحة عن الصندوق', 'أبرز الأرقام', 'مؤشرات الأقتصاد', 'النشاط الإقراضي', 'استراتيجية الصندوق', 'التحول الرقمي', 'تنمية القدرات البشرية', '50 عامًا', 'دراسة صناعية', 'إحصاءات النشاط الاقراضي'],
                 responsive: [{
                     breakpoint: 1450,
                     options: {
@@ -203,7 +448,7 @@
                         }
                     }
                 },
-                labels: ['القسم 1', 'القسم 2', 'القسم 3', 'القسم 4', 'القسم 5', 'القسم 6', 'القسم 7', 'القسم 8', 'القسم 9', 'القسم 10'],
+                labels: ['لمحة عن الصندوق', 'أبرز الأرقام', 'مؤشرات الأقتصاد', 'النشاط الإقراضي', 'استراتيجية الصندوق', 'التحول الرقمي', 'تنمية القدرات البشرية', '50 عامًا', 'دراسة صناعية', 'إحصاءات النشاط الاقراضي'],
                 responsive: [{
                     breakpoint: 1450,
                     options: {
@@ -260,250 +505,6 @@
 
             const rateChart = new ApexCharts(document.querySelector("#rateChart"), rateChartOptions);
             rateChart.render();
-        </script>
-
-        <!-- day downloads -->
-        <script>
-            var dayChartOptions = {
-                series: [{
-                    data: [340, 340, 410, 350, 305, 220, 305, 350, 210, 290]
-                }],
-                chart: {
-                    type: 'bar',
-                    height: 350,
-                    toolbar: {
-                        tools: {
-                            download: "<i class='material-icons'>more_vert</i>",
-                        }
-                    }
-                },
-                plotOptions: {
-                    bar: {
-                        borderRadius: window.innerWidth >= 1200 ? 10 : 2,
-                        horizontal: false,
-                        columnWidth: '38%',
-                    }
-                },
-                dataLabels: {
-                    enabled: false
-                },
-                xaxis: {
-                    categories: ['القسم 10', 'القسم 9', 'القسم 8', 'القسم 7', 'القسم 6', 'القسم 5', 'القسم 4', 'القسم 3', 'القسم 2', 'القسم 1'],
-                    position: 'bottom',
-
-                },
-                yaxis: {
-                    labels: {
-                        formatter: function (value) {
-                            return value.toFixed(0);
-                        }
-                    },
-                    min: 0,
-                    max: 700,
-                    tickAmount: 7,
-                },
-                fill: {
-                    type: 'gradient',
-                    gradient: {
-                        shade: 'dark',
-                        type: "vertical",
-                        gradientToColors: ['#386732'], // Ending color
-                        stops: [0, 100]
-                    }
-                },
-                colors: ['#66bb6a'],
-                grid: {
-                    show: true,
-                    borderColor: '#e7e7e7',
-                    strokeDashArray: 4,
-                },
-            };
-
-            const dayChart = new ApexCharts(document.querySelector("#dayChart"), dayChartOptions);
-            dayChart.render();
-        </script>
-
-        <!-- week downloads -->
-        <script>
-            var weekChartOptions = {
-                series: [{
-                    data: [340, 340, 410, 350, 305, 220, 305, 350, 210, 290]
-                }],
-                chart: {
-                    type: 'bar',
-                    height: 350,
-                    toolbar: {
-                        tools: {
-                            download: "<i class='material-icons'>more_vert</i>",
-                        }
-                    }
-                },
-                plotOptions: {
-                    bar: {
-                        borderRadius: 10,
-                        horizontal: false,
-                        columnWidth: '38%',
-                    }
-                },
-                dataLabels: {
-                    enabled: false
-                },
-                xaxis: {
-                    categories: ['القسم 10', 'القسم 9', 'القسم 8', 'القسم 7', 'القسم 6', 'القسم 5', 'القسم 4', 'القسم 3', 'القسم 2', 'القسم 1'],
-                    position: 'bottom',
-
-                },
-                yaxis: {
-                    labels: {
-                        formatter: function (value) {
-                            return value.toFixed(0);
-                        }
-                    },
-                    min: 0,
-                    max: 700,
-                    tickAmount: 7,
-                },
-                fill: {
-                    type: 'gradient',
-                    gradient: {
-                        shade: 'dark',
-                        type: "vertical",
-                        gradientToColors: ['#386732'], // Ending color
-                        stops: [0, 100]
-                    }
-                },
-                colors: ['#66bb6a'],
-                grid: {
-                    show: true,
-                    borderColor: '#e7e7e7',
-                    strokeDashArray: 4,
-                },
-            };
-
-            const weekChart = new ApexCharts(document.querySelector("#weekChart"), weekChartOptions);
-            weekChart.render();
-        </script>
-
-        <!-- month downloads -->
-        <script>
-            var monthChartOptions = {
-                series: [{
-                    data: [340, 340, 410, 350, 305, 220, 305, 350, 210, 290]
-                }],
-                chart: {
-                    type: 'bar',
-                    height: 350,
-                    toolbar: {
-                        tools: {
-                            download: "<i class='material-icons'>more_vert</i>",
-                        }
-                    }
-                },
-                plotOptions: {
-                    bar: {
-                        borderRadius: 10,
-                        horizontal: false,
-                        columnWidth: '38%',
-                    }
-                },
-                dataLabels: {
-                    enabled: false
-                },
-                xaxis: {
-                    categories: ['القسم 10', 'القسم 9', 'القسم 8', 'القسم 7', 'القسم 6', 'القسم 5', 'القسم 4', 'القسم 3', 'القسم 2', 'القسم 1'],
-                    position: 'bottom',
-
-                },
-                yaxis: {
-                    labels: {
-                        formatter: function (value) {
-                            return value.toFixed(0);
-                        }
-                    },
-                    min: 0,
-                    max: 700,
-                    tickAmount: 7,
-                },
-                fill: {
-                    type: 'gradient',
-                    gradient: {
-                        shade: 'dark',
-                        type: "vertical",
-                        gradientToColors: ['#386732'], // Ending color
-                        stops: [0, 100]
-                    }
-                },
-                colors: ['#66bb6a'],
-                grid: {
-                    show: true,
-                    borderColor: '#e7e7e7',
-                    strokeDashArray: 4,
-                },
-            };
-
-            const monthChart = new ApexCharts(document.querySelector("#monthChart"), monthChartOptions);
-            monthChart.render();
-        </script>
-
-        <!-- year downloads -->
-        <script>
-            var yearChartOptions = {
-                series: [{
-                    data: [340, 340, 410, 350, 305, 220, 305, 350, 210, 290]
-                }],
-                chart: {
-                    type: 'bar',
-                    height: 350,
-                    toolbar: {
-                        tools: {
-                            download: "<i class='material-icons'>more_vert</i>",
-                        }
-                    }
-                },
-                plotOptions: {
-                    bar: {
-                        borderRadius: 10,
-                        horizontal: false,
-                        columnWidth: '38%',
-                    }
-                },
-                dataLabels: {
-                    enabled: false
-                },
-                xaxis: {
-                    categories: ['القسم 10', 'القسم 9', 'القسم 8', 'القسم 7', 'القسم 6', 'القسم 5', 'القسم 4', 'القسم 3', 'القسم 2', 'القسم 1'],
-                    position: 'bottom',
-
-                },
-                yaxis: {
-                    labels: {
-                        formatter: function (value) {
-                            return value.toFixed(0);
-                        }
-                    },
-                    min: 0,
-                    max: 700,
-                    tickAmount: 7,
-                },
-                fill: {
-                    type: 'gradient',
-                    gradient: {
-                        shade: 'dark',
-                        type: "vertical",
-                        gradientToColors: ['#386732'], // Ending color
-                        stops: [0, 100]
-                    }
-                },
-                colors: ['#66bb6a'],
-                grid: {
-                    show: true,
-                    borderColor: '#e7e7e7',
-                    strokeDashArray: 4,
-                },
-            };
-
-            const yearChart = new ApexCharts(document.querySelector("#yearChart"), yearChartOptions);
-            yearChart.render();
         </script>
 
         <script src="../assets/vendors/bootstrap.bundle.min.js"></script>
