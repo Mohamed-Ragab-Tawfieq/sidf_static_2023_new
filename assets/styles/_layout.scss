@@ -78,13 +78,13 @@
 }
 
 .mobile-header {
-    padding-block: 2.2rem;
+    padding-block: 0.7rem;
 
     @media (max-width: 1450px) {
-        padding-block: 1.5rem;
+        padding-block: 0.4rem;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
         display: none;
     }
 

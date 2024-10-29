@@ -41,7 +41,7 @@
             <div class="container">
                 <nav>
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" width="36" alt="menu"></button>
-                    <a href="index.html"><img src="../assets/images/logo.svg" width="140" class="logo" alt="logo"></a>
+                    <a href="index.html"><img src="../assets/images/logo.svg" width="200" class="logo" alt="logo"></a>
                     <button class="btn"><img src="../assets/images/icons/search.svg" alt="search"></button>
                 </nav>
             </div>
@@ -256,7 +256,7 @@
             </section>
 
             <!-- section -->
-            <section class="sec-dark sec-logo-start logo-2" data-aos="fade-up" data-aos-duration="700">
+            <section class="sec-dark sec-logo-start logo-2 sec-2-1-2" data-aos="fade-up" data-aos-duration="700">
                 <div class="container sec-padding position-relative">
                     <div class="flex-between flex-column flex-lg-row">
                         <h2 class="charts-title sec-title text-success w-lg-3" data-aos="fade-up" data-aos-duration="700"> التوزيع القطاعي لقيمة القروض المعتمدة خلال عام 2023م</h2>
@@ -283,7 +283,7 @@
             </section>
 
             <!-- section -->
-            <section data-aos="fade-up" data-aos-duration="700">
+            <section class="sec-2-1-3" data-aos="fade-up" data-aos-duration="700">
                 <div class="container sec-padding position-relative">
                     <div class="flex-between flex-column-reverse flex-lg-row sec-arrows-wrapper sec-logo-end logo-2">
                         <img src="../assets/images/arrows/left/2.svg" class="sec-arrows lg" width="52" alt="arrows">
@@ -607,8 +607,16 @@
                 series: [75, 11, 10, 3, 1],
                 chart: {
                     type: 'pie',
-                    height: 600,
-                    width: 600
+                    height: 700,
+                    width: 700,
+                    toolbar: {
+                        show: true,
+                        offsetX: 0,
+                        offsetY: -50,
+                        tools: {
+                            download: "<i class='material-icons'>more_vert</i>",
+                        }
+                    }
                 },
                 labels: ['الصناعات الكيميائية', 'الصناعات الهندسية', 'صناعة الاستهلاكية', 'صناعة مواد البناء', 'الصناعات الأخري'],
                 responsive: [{
@@ -622,11 +630,11 @@
                         }
                     }
                 }],
-                colors: ['#447536', '#518539', '#5d923c', '#6ba440', '#95bc75'],
+                colors: ['#507431', '#8DB76B', '#9FC082', '#9FC082', '#9FC082'],
                 legend: {
                     position: 'left',
                     formatter: function (seriesName, opts) {
-                        return seriesName + " - " + "%" + opts.w.globals.series[opts.seriesIndex];
+                        return `${seriesName} <span class="percent">% ${opts.w.globals.series[opts.seriesIndex]}</span>`;
                     }
                 },
                 dataLabels: {
@@ -671,8 +679,16 @@
                 series: [62, 13, 9, 8, 8,],
                 chart: {
                     type: 'pie',
-                    height: 600,
-                    width: 600
+                    height: 650,
+                    width: 650,
+                    toolbar: {
+                        show: true,
+                        offsetX: 0,
+                        offsetY: -50,
+                        tools: {
+                            download: "<i class='material-icons'>more_vert</i>",
+                        }
+                    }
                 },
                 labels: ['المنطقة الشرقية', 'الرياض', 'مكة المكرمة', 'جازان', 'المناطق الأخري'],
                 responsive: [{
@@ -686,11 +702,11 @@
                         }
                     }
                 }],
-                colors: ['#447536', '#518539', '#5d923c', '#6ba440', '#95bc75'],
+                colors: ['#507431', '#8DB76B', '#9FC082', '#9FC082', '#9FC082'],
                 legend: {
                     position: 'right',
                     formatter: function (seriesName, opts) {
-                        return seriesName + " - " + "%" + opts.w.globals.series[opts.seriesIndex];
+                        return `<span class="percent">% ${opts.w.globals.series[opts.seriesIndex]}</span> ${seriesName}`;
                     }
                 },
                 dataLabels: {

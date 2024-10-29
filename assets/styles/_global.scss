@@ -412,6 +412,10 @@ section {
     &.logo-2 {
         background: url("../images/logo/2.svg") no-repeat center right;
     }
+
+    @media (max-width: 1199px) {
+        background-image: none !important;
+    }
 }
 
 .sec-logo-end {
@@ -421,6 +425,10 @@ section {
 
     &.logo-2 {
         background: url("../images/logo/2.svg") no-repeat center left;
+    }
+
+    @media (max-width: 1199px) {
+        background-image: none !important;
     }
 }
 
