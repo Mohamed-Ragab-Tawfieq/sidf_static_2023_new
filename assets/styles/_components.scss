@@ -1069,8 +1069,9 @@
 
 .routing-links {
     nav {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         gap: 1rem;
 
         @media (max-width: 1199px) {
@@ -1084,7 +1085,7 @@
         flex-direction: column;
 
         border-radius: 1rem;
-        padding: 1.88rem 2.25rem 1.5rem;
+        padding: 0.75rem 1.5rem;
         text-align: start;
 
         @media (max-width: 1450px) {
@@ -1110,6 +1111,7 @@
 
     .next-btn {
         color: $white !important;
+        order: 3;
     }
 
     .prev-btn {
@@ -1128,7 +1130,7 @@
         display: flex;
         align-items: center;
         gap: 0.25rem;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
 
         @media (max-width: 1199px) {
             font-size: 1.13rem !important;
@@ -1142,7 +1144,7 @@
     }
 
     .title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 600;
 
         @media (max-width: 1199px) {
