@@ -138,8 +138,8 @@
     }
 
     img {
-        &[src*="../assets/images/icons"],
-        &[src*="../assets/images/medals"] {
+        &[src*="/assets/images/icons"],
+        &[src*="/assets/images/medals"] {
             @media (max-width: 1199px) {
                 width: 40px !important;
             }
