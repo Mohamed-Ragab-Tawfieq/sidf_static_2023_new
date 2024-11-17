@@ -5,4 +5,5 @@
     "files.autoSave": "onFocusChange",
     "files.autoSaveDelay": 0,
     "liveServer.settings.multiRootWorkspaceName": "sidf_static_2024_new",
+    "liveServer.settings.port": 5501,
 }
